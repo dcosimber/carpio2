@@ -2,7 +2,7 @@
 title: "Reproducibilidad y actualización manual"
 ---
 
-## Separación entre análisis y publicación
+## Organización del análisis y la publicación
 
 El análisis bioinformático autoritativo se mantiene fuera de este repositorio.
 Este libro solo recibe figuras, tablas e informes que estén explícitamente

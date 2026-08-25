@@ -2,7 +2,7 @@
 title: "Reproducibilidad entre ensayos"
 ---
 
-## La profundidad de entrada difiere entre las ocho biopsias repetidas
+## Profundidad de secuenciación de las biopsias repetidas
 
 Las ocho biopsias presentes en ambos ensayos proporcionan una comparación
 pareada del rendimiento técnico. Todas tuvieron mayor número de pares de
@@ -15,7 +15,7 @@ profundidad técnica de entrada está ligada al ensayo; cualquier comparación
 posterior deberá revisar el efecto de ensayo y aplicar criterios de profundidad
 definidos tras DADA2.
 
-## Comparación de ASV pendiente
+## Reproducibilidad basada en ASV
 
 ::: {.callout-caution}
 La reproducibilidad de composición, diversidad o abundancia no puede evaluarse

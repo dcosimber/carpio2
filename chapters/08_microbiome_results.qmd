@@ -3,14 +3,14 @@ title: "Resultados microbiológicos"
 ---
 
 ::: {.callout-caution}
-## Resultados no disponibles todavía
+## Estado de los resultados
 
 No se presentan resultados microbiológicos en esta versión. La etapa depende de
 la inferencia de ASV, la asignación taxonómica, la revisión de controles y la
 definición documentada de filtros de calidad.
 :::
 
-## Resultados que se incorporarán
+## Plan de análisis microbiológico
 
 Una vez validado el conjunto final, el capítulo incluirá resultados de:
 

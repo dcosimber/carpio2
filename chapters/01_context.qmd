@@ -2,7 +2,7 @@
 title: "Contexto y objetivos"
 ---
 
-## Microbiota tisular y enfermedad de Crohn
+## Contexto biológico y clínico
 
 La microbiota humana participa en la fisiología del huésped, la inmunidad y el
 metabolismo. Aunque una gran parte de la evidencia disponible procede de heces
@@ -16,7 +16,7 @@ objetivo a largo plazo es caracterizar la microbiota tisular con una estrategia
 reproducible de amplicones 16S y, tras validar el conjunto microbiológico,
 evaluar asociaciones clínicas únicamente con resultados agregados y protegidos.
 
-## Una señal de baja biomasa requiere controles específicos
+## Muestras de baja biomasa y controles
 
 Las biopsias digestivas son muestras de **baja biomasa microbiana**: la
 cantidad de ADN bacteriano puede ser pequeña respecto al ADN humano. En esta
@@ -30,7 +30,7 @@ para evaluar contaminantes antes de los análisis microbiológicos. Los controle
 positivos, por su parte, permiten revisar recuperación taxonómica, especificidad
 y sensibilidad del procedimiento.
 
-## El ensayo piloto fundamentó la elección de V3–V4
+## Ensayo previo y selección de la región V3–V4
 
 Antes de la cohorte ampliada se realizó un ensayo previo/piloto para comparar
 V4 y V3–V4 en ocho biopsias, junto con controles positivos. Las muestras se
@@ -55,7 +55,7 @@ V3–V4 en el ensayo ampliado actual. No sustituyen la validación del conjunto
 actual: esa confirmación depende del QC, DADA2, la taxonomía y los controles
 procesados homogéneamente.
 
-## Objetivos del ensayo ampliado
+## Objetivos del análisis
 
 1. Caracterizar mediante 16S V3–V4 la microbiota de una cohorte ampliada de
    biopsias digestivas.
@@ -73,7 +73,7 @@ procesados homogéneamente.
    armonizados, sin duplicar observaciones biológicas.
 
 ::: {.callout-note}
-## Qué no se concluye todavía
+## Alcance de los resultados disponibles
 
 Este informe no presenta aún diversidad, composición, taxonomía ni asociaciones
 clínicas. Esas preguntas requieren denoising, asignación taxonómica y evaluación

@@ -2,7 +2,7 @@
 title: "Conclusiones y próximos pasos"
 ---
 
-## Conclusiones de la fase actualmente disponible
+## Síntesis técnica de la fase actual
 
 La estructura de datos y el preprocesamiento ya son trazables: el conjunto
 contiene 198 bibliotecas paired-end completas, el recorte de primers mantuvo
@@ -15,7 +15,7 @@ No puede extraerse todavía una conclusión sobre microbiota, taxonomía,
 contaminación o asociación clínica. Esas inferencias requieren resultados que
 aún no han sido calculados o revisados.
 
-## Próximos pasos analíticos
+## Etapas pendientes
 
 1. Ejecutar DADA2 de manera independiente por ensayo y revisar su seguimiento
    de lecturas.
@@ -30,7 +30,7 @@ aún no han sido calculados o revisados.
 6. Actualizar este libro únicamente tras una solicitud explícita de actualización
    del informe Quarto y una revisión local del render.
 
-## Reproducibilidad y disponibilidad
+## Reproducibilidad y disponibilidad de datos
 
 El código y la configuración del libro se distribuyen bajo MIT; su contenido,
 bajo CC BY 4.0. La documentación operativa, los activos curados y la política

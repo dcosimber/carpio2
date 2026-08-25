@@ -350,7 +350,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental, biopsias y controles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -434,10 +434,10 @@ div.csl-indent {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#asignación-taxonómica-con-una-referencia-versionada" id="toc-asignación-taxonómica-con-una-referencia-versionada" class="nav-link active" data-scroll-target="#asignación-taxonómica-con-una-referencia-versionada"><span class="header-section-number">7.1</span> Asignación taxonómica con una referencia versionada</a></li>
+  <li><a href="#asignación-taxonómica" id="toc-asignación-taxonómica" class="nav-link active" data-scroll-target="#asignación-taxonómica"><span class="header-section-number">7.1</span> Asignación taxonómica</a></li>
   <li><a href="#controles-positivos" id="toc-controles-positivos" class="nav-link" data-scroll-target="#controles-positivos"><span class="header-section-number">7.2</span> Controles positivos</a></li>
   <li><a href="#controles-negativos-y-decontaminación" id="toc-controles-negativos-y-decontaminación" class="nav-link" data-scroll-target="#controles-negativos-y-decontaminación"><span class="header-section-number">7.3</span> Controles negativos y decontaminación</a></li>
-  <li><a href="#resultados-previstos-para-esta-sección" id="toc-resultados-previstos-para-esta-sección" class="nav-link" data-scroll-target="#resultados-previstos-para-esta-sección"><span class="header-section-number">7.4</span> Resultados previstos para esta sección</a></li>
+  <li><a href="#productos-de-salida" id="toc-productos-de-salida" class="nav-link" data-scroll-target="#productos-de-salida"><span class="header-section-number">7.4</span> Productos de salida</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/06_taxonomy_controls.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -470,15 +470,15 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Precaución</span>Resultado pendiente
+<span class="screen-reader-only">Precaución</span>Estado de la etapa
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>La asignación taxonómica y la evaluación de controles aún no se han ejecutado en el análisis ampliado. Este capítulo documenta el método previsto y reserva el espacio para resultados revisados, sin atribuir composición microbiana a las biopsias ni declarar contaminantes antes de su evaluación.</p>
 </div>
 </div>
-<section id="asignación-taxonómica-con-una-referencia-versionada" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="asignación-taxonómica-con-una-referencia-versionada"><span class="header-section-number">7.1</span> Asignación taxonómica con una referencia versionada</h2>
+<section id="asignación-taxonómica" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="asignación-taxonómica"><span class="header-section-number">7.1</span> Asignación taxonómica</h2>
 <p>Las ASV no quiméricas se anotarán mediante SILVA NR99 138.2. La referencia, su versión, checksum y parámetros se conservarán en el proyecto analítico. La taxonomía se asignará únicamente después de la fusión por secuencia exacta.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>taxonomy <span class="ot">&lt;-</span> <span class="fu">assignTaxonomy</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">seqs =</span> <span class="sc">&lt;</span>secuencias_asv<span class="sc">&gt;</span>, <span class="at">refFasta =</span> <span class="sc">&lt;</span>silva_nr99_138_2<span class="sc">&gt;</span>,</span>
@@ -500,8 +500,8 @@ div.csl-indent {
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>La decisión de filtrado se conservará en tres capas revisables: tabla cruda, ASV candidatas a contaminante y tabla filtrada. Ninguna tabla sustituirá a las otras; así será posible revisar el impacto de cada decisión de decontaminación.</p>
 </section>
-<section id="resultados-previstos-para-esta-sección" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="resultados-previstos-para-esta-sección"><span class="header-section-number">7.4</span> Resultados previstos para esta sección</h2>
+<section id="productos-de-salida" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="productos-de-salida"><span class="header-section-number">7.4</span> Productos de salida</h2>
 <p>Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de los controles positivos, la lista de candidatas a contaminante, los criterios aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos no se inferirán a partir de los controles.</p>
 
 

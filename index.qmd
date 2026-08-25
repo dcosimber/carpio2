@@ -13,7 +13,7 @@ inferencia de ASV, taxonomía, decontaminación y análisis microbiológico se
 identifican expresamente como pendientes hasta que existan resultados revisados.
 :::
 
-## Alcance del conjunto analizado
+## Alcance del análisis
 
 El estudio se centra en la microbiota de biopsias digestivas en enfermedad de
 Crohn, con interés en el fenotipo fistulizante. La baja biomasa microbiana y la
@@ -27,7 +27,7 @@ archivos FASTQ, no a 396 observaciones independientes. Incluye 130 biopsias
 biológicas únicas, ocho biopsias repetidas entre ensayos, 38 controles positivos
 y 22 controles negativos; el conjunto ocupa 14,19 GB.
 
-## Hallazgos disponibles
+## Resultados disponibles
 
 - El recorte posicional de primers conservó el **100 % de los pares** en ambos
   ensayos. La comprobación posterior detectó una señal de primer residual de
@@ -39,12 +39,14 @@ y 22 controles negativos; el conjunto ocupa 14,19 GB.
   bibliotecas. Los códigos `01-xxx` están autorizados; no se publican
   identificadores de paciente ni variables clínicas individuales.
 
-## Lectura responsable y actualizaciones
+## Criterios de interpretación
 
 Los controles se conservan para QC y decontaminación, pero no se mezclarán con
 las biopsias en las comparaciones biológicas finales. Las ocho biopsias
 repetidas se utilizarán para estudiar reproducibilidad y efecto de ensayo, sin
 duplicar observaciones en el análisis clínico principal.
+
+## Actualización del informe
 
 Este libro es una capa de publicación separada del análisis. Solo se actualiza,
 renderiza y publica mediante una instrucción manual explícita.

@@ -1,5 +1,5 @@
 ---
-title: "Diseño experimental, biopsias y controles"
+title: "Diseño experimental y muestras"
 ---
 
 ## Región amplificada y configuración de secuenciación
@@ -78,7 +78,7 @@ piloto incluyen el sufijo `_carpio1` en el nombre de archivo, por ejemplo
 ampliado. Los identificadores de los controles indican su tipo y, cuando
 procede, dilución y réplica.
 
-## Inventario técnico completo de bibliotecas
+## Inventario de bibliotecas
 
 La tabla siguiente contiene los **198 registros técnicos** incluidos en el
 análisis. Muestra diez filas por página y ofrece controles para avanzar o
@@ -105,7 +105,7 @@ La misma información puede descargarse como
 [TSV curado](../tables/00_design/sample_inventory_public.tsv).
 
 ::: {.callout-note}
-## Información publicada
+## Alcance de la información publicada
 
 Los códigos técnicos `01-xxx` y los metadatos de laboratorio/secuenciación se
 han autorizado para esta documentación. No se publican FASTQ, identificadores

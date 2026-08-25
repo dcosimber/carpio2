@@ -318,7 +318,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental, biopsias y controles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -402,10 +402,10 @@ div.csl-indent {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#la-auditoría-confirmó-198-bibliotecas-paired-end-completas" id="toc-la-auditoría-confirmó-198-bibliotecas-paired-end-completas" class="nav-link active" data-scroll-target="#la-auditoría-confirmó-198-bibliotecas-paired-end-completas"><span class="header-section-number">5.1</span> La auditoría confirmó 198 bibliotecas paired-end completas</a></li>
-  <li><a href="#los-informes-multiqc-se-publican-sin-rutas-internas" id="toc-los-informes-multiqc-se-publican-sin-rutas-internas" class="nav-link" data-scroll-target="#los-informes-multiqc-se-publican-sin-rutas-internas"><span class="header-section-number">5.2</span> Los informes MultiQC se publican sin rutas internas</a></li>
-  <li><a href="#el-recorte-posicional-eliminó-la-señal-de-primer-sin-pérdida-de-pares" id="toc-el-recorte-posicional-eliminó-la-señal-de-primer-sin-pérdida-de-pares" class="nav-link" data-scroll-target="#el-recorte-posicional-eliminó-la-señal-de-primer-sin-pérdida-de-pares"><span class="header-section-number">5.3</span> El recorte posicional eliminó la señal de primer sin pérdida de pares</a></li>
-  <li><a href="#las-biopsias-repetidas-muestran-una-diferencia-marcada-de-profundidad-entre-ensayos" id="toc-las-biopsias-repetidas-muestran-una-diferencia-marcada-de-profundidad-entre-ensayos" class="nav-link" data-scroll-target="#las-biopsias-repetidas-muestran-una-diferencia-marcada-de-profundidad-entre-ensayos"><span class="header-section-number">5.4</span> Las biopsias repetidas muestran una diferencia marcada de profundidad entre ensayos</a></li>
+  <li><a href="#auditoría-de-bibliotecas-y-pares-fastq" id="toc-auditoría-de-bibliotecas-y-pares-fastq" class="nav-link active" data-scroll-target="#auditoría-de-bibliotecas-y-pares-fastq"><span class="header-section-number">5.1</span> Auditoría de bibliotecas y pares FASTQ</a></li>
+  <li><a href="#informes-de-qc-y-multiqc" id="toc-informes-de-qc-y-multiqc" class="nav-link" data-scroll-target="#informes-de-qc-y-multiqc"><span class="header-section-number">5.2</span> Informes de QC y MultiQC</a></li>
+  <li><a href="#recorte-y-verificación-de-primers" id="toc-recorte-y-verificación-de-primers" class="nav-link" data-scroll-target="#recorte-y-verificación-de-primers"><span class="header-section-number">5.3</span> Recorte y verificación de primers</a></li>
+  <li><a href="#profundidad-de-secuenciación-de-las-biopsias-repetidas" id="toc-profundidad-de-secuenciación-de-las-biopsias-repetidas" class="nav-link" data-scroll-target="#profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">5.4</span> Profundidad de secuenciación de las biopsias repetidas</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/04_qc_preprocessing.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -432,8 +432,8 @@ div.csl-indent {
 </header>
 
 
-<section id="la-auditoría-confirmó-198-bibliotecas-paired-end-completas" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="la-auditoría-confirmó-198-bibliotecas-paired-end-completas"><span class="header-section-number">5.1</span> La auditoría confirmó 198 bibliotecas paired-end completas</h2>
+<section id="auditoría-de-bibliotecas-y-pares-fastq" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="auditoría-de-bibliotecas-y-pares-fastq"><span class="header-section-number">5.1</span> Auditoría de bibliotecas y pares FASTQ</h2>
 <p>Se validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en cada biblioteca.</p>
 <table class="caption-top table">
 <colgroup>
@@ -478,12 +478,12 @@ div.csl-indent {
 </table>
 <p>Las profundidades agregadas por tipo de biblioteca están disponibles en las tablas de <a href="../tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv">FASTQ crudos</a> y <a href="../tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv">FASTQ recortados</a>.</p>
 </section>
-<section id="los-informes-multiqc-se-publican-sin-rutas-internas" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="los-informes-multiqc-se-publican-sin-rutas-internas"><span class="header-section-number">5.2</span> Los informes MultiQC se publican sin rutas internas</h2>
+<section id="informes-de-qc-y-multiqc" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="informes-de-qc-y-multiqc"><span class="header-section-number">5.2</span> Informes de QC y MultiQC</h2>
 <p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(<a href="#ref-Ewels2016" role="doc-biblioref">Ewels et&nbsp;al. 2016</a>)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/raw/fastqc_raw_multiqc_report.html">informe previo al recorte</a> y el <a href="../multiqc/trimmed/fastqc_trimmed_multiqc_report.html">informe posterior al recorte</a>.</p>
 </section>
-<section id="el-recorte-posicional-eliminó-la-señal-de-primer-sin-pérdida-de-pares" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="el-recorte-posicional-eliminó-la-señal-de-primer-sin-pérdida-de-pares"><span class="header-section-number">5.3</span> El recorte posicional eliminó la señal de primer sin pérdida de pares</h2>
+<section id="recorte-y-verificación-de-primers" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="recorte-y-verificación-de-primers"><span class="header-section-number">5.3</span> Recorte y verificación de primers</h2>
 <p>El diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de lecturas. La señal residual compatible con primer fue como máximo 0,10 % por biblioteca y fue nula en R2 en la comprobación agregada.</p>
 <table class="caption-top table">
 <colgroup>
@@ -521,8 +521,8 @@ div.csl-indent {
 </table>
 <p>Las métricas reproducibles se encuentran en <a href="../tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv">retención por ensayo</a> y <a href="../tables/01_preprocessing/primer_trimming_verification_summary.tsv">verificación de primers</a>.</p>
 </section>
-<section id="las-biopsias-repetidas-muestran-una-diferencia-marcada-de-profundidad-entre-ensayos" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="las-biopsias-repetidas-muestran-una-diferencia-marcada-de-profundidad-entre-ensayos"><span class="header-section-number">5.4</span> Las biopsias repetidas muestran una diferencia marcada de profundidad entre ensayos</h2>
+<section id="profundidad-de-secuenciación-de-las-biopsias-repetidas" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">5.4</span> Profundidad de secuenciación de las biopsias repetidas</h2>
 <p>La comparación pareada utiliza las ocho biopsias presentes en el piloto y el ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de filtrado, fusión de pares o eliminación de quimeras. En todas ellas, la profundidad de entrada fue mayor en el piloto; la media geométrica del cociente piloto/ampliado fue 7,69 y la mediana 7,51. No se aplicó una prueba de hipótesis.</p>
 <table class="caption-top table">
 <colgroup>
@@ -574,7 +574,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Precaución</span>Criterio de exclusión aún pendiente
+<span class="screen-reader-only">Precaución</span>Criterios de exclusión
 </div>
 </div>
 <div class="callout-body-container callout-body">

@@ -3,7 +3,7 @@ title: "Taxonomía, controles y decontaminación"
 ---
 
 ::: {.callout-caution}
-## Resultado pendiente
+## Estado de la etapa
 
 La asignación taxonómica y la evaluación de controles aún no se han ejecutado
 en el análisis ampliado. Este capítulo documenta el método previsto y reserva
@@ -11,7 +11,7 @@ el espacio para resultados revisados, sin atribuir composición microbiana a las
 biopsias ni declarar contaminantes antes de su evaluación.
 :::
 
-## Asignación taxonómica con una referencia versionada
+## Asignación taxonómica
 
 Las ASV no quiméricas se anotarán mediante SILVA NR99 138.2. La referencia, su
 versión, checksum y parámetros se conservarán en el proyecto analítico. La
@@ -56,7 +56,7 @@ La decisión de filtrado se conservará en tres capas revisables: tabla cruda,
 ASV candidatas a contaminante y tabla filtrada. Ninguna tabla sustituirá a las
 otras; así será posible revisar el impacto de cada decisión de decontaminación.
 
-## Resultados previstos para esta sección
+## Productos de salida
 
 Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de
 los controles positivos, la lista de candidatas a contaminante, los criterios

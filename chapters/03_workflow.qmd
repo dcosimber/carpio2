@@ -2,7 +2,7 @@
 title: "Flujo bioinformático"
 ---
 
-## Principio de procesamiento
+## Estrategia de procesamiento
 
 Los FASTQ crudos se consideran entradas inmutables. El procesamiento se separa
 por ensayo hasta el denoising para evitar que perfiles de error distintos se
@@ -20,7 +20,7 @@ cuantificar el efecto técnico.
 | Controles | decontam | Evaluar contaminantes y sensibilidad | Pendiente; tablas cruda, candidata y filtrada |
 | Downstream | R/phyloseq u herramientas equivalentes | Diversidad, composición, reproducibilidad y clínica | Pendiente; tablas y figuras agregadas |
 
-## QC de lecturas
+## Control de calidad de lecturas
 
 FastQC se ejecuta sobre cada miembro de cada par y MultiQC integra los
 resultados por ensayo. El comando genérico es el siguiente:
@@ -57,7 +57,7 @@ respectivamente. No se utilizó `--discard-untrimmed` ni se aplicó filtrado de
 calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta
 del primer y se reserva el filtrado de calidad para DADA2 [@Martin2011].
 
-## Denoising, fusión e integración planificados
+## Denoising, fusión e integración
 
 DADA2 se ejecutará de forma independiente en piloto y ensayo ampliado. Los
 parámetros inicialmente fijados se someterán a revisión mediante el seguimiento
@@ -83,7 +83,7 @@ menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando
 procede. Posteriormente se aplicará eliminación de quimeras por consenso y se
 guardará el seguimiento por muestra [@Callahan2016].
 
-## Taxonomía y controles planificados
+## Taxonomía y controles
 
 La taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y
 `minBoot = 50`; la versión y los checksums de la referencia se conservarán en

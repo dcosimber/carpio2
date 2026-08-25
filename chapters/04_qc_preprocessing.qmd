@@ -2,7 +2,7 @@
 title: "QC y preprocesamiento"
 ---
 
-## La auditoría confirmó 198 bibliotecas paired-end completas
+## Auditoría de bibliotecas y pares FASTQ
 
 Se validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único
 par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y
@@ -19,7 +19,7 @@ Las profundidades agregadas por tipo de biblioteca están disponibles en las
 tablas de [FASTQ crudos](../tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv)
 y [FASTQ recortados](../tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv).
 
-## Los informes MultiQC se publican sin rutas internas
+## Informes de QC y MultiQC
 
 Los informes de FastQC se integraron con MultiQC antes y después del recorte
 [@Ewels2016]. La versión pública se regenera exclusivamente a partir de copias
@@ -28,7 +28,7 @@ autorizados y excluye las rutas internas de computación. Se puede consultar el
 [informe previo al recorte](../multiqc/raw/fastqc_raw_multiqc_report.html) y el
 [informe posterior al recorte](../multiqc/trimmed/fastqc_trimmed_multiqc_report.html).
 
-## El recorte posicional eliminó la señal de primer sin pérdida de pares
+## Recorte y verificación de primers
 
 El diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras
 el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de
@@ -43,7 +43,7 @@ biblioteca y fue nula en R2 en la comprobación agregada.
 Las métricas reproducibles se encuentran en [retención por ensayo](../tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv)
 y [verificación de primers](../tables/01_preprocessing/primer_trimming_verification_summary.tsv).
 
-## Las biopsias repetidas muestran una diferencia marcada de profundidad entre ensayos
+## Profundidad de secuenciación de las biopsias repetidas
 
 La comparación pareada utiliza las ocho biopsias presentes en el piloto y el
 ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de
@@ -69,7 +69,7 @@ Los valores técnicos individuales y el resumen se ofrecen en la
 y en el [resumen descriptivo](../tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv).
 
 ::: {.callout-caution}
-## Criterio de exclusión aún pendiente
+## Criterios de exclusión
 
 Dos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su
 posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino

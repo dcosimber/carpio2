@@ -3,7 +3,7 @@ title: "DADA2 e inferencia de ASV"
 ---
 
 ::: {.callout-caution}
-## Resultado pendiente
+## Estado de la etapa
 
 Esta etapa todavía no se ha ejecutado para el conjunto ampliado. Por tanto, no
 se informa número de ASV, retención, éxito de fusión ni eliminación de quimeras.
@@ -11,7 +11,7 @@ Los parámetros expuestos a continuación son el plan reproducible que se
 validará con las salidas de seguimiento de DADA2.
 :::
 
-## Inferencia separada por ensayo
+## Procesamiento separado por ensayo
 
 Después del recorte de primers, cada ensayo se procesará de forma independiente
 con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de
@@ -20,7 +20,7 @@ evita asumir que ambos ensayos comparten el mismo perfil de error. La integraci�
 posterior se realizará por secuencia exacta, conservando una variable de ensayo
 para los análisis técnicos.
 
-## Comando y parámetros previstos
+## Comandos y parámetros
 
 La ejecución se realizará en R y registrará una tabla de seguimiento por
 biblioteca. El fragmento genérico de filtrado y denoising es:
@@ -50,7 +50,7 @@ La fusión se realizará con al menos 20 nt de solapamiento, cero discrepancias 
 "consensus")` a la tabla de secuencias. Antes de fijar los parámetros finales
 se compararán retención, fallos de fusión y posibles sesgos entre ensayos.
 
-## Salidas que se incorporarán
+## Productos de salida
 
 Cuando la etapa esté completada, este capítulo mostrará:
 

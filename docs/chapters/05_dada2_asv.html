@@ -350,7 +350,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental, biopsias y controles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -434,9 +434,9 @@ div.csl-indent {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#inferencia-separada-por-ensayo" id="toc-inferencia-separada-por-ensayo" class="nav-link active" data-scroll-target="#inferencia-separada-por-ensayo"><span class="header-section-number">6.1</span> Inferencia separada por ensayo</a></li>
-  <li><a href="#comando-y-parámetros-previstos" id="toc-comando-y-parámetros-previstos" class="nav-link" data-scroll-target="#comando-y-parámetros-previstos"><span class="header-section-number">6.2</span> Comando y parámetros previstos</a></li>
-  <li><a href="#salidas-que-se-incorporarán" id="toc-salidas-que-se-incorporarán" class="nav-link" data-scroll-target="#salidas-que-se-incorporarán"><span class="header-section-number">6.3</span> Salidas que se incorporarán</a></li>
+  <li><a href="#procesamiento-separado-por-ensayo" id="toc-procesamiento-separado-por-ensayo" class="nav-link active" data-scroll-target="#procesamiento-separado-por-ensayo"><span class="header-section-number">6.1</span> Procesamiento separado por ensayo</a></li>
+  <li><a href="#comandos-y-parámetros" id="toc-comandos-y-parámetros" class="nav-link" data-scroll-target="#comandos-y-parámetros"><span class="header-section-number">6.2</span> Comandos y parámetros</a></li>
+  <li><a href="#productos-de-salida" id="toc-productos-de-salida" class="nav-link" data-scroll-target="#productos-de-salida"><span class="header-section-number">6.3</span> Productos de salida</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/05_dada2_asv.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -469,19 +469,19 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Precaución</span>Resultado pendiente
+<span class="screen-reader-only">Precaución</span>Estado de la etapa
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Esta etapa todavía no se ha ejecutado para el conjunto ampliado. Por tanto, no se informa número de ASV, retención, éxito de fusión ni eliminación de quimeras. Los parámetros expuestos a continuación son el plan reproducible que se validará con las salidas de seguimiento de DADA2.</p>
 </div>
 </div>
-<section id="inferencia-separada-por-ensayo" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="inferencia-separada-por-ensayo"><span class="header-section-number">6.1</span> Inferencia separada por ensayo</h2>
+<section id="procesamiento-separado-por-ensayo" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="procesamiento-separado-por-ensayo"><span class="header-section-number">6.1</span> Procesamiento separado por ensayo</h2>
 <p>Después del recorte de primers, cada ensayo se procesará de forma independiente con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso <span class="citation" data-cites="Callahan2016">(<a href="#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>. Esta separación evita asumir que ambos ensayos comparten el mismo perfil de error. La integración posterior se realizará por secuencia exacta, conservando una variable de ensayo para los análisis técnicos.</p>
 </section>
-<section id="comando-y-parámetros-previstos" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="comando-y-parámetros-previstos"><span class="header-section-number">6.2</span> Comando y parámetros previstos</h2>
+<section id="comandos-y-parámetros" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="comandos-y-parámetros"><span class="header-section-number">6.2</span> Comandos y parámetros</h2>
 <p>La ejecución se realizará en R y registrará una tabla de seguimiento por biblioteca. El fragmento genérico de filtrado y denoising es:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>filtered <span class="ot">&lt;-</span> <span class="fu">filterAndTrim</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">fwd =</span> <span class="sc">&lt;</span>R1_recortadas<span class="sc">&gt;</span>, <span class="at">rev =</span> <span class="sc">&lt;</span>R2_recortadas<span class="sc">&gt;</span>,</span>
@@ -502,8 +502,8 @@ div.csl-indent {
 </ul>
 <p>La fusión se realizará con al menos 20 nt de solapamiento, cero discrepancias y <code>trimOverhang = TRUE</code>. Se aplicará <code>removeBimeraDenovo(..., method = "consensus")</code> a la tabla de secuencias. Antes de fijar los parámetros finales se compararán retención, fallos de fusión y posibles sesgos entre ensayos.</p>
 </section>
-<section id="salidas-que-se-incorporarán" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="salidas-que-se-incorporarán"><span class="header-section-number">6.3</span> Salidas que se incorporarán</h2>
+<section id="productos-de-salida" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="productos-de-salida"><span class="header-section-number">6.3</span> Productos de salida</h2>
 <p>Cuando la etapa esté completada, este capítulo mostrará:</p>
 <ol type="1">
 <li>seguimiento de lecturas por biblioteca y por ensayo;</li>
