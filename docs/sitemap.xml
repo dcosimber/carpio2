@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/chapters/01_context.html</loc>
-    <lastmod>2026-08-25T12:29:51.000Z</lastmod>
+    <lastmod>2026-08-25T12:45:33.000Z</lastmod>
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/chapters/02_design_samples.html</loc>
@@ -14,19 +14,19 @@
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/chapters/03_workflow.html</loc>
-    <lastmod>2026-08-25T12:29:51.000Z</lastmod>
+    <lastmod>2026-08-25T12:45:33.000Z</lastmod>
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/chapters/04_qc_preprocessing.html</loc>
-    <lastmod>2026-08-25T12:29:52.000Z</lastmod>
+    <lastmod>2026-08-25T12:45:34.000Z</lastmod>
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/chapters/05_dada2_asv.html</loc>
-    <lastmod>2026-08-25T12:29:53.000Z</lastmod>
+    <lastmod>2026-08-25T12:45:35.000Z</lastmod>
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/chapters/06_taxonomy_controls.html</loc>
-    <lastmod>2026-08-25T12:29:54.000Z</lastmod>
+    <lastmod>2026-08-25T12:45:36.000Z</lastmod>
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/chapters/07_reproducibility.html</loc>
@@ -51,5 +51,9 @@
   <url>
     <loc>https://dcosimber.github.io/carpio2/appendices/data_availability.html</loc>
     <lastmod>2026-08-25T10:28:57.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dcosimber.github.io/carpio2/appendices/references.html</loc>
+    <lastmod>2026-08-25T12:45:37.000Z</lastmod>
   </url>
 </urlset>

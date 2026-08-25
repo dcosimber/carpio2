@@ -91,37 +91,3 @@ asociaciones clínicas. Estas preguntas requieren completar DADA2, la asignació
 taxonómica y la evaluación de contaminación antes de incorporarse como
 resultados.
 :::
-
-## Referencias {.unnumbered}
-
-::: {.chapter-references}
-::: {#ref-Gevers2014 .csl-entry}
-Gevers, Dirk, Subra Kugathasan, Lee A. Denson, Yoshiki Vázquez-Baeza,
-Will Van Treuren, Bing Ren, et al. 2014. “The Treatment-Naive Microbiome
-in New-Onset Crohn’s Disease.” *Cell Host & Microbe* 15 (3): 382–392.
-<https://doi.org/10.1016/j.chom.2014.02.005>.
-:::
-
-::: {#ref-Klindworth2013 .csl-entry}
-Klindworth, Anna, Elmar Pruesse, Tim Schweer, Jörg Peplies, Christian
-Quast, Matthias Horn, and Frank Oliver Glöckner. 2013. “Evaluation of
-General 16S Ribosomal RNA Gene PCR Primers for Classical and
-Next-Generation Sequencing-Based Diversity Studies.” *Nucleic Acids
-Research* 41 (1): e1. <https://doi.org/10.1093/nar/gks808>.
-:::
-
-::: {#ref-Salter2014 .csl-entry}
-Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus,
-William O. Cookson, Miriam F. Moffatt, et al. 2014. “Reagent and
-Laboratory Contamination Can Critically Impact Sequence-Based Microbiome
-Analyses.” *Genome Biology* 15 (12): 564.
-<https://doi.org/10.1186/s13059-014-0541-7>.
-:::
-
-::: {#ref-Eisenhofer2019 .csl-entry}
-Eisenhofer, Raphael, Jeremy J. Minich, Clarisse Marotz, Aaron Cooper,
-Rob Knight, and Laura S. Weyrich. 2019. “Contamination in Low Microbial
-Biomass Microbiome Studies: Issues and Recommendations.” *Trends in
-Microbiology* 27 (2): 105–117. <https://doi.org/10.1016/j.tim.2018.11.003>.
-:::
-:::

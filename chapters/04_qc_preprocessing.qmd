@@ -97,14 +97,3 @@ posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, si
 tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y
 el umbral de profundidad definido para el análisis final.
 :::
-
-## Referencias {.unnumbered}
-
-::: {.chapter-references}
-::: {#ref-Ewels2016 .csl-entry}
-Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016.
-“MultiQC: Summarize Analysis Results for Multiple Tools and Samples in a
-Single Report.” *Bioinformatics* 32 (19): 3047–3048.
-<https://doi.org/10.1093/bioinformatics/btw354>.
-:::
-:::

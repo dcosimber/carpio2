@@ -17,10 +17,30 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -255,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04_qc_preprocessing.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">QC y preprocesamiento</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -269,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Proyecto Carpio</a> 
+      <a href="../">Proyecto Carpio</a>
         <div class="sidebar-tools-main">
     <a href="https://github.com/dcosimber/carpio2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -281,93 +301,99 @@ ul.task-list li input[type="checkbox"] {
         <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container"> 
+    <div class="sidebar-menu-container">
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumen técnico</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/01_context.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/03_workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/04_qc_preprocessing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">QC y preprocesamiento</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/05_dada2_asv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">DADA2 e inferencia de ASV</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/06_taxonomy_controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Taxonomía, controles y decontaminación</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/07_reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibilidad entre ensayos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/08_microbiome_results.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Resultados microbiológicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/09_clinical_associations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asociaciones clínicas agregadas</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/10_conclusions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
+      <div class="sidebar-item-container">
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Apéndices</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+          </a>
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../appendices/reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Reproducibilidad y actualización manual</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../appendices/data_availability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Disponibilidad de datos y licencias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container">
+  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
   </div>
 </li>
       </ul>
@@ -380,13 +406,12 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Tabla de contenidos</h2>
-   
+
   <ul>
   <li><a href="#auditoría-de-bibliotecas-y-pares-fastq" id="toc-auditoría-de-bibliotecas-y-pares-fastq" class="nav-link active" data-scroll-target="#auditoría-de-bibliotecas-y-pares-fastq"><span class="header-section-number">5.1</span> Auditoría de bibliotecas y pares FASTQ</a></li>
   <li><a href="#informes-de-qc-y-multiqc" id="toc-informes-de-qc-y-multiqc" class="nav-link" data-scroll-target="#informes-de-qc-y-multiqc"><span class="header-section-number">5.2</span> Informes de QC y MultiQC</a></li>
   <li><a href="#recorte-y-verificación-de-primers" id="toc-recorte-y-verificación-de-primers" class="nav-link" data-scroll-target="#recorte-y-verificación-de-primers"><span class="header-section-number">5.3</span> Recorte y verificación de primers</a></li>
   <li><a href="#profundidad-de-secuenciación-de-las-biopsias-repetidas" id="toc-profundidad-de-secuenciación-de-las-biopsias-repetidas" class="nav-link" data-scroll-target="#profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">5.4</span> Profundidad de secuenciación de las biopsias repetidas</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/04_qc_preprocessing.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -403,11 +428,11 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -471,7 +496,7 @@ Tabla&nbsp;5.1: Bibliotecas y pares de lecturas antes y después del recorte de 
 </section>
 <section id="informes-de-qc-y-multiqc" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="informes-de-qc-y-multiqc"><span class="header-section-number">5.2</span> Informes de QC y MultiQC</h2>
-<p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(Ewels et&nbsp;al. 2016)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/raw/fastqc_raw_multiqc_report.html">informe previo al recorte</a> y el <a href="../multiqc/trimmed/fastqc_trimmed_multiqc_report.html">informe posterior al recorte</a>.</p>
+<p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(<a href="../appendices/references.html#ref-Ewels2016" role="doc-biblioref">Ewels et&nbsp;al. 2016</a>)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/raw/fastqc_raw_multiqc_report.html">informe previo al recorte</a> y el <a href="../multiqc/trimmed/fastqc_trimmed_multiqc_report.html">informe posterior al recorte</a>.</p>
 </section>
 <section id="recorte-y-verificación-de-primers" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="recorte-y-verificación-de-primers"><span class="header-section-number">5.3</span> Recorte y verificación de primers</h2>
@@ -596,16 +621,13 @@ Figura&nbsp;5.1: Profundidad de secuenciación de las ocho biopsias repetidas. C
 <p>Dos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y el umbral de profundidad definido para el análisis final.</p>
 </div>
 </div>
-</section>
-<section id="referencias" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="referencias">Referencias</h2>
-<div class="chapter-references">
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Ewels2016" class="csl-entry" role="listitem">
-Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQC: Summarize Analysis Results for Multiple Tools and Samples in a Single Report.” <em>Bioinformatics</em> 32 (19): 3047–3048. <a href="https://doi.org/10.1093/bioinformatics/btw354" class="uri">https://doi.org/10.1093/bioinformatics/btw354</a>.
+Ewels, Philip, Måns Magnusson, Sverker Lundin, y Max Käller. 2016. <span>«MultiQC: Summarize analysis results for multiple tools and samples in a single report»</span>. <em>Bioinformatics</em> 32 (19): 3047-48. <a href="https://doi.org/10.1093/bioinformatics/btw354">https://doi.org/10.1093/bioinformatics/btw354</a>.
 </div>
 </div>
-
-
 </section>
 
 </main> <!-- /main -->
@@ -633,7 +655,7 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -653,11 +675,11 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copiado");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -739,7 +761,7 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -814,7 +836,7 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -842,7 +864,7 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -866,7 +888,7 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -906,7 +928,7 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -1031,7 +1053,7 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
   <div class="nav-page nav-page-previous">
       <a href="../chapters/03_workflow.html" class="pagination-link" aria-label="Flujo bioinformático">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></span>
-      </a>          
+      </a>
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/05_dada2_asv.html" class="pagination-link" aria-label="DADA2 e inferencia de ASV">
@@ -1058,18 +1080,18 @@ Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. “MultiQ
             slideConfig.href = srcAttr;
           }
         }
-      } 
+      }
     });
-  
+
     lightboxQuarto.on('slide_after_load', (data) => {
       const { slideIndex, slideNode, slideConfig, player, trigger } = data;
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(slideNode);
       }
     });
-  
+
   };
-  
+
 })();
           </script>
 

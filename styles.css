@@ -242,8 +242,7 @@ code {
   padding: 0 0.1rem;
 }
 
-#refs .csl-entry,
-.chapter-references .csl-entry {
+#refs .csl-entry {
   margin-bottom: 1em !important;
   text-align: justify;
   text-justify: inter-word;

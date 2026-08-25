@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -287,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03_workflow.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -301,7 +321,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Proyecto Carpio</a> 
+      <a href="../">Proyecto Carpio</a>
         <div class="sidebar-tools-main">
     <a href="https://github.com/dcosimber/carpio2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -313,93 +333,99 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container"> 
+    <div class="sidebar-menu-container">
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumen técnico</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/01_context.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/03_workflow.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/04_qc_preprocessing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">QC y preprocesamiento</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/05_dada2_asv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">DADA2 e inferencia de ASV</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/06_taxonomy_controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Taxonomía, controles y decontaminación</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/07_reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibilidad entre ensayos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/08_microbiome_results.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Resultados microbiológicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/09_clinical_associations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asociaciones clínicas agregadas</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../chapters/10_conclusions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
+      <div class="sidebar-item-container">
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Apéndices</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+          </a>
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../appendices/reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Reproducibilidad y actualización manual</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
+  <div class="sidebar-item-container">
   <a href="../appendices/data_availability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Disponibilidad de datos y licencias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container">
+  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
   </div>
 </li>
       </ul>
@@ -412,14 +438,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Tabla de contenidos</h2>
-   
+
   <ul>
   <li><a href="#estrategia-de-procesamiento" id="toc-estrategia-de-procesamiento" class="nav-link active" data-scroll-target="#estrategia-de-procesamiento"><span class="header-section-number">4.1</span> Estrategia de procesamiento</a></li>
   <li><a href="#control-de-calidad-de-lecturas" id="toc-control-de-calidad-de-lecturas" class="nav-link" data-scroll-target="#control-de-calidad-de-lecturas"><span class="header-section-number">4.2</span> Control de calidad de lecturas</a></li>
   <li><a href="#diagnóstico-y-recorte-de-primers" id="toc-diagnóstico-y-recorte-de-primers" class="nav-link" data-scroll-target="#diagnóstico-y-recorte-de-primers"><span class="header-section-number">4.3</span> Diagnóstico y recorte de primers</a></li>
   <li><a href="#denoising-fusión-e-integración" id="toc-denoising-fusión-e-integración" class="nav-link" data-scroll-target="#denoising-fusión-e-integración"><span class="header-section-number">4.4</span> Denoising, fusión e integración</a></li>
   <li><a href="#taxonomía-y-controles" id="toc-taxonomía-y-controles" class="nav-link" data-scroll-target="#taxonomía-y-controles"><span class="header-section-number">4.5</span> Taxonomía y controles</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/03_workflow.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -436,11 +461,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -538,7 +563,7 @@ Tabla&nbsp;4.1: Etapas del flujo bioinformático, herramientas y productos princ
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-p</span> <span class="op">&lt;</span>R2_recortado.fastq.gz<span class="op">&gt;</span> <span class="dt">\</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--json</span> <span class="op">&lt;</span>informe_cutadapt.json<span class="op">&gt;</span> <span class="dt">\</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>R1_crudo.fastq.gz<span class="op">&gt;</span> <span class="op">&lt;</span>R2_crudo.fastq.gz<span class="op">&gt;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>-u 17</code> y <code>-U 21</code> eliminan bases desde el extremo 5′ de R1 y R2, respectivamente. No se utilizó <code>--discard-untrimmed</code> ni se aplicó filtrado de calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta del primer y se reserva el filtrado de calidad para DADA2 <span class="citation" data-cites="Martin2011">(Martin 2011)</span>.</p>
+<p><code>-u 17</code> y <code>-U 21</code> eliminan bases desde el extremo 5′ de R1 y R2, respectivamente. No se utilizó <code>--discard-untrimmed</code> ni se aplicó filtrado de calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta del primer y se reserva el filtrado de calidad para DADA2 <span class="citation" data-cites="Martin2011">(<a href="../appendices/references.html#ref-Martin2011" role="doc-biblioref">Martin 2011</a>)</span>.</p>
 </section>
 <section id="denoising-fusión-e-integración" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="denoising-fusión-e-integración"><span class="header-section-number">4.4</span> Denoising, fusión e integración</h2>
@@ -553,30 +578,27 @@ Tabla&nbsp;4.1: Etapas del flujo bioinformático, herramientas y productos princ
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  denoised_R1, derep_R1, denoised_R2, derep_R2,</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">minOverlap =</span> <span class="dv">20</span>, <span class="at">maxMismatch =</span> <span class="dv">0</span>, <span class="at">trimOverhang =</span> <span class="cn">TRUE</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>truncLen = c(0, 0)</code> conserva longitud variable; <code>maxEE</code> limita el error esperado en R1/R2; <code>truncQ</code> termina lecturas en bases de muy baja calidad; y <code>minLen</code> elimina fragmentos claramente no informativos. La fusión exige al menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando procede. Posteriormente se aplicará eliminación de quimeras por consenso y se guardará el seguimiento por muestra <span class="citation" data-cites="Callahan2016">(Callahan et&nbsp;al. 2016)</span>.</p>
+<p><code>truncLen = c(0, 0)</code> conserva longitud variable; <code>maxEE</code> limita el error esperado en R1/R2; <code>truncQ</code> termina lecturas en bases de muy baja calidad; y <code>minLen</code> elimina fragmentos claramente no informativos. La fusión exige al menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando procede. Posteriormente se aplicará eliminación de quimeras por consenso y se guardará el seguimiento por muestra <span class="citation" data-cites="Callahan2016">(<a href="../appendices/references.html#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>.</p>
 </section>
 <section id="taxonomía-y-controles" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="taxonomía-y-controles"><span class="header-section-number">4.5</span> Taxonomía y controles</h2>
-<p>La taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y <code>minBoot = 50</code>; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad <span class="citation" data-cites="Davis2018 Quast2013">(Davis et&nbsp;al. 2018; Quast et&nbsp;al. 2013)</span>. Los resultados aún no han sido ejecutados y no se presentan como conclusiones.</p>
-</section>
-<section id="referencias" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="referencias">Referencias</h2>
-<div class="chapter-references">
-<div id="ref-Martin2011" class="csl-entry" role="listitem">
-Martin, Marcel. 2011. “Cutadapt Removes Adapter Sequences from High-Throughput Sequencing Reads.” <em>EMBnet.journal</em> 17 (1): 10–12. <a href="https://doi.org/10.14806/ej.17.1.200" class="uri">https://doi.org/10.14806/ej.17.1.200</a>.
-</div>
+<p>La taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y <code>minBoot = 50</code>; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad <span class="citation" data-cites="Davis2018 Quast2013">(<a href="../appendices/references.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>; <a href="../appendices/references.html#ref-Quast2013" role="doc-biblioref">Quast et&nbsp;al. 2013</a>)</span>. Los resultados aún no han sido ejecutados y no se presentan como conclusiones.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Callahan2016" class="csl-entry" role="listitem">
-Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, and Susan P. Holmes. 2016. “DADA2: High-Resolution Sample Inference from Illumina Amplicon Data.” <em>Nature Methods</em> 13 (7): 581–583. <a href="https://doi.org/10.1038/nmeth.3869" class="uri">https://doi.org/10.1038/nmeth.3869</a>.
+Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. <span>«DADA2: High-resolution sample inference from Illumina amplicon data»</span>. <em>Nature Methods</em> 13 (7): 581-83. <a href="https://doi.org/10.1038/nmeth.3869">https://doi.org/10.1038/nmeth.3869</a>.
 </div>
 <div id="ref-Davis2018" class="csl-entry" role="listitem">
-Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, and Benjamin J. Callahan. 2018. “Simple Statistical Identification and Removal of Contaminant Sequences in Marker-Gene and Metagenomics Data.” <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2" class="uri">https://doi.org/10.1186/s40168-018-0605-2</a>.
+Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. <span>«Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data»</span>. <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
+</div>
+<div id="ref-Martin2011" class="csl-entry" role="listitem">
+Martin, Marcel. 2011. <span>«Cutadapt removes adapter sequences from high-throughput sequencing reads»</span>. <em>EMBnet.journal</em> 17 (1): 10-12. <a href="https://doi.org/10.14806/ej.17.1.200">https://doi.org/10.14806/ej.17.1.200</a>.
 </div>
 <div id="ref-Quast2013" class="csl-entry" role="listitem">
-Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, and Frank Oliver Glöckner. 2013. “The SILVA Ribosomal RNA Gene Database Project: Improved Data Processing and Web-Based Tools.” <em>Nucleic Acids Research</em> 41 (D1): D590–D596. <a href="https://doi.org/10.1093/nar/gks1219" class="uri">https://doi.org/10.1093/nar/gks1219</a>.
+Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, y Frank Oliver Glöckner. 2013. <span>«The SILVA ribosomal RNA gene database project: improved data processing and web-based tools»</span>. <em>Nucleic Acids Research</em> 41 (D1): D590-96. <a href="https://doi.org/10.1093/nar/gks1219">https://doi.org/10.1093/nar/gks1219</a>.
 </div>
 </div>
-
-
 </section>
 
 </main> <!-- /main -->
@@ -604,7 +626,7 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -624,11 +646,11 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copiado");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -710,7 +732,7 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -785,7 +807,7 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -813,7 +835,7 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -837,7 +859,7 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -877,7 +899,7 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -1002,7 +1024,7 @@ Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Ya
   <div class="nav-page nav-page-previous">
       <a href="../chapters/02_design_samples.html" class="pagination-link" aria-label="Diseño experimental y muestras">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span>
-      </a>          
+      </a>
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/04_qc_preprocessing.html" class="pagination-link" aria-label="QC y preprocesamiento">

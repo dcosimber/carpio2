@@ -98,35 +98,3 @@ el análisis. Los controles negativos se evaluarán principalmente por
 prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia
 como análisis de sensibilidad [@Davis2018; @Quast2013]. Los resultados aún no
 han sido ejecutados y no se presentan como conclusiones.
-
-## Referencias {.unnumbered}
-
-::: {.chapter-references}
-::: {#ref-Martin2011 .csl-entry}
-Martin, Marcel. 2011. “Cutadapt Removes Adapter Sequences from
-High-Throughput Sequencing Reads.” *EMBnet.journal* 17 (1): 10–12.
-<https://doi.org/10.14806/ej.17.1.200>.
-:::
-
-::: {#ref-Callahan2016 .csl-entry}
-Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W.
-Han, Amy Jo A. Johnson, and Susan P. Holmes. 2016. “DADA2:
-High-Resolution Sample Inference from Illumina Amplicon Data.” *Nature
-Methods* 13 (7): 581–583. <https://doi.org/10.1038/nmeth.3869>.
-:::
-
-::: {#ref-Davis2018 .csl-entry}
-Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman,
-and Benjamin J. Callahan. 2018. “Simple Statistical Identification and
-Removal of Contaminant Sequences in Marker-Gene and Metagenomics Data.”
-*Microbiome* 6 (1): 226. <https://doi.org/10.1186/s40168-018-0605-2>.
-:::
-
-::: {#ref-Quast2013 .csl-entry}
-Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer,
-Pablo Yarza, Jörg Peplies, and Frank Oliver Glöckner. 2013. “The SILVA
-Ribosomal RNA Gene Database Project: Improved Data Processing and
-Web-Based Tools.” *Nucleic Acids Research* 41 (D1): D590–D596.
-<https://doi.org/10.1093/nar/gks1219>.
-:::
-:::
