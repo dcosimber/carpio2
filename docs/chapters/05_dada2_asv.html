@@ -344,7 +344,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/01_context.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Contexto y objetivos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -437,6 +437,7 @@ div.csl-indent {
   <li><a href="#procesamiento-separado-por-ensayo" id="toc-procesamiento-separado-por-ensayo" class="nav-link active" data-scroll-target="#procesamiento-separado-por-ensayo"><span class="header-section-number">6.1</span> Procesamiento separado por ensayo</a></li>
   <li><a href="#comandos-y-parámetros" id="toc-comandos-y-parámetros" class="nav-link" data-scroll-target="#comandos-y-parámetros"><span class="header-section-number">6.2</span> Comandos y parámetros</a></li>
   <li><a href="#productos-de-salida" id="toc-productos-de-salida" class="nav-link" data-scroll-target="#productos-de-salida"><span class="header-section-number">6.3</span> Productos de salida</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/05_dada2_asv.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -478,7 +479,7 @@ div.csl-indent {
 </div>
 <section id="procesamiento-separado-por-ensayo" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="procesamiento-separado-por-ensayo"><span class="header-section-number">6.1</span> Procesamiento separado por ensayo</h2>
-<p>Después del recorte de primers, cada ensayo se procesará de forma independiente con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso <span class="citation" data-cites="Callahan2016">(<a href="#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>. Esta separación evita asumir que ambos ensayos comparten el mismo perfil de error. La integración posterior se realizará por secuencia exacta, conservando una variable de ensayo para los análisis técnicos.</p>
+<p>Después del recorte de primers, cada ensayo se procesará de forma independiente con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso <span class="citation" data-cites="Callahan2016">(<a href="01_context.html#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>. Esta separación evita asumir que ambos ensayos comparten el mismo perfil de error. La integración posterior se realizará por secuencia exacta, conservando una variable de ensayo para los análisis técnicos.</p>
 </section>
 <section id="comandos-y-parámetros" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="comandos-y-parámetros"><span class="header-section-number">6.2</span> Comandos y parámetros</h2>
@@ -512,13 +513,16 @@ div.csl-indent {
 <li>criterios documentados para el umbral mínimo de profundidad; y</li>
 <li>tabla de ASV integrada por secuencia exacta, con procedencia de ensayo.</li>
 </ol>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+</section>
+<section id="referencias" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="referencias">Referencias</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Callahan2016" class="csl-entry" role="listitem">
 Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. <span>«DADA2: High-resolution sample inference from Illumina amplicon data»</span>. <em>Nature Methods</em> 13 (7): 581-83. <a href="https://doi.org/10.1038/nmeth.3869">https://doi.org/10.1038/nmeth.3869</a>.
 </div>
 </div>
+
+
 </section>
 
 </main> <!-- /main -->

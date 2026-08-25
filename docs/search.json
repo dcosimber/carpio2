@@ -42,41 +42,41 @@
   {
     "objectID": "chapters/01_context.html",
     "href": "chapters/01_context.html",
-    "title": "2  Contexto y objetivos",
+    "title": "2  Introducción, antecedentes y objetivos",
     "section": "",
-    "text": "2.1 Contexto biológico y clínico\nLa microbiota humana participa en la fisiología del huésped, la inmunidad y el metabolismo. Aunque una gran parte de la evidencia disponible procede de heces o contenido luminal, existe interés en las comunidades microbianas presentes en los tejidos y en su posible relación con la inflamación, la progresión de la enfermedad y el microambiente local.\nEste proyecto estudia la microbiota asociada a biopsias digestivas de pacientes con enfermedad de Crohn, con especial interés en el fenotipo fistulizante. El objetivo a largo plazo es caracterizar la microbiota tisular con una estrategia reproducible de amplicones 16S y, tras validar el conjunto microbiológico, evaluar asociaciones clínicas únicamente con resultados agregados y protegidos.",
+    "text": "2.1 Introducción\nLa enfermedad de Crohn es una enfermedad inflamatoria intestinal de curso heterogéneo en la que la interacción entre el huésped, el sistema inmunitario y la microbiota intestinal forma parte del contexto biológico relevante. El estudio de la microbiota asociada a la mucosa mediante biopsias permite aproximarse al microambiente local, aunque las diferencias observadas deben interpretarse como asociaciones y no como evidencia de causalidad. Los cambios en la microbiota mucosa se han descrito desde fases tempranas de la enfermedad (Gevers et al. 2014).\nEste proyecto se centra en biopsias digestivas de pacientes con enfermedad de Crohn, con interés específico en el fenotipo fistulizante. La caracterización se basa en la secuenciación de amplicones del gen bacteriano 16S rRNA, un método adecuado para describir comunidades bacterianas de forma reproducible. Sin embargo, la región hipervariable seleccionada y los cebadores empleados pueden modificar la representación taxonómica observada; por ello, su elección debe validarse en el contexto experimental concreto (Klindworth et al. 2013).\nLas biopsias son muestras de baja biomasa microbiana: la cantidad de ADN bacteriano puede ser limitada en relación con el ADN del huésped. Esta condición incrementa la vulnerabilidad a la contaminación procedente de reactivos, materiales y procedimientos de laboratorio, denominada habitualmente kitoma. Los controles negativos de extracción y PCR son, por tanto, indispensables para evaluar una posible señal contaminante antes de atribuir resultados a la microbiota tisular (Salter et al. 2014; Eisenhofer et al. 2019). Los controles positivos complementan esta evaluación al permitir examinar recuperación taxonómica, especificidad y sensibilidad del procedimiento.\nEl análisis actual utiliza exclusivamente la región V3–V4. Esta decisión se sustenta en el ensayo piloto descrito a continuación y se someterá de nuevo a control de calidad, denoising, asignación taxonómica y evaluación de controles antes de cualquier análisis microbiológico o clínico.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contexto y objetivos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción, antecedentes y objetivos</span>"
     ]
   },
   {
-    "objectID": "chapters/01_context.html#muestras-de-baja-biomasa-y-controles",
-    "href": "chapters/01_context.html#muestras-de-baja-biomasa-y-controles",
-    "title": "2  Contexto y objetivos",
-    "section": "2.2 Muestras de baja biomasa y controles",
-    "text": "2.2 Muestras de baja biomasa y controles\nLas biopsias digestivas son muestras de baja biomasa microbiana: la cantidad de ADN bacteriano puede ser pequeña respecto al ADN humano. En esta situación, reactivos, materiales de laboratorio, extracción y PCR pueden introducir señal ajena a la muestra. Esta comunidad asociada a reactivos se denomina habitualmente kitoma.\nPor ello, los controles negativos no son accesorios. Permiten distinguir una señal biológica reproducible de una contaminación técnica y aportan una base para evaluar contaminantes antes de los análisis microbiológicos. Los controles positivos, por su parte, permiten revisar recuperación taxonómica, especificidad y sensibilidad del procedimiento.",
+    "objectID": "chapters/01_context.html#ensayo-piloto",
+    "href": "chapters/01_context.html#ensayo-piloto",
+    "title": "2  Introducción, antecedentes y objetivos",
+    "section": "2.2 Ensayo piloto",
+    "text": "2.2 Ensayo piloto\nEl ensayo piloto se diseñó para optimizar el flujo de trabajo antes de ampliar la cohorte. Incluyó ocho biopsias digestivas, controles positivos de extracción y PCR, y diluciones seriadas de Escherichia coli. Las biopsias se amplificaron por duplicado para las regiones V4 y V3–V4 y se secuenciaron en Illumina NextSeq con lecturas paired-end de 2 × 300 pb.\nEn el análisis preliminar, V3–V4 presentó mayor profundidad de entrada y mayor retención tras filtrado, fusión de pares y eliminación de quimeras que V4. Para las biopsias, el informe del piloto registró aproximadamente un millón de lecturas de entrada por biblioteca V3–V4 frente a 0,38 millones para V4, y unas 0,38 frente a 0,17 millones tras el procesamiento. V3–V4 también mostró mayor diversidad alfa, mejor sensibilidad en las diluciones de E. coli, menor proporción de asignaciones taxonómicas inciertas y mayor concordancia de las comunidades mock con su composición esperada.\nLa composición microbiana observada varió entre regiones, un resultado esperado dado el sesgo introducido por la elección del amplicón. En consecuencia, las comparaciones entre V4 y V3–V4 no se interpretan como equivalencias directas. El piloto aportó la justificación experimental para seleccionar V3–V4 en el ensayo ampliado, pero sus resultados no sustituyen la validación independiente del conjunto actual.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contexto y objetivos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción, antecedentes y objetivos</span>"
     ]
   },
   {
-    "objectID": "chapters/01_context.html#ensayo-previo-y-selección-de-la-región-v3v4",
-    "href": "chapters/01_context.html#ensayo-previo-y-selección-de-la-región-v3v4",
-    "title": "2  Contexto y objetivos",
-    "section": "2.3 Ensayo previo y selección de la región V3–V4",
-    "text": "2.3 Ensayo previo y selección de la región V3–V4\nAntes de la cohorte ampliada se realizó un ensayo previo/piloto para comparar V4 y V3–V4 en ocho biopsias, junto con controles positivos. Las muestras se amplificaron por duplicado para ambas regiones y se secuenciaron en Illumina NextSeq con lecturas paired-end de 2 × 300 pb. El contraste evaluó profundidad, retención tras procesamiento, diversidad y composición observadas, sensibilidad en diluciones seriadas de Escherichia coli y concordancia de los mocks con su composición esperada.\nEl análisis previo indicó que V3–V4 proporcionaba mayor profundidad de entrada y mayor retención tras filtrado, fusión y eliminación de quimeras. En las biopsias, el borrador del piloto informó aproximadamente un millón de lecturas de entrada para V3–V4 frente a 380 mil para V4, y unas 375 mil frente a 170 mil después del procesamiento. V3–V4 mostró además mayor diversidad alfa, mejor sensibilidad en las diluciones de E. coli, menos asignaciones taxonómicas inciertas y una mayor concordancia de las comunidades mock con su composición esperada. La composición observada también varió con la región amplificada, por lo que las comparaciones entre V4 y V3–V4 deben interpretarse con cautela.\nEstos resultados constituyeron la justificación experimental para priorizar V3–V4 en el ensayo ampliado actual. No sustituyen la validación del conjunto actual: esa confirmación depende del QC, DADA2, la taxonomía y los controles procesados homogéneamente.",
+    "objectID": "chapters/01_context.html#objetivos",
+    "href": "chapters/01_context.html#objetivos",
+    "title": "2  Introducción, antecedentes y objetivos",
+    "section": "2.3 Objetivos",
+    "text": "2.3 Objetivos\nEl objetivo general es establecer un conjunto de datos de microbiota tisular de calidad controlada para biopsias digestivas de pacientes con enfermedad de Crohn, preparado para análisis microbiológicos y clínicos posteriores.\nLos objetivos específicos son:\n\nCaracterizar la microbiota bacteriana mediante la región V3–V4 del gen 16S rRNA en una cohorte ampliada de biopsias digestivas.\nImplementar un flujo reproducible desde FASTQ paired-end hasta una tabla de variantes de secuencia de amplicón (ASV) con anotación taxonómica.\nEvaluar la profundidad y calidad de cada biblioteca y establecer criterios de exclusión antes de los análisis estadísticos.\nEvaluar el rendimiento analítico mediante controles positivos y caracterizar la contaminación potencial mediante controles negativos de batch, extracción y PCR.\nCuantificar la reproducibilidad y el posible efecto de ensayo en las ocho biopsias repetidas entre el piloto y el ensayo ampliado.\nGenerar un conjunto microbiológico final que permita integrar, en una etapa posterior, abundancias microbianas y metadatos clínicos armonizados sin duplicar observaciones biológicas.\n\n\n\n\n\n\n\nNotaAlcance de los resultados disponibles\n\n\n\nEste informe no presenta todavía diversidad, composición, taxonomía ni asociaciones clínicas. Estas preguntas requieren completar DADA2, la asignación taxonómica y la evaluación de contaminación antes de incorporarse como resultados.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contexto y objetivos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción, antecedentes y objetivos</span>"
     ]
   },
   {
-    "objectID": "chapters/01_context.html#objetivos-del-análisis",
-    "href": "chapters/01_context.html#objetivos-del-análisis",
-    "title": "2  Contexto y objetivos",
-    "section": "2.4 Objetivos del análisis",
-    "text": "2.4 Objetivos del análisis\n\nCaracterizar mediante 16S V3–V4 la microbiota de una cohorte ampliada de biopsias digestivas.\nMantener un flujo reproducible desde FASTQ paired-end hasta una tabla de variantes de secuencia de amplicón (ASV) y su anotación taxonómica.\nEvaluar profundidad y calidad por biblioteca, definiendo criterios de exclusión antes del análisis estadístico.\nUsar controles positivos para evaluar recuperación taxonómica, especificidad y límite de detección.\nCaracterizar el kitoma con controles negativos de batch, extracción y PCR antes del análisis biológico.\nEvaluar concordancia y posible efecto de ensayo en las ocho biopsias repetidas, incluyendo un posible efecto de carrera o batch.\nIntegrar posteriormente abundancias microbianas y metadatos clínicos armonizados, sin duplicar observaciones biológicas.\n\n\n\n\n\n\n\nNotaAlcance de los resultados disponibles\n\n\n\nEste informe no presenta aún diversidad, composición, taxonomía ni asociaciones clínicas. Esas preguntas requieren denoising, asignación taxonómica y evaluación de contaminación, etapas que todavía no se han incorporado como resultados.",
+    "objectID": "chapters/01_context.html#referencias",
+    "href": "chapters/01_context.html#referencias",
+    "title": "2  Introducción, antecedentes y objetivos",
+    "section": "Referencias",
+    "text": "Referencias\n\n\nCallahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W.\nHan, Amy Jo A. Johnson, and Susan P. Holmes. 2016. “DADA2:\nHigh-Resolution Sample Inference from Illumina Amplicon Data.”\nNature Methods 13 (7): 581–83. https://doi.org/10.1038/nmeth.3869.\n\n\nDavis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman,\nand Benjamin J. Callahan. 2018. “Simple Statistical Identification\nand Removal of Contaminant Sequences in Marker-Gene and Metagenomics\nData.” Microbiome 6 (1): 226. https://doi.org/10.1186/s40168-018-0605-2.\n\n\nEisenhofer, Raphael, Jeremy J. Minich, Clarisse Marotz, Aaron Cooper,\nRob Knight, and Laura S. Weyrich. 2019. “Contamination in Low\nMicrobial Biomass Microbiome Studies: Issues and\nRecommendations.” Trends in Microbiology 27 (2): 105–17.\nhttps://doi.org/10.1016/j.tim.2018.11.003.\n\n\nEwels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016.\n“MultiQC: Summarize Analysis Results for Multiple Tools and\nSamples in a Single Report.” Bioinformatics 32 (19):\n3047–48. https://doi.org/10.1093/bioinformatics/btw354.\n\n\nGevers, Dirk, Subra Kugathasan, Lee A. Denson, Yoshiki Vázquez-Baeza,\nWill Van Treuren, Bing Ren, et al. 2014. “The Treatment-Naive\nMicrobiome in New-Onset Crohn’s Disease.” Cell Host &\nMicrobe 15 (3): 382–92. https://doi.org/10.1016/j.chom.2014.02.005.\n\n\nKlindworth, Anna, Elmar Pruesse, Tim Schweer, Jörg Peplies, Christian\nQuast, Matthias Horn, and Frank Oliver Glöckner. 2013. “Evaluation\nof General 16S Ribosomal RNA Gene PCR Primers for Classical and\nNext-Generation Sequencing-Based Diversity Studies.” Nucleic\nAcids Research 41 (1): e1. https://doi.org/10.1093/nar/gks808.\n\n\nMartin, Marcel. 2011. “Cutadapt Removes Adapter Sequences from\nHigh-Throughput Sequencing Reads.” EMBnet.journal 17\n(1): 10–12. https://doi.org/10.14806/ej.17.1.200.\n\n\nQuast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer,\nPablo Yarza, Jörg Peplies, and Frank Oliver Glöckner. 2013. “The\nSILVA Ribosomal RNA Gene Database Project: Improved Data Processing and\nWeb-Based Tools.” Nucleic Acids Research 41 (D1):\nD590–96. https://doi.org/10.1093/nar/gks1219.\n\n\nSalter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus,\nWilliam O. Cookson, Miriam F. Moffatt, et al. 2014. “Reagent and\nLaboratory Contamination Can Critically Impact Sequence-Based Microbiome\nAnalyses.” Genome Biology 15 (12): 564. https://doi.org/10.1186/s13059-014-0541-7.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contexto y objetivos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción, antecedentes y objetivos</span>"
     ]
   },
   {
@@ -84,7 +84,7 @@
     "href": "chapters/02_design_samples.html",
     "title": "3  Diseño experimental y muestras",
     "section": "",
-    "text": "3.1 Región amplificada y configuración de secuenciación\nEl ensayo ampliado actual se centra exclusivamente en la región V3–V4 del gen bacteriano 16S rRNA. La combinación del tamaño esperado del amplicón y las lecturas paired-end debe proporcionar solapamiento suficiente para fusionar R1 y R2; los parámetros finales de calidad y fusión se validarán con los perfiles reales de las lecturas.",
+    "text": "3.1 Región amplificada y configuración de secuenciación\nEl ensayo ampliado actual se centra exclusivamente en la región V3–V4 del gen bacteriano 16S rRNA. La combinación del tamaño esperado del amplicón y las lecturas paired-end debe proporcionar solapamiento suficiente para fusionar R1 y R2; los parámetros finales de calidad y fusión se validarán con los perfiles reales de las lecturas.\nLa configuración de la región amplificada y de la secuenciación se resume en la Tabla 3.1.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño experimental y muestras</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "chapters/02_design_samples.html#región-amplificada-y-configuración-de-secuenciación",
     "title": "3  Diseño experimental y muestras",
     "section": "",
-    "text": "Característica\nDescripción\n\n\n\n\nDiana\nGen bacteriano 16S rRNA, región V3–V4\n\n\nCebador forward\n341F (CCTACGGGNGGCWGCAG)\n\n\nCebador reverse\n805R (GACTACHVGGGTATCTAATCC)\n\n\nTamaño esperado del amplicón\nAproximadamente 464 pb\n\n\nAdaptadores\nOverhangs compatibles con indexación Illumina\n\n\nPreparación de librerías\nÍndices Nextera XT, con protocolo modificado\n\n\nPlataforma descrita\nIllumina NextSeq, celda P1\n\n\nConfiguración\nPaired-end 2 × 300 pb, 600 ciclos\n\n\nPCR\n35 ciclos; anillamiento a 53 °C según el borrador experimental",
+    "text": "Tabla 3.1: Configuración de la amplificación y secuenciación de la región 16S V3–V4.\n\n\n\n\n\n\n\n\n\nCaracterística\nDescripción\n\n\n\n\nDiana\nGen bacteriano 16S rRNA, región V3–V4\n\n\nCebador forward\n341F (CCTACGGGNGGCWGCAG)\n\n\nCebador reverse\n805R (GACTACHVGGGTATCTAATCC)\n\n\nTamaño esperado del amplicón\nAproximadamente 464 pb\n\n\nAdaptadores\nOverhangs compatibles con indexación Illumina\n\n\nPreparación de librerías\nÍndices Nextera XT, con protocolo modificado\n\n\nPlataforma descrita\nIllumina NextSeq, celda P1\n\n\nConfiguración\nPaired-end 2 × 300 pb, 600 ciclos\n\n\nPCR\n35 ciclos; anillamiento a 53 °C según el borrador experimental",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño experimental y muestras</span>"
     ]
@@ -104,7 +104,7 @@
     "href": "chapters/02_design_samples.html#cohorte-técnica-y-unidad-de-análisis",
     "title": "3  Diseño experimental y muestras",
     "section": "3.2 Cohorte técnica y unidad de análisis",
-    "text": "3.2 Cohorte técnica y unidad de análisis\nLa unidad de análisis de la secuenciación es una biblioteca paired-end: un archivo R1 y un archivo R2 complementarios procedentes de la misma molécula de amplicón. Por ello, 198 bibliotecas equivalen a 198 pares R1/R2 y 396 FASTQ, pero no a 396 observaciones independientes.\nEl conjunto contiene 130 códigos de biopsia únicos y 138 registros de biopsia al contar las ocho repeticiones del piloto. Las repeticiones no incrementan el tamaño de la cohorte clínica principal; son observaciones técnicas para estudiar reproducibilidad y efecto de ensayo.\n\n\n\n\n\n\n\n\n\n\nEnsayo\nTipo de registro\nSubtipo\nBibliotecas paired-end\nFASTQ\n\n\n\n\nAmpliado actual\nBiopsia\nBiopsia digestiva\n130\n260\n\n\nPiloto\nBiopsia repetida\nCódigos 01-049 a 01-056\n8\n16\n\n\nPiloto\nControl positivo\nMock de extracción\n8\n16\n\n\nPiloto\nControl positivo\nMock de PCR\n6\n12\n\n\nPiloto\nControl positivo\nDiluciones de Escherichia coli\n24\n48\n\n\nAmpliado actual\nControl negativo\nBatch\n2\n4\n\n\nAmpliado actual\nControl negativo\nExtracción\n10\n20\n\n\nAmpliado actual\nControl negativo\nPCR\n10\n20\n\n\nTotal\n\n\n198\n396",
+    "text": "3.2 Cohorte técnica y unidad de análisis\nLa unidad de análisis de la secuenciación es una biblioteca paired-end: un archivo R1 y un archivo R2 complementarios procedentes de la misma molécula de amplicón. Por ello, 198 bibliotecas equivalen a 198 pares R1/R2 y 396 FASTQ, pero no a 396 observaciones independientes.\nEl conjunto contiene 130 códigos de biopsia únicos y 138 registros de biopsia al contar las ocho repeticiones del piloto. Las repeticiones no incrementan el tamaño de la cohorte clínica principal; son observaciones técnicas para estudiar reproducibilidad y efecto de ensayo.\nLa composición técnica de las bibliotecas se detalla en la Tabla 3.2.\n\n\n\nTabla 3.2: Composición técnica de las bibliotecas paired-end y archivos FASTQ incluidos.\n\n\n\n\n\n\n\n\n\n\n\n\nEnsayo\nTipo de registro\nSubtipo\nBibliotecas paired-end\nFASTQ\n\n\n\n\nAmpliado actual\nBiopsia\nBiopsia digestiva\n130\n260\n\n\nPiloto\nBiopsia repetida\nCódigos 01-049 a 01-056\n8\n16\n\n\nPiloto\nControl positivo\nMock de extracción\n8\n16\n\n\nPiloto\nControl positivo\nMock de PCR\n6\n12\n\n\nPiloto\nControl positivo\nDiluciones de Escherichia coli\n24\n48\n\n\nAmpliado actual\nControl negativo\nBatch\n2\n4\n\n\nAmpliado actual\nControl negativo\nExtracción\n10\n20\n\n\nAmpliado actual\nControl negativo\nPCR\n10\n20\n\n\nTotal\n\n\n198\n396",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño experimental y muestras</span>"
     ]
@@ -144,7 +144,7 @@
     "href": "chapters/03_workflow.html",
     "title": "4  Flujo bioinformático",
     "section": "",
-    "text": "4.1 Estrategia de procesamiento\nLos FASTQ crudos se consideran entradas inmutables. El procesamiento se separa por ensayo hasta el denoising para evitar que perfiles de error distintos se mezclen al aprender el modelo de DADA2. Después, las ASV no quiméricas se integrarán por secuencia exacta y se conservará el identificador de ensayo para cuantificar el efecto técnico.",
+    "text": "4.1 Estrategia de procesamiento\nLos FASTQ crudos se consideran entradas inmutables. El procesamiento se separa por ensayo hasta el denoising para evitar que perfiles de error distintos se mezclen al aprender el modelo de DADA2. Después, las ASV no quiméricas se integrarán por secuencia exacta y se conservará el identificador de ensayo para cuantificar el efecto técnico.\nLas etapas, herramientas y productos previstos se resumen en la Tabla 4.1.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
     ]
@@ -154,7 +154,7 @@
     "href": "chapters/03_workflow.html#estrategia-de-procesamiento",
     "title": "4  Flujo bioinformático",
     "section": "",
-    "text": "Bloque\nHerramienta\nPropósito\nEstado y salida principal\n\n\n\n\nAuditoría de entradas\nscripts de validación\nComprobar pares R1/R2 y metadatos\nCompletado; inventario de bibliotecas\n\n\nQC\nFastQC y MultiQC\nRevisar calidad, longitud y contenido de adaptadores\nCompletado; informes antes y después del recorte\n\n\nRecorte de primers\nCutadapt\nEliminar los extremos de primer validados\nCompletado; FASTQ recortados y métricas JSON\n\n\nDenoising\nDADA2\nFiltrado, modelo de error, ASV, fusión y quimeras\nPendiente; tabla de seguimiento y ASV\n\n\nTaxonomía\nDADA2 + SILVA 138.2\nAsignar taxonomía a ASV\nPendiente; tabla taxonómica\n\n\nControles\ndecontam\nEvaluar contaminantes y sensibilidad\nPendiente; tablas cruda, candidata y filtrada\n\n\nDownstream\nR/phyloseq u herramientas equivalentes\nDiversidad, composición, reproducibilidad y clínica\nPendiente; tablas y figuras agregadas",
+    "text": "Tabla 4.1: Etapas del flujo bioinformático, herramientas y productos principales.\n\n\n\n\n\n\n\n\n\n\n\nBloque\nHerramienta\nPropósito\nEstado y salida principal\n\n\n\n\nAuditoría de entradas\nscripts de validación\nComprobar pares R1/R2 y metadatos\nCompletado; inventario de bibliotecas\n\n\nQC\nFastQC y MultiQC\nRevisar calidad, longitud y contenido de adaptadores\nCompletado; informes antes y después del recorte\n\n\nRecorte de primers\nCutadapt\nEliminar los extremos de primer validados\nCompletado; FASTQ recortados y métricas JSON\n\n\nDenoising\nDADA2\nFiltrado, modelo de error, ASV, fusión y quimeras\nPendiente; tabla de seguimiento y ASV\n\n\nTaxonomía\nDADA2 + SILVA 138.2\nAsignar taxonomía a ASV\nPendiente; tabla taxonómica\n\n\nControles\ndecontam\nEvaluar contaminantes y sensibilidad\nPendiente; tablas cruda, candidata y filtrada\n\n\nDownstream\nR/phyloseq u herramientas equivalentes\nDiversidad, composición, reproducibilidad y clínica\nPendiente; tablas y figuras agregadas",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
     ]
@@ -194,7 +194,17 @@
     "href": "chapters/03_workflow.html#taxonomía-y-controles",
     "title": "4  Flujo bioinformático",
     "section": "4.5 Taxonomía y controles",
-    "text": "4.5 Taxonomía y controles\nLa taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y minBoot = 50; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad (Davis et al. 2018; Quast et al. 2013). Los resultados aún no han sido ejecutados y no se presentan como conclusiones.\n\n\n\n\nCallahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. «DADA2: High-resolution sample inference from Illumina amplicon data». Nature Methods 13 (7): 581-83. https://doi.org/10.1038/nmeth.3869.\n\n\nDavis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. «Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data». Microbiome 6 (1): 226. https://doi.org/10.1186/s40168-018-0605-2.\n\n\nMartin, Marcel. 2011. «Cutadapt removes adapter sequences from high-throughput sequencing reads». EMBnet.journal 17 (1): 10-12. https://doi.org/10.14806/ej.17.1.200.\n\n\nQuast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, y Frank Oliver Glöckner. 2013. «The SILVA ribosomal RNA gene database project: improved data processing and web-based tools». Nucleic Acids Research 41 (D1): D590-96. https://doi.org/10.1093/nar/gks1219.",
+    "text": "4.5 Taxonomía y controles\nLa taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y minBoot = 50; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad (Davis et al. 2018; Quast et al. 2013). Los resultados aún no han sido ejecutados y no se presentan como conclusiones.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_workflow.html#referencias",
+    "href": "chapters/03_workflow.html#referencias",
+    "title": "4  Flujo bioinformático",
+    "section": "Referencias",
+    "text": "Referencias\n\n\nCallahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. «DADA2: High-resolution sample inference from Illumina amplicon data». Nature Methods 13 (7): 581-83. https://doi.org/10.1038/nmeth.3869.\n\n\nDavis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. «Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data». Microbiome 6 (1): 226. https://doi.org/10.1186/s40168-018-0605-2.\n\n\nMartin, Marcel. 2011. «Cutadapt removes adapter sequences from high-throughput sequencing reads». EMBnet.journal 17 (1): 10-12. https://doi.org/10.14806/ej.17.1.200.\n\n\nQuast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, y Frank Oliver Glöckner. 2013. «The SILVA ribosomal RNA gene database project: improved data processing and web-based tools». Nucleic Acids Research 41 (D1): D590-96. https://doi.org/10.1093/nar/gks1219.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
     ]
@@ -204,7 +214,7 @@
     "href": "chapters/04_qc_preprocessing.html",
     "title": "5  QC y preprocesamiento",
     "section": "",
-    "text": "5.1 Auditoría de bibliotecas y pares FASTQ\nSe validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en cada biblioteca.\nLas profundidades agregadas por tipo de biblioteca están disponibles en las tablas de FASTQ crudos y FASTQ recortados.",
+    "text": "5.1 Auditoría de bibliotecas y pares FASTQ\nSe validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en cada biblioteca.\nEl resumen de bibliotecas y pares de lecturas se presenta en la Tabla 5.1.\nLas profundidades agregadas por tipo de biblioteca están disponibles en las tablas de FASTQ crudos y FASTQ recortados.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
     ]
@@ -214,7 +224,7 @@
     "href": "chapters/04_qc_preprocessing.html#auditoría-de-bibliotecas-y-pares-fastq",
     "title": "5  QC y preprocesamiento",
     "section": "",
-    "text": "Ensayo\nBibliotecas\nPares de lecturas crudos\nPares tras recorte\nRetención de pares\n\n\n\n\nPiloto\n46\n30,06 millones\n30,06 millones\n100,00 %\n\n\nAmpliado actual\n152\n29,91 millones\n29,91 millones\n100,00 %\n\n\nTotal\n198\n59,97 millones\n59,97 millones\n100,00 %",
+    "text": "Tabla 5.1: Bibliotecas y pares de lecturas antes y después del recorte de primers.\n\n\n\n\n\n\n\n\n\n\n\n\nEnsayo\nBibliotecas\nPares de lecturas crudos\nPares tras recorte\nRetención de pares\n\n\n\n\nPiloto\n46\n30,06 millones\n30,06 millones\n100,00 %\n\n\nAmpliado actual\n152\n29,91 millones\n29,91 millones\n100,00 %\n\n\nTotal\n198\n59,97 millones\n59,97 millones\n100,00 %",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
     ]
@@ -234,7 +244,7 @@
     "href": "chapters/04_qc_preprocessing.html#recorte-y-verificación-de-primers",
     "title": "5  QC y preprocesamiento",
     "section": "5.3 Recorte y verificación de primers",
-    "text": "5.3 Recorte y verificación de primers\nEl diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de lecturas. La señal residual compatible con primer fue como máximo 0,10 % por biblioteca y fue nula en R2 en la comprobación agregada.\n\n\n\n\n\n\n\n\n\n\nEnsayo\nPares de entrada\nPares de salida\nBases retenidas\nMáximo residual por biblioteca\n\n\n\n\nPiloto\n30,06 millones\n30,06 millones\n92,48 %\n0,10 %\n\n\nAmpliado actual\n29,91 millones\n29,91 millones\n93,36 %\n0,10 %\n\n\n\nLas métricas reproducibles se encuentran en retención por ensayo y verificación de primers.",
+    "text": "5.3 Recorte y verificación de primers\nEl diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de lecturas. La señal residual compatible con primer fue como máximo 0,10 % por biblioteca y fue nula en R2 en la comprobación agregada.\nLa retención de lecturas y el residual de primer se detallan en la Tabla 5.2.\n\n\n\nTabla 5.2: Retención de pares y verificación de primers tras el recorte.\n\n\n\n\n\n\n\n\n\n\n\n\nEnsayo\nPares de entrada\nPares de salida\nBases retenidas\nMáximo residual por biblioteca\n\n\n\n\nPiloto\n30,06 millones\n30,06 millones\n92,48 %\n0,10 %\n\n\nAmpliado actual\n29,91 millones\n29,91 millones\n93,36 %\n0,10 %\n\n\n\n\n\n\nLas métricas reproducibles se encuentran en retención por ensayo y verificación de primers.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
     ]
@@ -244,7 +254,17 @@
     "href": "chapters/04_qc_preprocessing.html#profundidad-de-secuenciación-de-las-biopsias-repetidas",
     "title": "5  QC y preprocesamiento",
     "section": "5.4 Profundidad de secuenciación de las biopsias repetidas",
-    "text": "5.4 Profundidad de secuenciación de las biopsias repetidas\nLa comparación pareada utiliza las ocho biopsias presentes en el piloto y el ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de filtrado, fusión de pares o eliminación de quimeras. En todas ellas, la profundidad de entrada fue mayor en el piloto; la media geométrica del cociente piloto/ampliado fue 7,69 y la mediana 7,51. No se aplicó una prueba de hipótesis.\n\n\n\n\n\n\n\n\nMétrica (8 biopsias emparejadas)\nPiloto\nAmpliado actual\n\n\n\n\nPares totales\n11,82 millones\n1,55 millones\n\n\nMedia por biopsia, DE\n1,48 (0,26) millones\n0,19 (0,04) millones\n\n\nMediana por biopsia [RIC]\n1,48 [1,44–1,58] millones\n0,20 [0,16–0,22] millones\n\n\nRango por biopsia\n0,94–1,84 millones\n0,14–0,26 millones\n\n\n\nLa figura muestra pares de lecturas en escala logarítmica. Cada línea une la misma biopsia entre ambos ensayos; el eje vertical está expresado en millones de pares, no en lecturas individuales.\n\n\n\nComparación pareada de profundidad de las ocho biopsias repetidas; cada línea representa una biopsia y el eje vertical usa escala logarítmica.\n\n\nLos valores técnicos individuales y el resumen se ofrecen en la tabla por biopsia y en el resumen descriptivo.\n\n\n\n\n\n\nPrecauciónCriterios de exclusión\n\n\n\nDos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y el umbral de profundidad definido para el análisis final.\n\n\n\n\n\n\nEwels, Philip, Måns Magnusson, Sverker Lundin, y Max Käller. 2016. «MultiQC: Summarize analysis results for multiple tools and samples in a single report». Bioinformatics 32 (19): 3047-48. https://doi.org/10.1093/bioinformatics/btw354.",
+    "text": "5.4 Profundidad de secuenciación de las biopsias repetidas\nLa comparación pareada utiliza las ocho biopsias presentes en el piloto y el ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de filtrado, fusión de pares o eliminación de quimeras. En todas ellas, la profundidad de entrada fue mayor en el piloto; la media geométrica del cociente piloto/ampliado fue 7,69 y la mediana 7,51. No se aplicó una prueba de hipótesis.\nEl resumen descriptivo de esta comparación se presenta en la Tabla 5.3.\n\n\n\nTabla 5.3: Profundidad de los pares de lecturas crudos en las biopsias repetidas.\n\n\n\n\n\n\n\n\n\n\nMétrica (8 biopsias emparejadas)\nPiloto\nAmpliado actual\n\n\n\n\nPares totales\n11,82 millones\n1,55 millones\n\n\nMedia por biopsia, DE\n1,48 (0,26) millones\n0,19 (0,04) millones\n\n\nMediana por biopsia [RIC]\n1,48 [1,44–1,58] millones\n0,20 [0,16–0,22] millones\n\n\nRango por biopsia\n0,94–1,84 millones\n0,14–0,26 millones\n\n\n\n\n\n\nLa Figura 5.1 muestra pares de lecturas en escala logarítmica. Cada línea une la misma biopsia entre ambos ensayos; el eje vertical está expresado en millones de pares, no en lecturas individuales.\n\n\n\n\n\n\nFigura 5.1: Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas.\n\n\n\nLos valores técnicos individuales y el resumen se ofrecen en la tabla por biopsia y en el resumen descriptivo.\n\n\n\n\n\n\nPrecauciónCriterios de exclusión\n\n\n\nDos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y el umbral de profundidad definido para el análisis final.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_qc_preprocessing.html#referencias",
+    "href": "chapters/04_qc_preprocessing.html#referencias",
+    "title": "5  QC y preprocesamiento",
+    "section": "Referencias",
+    "text": "Referencias\n\n\nEwels, Philip, Måns Magnusson, Sverker Lundin, y Max Käller. 2016. «MultiQC: Summarize analysis results for multiple tools and samples in a single report». Bioinformatics 32 (19): 3047-48. https://doi.org/10.1093/bioinformatics/btw354.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
     ]
@@ -274,7 +294,17 @@
     "href": "chapters/05_dada2_asv.html#productos-de-salida",
     "title": "6  DADA2 e inferencia de ASV",
     "section": "6.3 Productos de salida",
-    "text": "6.3 Productos de salida\nCuando la etapa esté completada, este capítulo mostrará:\n\nseguimiento de lecturas por biblioteca y por ensayo;\nnúmero de ASV antes y después de quimeras;\ndistribución de longitudes de los amplicones fusionados;\ncriterios documentados para el umbral mínimo de profundidad; y\ntabla de ASV integrada por secuencia exacta, con procedencia de ensayo.\n\n\n\n\n\nCallahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. «DADA2: High-resolution sample inference from Illumina amplicon data». Nature Methods 13 (7): 581-83. https://doi.org/10.1038/nmeth.3869.",
+    "text": "6.3 Productos de salida\nCuando la etapa esté completada, este capítulo mostrará:\n\nseguimiento de lecturas por biblioteca y por ensayo;\nnúmero de ASV antes y después de quimeras;\ndistribución de longitudes de los amplicones fusionados;\ncriterios documentados para el umbral mínimo de profundidad; y\ntabla de ASV integrada por secuencia exacta, con procedencia de ensayo.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>DADA2 e inferencia de ASV</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_dada2_asv.html#referencias",
+    "href": "chapters/05_dada2_asv.html#referencias",
+    "title": "6  DADA2 e inferencia de ASV",
+    "section": "Referencias",
+    "text": "Referencias\n\n\nCallahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. «DADA2: High-resolution sample inference from Illumina amplicon data». Nature Methods 13 (7): 581-83. https://doi.org/10.1038/nmeth.3869.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>DADA2 e inferencia de ASV</span>"
     ]
@@ -324,7 +354,17 @@
     "href": "chapters/06_taxonomy_controls.html#productos-de-salida",
     "title": "7  Taxonomía, controles y decontaminación",
     "section": "7.4 Productos de salida",
-    "text": "7.4 Productos de salida\nSe incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de los controles positivos, la lista de candidatas a contaminante, los criterios aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos no se inferirán a partir de los controles.\n\n\n\n\nDavis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. «Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data». Microbiome 6 (1): 226. https://doi.org/10.1186/s40168-018-0605-2.",
+    "text": "7.4 Productos de salida\nSe incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de los controles positivos, la lista de candidatas a contaminante, los criterios aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos no se inferirán a partir de los controles.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Taxonomía, controles y decontaminación</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_taxonomy_controls.html#referencias",
+    "href": "chapters/06_taxonomy_controls.html#referencias",
+    "title": "7  Taxonomía, controles y decontaminación",
+    "section": "Referencias",
+    "text": "Referencias\n\n\nDavis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. «Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data». Microbiome 6 (1): 226. https://doi.org/10.1186/s40168-018-0605-2.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Taxonomía, controles y decontaminación</span>"
     ]

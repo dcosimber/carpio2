@@ -10,6 +10,10 @@ lecturas paired-end debe proporcionar solapamiento suficiente para fusionar R1
 y R2; los parámetros finales de calidad y fusión se validarán con los perfiles
 reales de las lecturas.
 
+La configuración de la región amplificada y de la secuenciación se resume en la
+@tbl-sequencing-configuration.
+
+::: {#tbl-sequencing-configuration}
 | Característica | Descripción |
 |---|---|
 | Diana | Gen bacteriano 16S rRNA, región V3–V4 |
@@ -21,6 +25,9 @@ reales de las lecturas.
 | Plataforma descrita | Illumina NextSeq, celda P1 |
 | Configuración | Paired-end 2 × 300 pb, 600 ciclos |
 | PCR | 35 ciclos; anillamiento a 53 °C según el borrador experimental |
+
+: Configuración de la amplificación y secuenciación de la región 16S V3–V4.
+:::
 
 ## Cohorte técnica y unidad de análisis
 
@@ -34,6 +41,10 @@ al contar las ocho repeticiones del piloto. Las repeticiones no incrementan el
 tamaño de la cohorte clínica principal; son observaciones técnicas para estudiar
 reproducibilidad y efecto de ensayo.
 
+La composición técnica de las bibliotecas se detalla en la
+@tbl-library-composition.
+
+::: {#tbl-library-composition}
 | Ensayo | Tipo de registro | Subtipo | Bibliotecas paired-end | FASTQ |
 |---|---|---|---:|---:|
 | Ampliado actual | Biopsia | Biopsia digestiva | 130 | 260 |
@@ -45,6 +56,9 @@ reproducibilidad y efecto de ensayo.
 | Ampliado actual | Control negativo | Extracción | 10 | 20 |
 | Ampliado actual | Control negativo | PCR | 10 | 20 |
 | **Total** |  |  | **198** | **396** |
+
+: Composición técnica de las bibliotecas paired-end y archivos FASTQ incluidos.
+:::
 
 ## Controles experimentales
 

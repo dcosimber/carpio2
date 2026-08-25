@@ -62,3 +62,8 @@ Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles d
 los controles positivos, la lista de candidatas a contaminante, los criterios
 aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos
 no se inferirán a partir de los controles.
+
+## Referencias {.unnumbered}
+
+::: {#refs}
+:::

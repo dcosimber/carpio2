@@ -1,7 +1,6 @@
 /* Estilo editorial del libro Quarto. No se usa logotipo en este proyecto. */
 :root {
-  --carpio-ink: #17324d;
-  --carpio-blue: #1f6f8b;
+  --carpio-blue: #0d6efd;
   --carpio-teal: #2b7a78;
   --carpio-sand: #f6f8fa;
   --carpio-line: #dbe4ea;
@@ -17,9 +16,12 @@ body {
 }
 
 h1, h2, h3, h4 {
-  color: var(--carpio-ink);
+  color: inherit;
   font-weight: 650;
   letter-spacing: -0.015em;
+  line-height: 1.22;
+  margin-bottom: 0.48em;
+  margin-top: 1.35em;
 }
 
 h1.title {
@@ -28,13 +30,25 @@ h1.title {
 }
 
 h2 {
-  border-bottom: 1px solid var(--carpio-line);
-  margin-top: 2.7rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 0.35rem;
 }
 
-p, li {
+#quarto-document-content p,
+#quarto-document-content li {
+  hyphens: auto;
   line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#quarto-document-content table p,
+#quarto-document-content table li,
+#quarto-document-content .sample-inventory caption,
+#quarto-document-content .sample-pagination-status,
+#quarto-document-content .source-note {
+  hyphens: manual;
+  text-align: left;
 }
 
 a {
@@ -46,7 +60,7 @@ a {
 }
 
 #quarto-sidebar .sidebar-title {
-  color: var(--carpio-ink);
+  color: inherit;
   font-size: 1.12rem;
   font-weight: 700;
   line-height: 1.25;
@@ -75,21 +89,35 @@ a {
 
 table {
   border-collapse: collapse;
-  font-size: 0.93rem;
-  margin: 1.25rem 0 1.75rem;
-  width: 100%;
+  font-size: 0.88em;
+  margin: 1.25rem auto 1.75rem;
+  max-width: 100%;
+  width: auto;
 }
 
 table th {
-  background: var(--carpio-sand);
-  color: var(--carpio-ink);
-  font-weight: 650;
+  background-color: #d8dee6 !important;
+  border-bottom: 1px solid #aeb7c2;
+  box-shadow: inset 0 0 0 9999px #d8dee6;
+  color: #1f2933;
+  font-weight: 600;
+  text-align: center;
+  --bs-table-bg: #d8dee6;
+  --bs-table-color: #1f2933;
 }
 
 table th, table td {
   border-color: var(--carpio-line) !important;
-  padding: 0.55rem 0.65rem;
-  vertical-align: top;
+  padding: 0.48em 0.65em;
+  vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.018);
+}
+
+tbody tr:hover {
+  background: rgba(0, 0, 0, 0.045);
 }
 
 pre.sourceCode {
@@ -103,7 +131,7 @@ code {
 }
 
 .quarto-figure figure {
-  margin: 1.75rem auto;
+  margin: 1rem auto 1.2rem;
 }
 
 .quarto-figure img {
@@ -113,9 +141,12 @@ code {
 }
 
 .figure-caption, figcaption {
-  color: #52616b;
-  font-size: 0.92rem;
-  margin-top: 0.55rem;
+  color: #5f6b7a;
+  font-size: 0.86em;
+  hyphens: auto;
+  margin-top: 0.45em;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .source-note {
@@ -141,6 +172,7 @@ code {
 .sample-inventory {
   margin: 0;
   min-width: 105rem;
+  width: 100%;
 }
 
 .sample-inventory caption {
@@ -210,6 +242,12 @@ code {
   padding: 0 0.1rem;
 }
 
+#refs .csl-entry {
+  margin-bottom: 1em !important;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 @media (max-width: 991.98px) {
   #quarto-document-content {
     max-width: none;
@@ -228,16 +266,43 @@ code {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --carpio-ink: #dcebf5;
-    --carpio-blue: #75c7e5;
-    --carpio-teal: #76d6c9;
-    --carpio-sand: #263847;
-    --carpio-line: #3b4f5f;
-  }
+.quarto-dark {
+  --carpio-blue: #b9d5ff;
+  --carpio-teal: #76d6c9;
+  --carpio-sand: #263847;
+  --carpio-line: #3b4f5f;
+}
 
-  .quarto-figure img {
-    background: #fff;
-  }
+.quarto-dark h2 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.quarto-dark table th {
+  background-color: #334155 !important;
+  border-bottom-color: #64748b;
+  box-shadow: inset 0 0 0 9999px #334155;
+  color: #f1f5f9;
+  --bs-table-bg: #334155;
+  --bs-table-color: #f1f5f9;
+}
+
+.quarto-dark tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.quarto-dark tbody tr:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.quarto-dark .figure-caption,
+.quarto-dark figcaption {
+  color: #c7d0d9;
+}
+
+.quarto-dark code {
+  color: inherit;
+}
+
+.quarto-dark .quarto-figure img {
+  background: #fff;
 }

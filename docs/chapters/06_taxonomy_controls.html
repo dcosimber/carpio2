@@ -344,7 +344,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/01_context.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Contexto y objetivos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -438,6 +438,7 @@ div.csl-indent {
   <li><a href="#controles-positivos" id="toc-controles-positivos" class="nav-link" data-scroll-target="#controles-positivos"><span class="header-section-number">7.2</span> Controles positivos</a></li>
   <li><a href="#controles-negativos-y-decontaminación" id="toc-controles-negativos-y-decontaminación" class="nav-link" data-scroll-target="#controles-negativos-y-decontaminación"><span class="header-section-number">7.3</span> Controles negativos y decontaminación</a></li>
   <li><a href="#productos-de-salida" id="toc-productos-de-salida" class="nav-link" data-scroll-target="#productos-de-salida"><span class="header-section-number">7.4</span> Productos de salida</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/06_taxonomy_controls.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -492,7 +493,7 @@ div.csl-indent {
 </section>
 <section id="controles-negativos-y-decontaminación" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="controles-negativos-y-decontaminación"><span class="header-section-number">7.3</span> Controles negativos y decontaminación</h2>
-<p>Los controles negativos de batch, extracción y PCR fundamentarán el análisis principal de prevalencia de contaminantes. Cuando haya una variable de concentración de ADN apropiada y validada, se añadirá un análisis de frecuencia como sensibilidad <span class="citation" data-cites="Davis2018">(<a href="#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>)</span>. El comando genérico de prevalencia es:</p>
+<p>Los controles negativos de batch, extracción y PCR fundamentarán el análisis principal de prevalencia de contaminantes. Cuando haya una variable de concentración de ADN apropiada y validada, se añadirá un análisis de frecuencia como sensibilidad <span class="citation" data-cites="Davis2018">(<a href="01_context.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>)</span>. El comando genérico de prevalencia es:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>contaminants <span class="ot">&lt;-</span> <span class="fu">isContaminant</span>(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">physeq =</span> <span class="sc">&lt;</span>objeto_con_asv_y_metadatos<span class="sc">&gt;</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">"prevalence"</span>, <span class="at">neg =</span> <span class="st">"is_negative_control"</span>,</span>
@@ -503,13 +504,16 @@ div.csl-indent {
 <section id="productos-de-salida" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="productos-de-salida"><span class="header-section-number">7.4</span> Productos de salida</h2>
 <p>Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de los controles positivos, la lista de candidatas a contaminante, los criterios aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos no se inferirán a partir de los controles.</p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+</section>
+<section id="referencias" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="referencias">Referencias</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Davis2018" class="csl-entry" role="listitem">
 Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. <span>«Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data»</span>. <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
 </div>
 </div>
+
+
 </section>
 
 </main> <!-- /main -->

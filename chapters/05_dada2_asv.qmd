@@ -59,3 +59,8 @@ Cuando la etapa esté completada, este capítulo mostrará:
 3. distribución de longitudes de los amplicones fusionados;
 4. criterios documentados para el umbral mínimo de profundidad; y
 5. tabla de ASV integrada por secuencia exacta, con procedencia de ensayo.
+
+## Referencias {.unnumbered}
+
+::: {#refs}
+:::

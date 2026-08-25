@@ -10,6 +10,10 @@ mezclen al aprender el modelo de DADA2. Después, las ASV no quiméricas se
 integrarán por secuencia exacta y se conservará el identificador de ensayo para
 cuantificar el efecto técnico.
 
+Las etapas, herramientas y productos previstos se resumen en la
+@tbl-workflow-stages.
+
+::: {#tbl-workflow-stages}
 | Bloque | Herramienta | Propósito | Estado y salida principal |
 |---|---|---|---|
 | Auditoría de entradas | scripts de validación | Comprobar pares R1/R2 y metadatos | Completado; inventario de bibliotecas |
@@ -19,6 +23,9 @@ cuantificar el efecto técnico.
 | Taxonomía | DADA2 + SILVA 138.2 | Asignar taxonomía a ASV | Pendiente; tabla taxonómica |
 | Controles | decontam | Evaluar contaminantes y sensibilidad | Pendiente; tablas cruda, candidata y filtrada |
 | Downstream | R/phyloseq u herramientas equivalentes | Diversidad, composición, reproducibilidad y clínica | Pendiente; tablas y figuras agregadas |
+
+: Etapas del flujo bioinformático, herramientas y productos principales.
+:::
 
 ## Control de calidad de lecturas
 
@@ -91,3 +98,8 @@ el análisis. Los controles negativos se evaluarán principalmente por
 prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia
 como análisis de sensibilidad [@Davis2018; @Quast2013]. Los resultados aún no
 han sido ejecutados y no se presentan como conclusiones.
+
+## Referencias {.unnumbered}
+
+::: {#refs}
+:::

@@ -312,7 +312,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/01_context.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Contexto y objetivos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -406,6 +406,7 @@ div.csl-indent {
   <li><a href="#informes-de-qc-y-multiqc" id="toc-informes-de-qc-y-multiqc" class="nav-link" data-scroll-target="#informes-de-qc-y-multiqc"><span class="header-section-number">5.2</span> Informes de QC y MultiQC</a></li>
   <li><a href="#recorte-y-verificación-de-primers" id="toc-recorte-y-verificación-de-primers" class="nav-link" data-scroll-target="#recorte-y-verificación-de-primers"><span class="header-section-number">5.3</span> Recorte y verificación de primers</a></li>
   <li><a href="#profundidad-de-secuenciación-de-las-biopsias-repetidas" id="toc-profundidad-de-secuenciación-de-las-biopsias-repetidas" class="nav-link" data-scroll-target="#profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">5.4</span> Profundidad de secuenciación de las biopsias repetidas</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/04_qc_preprocessing.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -435,6 +436,13 @@ div.csl-indent {
 <section id="auditoría-de-bibliotecas-y-pares-fastq" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="auditoría-de-bibliotecas-y-pares-fastq"><span class="header-section-number">5.1</span> Auditoría de bibliotecas y pares FASTQ</h2>
 <p>Se validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en cada biblioteca.</p>
+<p>El resumen de bibliotecas y pares de lecturas se presenta en la <a href="#tbl-preprocessing-summary" class="quarto-xref">Tabla&nbsp;<span>5.1</span></a>.</p>
+<div id="tbl-preprocessing-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-preprocessing-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.1: Bibliotecas y pares de lecturas antes y después del recorte de primers.
+</figcaption>
+<div aria-describedby="tbl-preprocessing-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
@@ -476,15 +484,25 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <p>Las profundidades agregadas por tipo de biblioteca están disponibles en las tablas de <a href="../tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv">FASTQ crudos</a> y <a href="../tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv">FASTQ recortados</a>.</p>
 </section>
 <section id="informes-de-qc-y-multiqc" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="informes-de-qc-y-multiqc"><span class="header-section-number">5.2</span> Informes de QC y MultiQC</h2>
-<p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(<a href="#ref-Ewels2016" role="doc-biblioref">Ewels et&nbsp;al. 2016</a>)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/raw/fastqc_raw_multiqc_report.html">informe previo al recorte</a> y el <a href="../multiqc/trimmed/fastqc_trimmed_multiqc_report.html">informe posterior al recorte</a>.</p>
+<p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(<a href="01_context.html#ref-Ewels2016" role="doc-biblioref">Ewels et&nbsp;al. 2016</a>)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/raw/fastqc_raw_multiqc_report.html">informe previo al recorte</a> y el <a href="../multiqc/trimmed/fastqc_trimmed_multiqc_report.html">informe posterior al recorte</a>.</p>
 </section>
 <section id="recorte-y-verificación-de-primers" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="recorte-y-verificación-de-primers"><span class="header-section-number">5.3</span> Recorte y verificación de primers</h2>
 <p>El diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de lecturas. La señal residual compatible con primer fue como máximo 0,10 % por biblioteca y fue nula en R2 en la comprobación agregada.</p>
+<p>La retención de lecturas y el residual de primer se detallan en la <a href="#tbl-primer-trimming" class="quarto-xref">Tabla&nbsp;<span>5.2</span></a>.</p>
+<div id="tbl-primer-trimming" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-primer-trimming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.2: Retención de pares y verificación de primers tras el recorte.
+</figcaption>
+<div aria-describedby="tbl-primer-trimming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
@@ -519,11 +537,21 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <p>Las métricas reproducibles se encuentran en <a href="../tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv">retención por ensayo</a> y <a href="../tables/01_preprocessing/primer_trimming_verification_summary.tsv">verificación de primers</a>.</p>
 </section>
 <section id="profundidad-de-secuenciación-de-las-biopsias-repetidas" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">5.4</span> Profundidad de secuenciación de las biopsias repetidas</h2>
 <p>La comparación pareada utiliza las ocho biopsias presentes en el piloto y el ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de filtrado, fusión de pares o eliminación de quimeras. En todas ellas, la profundidad de entrada fue mayor en el piloto; la media geométrica del cociente piloto/ampliado fue 7,69 y la mediana 7,51. No se aplicó una prueba de hipótesis.</p>
+<p>El resumen descriptivo de esta comparación se presenta en la <a href="#tbl-repeated-depth-summary" class="quarto-xref">Tabla&nbsp;<span>5.3</span></a>.</p>
+<div id="tbl-repeated-depth-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-repeated-depth-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.3: Profundidad de los pares de lecturas crudos en las biopsias repetidas.
+</figcaption>
+<div aria-describedby="tbl-repeated-depth-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 27%">
@@ -560,11 +588,18 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>La figura muestra pares de lecturas en escala logarítmica. Cada línea une la misma biopsia entre ambos ensayos; el eje vertical está expresado en millones de pares, no en lecturas individuales.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Comparación pareada de profundidad de las ocho biopsias repetidas; cada línea representa una biopsia y el eje vertical usa escala logarítmica."><img src="../figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png" class="img-fluid figure-img" alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado."></a></p>
-<figcaption>Comparación pareada de profundidad de las ocho biopsias repetidas; cada línea representa una biopsia y el eje vertical usa escala logarítmica.</figcaption>
+</div>
+</figure>
+</div>
+<p>La <a href="#fig-repeated-depth" class="quarto-xref">Figura&nbsp;<span>5.1</span></a> muestra pares de lecturas en escala logarítmica. Cada línea une la misma biopsia entre ambos ensayos; el eje vertical está expresado en millones de pares, no en lecturas individuales.</p>
+<div id="fig-repeated-depth" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-repeated-depth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;5.1: Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas."><img src="../figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png" class="img-fluid figure-img" alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-repeated-depth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.1: Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas.
+</figcaption>
 </figure>
 </div>
 <p>Los valores técnicos individuales y el resumen se ofrecen en la <a href="../tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv">tabla por biopsia</a> y en el <a href="../tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv">resumen descriptivo</a>.</p>
@@ -581,13 +616,16 @@ div.csl-indent {
 <p>Dos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y el umbral de profundidad definido para el análisis final.</p>
 </div>
 </div>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+</section>
+<section id="referencias" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="referencias">Referencias</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Ewels2016" class="csl-entry" role="listitem">
 Ewels, Philip, Måns Magnusson, Sverker Lundin, y Max Käller. 2016. <span>«MultiQC: Summarize analysis results for multiple tools and samples in a single report»</span>. <em>Bioinformatics</em> 32 (19): 3047-48. <a href="https://doi.org/10.1093/bioinformatics/btw354">https://doi.org/10.1093/bioinformatics/btw354</a>.
 </div>
 </div>
+
+
 </section>
 
 </main> <!-- /main -->
