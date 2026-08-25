@@ -130,6 +130,86 @@ code {
   padding: 0.9rem 1rem;
 }
 
+.sample-table-scroll {
+  border: 1px solid var(--carpio-line);
+  border-radius: 0.4rem;
+  margin: 1.25rem 0 0.8rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.sample-inventory {
+  margin: 0;
+  min-width: 105rem;
+}
+
+.sample-inventory caption {
+  caption-side: top;
+  color: #52616b;
+  font-size: 0.92rem;
+  padding: 0.8rem 0.9rem;
+  text-align: left;
+}
+
+.sample-inventory th,
+.sample-inventory td {
+  white-space: nowrap;
+}
+
+.sample-pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.8rem 0 1.45rem;
+}
+
+.sample-pagination-status {
+  color: #52616b;
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  margin: 0 0 0.15rem;
+}
+
+.sample-pagination button {
+  background: transparent;
+  border: 1px solid var(--carpio-line);
+  border-radius: 0.3rem;
+  color: var(--carpio-blue);
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: 2.2rem;
+  padding: 0.35rem 0.55rem;
+}
+
+.sample-pagination button:hover:not(:disabled) {
+  background: var(--carpio-sand);
+}
+
+.sample-pagination button[aria-current="page"] {
+  background: var(--carpio-blue);
+  border-color: var(--carpio-blue);
+  color: #fff;
+  font-weight: 700;
+}
+
+.sample-pagination button:disabled {
+  color: #88949d;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.sample-pagination button:focus-visible,
+.sample-table-scroll:focus-visible {
+  outline: 3px solid #e5a93d;
+  outline-offset: 2px;
+}
+
+.sample-pagination-ellipsis {
+  color: #52616b;
+  padding: 0 0.1rem;
+}
+
 @media (max-width: 991.98px) {
   #quarto-document-content {
     max-width: none;
@@ -137,6 +217,14 @@ code {
 
   table {
     font-size: 0.85rem;
+  }
+
+  .sample-pagination {
+    gap: 0.3rem;
+  }
+
+  .sample-pagination button {
+    padding: 0.3rem 0.45rem;
   }
 }
 

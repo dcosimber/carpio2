@@ -2,6 +2,7 @@ project:
   type: book
   output-dir: docs
   resources:
+    - assets/
     - figures/
     - tables/
     - multiqc/

@@ -1,0 +1,199 @@
+registro_tecnico	fastq_r1	fastq_r2	ensayo	hoja_metadatos	tipo_muestra	tipo_control	dilucion	fecha_extraccion	fecha_biblioteca	fecha_secuenciacion	origen_fecha_secuenciacion	carrera	set_indices	indice_i7	indice_i5
+01-049	01-049_R1.fastq.gz	01-049_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N701	S513
+01-049_carpio1	01-049_carpio1_R1.fastq.gz	01-049_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N701	S521
+01-050	01-050_R1.fastq.gz	01-050_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N702	S513
+01-050_carpio1	01-050_carpio1_R1.fastq.gz	01-050_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N702	S521
+01-051	01-051_R1.fastq.gz	01-051_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N703	S513
+01-051_carpio1	01-051_carpio1_R1.fastq.gz	01-051_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N703	S521
+01-052	01-052_R1.fastq.gz	01-052_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N704	S513
+01-052_carpio1	01-052_carpio1_R1.fastq.gz	01-052_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N704	S521
+01-053	01-053_R1.fastq.gz	01-053_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N705	S513
+01-053_carpio1	01-053_carpio1_R1.fastq.gz	01-053_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N705	S521
+01-054	01-054_R1.fastq.gz	01-054_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N706	S513
+01-054_carpio1	01-054_carpio1_R1.fastq.gz	01-054_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N706	S521
+01-055	01-055_R1.fastq.gz	01-055_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N707	S513
+01-055_carpio1	01-055_carpio1_R1.fastq.gz	01-055_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N707	S521
+01-056	01-056_R1.fastq.gz	01-056_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N710	S513
+01-056_carpio1	01-056_carpio1_R1.fastq.gz	01-056_carpio1_R2.fastq.gz	Ensayo previo/piloto	Run1	Biopsia	—	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N710	S521
+01-057	01-057_R1.fastq.gz	01-057_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N711	S513
+01-058	01-058_R1.fastq.gz	01-058_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N712	S513
+01-059	01-059_R1.fastq.gz	01-059_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N714	S513
+01-060	01-060_R1.fastq.gz	01-060_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N715	S513
+01-061	01-061_R1.fastq.gz	01-061_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N701	S515
+01-062	01-062_R1.fastq.gz	01-062_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N702	S515
+01-063	01-063_R1.fastq.gz	01-063_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N703	S515
+01-064	01-064_R1.fastq.gz	01-064_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N704	S517
+01-065	01-065_R1.fastq.gz	01-065_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N715	S517
+01-066	01-066_R1.fastq.gz	01-066_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N701	S518
+01-067	01-067_R1.fastq.gz	01-067_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N702	S518
+01-068	01-068_R1.fastq.gz	01-068_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N703	S518
+01-069	01-069_R1.fastq.gz	01-069_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N704	S518
+01-070	01-070_R1.fastq.gz	01-070_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N705	S518
+01-071	01-071_R1.fastq.gz	01-071_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N706	S518
+01-072	01-072_R1.fastq.gz	01-072_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-30	2026-07-30	Fecha de biblioteca (proxy)	Run 3	C	N707	S518
+01-073	01-073_R1.fastq.gz	01-073_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N710	S518
+01-074	01-074_R1.fastq.gz	01-074_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N711	S518
+01-075	01-075_R1.fastq.gz	01-075_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N712	S518
+01-076	01-076_R1.fastq.gz	01-076_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N714	S518
+01-077	01-077_R1.fastq.gz	01-077_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N715	S518
+01-078	01-078_R1.fastq.gz	01-078_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N701	S520
+01-079	01-079_R1.fastq.gz	01-079_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N702	S520
+01-080	01-080_R1.fastq.gz	01-080_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N703	S520
+01-081	01-081_R1.fastq.gz	01-081_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N704	S520
+01-082	01-082_R1.fastq.gz	01-082_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N705	S520
+01-084	01-084_R1.fastq.gz	01-084_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N706	S520
+01-085	01-085_R1.fastq.gz	01-085_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N707	S520
+01-086	01-086_R1.fastq.gz	01-086_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N710	S520
+01-087	01-087_R1.fastq.gz	01-087_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N711	S520
+01-088	01-088_R1.fastq.gz	01-088_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N712	S520
+01-089	01-089_R1.fastq.gz	01-089_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N714	S520
+01-090	01-090_R1.fastq.gz	01-090_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N715	S520
+01-091	01-091_R1.fastq.gz	01-091_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N701	S521
+01-092	01-092_R1.fastq.gz	01-092_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N702	S521
+01-093	01-093_R1.fastq.gz	01-093_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N703	S521
+01-094	01-094_R1.fastq.gz	01-094_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N704	S521
+01-095	01-095_R1.fastq.gz	01-095_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N705	S521
+01-096	01-096_R1.fastq.gz	01-096_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-07-31	2026-07-31	Fecha de biblioteca (proxy)	Run 3	C	N706	S521
+01-097	01-097_R1.fastq.gz	01-097_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N707	S521
+01-098	01-098_R1.fastq.gz	01-098_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N710	S521
+01-099	01-099_R1.fastq.gz	01-099_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N711	S521
+01-100	01-100_R1.fastq.gz	01-100_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N712	S521
+01-101	01-101_R1.fastq.gz	01-101_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N714	S521
+01-102	01-102_R1.fastq.gz	01-102_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N715	S521
+01-103	01-103_R1.fastq.gz	01-103_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N701	S522
+01-104	01-104_R1.fastq.gz	01-104_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N702	S522
+01-105	01-105_R1.fastq.gz	01-105_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N703	S522
+01-106	01-106_R1.fastq.gz	01-106_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N705	S522
+01-107	01-107_R1.fastq.gz	01-107_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	B	N722	S508
+01-108	01-108_R1.fastq.gz	01-108_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N706	S522
+01-109	01-109_R1.fastq.gz	01-109_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N707	S522
+01-110	01-110_R1.fastq.gz	01-110_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N710	S522
+01-111	01-111_R1.fastq.gz	01-111_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N711	S522
+01-112	01-112_R1.fastq.gz	01-112_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N712	S522
+01-114	01-114_R1.fastq.gz	01-114_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N714	S522
+01-115	01-115_R1.fastq.gz	01-115_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	C	N715	S522
+01-116	01-116_R1.fastq.gz	01-116_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	B	N716	S502
+01-117	01-117_R1.fastq.gz	01-117_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	B	N718	S502
+01-118	01-118_R1.fastq.gz	01-118_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	B	N719	S502
+01-119	01-119_R1.fastq.gz	01-119_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	B	N720	S502
+01-121	01-121_R1.fastq.gz	01-121_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	B	N721	S502
+01-122	01-122_R1.fastq.gz	01-122_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-22	2026-08-04	2026-08-04	Fecha de biblioteca (proxy)	Run 3	B	N722	S502
+01-123	01-123_R1.fastq.gz	01-123_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N723	S502
+01-124	01-124_R1.fastq.gz	01-124_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N724	S502
+01-125	01-125_R1.fastq.gz	01-125_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N726	S502
+01-126	01-126_R1.fastq.gz	01-126_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N727	S502
+01-127	01-127_R1.fastq.gz	01-127_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N728	S502
+01-128	01-128_R1.fastq.gz	01-128_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N729	S502
+01-129	01-129_R1.fastq.gz	01-129_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N716	S503
+01-130	01-130_R1.fastq.gz	01-130_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N718	S503
+01-131	01-131_R1.fastq.gz	01-131_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N719	S503
+01-132	01-132_R1.fastq.gz	01-132_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N720	S503
+01-133	01-133_R1.fastq.gz	01-133_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N721	S503
+01-134	01-134_R1.fastq.gz	01-134_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N722	S503
+01-135	01-135_R1.fastq.gz	01-135_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N723	S503
+01-136	01-136_R1.fastq.gz	01-136_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N724	S503
+01-137	01-137_R1.fastq.gz	01-137_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N726	S503
+01-138	01-138_R1.fastq.gz	01-138_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N727	S503
+01-140	01-140_R1.fastq.gz	01-140_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N728	S503
+01-142	01-142_R1.fastq.gz	01-142_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N729	S503
+01-143	01-143_R1.fastq.gz	01-143_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N716	S505
+01-144	01-144_R1.fastq.gz	01-144_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N718	S505
+01-145	01-145_R1.fastq.gz	01-145_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N719	S505
+01-146	01-146_R1.fastq.gz	01-146_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N720	S505
+01-147	01-147_R1.fastq.gz	01-147_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N721	S505
+01-148	01-148_R1.fastq.gz	01-148_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-06	2026-08-06	Fecha de biblioteca (proxy)	Run 3	B	N722	S505
+01-149	01-149_R1.fastq.gz	01-149_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N723	S505
+01-150	01-150_R1.fastq.gz	01-150_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N724	S505
+01-151	01-151_R1.fastq.gz	01-151_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N726	S505
+01-152	01-152_R1.fastq.gz	01-152_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N727	S505
+01-153	01-153_R1.fastq.gz	01-153_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N728	S505
+01-154	01-154_R1.fastq.gz	01-154_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N729	S505
+01-155	01-155_R1.fastq.gz	01-155_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N716	S506
+01-156	01-156_R1.fastq.gz	01-156_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N718	S506
+01-157	01-157_R1.fastq.gz	01-157_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N719	S506
+01-158	01-158_R1.fastq.gz	01-158_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N720	S506
+01-159	01-159_R1.fastq.gz	01-159_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N721	S506
+01-160	01-160_R1.fastq.gz	01-160_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N722	S506
+01-161	01-161_R1.fastq.gz	01-161_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N723	S506
+01-162	01-162_R1.fastq.gz	01-162_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N724	S506
+01-163	01-163_R1.fastq.gz	01-163_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N726	S506
+01-164	01-164_R1.fastq.gz	01-164_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N727	S506
+01-165	01-165_R1.fastq.gz	01-165_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N728	S506
+01-166	01-166_R1.fastq.gz	01-166_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N729	S506
+01-167	01-167_R1.fastq.gz	01-167_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N716	S507
+01-168	01-168_R1.fastq.gz	01-168_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N718	S507
+01-169	01-169_R1.fastq.gz	01-169_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N719	S507
+01-170	01-170_R1.fastq.gz	01-170_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N720	S507
+01-172	01-172_R1.fastq.gz	01-172_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N721	S507
+01-174	01-174_R1.fastq.gz	01-174_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-07	2026-08-07	Fecha de biblioteca (proxy)	Run 3	B	N722	S507
+01-175	01-175_R1.fastq.gz	01-175_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N723	S507
+01-177	01-177_R1.fastq.gz	01-177_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N724	S507
+01-178	01-178_R1.fastq.gz	01-178_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N726	S507
+01-179	01-179_R1.fastq.gz	01-179_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N727	S507
+01-180	01-180_R1.fastq.gz	01-180_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N728	S507
+01-181	01-181_R1.fastq.gz	01-181_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N729	S507
+01-182	01-182_R1.fastq.gz	01-182_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N716	S508
+01-183	01-183_R1.fastq.gz	01-183_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N718	S508
+01-184	01-184_R1.fastq.gz	01-184_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N719	S508
+01-185	01-185_R1.fastq.gz	01-185_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N720	S508
+01-186	01-186_R1.fastq.gz	01-186_R2.fastq.gz	Ensayo ampliado actual	Run 3	Biopsia	—	—	2026-01-26	2026-08-11	2026-08-11	Fecha de biblioteca (proxy)	Run 3	B	N721	S508
+ecoli_dil1_1	ecoli_dil1_1_R1.fastq.gz	ecoli_dil1_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻¹	2026-02-04	—	2026-02-04	Etiqueta de origen	Ensayo previo/piloto	—	N704	S522
+ecoli_dil1_2	ecoli_dil1_2_R1.fastq.gz	ecoli_dil1_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻¹	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N715	S515
+ecoli_dil1_3	ecoli_dil1_3_R1.fastq.gz	ecoli_dil1_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻¹	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N706	S516
+ecoli_dil1_4	ecoli_dil1_4_R1.fastq.gz	ecoli_dil1_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻¹	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N715	S516
+ecoli_dil2_1	ecoli_dil2_1_R1.fastq.gz	ecoli_dil2_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻²	2026-02-04	—	2026-02-04	Etiqueta de origen	Ensayo previo/piloto	—	N703	S522
+ecoli_dil2_2	ecoli_dil2_2_R1.fastq.gz	ecoli_dil2_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻²	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N714	S515
+ecoli_dil2_3	ecoli_dil2_3_R1.fastq.gz	ecoli_dil2_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻²	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N705	S516
+ecoli_dil2_4	ecoli_dil2_4_R1.fastq.gz	ecoli_dil2_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻²	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N714	S516
+ecoli_dil3_1	ecoli_dil3_1_R1.fastq.gz	ecoli_dil3_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻³	2026-02-04	—	2026-02-04	Etiqueta de origen	Ensayo previo/piloto	—	N702	S522
+ecoli_dil3_2	ecoli_dil3_2_R1.fastq.gz	ecoli_dil3_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻³	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N712	S515
+ecoli_dil3_3	ecoli_dil3_3_R1.fastq.gz	ecoli_dil3_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻³	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N704	S516
+ecoli_dil3_4	ecoli_dil3_4_R1.fastq.gz	ecoli_dil3_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻³	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N712	S516
+ecoli_dil4_1	ecoli_dil4_1_R1.fastq.gz	ecoli_dil4_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁴	2026-02-04	—	2026-02-04	Etiqueta de origen	Ensayo previo/piloto	—	N701	S522
+ecoli_dil4_2	ecoli_dil4_2_R1.fastq.gz	ecoli_dil4_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁴	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N711	S515
+ecoli_dil4_3	ecoli_dil4_3_R1.fastq.gz	ecoli_dil4_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁴	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N703	S516
+ecoli_dil4_4	ecoli_dil4_4_R1.fastq.gz	ecoli_dil4_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁴	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N711	S516
+ecoli_dil5_1	ecoli_dil5_1_R1.fastq.gz	ecoli_dil5_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁵	2026-02-04	—	2026-02-04	Etiqueta de origen	Ensayo previo/piloto	—	N715	S521
+ecoli_dil5_2	ecoli_dil5_2_R1.fastq.gz	ecoli_dil5_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁵	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N710	S515
+ecoli_dil5_3	ecoli_dil5_3_R1.fastq.gz	ecoli_dil5_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁵	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N702	S516
+ecoli_dil5_4	ecoli_dil5_4_R1.fastq.gz	ecoli_dil5_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁵	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N710	S516
+ecoli_dil6_1	ecoli_dil6_1_R1.fastq.gz	ecoli_dil6_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁶	2026-02-04	—	2026-02-04	Etiqueta de origen	Ensayo previo/piloto	—	N714	S521
+ecoli_dil6_2	ecoli_dil6_2_R1.fastq.gz	ecoli_dil6_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁶	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N707	S515
+ecoli_dil6_3	ecoli_dil6_3_R1.fastq.gz	ecoli_dil6_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁶	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N701	S516
+ecoli_dil6_4	ecoli_dil6_4_R1.fastq.gz	ecoli_dil6_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Dilución de E. coli	10⁻⁶	2026-02-09	—	2026-02-09	Etiqueta de origen	Ensayo previo/piloto	—	N707	S516
+mock_extr_1	mock_extr_1_R1.fastq.gz	mock_extr_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-01-22	—	2026-01-22	Etiqueta de origen	Ensayo previo/piloto	—	N711	S521
+mock_extr_2	mock_extr_2_R1.fastq.gz	mock_extr_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-01-26	—	2026-01-26	Etiqueta de origen	Ensayo previo/piloto	—	N712	S521
+mock_extr_3	mock_extr_3_R1.fastq.gz	mock_extr_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-02-02	—	2026-02-02	Etiqueta de origen	Ensayo previo/piloto	—	N705	S522
+mock_extr_4	mock_extr_4_R1.fastq.gz	mock_extr_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-02-02	—	2026-02-02	Etiqueta de origen	Ensayo previo/piloto	—	N706	S522
+mock_extr_5	mock_extr_5_R1.fastq.gz	mock_extr_5_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-02-02	—	2026-02-02	Etiqueta de origen	Ensayo previo/piloto	—	N707	S522
+mock_extr_6	mock_extr_6_R1.fastq.gz	mock_extr_6_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-02-02	—	2026-02-02	Etiqueta de origen	Ensayo previo/piloto	—	N710	S522
+mock_extr_7	mock_extr_7_R1.fastq.gz	mock_extr_7_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-02-02	—	2026-02-02	Etiqueta de origen	Ensayo previo/piloto	—	N711	S522
+mock_extr_8	mock_extr_8_R1.fastq.gz	mock_extr_8_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de extracción	—	2026-02-02	—	2026-02-02	Etiqueta de origen	Ensayo previo/piloto	—	N712	S522
+mock_pcr_1	mock_pcr_1_R1.fastq.gz	mock_pcr_1_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de PCR	—	2026-02-25	—	2026-02-25	Etiqueta de origen	Ensayo previo/piloto	—	N714	S522
+mock_pcr_2	mock_pcr_2_R1.fastq.gz	mock_pcr_2_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de PCR	—	2026-02-25	—	2026-02-25	Etiqueta de origen	Ensayo previo/piloto	—	N715	S522
+mock_pcr_3	mock_pcr_3_R1.fastq.gz	mock_pcr_3_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de PCR	—	2026-02-25	—	2026-02-25	Etiqueta de origen	Ensayo previo/piloto	—	N716	S511
+mock_pcr_4	mock_pcr_4_R1.fastq.gz	mock_pcr_4_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de PCR	—	2026-02-25	—	2026-02-25	Etiqueta de origen	Ensayo previo/piloto	—	N718	S511
+mock_pcr_5	mock_pcr_5_R1.fastq.gz	mock_pcr_5_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de PCR	—	2026-02-25	—	2026-02-25	Etiqueta de origen	Ensayo previo/piloto	—	N719	S511
+mock_pcr_6	mock_pcr_6_R1.fastq.gz	mock_pcr_6_R2.fastq.gz	Ensayo previo/piloto	Run1	Control positivo	Mock de PCR	—	2026-02-25	—	2026-02-25	Etiqueta de origen	Ensayo previo/piloto	—	N720	S511
+cneg_batch_1	cneg_batch_1_R1.fastq.gz	cneg_batch_1_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Batch	—	2026-01-22	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N704	S516
+cneg_batch_2	cneg_batch_2_R1.fastq.gz	cneg_batch_2_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Batch	—	2026-01-26	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N705	S516
+cneg_extr_1	cneg_extr_1_R1.fastq.gz	cneg_extr_1_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N706	S516
+cneg_extr_10	cneg_extr_10_R1.fastq.gz	cneg_extr_10_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N703	S517
+cneg_extr_2	cneg_extr_2_R1.fastq.gz	cneg_extr_2_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N707	S516
+cneg_extr_3	cneg_extr_3_R1.fastq.gz	cneg_extr_3_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N710	S516
+cneg_extr_4	cneg_extr_4_R1.fastq.gz	cneg_extr_4_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N711	S516
+cneg_extr_5	cneg_extr_5_R1.fastq.gz	cneg_extr_5_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N712	S516
+cneg_extr_6	cneg_extr_6_R1.fastq.gz	cneg_extr_6_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N714	S516
+cneg_extr_7	cneg_extr_7_R1.fastq.gz	cneg_extr_7_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N715	S516
+cneg_extr_8	cneg_extr_8_R1.fastq.gz	cneg_extr_8_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N701	S517
+cneg_extr_9	cneg_extr_9_R1.fastq.gz	cneg_extr_9_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	Extracción	—	2026-01-30	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N702	S517
+cneg_pcr_1	cneg_pcr_1_R1.fastq.gz	cneg_pcr_1_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N705	S517
+cneg_pcr_10	cneg_pcr_10_R1.fastq.gz	cneg_pcr_10_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N706	S515
+cneg_pcr_2	cneg_pcr_2_R1.fastq.gz	cneg_pcr_2_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N706	S517
+cneg_pcr_3	cneg_pcr_3_R1.fastq.gz	cneg_pcr_3_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N707	S517
+cneg_pcr_4	cneg_pcr_4_R1.fastq.gz	cneg_pcr_4_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N710	S517
+cneg_pcr_5	cneg_pcr_5_R1.fastq.gz	cneg_pcr_5_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N711	S517
+cneg_pcr_6	cneg_pcr_6_R1.fastq.gz	cneg_pcr_6_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N712	S517
+cneg_pcr_7	cneg_pcr_7_R1.fastq.gz	cneg_pcr_7_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N714	S517
+cneg_pcr_8	cneg_pcr_8_R1.fastq.gz	cneg_pcr_8_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N704	S515
+cneg_pcr_9	cneg_pcr_9_R1.fastq.gz	cneg_pcr_9_R2.fastq.gz	Ensayo ampliado actual	Run 3	Control negativo	PCR	—	—	2026-08-10	2026-08-10	Fecha de biblioteca (proxy)	Run 3	C	N705	S515

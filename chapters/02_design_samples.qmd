@@ -1,54 +1,113 @@
 ---
-title: "Diseño, biopsias y controles"
+title: "Diseño experimental, biopsias y controles"
 ---
+
+## Región amplificada y configuración de secuenciación
+
+El ensayo ampliado actual se centra exclusivamente en la región V3–V4 del gen
+bacteriano 16S rRNA. La combinación del tamaño esperado del amplicón y las
+lecturas paired-end debe proporcionar solapamiento suficiente para fusionar R1
+y R2; los parámetros finales de calidad y fusión se validarán con los perfiles
+reales de las lecturas.
+
+| Característica | Descripción |
+|---|---|
+| Diana | Gen bacteriano 16S rRNA, región V3–V4 |
+| Cebador forward | 341F (`CCTACGGGNGGCWGCAG`) |
+| Cebador reverse | 805R (`GACTACHVGGGTATCTAATCC`) |
+| Tamaño esperado del amplicón | Aproximadamente 464 pb |
+| Adaptadores | Overhangs compatibles con indexación Illumina |
+| Preparación de librerías | Índices Nextera XT, con protocolo modificado |
+| Plataforma descrita | Illumina NextSeq, celda P1 |
+| Configuración | Paired-end 2 × 300 pb, 600 ciclos |
+| PCR | 35 ciclos; anillamiento a 53 °C según el borrador experimental |
 
 ## Cohorte técnica y unidad de análisis
 
-La entrada comprende **198 bibliotecas paired-end**. Cada biblioteca está
-representada por dos archivos FASTQ complementarios: R1 y R2. Por tanto, los
-198 pares representan 396 archivos, pero no 396 observaciones independientes.
-Cuando se informa profundidad se usa, salvo indicación contraria, el número de
-**pares de lecturas**.
+La unidad de análisis de la secuenciación es una **biblioteca paired-end**:
+un archivo R1 y un archivo R2 complementarios procedentes de la misma molécula
+de amplicón. Por ello, 198 bibliotecas equivalen a 198 pares R1/R2 y 396 FASTQ,
+pero no a 396 observaciones independientes.
 
-El ensayo ampliado contiene 152 bibliotecas y el ensayo piloto aporta 46. En
-conjunto hay 130 biopsias biológicas únicas, 138 registros de biopsia al contar
-las ocho repeticiones técnicas, 38 controles positivos y 22 controles
-negativos. Las repeticiones del piloto no incrementan el tamaño de la cohorte
-clínica principal.
+El conjunto contiene 130 códigos de biopsia únicos y 138 registros de biopsia
+al contar las ocho repeticiones del piloto. Las repeticiones no incrementan el
+tamaño de la cohorte clínica principal; son observaciones técnicas para estudiar
+reproducibilidad y efecto de ensayo.
 
-| Ensayo | Tipo de registro | Subtipo | Bibliotecas paired-end |
-|---|---|---|---:|
-| Ampliado actual | Biopsia | Biopsia digestiva | 130 |
-| Piloto | Biopsia repetida | Ocho biopsias presentes en ambos ensayos | 8 |
-| Piloto | Control positivo | Mock de extracción | 8 |
-| Piloto | Control positivo | Mock de PCR | 6 |
-| Piloto | Control positivo | Diluciones de *Escherichia coli* | 24 |
-| Ampliado actual | Control negativo | Batch | 2 |
-| Ampliado actual | Control negativo | Extracción | 10 |
-| Ampliado actual | Control negativo | PCR | 10 |
-| **Total** |  |  | **198** |
+| Ensayo | Tipo de registro | Subtipo | Bibliotecas paired-end | FASTQ |
+|---|---|---|---:|---:|
+| Ampliado actual | Biopsia | Biopsia digestiva | 130 | 260 |
+| Piloto | Biopsia repetida | Códigos `01-049` a `01-056` | 8 | 16 |
+| Piloto | Control positivo | Mock de extracción | 8 | 16 |
+| Piloto | Control positivo | Mock de PCR | 6 | 12 |
+| Piloto | Control positivo | Diluciones de *Escherichia coli* | 24 | 48 |
+| Ampliado actual | Control negativo | Batch | 2 | 4 |
+| Ampliado actual | Control negativo | Extracción | 10 | 20 |
+| Ampliado actual | Control negativo | PCR | 10 | 20 |
+| **Total** |  |  | **198** | **396** |
 
-## Papel de los controles
+## Controles experimentales
 
-Los controles positivos del piloto cubren el proceso de extracción (mocks de
-células), PCR (mocks de ADN) y sensibilidad analítica (diluciones seriadas de
-*E. coli*). Los controles negativos del ensayo ampliado permiten distinguir
-contaminación asociada al batch, la extracción o la PCR. Estos controles no
-formarán parte de las comparaciones biológicas entre biopsias, pero se
-mantendrán hasta la fase de decontaminación y validación.
+Los controles positivos procedentes del piloto cubren etapas complementarias:
 
-## Trazabilidad de identificadores
+- **Mocks de extracción (`mock_extr_*`)**: comunidades de composición conocida
+  incorporadas antes de la extracción; evalúan el procedimiento completo.
+- **Mocks de PCR (`mock_pcr_*`)**: ADN de composición conocida que evalúa
+  amplificación, preparación de librerías y asignación taxonómica.
+- **Diluciones de *E. coli* (`ecoli_dilN_R`)**: 24 registros distribuidos en
+  seis diluciones decimales seriadas, de 10⁻¹ a 10⁻⁶, para estudiar sensibilidad
+  y límite de detección.
 
-El código biológico de biopsia usa el formato técnico `01-xxx`. Las ocho
-biopsias procedentes del piloto llevan un sufijo que las diferencia del registro
-del ensayo ampliado. Esta distinción conserva la trazabilidad técnica y evita
-que una biopsia repetida se interprete como un nuevo individuo. Los metadatos
-clínicos individuales no forman parte de este repositorio público.
+Los controles negativos del ensayo ampliado permiten localizar posibles fuentes
+de contaminación: dos controles de batch (`cneg_batch_*`), diez blancos de
+extracción con agua libre de nucleasas (`cneg_extr_*`) y diez blancos de PCR
+sin paso de extracción (`cneg_pcr_*`). Los controles se conservan hasta la
+etapa de decontaminación, pero no entrarán en las comparaciones biológicas entre
+biopsias.
+
+No se incorporaron controles negativos del piloto al conjunto consolidado
+actual. Su ausencia se conserva como parte de la trazabilidad al interpretar
+los controles disponibles y las comparaciones entre ensayos.
+
+## Convención de nombres y trazabilidad
+
+Las biopsias del ensayo ampliado usan directamente su código técnico, por
+ejemplo `01-049_R1.fastq.gz` y `01-049_R2.fastq.gz`. Las ocho biopsias del
+piloto incluyen el sufijo `_carpio1` en el nombre de archivo, por ejemplo
+`01-049_carpio1_R1.fastq.gz`, para diferenciarlas de su biblioteca en el ensayo
+ampliado. Los identificadores de los controles indican su tipo y, cuando
+procede, dilución y réplica.
+
+## Inventario técnico completo de bibliotecas
+
+La tabla siguiente contiene los **198 registros técnicos** incluidos en el
+análisis. Muestra diez filas por página y ofrece controles para avanzar o
+retroceder. Incluye las variables de secuenciación presentes en el informe de
+origen: nombres de FASTQ, ensayo, hoja de metadatos, tipo de muestra o control,
+dilución, fechas de laboratorio, base de la fecha de secuenciación e índices.
+
+La fecha de secuenciación del ensayo ampliado se representa mediante la fecha
+de biblioteca como *proxy*; para el piloto procede de la etiqueta de origen. Se
+mantiene esa columna para que la interpretación sea trazable. La tabla excluye
+deliberadamente `record_id`, etiquetas internas de origen, concentraciones,
+medidas TapeStation, tamaños de archivo, identificadores de paciente y
+metadatos clínicos.
+
+{{< include includes/sample_inventory_table.html >}}
+
+<noscript>
+<p class="source-note">JavaScript está desactivado; se muestran las 198 filas de la tabla completa sin paginación.</p>
+</noscript>
+
+<script src="../assets/js/sample-table-pagination.js"></script>
+
+La misma información puede descargarse como
+[TSV curado](../tables/00_design/sample_inventory_public.tsv).
 
 ::: {.callout-note}
 ## Información publicada
 
-Se muestran recuentos agregados y, cuando es necesario para QC, códigos técnicos
-de muestra autorizados. No se publican fechas clínicas, identificadores de
-paciente ni tablas clínicas individuales.
+Los códigos técnicos `01-xxx` y los metadatos de laboratorio/secuenciación se
+han autorizado para esta documentación. No se publican FASTQ, identificadores
+de paciente, fechas clínicas ni tablas clínicas individuales.
 :::

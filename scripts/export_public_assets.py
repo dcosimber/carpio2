@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html
 import hashlib
 import json
 import os
@@ -29,6 +30,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "config" / "publication_assets.json"
 MANIFEST_PATH = REPO_ROOT / "manifests" / "public_asset_manifest.tsv"
 ALLOWED_PUBLIC_ROOTS = ("tables", "figures", "multiqc")
+ALLOWED_INCLUDE_ROOT = "chapters/includes/"
 ABSOLUTE_PATH_PATTERN = re.compile(r"(?:^|[\\\"'>( ])/(?:mnt|home|tmp|var/tmp|Users|private)(?:/|$)")
 
 
@@ -88,6 +90,16 @@ def resolve_destination(relative_destination: str) -> Path:
     return destination
 
 
+def resolve_include_destination(relative_destination: str) -> Path:
+    """Resolve a generated Quarto include without allowing arbitrary writes."""
+    destination = (REPO_ROOT / relative_destination).resolve()
+    if not is_within(destination, REPO_ROOT):
+        raise ExportError("Una ruta de include sale del repositorio.")
+    if not relative_destination.startswith(ALLOWED_INCLUDE_ROOT):
+        raise ExportError("El include no pertenece a chapters/includes/.")
+    return destination
+
+
 def validate_extension(path: Path, blocked_extensions: Iterable[str]) -> None:
     lower_name = path.name.lower()
     if any(lower_name.endswith(extension) for extension in blocked_extensions):
@@ -141,6 +153,114 @@ def copy_asset(
         "description": asset["description"],
         "sha256": sha256sum(source) if dry_run else sha256sum(destination),
         "kind": "file",
+    }
+
+
+def public_value(value: str | None, source_column: str, value_maps: dict) -> str:
+    """Normalise missing values and apply only configured public labels."""
+    if value is None or value.strip() in {"", "NA", "NaN", "NULL"}:
+        return "—"
+    return value_maps.get(source_column, {}).get(value, value)
+
+
+def render_sample_table_html(fields: list[dict], rows: list[dict], expected_rows: int) -> str:
+    """Build an escaped, non-executable HTML table for Quarto inclusion."""
+    headers = "".join(
+        f'<th scope="col">{html.escape(field["label"])}</th>' for field in fields
+    )
+    body = "\n".join(
+        "<tr>"
+        + "".join(
+            f'<td>{html.escape(row[field["output"]])}</td>' for field in fields
+        )
+        + "</tr>"
+        for row in rows
+    )
+    return (
+        '<div class="sample-table-scroll" data-sample-table-pagination '
+        'data-page-size="10" role="region" '
+        'aria-label="Tabla técnica completa de bibliotecas" tabindex="0">\n'
+        '<table id="sample-inventory" class="sample-inventory" data-page-size="10">\n'
+        f'<caption>Inventario técnico de las {expected_rows} bibliotecas paired-end incluidas en el análisis.</caption>\n'
+        f"<thead><tr>{headers}</tr></thead>\n"
+        f"<tbody>\n{body}\n</tbody>\n"
+        "</table>\n"
+        "</div>\n"
+    )
+
+
+def build_curated_tsv_asset(
+    asset: dict,
+    analysis_root: Path,
+    config: dict,
+    dry_run: bool,
+) -> dict:
+    """Export an allowlisted subset of a TSV that may contain private fields."""
+    source = resolve_source(analysis_root, asset["source"])
+    destination = resolve_destination(asset["destination"])
+    include_destination = resolve_include_destination(asset["include_destination"])
+    validate_extension(destination, config["blocked_extensions"])
+
+    fields = asset["fields"]
+    source_columns = [field["source"] for field in fields]
+    output_columns = [field["output"] for field in fields]
+    restricted = {item.lower() for item in config["restricted_table_headers"]}
+    if restricted.intersection(column.lower() for column in source_columns):
+        raise ExportError("La curación solicitó una columna restringida.")
+    if len(output_columns) != len(set(output_columns)):
+        raise ExportError("La tabla curada tiene columnas de salida duplicadas.")
+
+    with source.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames is None:
+            raise ExportError("La tabla fuente no contiene cabecera.")
+        missing = set(source_columns).difference(reader.fieldnames)
+        if missing:
+            raise ExportError(
+                "Faltan columnas autorizadas en la tabla fuente: "
+                + ", ".join(sorted(missing))
+            )
+        rows = [
+            {
+                field["output"]: public_value(
+                    row[field["source"]], field["source"], asset.get("value_maps", {})
+                )
+                for field in fields
+            }
+            for row in reader
+        ]
+
+    expected_rows = int(asset["expected_rows"])
+    if len(rows) != expected_rows:
+        raise ExportError(
+            f"La tabla curada tiene {len(rows)} filas; se esperaban {expected_rows}."
+        )
+    if not dry_run:
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        with destination.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(
+                handle,
+                fieldnames=output_columns,
+                delimiter="\t",
+                lineterminator="\n",
+            )
+            writer.writeheader()
+            writer.writerows(rows)
+        include_destination.parent.mkdir(parents=True, exist_ok=True)
+        include_destination.write_text(
+            render_sample_table_html(fields, rows, expected_rows), encoding="utf-8"
+        )
+        validate_table_headers(destination, config["restricted_table_headers"])
+        validate_text_has_no_internal_paths(destination)
+        validate_text_has_no_internal_paths(include_destination)
+
+    return {
+        "asset_id": asset["id"],
+        "source_relative": asset["source"],
+        "destination_relative": asset["destination"],
+        "description": asset["description"],
+        "sha256": sha256sum(source) if dry_run else sha256sum(destination),
+        "kind": "curated_tsv",
     }
 
 
@@ -241,6 +361,24 @@ def build_multiqc_report(
     }
 
 
+def reuse_multiqc_report(report_config: dict) -> dict:
+    """Keep an already validated MultiQC report in a manual text-only update."""
+    destination = resolve_destination(report_config["destination"])
+    if not destination.is_file():
+        raise ExportError(
+            "No existe MultiQC saneado para reutilizar; ejecute una exportación completa."
+        )
+    validate_text_has_no_internal_paths(destination)
+    return {
+        "asset_id": report_config["id"],
+        "source_relative": ";".join(report_config["input_directories"]),
+        "destination_relative": report_config["destination"],
+        "description": report_config["description"],
+        "sha256": sha256sum(destination),
+        "kind": "sanitized_multiqc_reused",
+    }
+
+
 def write_manifest(rows: list[dict], dry_run: bool) -> None:
     if dry_run:
         return
@@ -272,6 +410,14 @@ def main() -> int:
         default=os.environ.get("CARPIO_MULTIQC_COMMAND", "conda run -n multiqc multiqc"),
         help="Comando para MultiQC; por defecto, 'conda run -n multiqc multiqc'.",
     )
+    parser.add_argument(
+        "--skip-multiqc",
+        action="store_true",
+        help=(
+            "Reutiliza los MultiQC saneados ya validados; útil para una "
+            "actualización manual que solo modifica texto o tablas."
+        ),
+    )
     arguments = parser.parse_args()
 
     try:
@@ -281,12 +427,20 @@ def main() -> int:
             copy_asset(asset, analysis_root, config, arguments.dry_run)
             for asset in config["allowed_assets"]
         ]
+        rows.extend(
+            build_curated_tsv_asset(asset, analysis_root, config, arguments.dry_run)
+            for asset in config.get("curated_tsv_assets", [])
+        )
         multiqc_command = shlex.split(arguments.multiqc_command)
-        if not multiqc_command:
+        if not multiqc_command and not arguments.skip_multiqc:
             raise ExportError("El comando de MultiQC está vacío.")
         rows.extend(
-            build_multiqc_report(
-                report, analysis_root, multiqc_command, arguments.dry_run
+            (
+                reuse_multiqc_report(report)
+                if arguments.skip_multiqc and not arguments.dry_run
+                else build_multiqc_report(
+                    report, analysis_root, multiqc_command, arguments.dry_run
+                )
             )
             for report in config["multiqc_reports"]
         )

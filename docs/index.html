@@ -295,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño, biopsias y controles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental, biopsias y controles</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -379,9 +379,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#hallazgos-disponibles" id="toc-hallazgos-disponibles" class="nav-link active" data-scroll-target="#hallazgos-disponibles"><span class="header-section-number">0.1</span> Hallazgos disponibles</a></li>
-  <li><a href="#alcance-y-lectura-responsable" id="toc-alcance-y-lectura-responsable" class="nav-link" data-scroll-target="#alcance-y-lectura-responsable"><span class="header-section-number">0.2</span> Alcance y lectura responsable</a></li>
-  <li><a href="#organización-del-libro" id="toc-organización-del-libro" class="nav-link" data-scroll-target="#organización-del-libro"><span class="header-section-number">0.3</span> Organización del libro</a></li>
+  <li><a href="#alcance-del-conjunto-analizado" id="toc-alcance-del-conjunto-analizado" class="nav-link active" data-scroll-target="#alcance-del-conjunto-analizado"><span class="header-section-number">0.1</span> Alcance del conjunto analizado</a></li>
+  <li><a href="#hallazgos-disponibles" id="toc-hallazgos-disponibles" class="nav-link" data-scroll-target="#hallazgos-disponibles"><span class="header-section-number">0.2</span> Hallazgos disponibles</a></li>
+  <li><a href="#lectura-responsable-y-actualizaciones" id="toc-lectura-responsable-y-actualizaciones" class="nav-link" data-scroll-target="#lectura-responsable-y-actualizaciones"><span class="header-section-number">0.3</span> Lectura responsable y actualizaciones</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -437,25 +437,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Esta es una versión pública y curada del análisis de amplicones 16S V3–V4 en biopsias digestivas. Documenta los resultados que ya han sido calculados: diseño, inventario de entradas, control de calidad, recorte de primers y comparación de profundidad de las biopsias repetidas. Las etapas de inferencia de ASV, taxonomía, decontaminación y análisis microbiológico se identificarán expresamente como pendientes hasta que existan resultados revisados.</p>
+<p>Esta es una versión pública y curada del análisis de amplicones 16S V3–V4 en biopsias digestivas. Documenta los resultados ya disponibles: diseño experimental, inventario técnico de bibliotecas, control de calidad, recorte de primers y comparación de profundidad de las biopsias repetidas. Las etapas de inferencia de ASV, taxonomía, decontaminación y análisis microbiológico se identifican expresamente como pendientes hasta que existan resultados revisados.</p>
 </div>
 </div>
-<section id="hallazgos-disponibles" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="hallazgos-disponibles"><span class="header-section-number">0.1</span> Hallazgos disponibles</h2>
+<section id="alcance-del-conjunto-analizado" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="alcance-del-conjunto-analizado"><span class="header-section-number">0.1</span> Alcance del conjunto analizado</h2>
+<p>El estudio se centra en la microbiota de biopsias digestivas en enfermedad de Crohn, con interés en el fenotipo fistulizante. La baja biomasa microbiana y la abundancia relativa de ADN humano hacen indispensable un diseño con controles positivos y negativos, además de una evaluación explícita de contaminación técnica.</p>
+<p>El conjunto actual reúne <strong>198 bibliotecas paired-end</strong>: 152 del ensayo ampliado y 46 del ensayo previo/piloto. Equivale a 198 pares R1/R2 y 396 archivos FASTQ, no a 396 observaciones independientes. Incluye 130 biopsias biológicas únicas, ocho biopsias repetidas entre ensayos, 38 controles positivos y 22 controles negativos; el conjunto ocupa 14,19 GB.</p>
+</section>
+<section id="hallazgos-disponibles" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="hallazgos-disponibles"><span class="header-section-number">0.2</span> Hallazgos disponibles</h2>
 <ul>
-<li>El conjunto de entrada contiene <strong>198 bibliotecas paired-end</strong>, equivalentes a 198 pares R1/R2 y 396 archivos FASTQ: 152 del ensayo ampliado y 46 del ensayo piloto.</li>
 <li>El recorte posicional de primers conservó el <strong>100 % de los pares</strong> en ambos ensayos. La comprobación posterior detectó una señal de primer residual de como máximo <strong>0,10 %</strong> por biblioteca.</li>
-<li>Las ocho biopsias incluidas en ambos ensayos tuvieron mayor profundidad de entrada en el piloto. La comparación es técnica y descriptiva; no constituye una comparación biológica.</li>
+<li>Las ocho biopsias presentes en ambos ensayos tuvieron mayor profundidad de entrada en el piloto. La comparación es técnica y descriptiva; no constituye una comparación biológica.</li>
+<li>El libro incorpora un inventario técnico completo, paginado, de las 198 bibliotecas. Los códigos <code>01-xxx</code> están autorizados; no se publican identificadores de paciente ni variables clínicas individuales.</li>
 </ul>
 </section>
-<section id="alcance-y-lectura-responsable" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="alcance-y-lectura-responsable"><span class="header-section-number">0.2</span> Alcance y lectura responsable</h2>
-<p>La unidad de análisis de secuenciación es un <strong>par de lecturas</strong>: una lectura forward (R1) y su lectura reverse (R2) procedentes de la misma molécula de amplicón. Los controles se conservan para el control de calidad, pero no se mezclarán con las biopsias en las comparaciones biológicas finales. Las ocho biopsias repetidas se utilizarán para evaluar reproducibilidad y efecto de ensayo, sin duplicar observaciones en el análisis clínico principal.</p>
-<p>Este libro es una capa de publicación separada del análisis. Se actualiza y se renderiza únicamente mediante una solicitud manual; no observa ni sincroniza el proyecto analítico de forma automática.</p>
-</section>
-<section id="organización-del-libro" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="organización-del-libro"><span class="header-section-number">0.3</span> Organización del libro</h2>
-<p>Los primeros capítulos describen el contexto, el diseño y el preprocesamiento ya completado. Los capítulos posteriores establecen de forma transparente el plan para DADA2, taxonomía, controles, reproducibilidad y análisis clínicos; no adelantan resultados que aún no se hayan producido.</p>
+<section id="lectura-responsable-y-actualizaciones" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="lectura-responsable-y-actualizaciones"><span class="header-section-number">0.3</span> Lectura responsable y actualizaciones</h2>
+<p>Los controles se conservan para QC y decontaminación, pero no se mezclarán con las biopsias en las comparaciones biológicas finales. Las ocho biopsias repetidas se utilizarán para estudiar reproducibilidad y efecto de ensayo, sin duplicar observaciones en el análisis clínico principal.</p>
+<p>Este libro es una capa de publicación separada del análisis. Solo se actualiza, renderiza y publica mediante una instrucción manual explícita.</p>
 
 
 </section>

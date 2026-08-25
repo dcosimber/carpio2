@@ -7,9 +7,10 @@ ni metadatos clínicos individuales.
 
 ## Estado actual
 
-La primera versión documenta el diseño experimental, la auditoría de entradas,
-el control de calidad, el diagnóstico y recorte de primers, y la comparación
-de profundidad de las ocho biopsias repetidas. Las etapas de DADA2, ASV,
+La versión actual documenta el contexto, el diseño experimental, el inventario
+técnico paginado de las 198 bibliotecas, la auditoría de entradas, el control
+de calidad, el diagnóstico y recorte de primers, y la comparación de
+profundidad de las ocho biopsias repetidas. Las etapas de DADA2, ASV,
 taxonomía, decontaminación y análisis clínico se incorporarán solo cuando sus
 resultados estén disponibles y se solicite expresamente una actualización.
 
@@ -33,6 +34,10 @@ CARPIO_ANALYSIS_DIR=/ruta/a/CARPIO2 scripts/build_report.sh --export
 
 # Exporta sin renderizar.
 CARPIO_ANALYSIS_DIR=/ruta/a/CARPIO2 scripts/build_report.sh --export-only
+
+# Actualiza una tabla curada ya autorizada sin regenerar MultiQC.
+# Usar solo bajo petición explícita de actualizar el informe.
+CARPIO_ANALYSIS_DIR=/ruta/a/CARPIO2 python3 scripts/export_public_assets.py --skip-multiqc
 ```
 
 `docs/` es el directorio de salida para GitHub Pages. El workflow de GitHub
@@ -53,8 +58,9 @@ activos desde el proyecto analítico.
 ```text
 .
 ├── .github/workflows/  despliegue de GitHub Pages tras push a main
+├── assets/             recursos locales de presentación e interactividad
 ├── appendices/         reproducibilidad y disponibilidad de datos
-├── chapters/           capítulos del libro
+├── chapters/           capítulos y fragmentos HTML curados del libro
 ├── config/             lista permitida de activos y reglas de exportación
 ├── figures/            figuras curadas para publicación
 ├── manifests/          trazabilidad de las exportaciones y builds

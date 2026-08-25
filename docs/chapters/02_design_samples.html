@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Diseño, biopsias y controles – Proyecto Carpio</title>
+<title>3&nbsp; Diseño experimental, biopsias y controles – Proyecto Carpio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -251,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/02_design_samples.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño, biopsias y controles</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/02_design_samples.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental, biopsias y controles</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -295,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño, biopsias y controles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental, biopsias y controles</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -379,9 +379,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#cohorte-técnica-y-unidad-de-análisis" id="toc-cohorte-técnica-y-unidad-de-análisis" class="nav-link active" data-scroll-target="#cohorte-técnica-y-unidad-de-análisis"><span class="header-section-number">3.1</span> Cohorte técnica y unidad de análisis</a></li>
-  <li><a href="#papel-de-los-controles" id="toc-papel-de-los-controles" class="nav-link" data-scroll-target="#papel-de-los-controles"><span class="header-section-number">3.2</span> Papel de los controles</a></li>
-  <li><a href="#trazabilidad-de-identificadores" id="toc-trazabilidad-de-identificadores" class="nav-link" data-scroll-target="#trazabilidad-de-identificadores"><span class="header-section-number">3.3</span> Trazabilidad de identificadores</a></li>
+  <li><a href="#región-amplificada-y-configuración-de-secuenciación" id="toc-región-amplificada-y-configuración-de-secuenciación" class="nav-link active" data-scroll-target="#región-amplificada-y-configuración-de-secuenciación"><span class="header-section-number">3.1</span> Región amplificada y configuración de secuenciación</a></li>
+  <li><a href="#cohorte-técnica-y-unidad-de-análisis" id="toc-cohorte-técnica-y-unidad-de-análisis" class="nav-link" data-scroll-target="#cohorte-técnica-y-unidad-de-análisis"><span class="header-section-number">3.2</span> Cohorte técnica y unidad de análisis</a></li>
+  <li><a href="#controles-experimentales" id="toc-controles-experimentales" class="nav-link" data-scroll-target="#controles-experimentales"><span class="header-section-number">3.3</span> Controles experimentales</a></li>
+  <li><a href="#convención-de-nombres-y-trazabilidad" id="toc-convención-de-nombres-y-trazabilidad" class="nav-link" data-scroll-target="#convención-de-nombres-y-trazabilidad"><span class="header-section-number">3.4</span> Convención de nombres y trazabilidad</a></li>
+  <li><a href="#inventario-técnico-completo-de-bibliotecas" id="toc-inventario-técnico-completo-de-bibliotecas" class="nav-link" data-scroll-target="#inventario-técnico-completo-de-bibliotecas"><span class="header-section-number">3.5</span> Inventario técnico completo de bibliotecas</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/02_design_samples.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -391,7 +393,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño, biopsias y controles</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental, biopsias y controles</span></h1>
 </div>
 
 
@@ -408,16 +410,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="cohorte-técnica-y-unidad-de-análisis" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="cohorte-técnica-y-unidad-de-análisis"><span class="header-section-number">3.1</span> Cohorte técnica y unidad de análisis</h2>
-<p>La entrada comprende <strong>198 bibliotecas paired-end</strong>. Cada biblioteca está representada por dos archivos FASTQ complementarios: R1 y R2. Por tanto, los 198 pares representan 396 archivos, pero no 396 observaciones independientes. Cuando se informa profundidad se usa, salvo indicación contraria, el número de <strong>pares de lecturas</strong>.</p>
-<p>El ensayo ampliado contiene 152 bibliotecas y el ensayo piloto aporta 46. En conjunto hay 130 biopsias biológicas únicas, 138 registros de biopsia al contar las ocho repeticiones técnicas, 38 controles positivos y 22 controles negativos. Las repeticiones del piloto no incrementan el tamaño de la cohorte clínica principal.</p>
+<section id="región-amplificada-y-configuración-de-secuenciación" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="región-amplificada-y-configuración-de-secuenciación"><span class="header-section-number">3.1</span> Región amplificada y configuración de secuenciación</h2>
+<p>El ensayo ampliado actual se centra exclusivamente en la región V3–V4 del gen bacteriano 16S rRNA. La combinación del tamaño esperado del amplicón y las lecturas paired-end debe proporcionar solapamiento suficiente para fusionar R1 y R2; los parámetros finales de calidad y fusión se validarán con los perfiles reales de las lecturas.</p>
 <table class="caption-top table">
 <colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Característica</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diana</td>
+<td>Gen bacteriano 16S rRNA, región V3–V4</td>
+</tr>
+<tr class="even">
+<td>Cebador forward</td>
+<td>341F (<code>CCTACGGGNGGCWGCAG</code>)</td>
+</tr>
+<tr class="odd">
+<td>Cebador reverse</td>
+<td>805R (<code>GACTACHVGGGTATCTAATCC</code>)</td>
+</tr>
+<tr class="even">
+<td>Tamaño esperado del amplicón</td>
+<td>Aproximadamente 464 pb</td>
+</tr>
+<tr class="odd">
+<td>Adaptadores</td>
+<td>Overhangs compatibles con indexación Illumina</td>
+</tr>
+<tr class="even">
+<td>Preparación de librerías</td>
+<td>Índices Nextera XT, con protocolo modificado</td>
+</tr>
+<tr class="odd">
+<td>Plataforma descrita</td>
+<td>Illumina NextSeq, celda P1</td>
+</tr>
+<tr class="even">
+<td>Configuración</td>
+<td>Paired-end 2 × 300 pb, 600 ciclos</td>
+</tr>
+<tr class="odd">
+<td>PCR</td>
+<td>35 ciclos; anillamiento a 53 °C según el borrador experimental</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cohorte-técnica-y-unidad-de-análisis" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="cohorte-técnica-y-unidad-de-análisis"><span class="header-section-number">3.2</span> Cohorte técnica y unidad de análisis</h2>
+<p>La unidad de análisis de la secuenciación es una <strong>biblioteca paired-end</strong>: un archivo R1 y un archivo R2 complementarios procedentes de la misma molécula de amplicón. Por ello, 198 bibliotecas equivalen a 198 pares R1/R2 y 396 FASTQ, pero no a 396 observaciones independientes.</p>
+<p>El conjunto contiene 130 códigos de biopsia únicos y 138 registros de biopsia al contar las ocho repeticiones del piloto. Las repeticiones no incrementan el tamaño de la cohorte clínica principal; son observaciones técnicas para estudiar reproducibilidad y efecto de ensayo.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
 <col style="width: 23%">
 <col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -425,6 +482,7 @@ ul.task-list li input[type="checkbox"] {
 <th>Tipo de registro</th>
 <th>Subtipo</th>
 <th style="text-align: right;">Bibliotecas paired-end</th>
+<th style="text-align: right;">FASTQ</th>
 </tr>
 </thead>
 <tbody>
@@ -433,65 +491,10054 @@ ul.task-list li input[type="checkbox"] {
 <td>Biopsia</td>
 <td>Biopsia digestiva</td>
 <td style="text-align: right;">130</td>
+<td style="text-align: right;">260</td>
 </tr>
 <tr class="even">
 <td>Piloto</td>
 <td>Biopsia repetida</td>
-<td>Ocho biopsias presentes en ambos ensayos</td>
+<td>Códigos <code>01-049</code> a <code>01-056</code></td>
 <td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
 </tr>
 <tr class="odd">
 <td>Piloto</td>
 <td>Control positivo</td>
 <td>Mock de extracción</td>
 <td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
 </tr>
 <tr class="even">
 <td>Piloto</td>
 <td>Control positivo</td>
 <td>Mock de PCR</td>
 <td style="text-align: right;">6</td>
+<td style="text-align: right;">12</td>
 </tr>
 <tr class="odd">
 <td>Piloto</td>
 <td>Control positivo</td>
 <td>Diluciones de <em>Escherichia coli</em></td>
 <td style="text-align: right;">24</td>
+<td style="text-align: right;">48</td>
 </tr>
 <tr class="even">
 <td>Ampliado actual</td>
 <td>Control negativo</td>
 <td>Batch</td>
 <td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
 </tr>
 <tr class="odd">
 <td>Ampliado actual</td>
 <td>Control negativo</td>
 <td>Extracción</td>
 <td style="text-align: right;">10</td>
+<td style="text-align: right;">20</td>
 </tr>
 <tr class="even">
 <td>Ampliado actual</td>
 <td>Control negativo</td>
 <td>PCR</td>
 <td style="text-align: right;">10</td>
+<td style="text-align: right;">20</td>
 </tr>
 <tr class="odd">
 <td><strong>Total</strong></td>
 <td></td>
 <td></td>
 <td style="text-align: right;"><strong>198</strong></td>
+<td style="text-align: right;"><strong>396</strong></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="papel-de-los-controles" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="papel-de-los-controles"><span class="header-section-number">3.2</span> Papel de los controles</h2>
-<p>Los controles positivos del piloto cubren el proceso de extracción (mocks de células), PCR (mocks de ADN) y sensibilidad analítica (diluciones seriadas de <em>E. coli</em>). Los controles negativos del ensayo ampliado permiten distinguir contaminación asociada al batch, la extracción o la PCR. Estos controles no formarán parte de las comparaciones biológicas entre biopsias, pero se mantendrán hasta la fase de decontaminación y validación.</p>
+<section id="controles-experimentales" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="controles-experimentales"><span class="header-section-number">3.3</span> Controles experimentales</h2>
+<p>Los controles positivos procedentes del piloto cubren etapas complementarias:</p>
+<ul>
+<li><strong>Mocks de extracción (<code>mock_extr_*</code>)</strong>: comunidades de composición conocida incorporadas antes de la extracción; evalúan el procedimiento completo.</li>
+<li><strong>Mocks de PCR (<code>mock_pcr_*</code>)</strong>: ADN de composición conocida que evalúa amplificación, preparación de librerías y asignación taxonómica.</li>
+<li><strong>Diluciones de <em>E. coli</em> (<code>ecoli_dilN_R</code>)</strong>: 24 registros distribuidos en seis diluciones decimales seriadas, de 10⁻¹ a 10⁻⁶, para estudiar sensibilidad y límite de detección.</li>
+</ul>
+<p>Los controles negativos del ensayo ampliado permiten localizar posibles fuentes de contaminación: dos controles de batch (<code>cneg_batch_*</code>), diez blancos de extracción con agua libre de nucleasas (<code>cneg_extr_*</code>) y diez blancos de PCR sin paso de extracción (<code>cneg_pcr_*</code>). Los controles se conservan hasta la etapa de decontaminación, pero no entrarán en las comparaciones biológicas entre biopsias.</p>
+<p>No se incorporaron controles negativos del piloto al conjunto consolidado actual. Su ausencia se conserva como parte de la trazabilidad al interpretar los controles disponibles y las comparaciones entre ensayos.</p>
 </section>
-<section id="trazabilidad-de-identificadores" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="trazabilidad-de-identificadores"><span class="header-section-number">3.3</span> Trazabilidad de identificadores</h2>
-<p>El código biológico de biopsia usa el formato técnico <code>01-xxx</code>. Las ocho biopsias procedentes del piloto llevan un sufijo que las diferencia del registro del ensayo ampliado. Esta distinción conserva la trazabilidad técnica y evita que una biopsia repetida se interprete como un nuevo individuo. Los metadatos clínicos individuales no forman parte de este repositorio público.</p>
+<section id="convención-de-nombres-y-trazabilidad" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="convención-de-nombres-y-trazabilidad"><span class="header-section-number">3.4</span> Convención de nombres y trazabilidad</h2>
+<p>Las biopsias del ensayo ampliado usan directamente su código técnico, por ejemplo <code>01-049_R1.fastq.gz</code> y <code>01-049_R2.fastq.gz</code>. Las ocho biopsias del piloto incluyen el sufijo <code>_carpio1</code> en el nombre de archivo, por ejemplo <code>01-049_carpio1_R1.fastq.gz</code>, para diferenciarlas de su biblioteca en el ensayo ampliado. Los identificadores de los controles indican su tipo y, cuando procede, dilución y réplica.</p>
+</section>
+<section id="inventario-técnico-completo-de-bibliotecas" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="inventario-técnico-completo-de-bibliotecas"><span class="header-section-number">3.5</span> Inventario técnico completo de bibliotecas</h2>
+<p>La tabla siguiente contiene los <strong>198 registros técnicos</strong> incluidos en el análisis. Muestra diez filas por página y ofrece controles para avanzar o retroceder. Incluye las variables de secuenciación presentes en el informe de origen: nombres de FASTQ, ensayo, hoja de metadatos, tipo de muestra o control, dilución, fechas de laboratorio, base de la fecha de secuenciación e índices.</p>
+<p>La fecha de secuenciación del ensayo ampliado se representa mediante la fecha de biblioteca como <em>proxy</em>; para el piloto procede de la etiqueta de origen. Se mantiene esa columna para que la interpretación sea trazable. La tabla excluye deliberadamente <code>record_id</code>, etiquetas internas de origen, concentraciones, medidas TapeStation, tamaños de archivo, identificadores de paciente y metadatos clínicos.</p>
+<div class="sample-table-scroll" data-sample-table-pagination="" data-page-size="10" role="region" aria-label="Tabla técnica completa de bibliotecas" tabindex="0">
+<table id="sample-inventory" class="sample-inventory" data-page-size="10">
+<caption>
+Inventario técnico de las 198 bibliotecas paired-end incluidas en el análisis.
+</caption>
+<thead>
+<tr>
+<th scope="col">
+Registro técnico
+</th>
+<th scope="col">
+FASTQ R1
+</th>
+<th scope="col">
+FASTQ R2
+</th>
+<th scope="col">
+Ensayo
+</th>
+<th scope="col">
+Hoja
+</th>
+<th scope="col">
+Tipo
+</th>
+<th scope="col">
+Control
+</th>
+<th scope="col">
+Dilución
+</th>
+<th scope="col">
+Extracción
+</th>
+<th scope="col">
+Biblioteca
+</th>
+<th scope="col">
+Secuenciación
+</th>
+<th scope="col">
+Base de fecha
+</th>
+<th scope="col">
+Carrera
+</th>
+<th scope="col">
+Set índices
+</th>
+<th scope="col">
+Índice i7
+</th>
+<th scope="col">
+Índice i5
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+01-049
+</td>
+<td>
+01-049_R1.fastq.gz
+</td>
+<td>
+01-049_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N701
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-049_carpio1
+</td>
+<td>
+01-049_carpio1_R1.fastq.gz
+</td>
+<td>
+01-049_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N701
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-050
+</td>
+<td>
+01-050_R1.fastq.gz
+</td>
+<td>
+01-050_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N702
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-050_carpio1
+</td>
+<td>
+01-050_carpio1_R1.fastq.gz
+</td>
+<td>
+01-050_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N702
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-051
+</td>
+<td>
+01-051_R1.fastq.gz
+</td>
+<td>
+01-051_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N703
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-051_carpio1
+</td>
+<td>
+01-051_carpio1_R1.fastq.gz
+</td>
+<td>
+01-051_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N703
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-052
+</td>
+<td>
+01-052_R1.fastq.gz
+</td>
+<td>
+01-052_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N704
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-052_carpio1
+</td>
+<td>
+01-052_carpio1_R1.fastq.gz
+</td>
+<td>
+01-052_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N704
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-053
+</td>
+<td>
+01-053_R1.fastq.gz
+</td>
+<td>
+01-053_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-053_carpio1
+</td>
+<td>
+01-053_carpio1_R1.fastq.gz
+</td>
+<td>
+01-053_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N705
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-054
+</td>
+<td>
+01-054_R1.fastq.gz
+</td>
+<td>
+01-054_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-054_carpio1
+</td>
+<td>
+01-054_carpio1_R1.fastq.gz
+</td>
+<td>
+01-054_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N706
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-055
+</td>
+<td>
+01-055_R1.fastq.gz
+</td>
+<td>
+01-055_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N707
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-055_carpio1
+</td>
+<td>
+01-055_carpio1_R1.fastq.gz
+</td>
+<td>
+01-055_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N707
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-056
+</td>
+<td>
+01-056_R1.fastq.gz
+</td>
+<td>
+01-056_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N710
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-056_carpio1
+</td>
+<td>
+01-056_carpio1_R1.fastq.gz
+</td>
+<td>
+01-056_carpio1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N710
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-057
+</td>
+<td>
+01-057_R1.fastq.gz
+</td>
+<td>
+01-057_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N711
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-058
+</td>
+<td>
+01-058_R1.fastq.gz
+</td>
+<td>
+01-058_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N712
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-059
+</td>
+<td>
+01-059_R1.fastq.gz
+</td>
+<td>
+01-059_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N714
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-060
+</td>
+<td>
+01-060_R1.fastq.gz
+</td>
+<td>
+01-060_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N715
+</td>
+<td>
+S513
+</td>
+</tr>
+<tr>
+<td>
+01-061
+</td>
+<td>
+01-061_R1.fastq.gz
+</td>
+<td>
+01-061_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N701
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+01-062
+</td>
+<td>
+01-062_R1.fastq.gz
+</td>
+<td>
+01-062_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N702
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+01-063
+</td>
+<td>
+01-063_R1.fastq.gz
+</td>
+<td>
+01-063_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N703
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+01-064
+</td>
+<td>
+01-064_R1.fastq.gz
+</td>
+<td>
+01-064_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N704
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+01-065
+</td>
+<td>
+01-065_R1.fastq.gz
+</td>
+<td>
+01-065_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N715
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+01-066
+</td>
+<td>
+01-066_R1.fastq.gz
+</td>
+<td>
+01-066_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N701
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-067
+</td>
+<td>
+01-067_R1.fastq.gz
+</td>
+<td>
+01-067_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N702
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-068
+</td>
+<td>
+01-068_R1.fastq.gz
+</td>
+<td>
+01-068_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N703
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-069
+</td>
+<td>
+01-069_R1.fastq.gz
+</td>
+<td>
+01-069_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N704
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-070
+</td>
+<td>
+01-070_R1.fastq.gz
+</td>
+<td>
+01-070_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-071
+</td>
+<td>
+01-071_R1.fastq.gz
+</td>
+<td>
+01-071_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-072
+</td>
+<td>
+01-072_R1.fastq.gz
+</td>
+<td>
+01-072_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+2026-07-30
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N707
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-073
+</td>
+<td>
+01-073_R1.fastq.gz
+</td>
+<td>
+01-073_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N710
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-074
+</td>
+<td>
+01-074_R1.fastq.gz
+</td>
+<td>
+01-074_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N711
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-075
+</td>
+<td>
+01-075_R1.fastq.gz
+</td>
+<td>
+01-075_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N712
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-076
+</td>
+<td>
+01-076_R1.fastq.gz
+</td>
+<td>
+01-076_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N714
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-077
+</td>
+<td>
+01-077_R1.fastq.gz
+</td>
+<td>
+01-077_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N715
+</td>
+<td>
+S518
+</td>
+</tr>
+<tr>
+<td>
+01-078
+</td>
+<td>
+01-078_R1.fastq.gz
+</td>
+<td>
+01-078_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N701
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-079
+</td>
+<td>
+01-079_R1.fastq.gz
+</td>
+<td>
+01-079_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N702
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-080
+</td>
+<td>
+01-080_R1.fastq.gz
+</td>
+<td>
+01-080_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N703
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-081
+</td>
+<td>
+01-081_R1.fastq.gz
+</td>
+<td>
+01-081_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N704
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-082
+</td>
+<td>
+01-082_R1.fastq.gz
+</td>
+<td>
+01-082_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-084
+</td>
+<td>
+01-084_R1.fastq.gz
+</td>
+<td>
+01-084_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-085
+</td>
+<td>
+01-085_R1.fastq.gz
+</td>
+<td>
+01-085_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N707
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-086
+</td>
+<td>
+01-086_R1.fastq.gz
+</td>
+<td>
+01-086_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N710
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-087
+</td>
+<td>
+01-087_R1.fastq.gz
+</td>
+<td>
+01-087_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N711
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-088
+</td>
+<td>
+01-088_R1.fastq.gz
+</td>
+<td>
+01-088_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N712
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-089
+</td>
+<td>
+01-089_R1.fastq.gz
+</td>
+<td>
+01-089_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N714
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-090
+</td>
+<td>
+01-090_R1.fastq.gz
+</td>
+<td>
+01-090_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N715
+</td>
+<td>
+S520
+</td>
+</tr>
+<tr>
+<td>
+01-091
+</td>
+<td>
+01-091_R1.fastq.gz
+</td>
+<td>
+01-091_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N701
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-092
+</td>
+<td>
+01-092_R1.fastq.gz
+</td>
+<td>
+01-092_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N702
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-093
+</td>
+<td>
+01-093_R1.fastq.gz
+</td>
+<td>
+01-093_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N703
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-094
+</td>
+<td>
+01-094_R1.fastq.gz
+</td>
+<td>
+01-094_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N704
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-095
+</td>
+<td>
+01-095_R1.fastq.gz
+</td>
+<td>
+01-095_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-096
+</td>
+<td>
+01-096_R1.fastq.gz
+</td>
+<td>
+01-096_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+2026-07-31
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-097
+</td>
+<td>
+01-097_R1.fastq.gz
+</td>
+<td>
+01-097_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N707
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-098
+</td>
+<td>
+01-098_R1.fastq.gz
+</td>
+<td>
+01-098_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N710
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-099
+</td>
+<td>
+01-099_R1.fastq.gz
+</td>
+<td>
+01-099_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N711
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-100
+</td>
+<td>
+01-100_R1.fastq.gz
+</td>
+<td>
+01-100_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N712
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-101
+</td>
+<td>
+01-101_R1.fastq.gz
+</td>
+<td>
+01-101_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N714
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-102
+</td>
+<td>
+01-102_R1.fastq.gz
+</td>
+<td>
+01-102_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N715
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+01-103
+</td>
+<td>
+01-103_R1.fastq.gz
+</td>
+<td>
+01-103_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N701
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-104
+</td>
+<td>
+01-104_R1.fastq.gz
+</td>
+<td>
+01-104_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N702
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-105
+</td>
+<td>
+01-105_R1.fastq.gz
+</td>
+<td>
+01-105_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N703
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-106
+</td>
+<td>
+01-106_R1.fastq.gz
+</td>
+<td>
+01-106_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-107
+</td>
+<td>
+01-107_R1.fastq.gz
+</td>
+<td>
+01-107_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N722
+</td>
+<td>
+S508
+</td>
+</tr>
+<tr>
+<td>
+01-108
+</td>
+<td>
+01-108_R1.fastq.gz
+</td>
+<td>
+01-108_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-109
+</td>
+<td>
+01-109_R1.fastq.gz
+</td>
+<td>
+01-109_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N707
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-110
+</td>
+<td>
+01-110_R1.fastq.gz
+</td>
+<td>
+01-110_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N710
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-111
+</td>
+<td>
+01-111_R1.fastq.gz
+</td>
+<td>
+01-111_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N711
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-112
+</td>
+<td>
+01-112_R1.fastq.gz
+</td>
+<td>
+01-112_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N712
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-114
+</td>
+<td>
+01-114_R1.fastq.gz
+</td>
+<td>
+01-114_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N714
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-115
+</td>
+<td>
+01-115_R1.fastq.gz
+</td>
+<td>
+01-115_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N715
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+01-116
+</td>
+<td>
+01-116_R1.fastq.gz
+</td>
+<td>
+01-116_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N716
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-117
+</td>
+<td>
+01-117_R1.fastq.gz
+</td>
+<td>
+01-117_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N718
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-118
+</td>
+<td>
+01-118_R1.fastq.gz
+</td>
+<td>
+01-118_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N719
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-119
+</td>
+<td>
+01-119_R1.fastq.gz
+</td>
+<td>
+01-119_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N720
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-121
+</td>
+<td>
+01-121_R1.fastq.gz
+</td>
+<td>
+01-121_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N721
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-122
+</td>
+<td>
+01-122_R1.fastq.gz
+</td>
+<td>
+01-122_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+2026-08-04
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N722
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-123
+</td>
+<td>
+01-123_R1.fastq.gz
+</td>
+<td>
+01-123_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N723
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-124
+</td>
+<td>
+01-124_R1.fastq.gz
+</td>
+<td>
+01-124_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N724
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-125
+</td>
+<td>
+01-125_R1.fastq.gz
+</td>
+<td>
+01-125_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N726
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-126
+</td>
+<td>
+01-126_R1.fastq.gz
+</td>
+<td>
+01-126_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N727
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-127
+</td>
+<td>
+01-127_R1.fastq.gz
+</td>
+<td>
+01-127_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N728
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-128
+</td>
+<td>
+01-128_R1.fastq.gz
+</td>
+<td>
+01-128_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N729
+</td>
+<td>
+S502
+</td>
+</tr>
+<tr>
+<td>
+01-129
+</td>
+<td>
+01-129_R1.fastq.gz
+</td>
+<td>
+01-129_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N716
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-130
+</td>
+<td>
+01-130_R1.fastq.gz
+</td>
+<td>
+01-130_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N718
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-131
+</td>
+<td>
+01-131_R1.fastq.gz
+</td>
+<td>
+01-131_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N719
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-132
+</td>
+<td>
+01-132_R1.fastq.gz
+</td>
+<td>
+01-132_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N720
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-133
+</td>
+<td>
+01-133_R1.fastq.gz
+</td>
+<td>
+01-133_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N721
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-134
+</td>
+<td>
+01-134_R1.fastq.gz
+</td>
+<td>
+01-134_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N722
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-135
+</td>
+<td>
+01-135_R1.fastq.gz
+</td>
+<td>
+01-135_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N723
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-136
+</td>
+<td>
+01-136_R1.fastq.gz
+</td>
+<td>
+01-136_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N724
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-137
+</td>
+<td>
+01-137_R1.fastq.gz
+</td>
+<td>
+01-137_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N726
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-138
+</td>
+<td>
+01-138_R1.fastq.gz
+</td>
+<td>
+01-138_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N727
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-140
+</td>
+<td>
+01-140_R1.fastq.gz
+</td>
+<td>
+01-140_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N728
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-142
+</td>
+<td>
+01-142_R1.fastq.gz
+</td>
+<td>
+01-142_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N729
+</td>
+<td>
+S503
+</td>
+</tr>
+<tr>
+<td>
+01-143
+</td>
+<td>
+01-143_R1.fastq.gz
+</td>
+<td>
+01-143_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N716
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-144
+</td>
+<td>
+01-144_R1.fastq.gz
+</td>
+<td>
+01-144_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N718
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-145
+</td>
+<td>
+01-145_R1.fastq.gz
+</td>
+<td>
+01-145_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N719
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-146
+</td>
+<td>
+01-146_R1.fastq.gz
+</td>
+<td>
+01-146_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N720
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-147
+</td>
+<td>
+01-147_R1.fastq.gz
+</td>
+<td>
+01-147_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N721
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-148
+</td>
+<td>
+01-148_R1.fastq.gz
+</td>
+<td>
+01-148_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+2026-08-06
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N722
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-149
+</td>
+<td>
+01-149_R1.fastq.gz
+</td>
+<td>
+01-149_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N723
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-150
+</td>
+<td>
+01-150_R1.fastq.gz
+</td>
+<td>
+01-150_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N724
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-151
+</td>
+<td>
+01-151_R1.fastq.gz
+</td>
+<td>
+01-151_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N726
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-152
+</td>
+<td>
+01-152_R1.fastq.gz
+</td>
+<td>
+01-152_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N727
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-153
+</td>
+<td>
+01-153_R1.fastq.gz
+</td>
+<td>
+01-153_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N728
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-154
+</td>
+<td>
+01-154_R1.fastq.gz
+</td>
+<td>
+01-154_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N729
+</td>
+<td>
+S505
+</td>
+</tr>
+<tr>
+<td>
+01-155
+</td>
+<td>
+01-155_R1.fastq.gz
+</td>
+<td>
+01-155_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N716
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-156
+</td>
+<td>
+01-156_R1.fastq.gz
+</td>
+<td>
+01-156_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N718
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-157
+</td>
+<td>
+01-157_R1.fastq.gz
+</td>
+<td>
+01-157_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N719
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-158
+</td>
+<td>
+01-158_R1.fastq.gz
+</td>
+<td>
+01-158_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N720
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-159
+</td>
+<td>
+01-159_R1.fastq.gz
+</td>
+<td>
+01-159_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N721
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-160
+</td>
+<td>
+01-160_R1.fastq.gz
+</td>
+<td>
+01-160_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N722
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-161
+</td>
+<td>
+01-161_R1.fastq.gz
+</td>
+<td>
+01-161_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N723
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-162
+</td>
+<td>
+01-162_R1.fastq.gz
+</td>
+<td>
+01-162_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N724
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-163
+</td>
+<td>
+01-163_R1.fastq.gz
+</td>
+<td>
+01-163_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N726
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-164
+</td>
+<td>
+01-164_R1.fastq.gz
+</td>
+<td>
+01-164_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N727
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-165
+</td>
+<td>
+01-165_R1.fastq.gz
+</td>
+<td>
+01-165_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N728
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-166
+</td>
+<td>
+01-166_R1.fastq.gz
+</td>
+<td>
+01-166_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N729
+</td>
+<td>
+S506
+</td>
+</tr>
+<tr>
+<td>
+01-167
+</td>
+<td>
+01-167_R1.fastq.gz
+</td>
+<td>
+01-167_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N716
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-168
+</td>
+<td>
+01-168_R1.fastq.gz
+</td>
+<td>
+01-168_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N718
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-169
+</td>
+<td>
+01-169_R1.fastq.gz
+</td>
+<td>
+01-169_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N719
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-170
+</td>
+<td>
+01-170_R1.fastq.gz
+</td>
+<td>
+01-170_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N720
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-172
+</td>
+<td>
+01-172_R1.fastq.gz
+</td>
+<td>
+01-172_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N721
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-174
+</td>
+<td>
+01-174_R1.fastq.gz
+</td>
+<td>
+01-174_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+2026-08-07
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N722
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-175
+</td>
+<td>
+01-175_R1.fastq.gz
+</td>
+<td>
+01-175_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N723
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-177
+</td>
+<td>
+01-177_R1.fastq.gz
+</td>
+<td>
+01-177_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N724
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-178
+</td>
+<td>
+01-178_R1.fastq.gz
+</td>
+<td>
+01-178_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N726
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-179
+</td>
+<td>
+01-179_R1.fastq.gz
+</td>
+<td>
+01-179_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N727
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-180
+</td>
+<td>
+01-180_R1.fastq.gz
+</td>
+<td>
+01-180_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N728
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-181
+</td>
+<td>
+01-181_R1.fastq.gz
+</td>
+<td>
+01-181_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N729
+</td>
+<td>
+S507
+</td>
+</tr>
+<tr>
+<td>
+01-182
+</td>
+<td>
+01-182_R1.fastq.gz
+</td>
+<td>
+01-182_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N716
+</td>
+<td>
+S508
+</td>
+</tr>
+<tr>
+<td>
+01-183
+</td>
+<td>
+01-183_R1.fastq.gz
+</td>
+<td>
+01-183_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N718
+</td>
+<td>
+S508
+</td>
+</tr>
+<tr>
+<td>
+01-184
+</td>
+<td>
+01-184_R1.fastq.gz
+</td>
+<td>
+01-184_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N719
+</td>
+<td>
+S508
+</td>
+</tr>
+<tr>
+<td>
+01-185
+</td>
+<td>
+01-185_R1.fastq.gz
+</td>
+<td>
+01-185_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N720
+</td>
+<td>
+S508
+</td>
+</tr>
+<tr>
+<td>
+01-186
+</td>
+<td>
+01-186_R1.fastq.gz
+</td>
+<td>
+01-186_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Biopsia
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+2026-08-11
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+B
+</td>
+<td>
+N721
+</td>
+<td>
+S508
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil1_1
+</td>
+<td>
+ecoli_dil1_1_R1.fastq.gz
+</td>
+<td>
+ecoli_dil1_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻¹
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N704
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil1_2
+</td>
+<td>
+ecoli_dil1_2_R1.fastq.gz
+</td>
+<td>
+ecoli_dil1_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻¹
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N715
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil1_3
+</td>
+<td>
+ecoli_dil1_3_R1.fastq.gz
+</td>
+<td>
+ecoli_dil1_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻¹
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N706
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil1_4
+</td>
+<td>
+ecoli_dil1_4_R1.fastq.gz
+</td>
+<td>
+ecoli_dil1_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻¹
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N715
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil2_1
+</td>
+<td>
+ecoli_dil2_1_R1.fastq.gz
+</td>
+<td>
+ecoli_dil2_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻²
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N703
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil2_2
+</td>
+<td>
+ecoli_dil2_2_R1.fastq.gz
+</td>
+<td>
+ecoli_dil2_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻²
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N714
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil2_3
+</td>
+<td>
+ecoli_dil2_3_R1.fastq.gz
+</td>
+<td>
+ecoli_dil2_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻²
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N705
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil2_4
+</td>
+<td>
+ecoli_dil2_4_R1.fastq.gz
+</td>
+<td>
+ecoli_dil2_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻²
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N714
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil3_1
+</td>
+<td>
+ecoli_dil3_1_R1.fastq.gz
+</td>
+<td>
+ecoli_dil3_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻³
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N702
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil3_2
+</td>
+<td>
+ecoli_dil3_2_R1.fastq.gz
+</td>
+<td>
+ecoli_dil3_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻³
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N712
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil3_3
+</td>
+<td>
+ecoli_dil3_3_R1.fastq.gz
+</td>
+<td>
+ecoli_dil3_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻³
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N704
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil3_4
+</td>
+<td>
+ecoli_dil3_4_R1.fastq.gz
+</td>
+<td>
+ecoli_dil3_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻³
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N712
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil4_1
+</td>
+<td>
+ecoli_dil4_1_R1.fastq.gz
+</td>
+<td>
+ecoli_dil4_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁴
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N701
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil4_2
+</td>
+<td>
+ecoli_dil4_2_R1.fastq.gz
+</td>
+<td>
+ecoli_dil4_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁴
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N711
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil4_3
+</td>
+<td>
+ecoli_dil4_3_R1.fastq.gz
+</td>
+<td>
+ecoli_dil4_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁴
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N703
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil4_4
+</td>
+<td>
+ecoli_dil4_4_R1.fastq.gz
+</td>
+<td>
+ecoli_dil4_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁴
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N711
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil5_1
+</td>
+<td>
+ecoli_dil5_1_R1.fastq.gz
+</td>
+<td>
+ecoli_dil5_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁵
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N715
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil5_2
+</td>
+<td>
+ecoli_dil5_2_R1.fastq.gz
+</td>
+<td>
+ecoli_dil5_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁵
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N710
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil5_3
+</td>
+<td>
+ecoli_dil5_3_R1.fastq.gz
+</td>
+<td>
+ecoli_dil5_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁵
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N702
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil5_4
+</td>
+<td>
+ecoli_dil5_4_R1.fastq.gz
+</td>
+<td>
+ecoli_dil5_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁵
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N710
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil6_1
+</td>
+<td>
+ecoli_dil6_1_R1.fastq.gz
+</td>
+<td>
+ecoli_dil6_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁶
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-04
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N714
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil6_2
+</td>
+<td>
+ecoli_dil6_2_R1.fastq.gz
+</td>
+<td>
+ecoli_dil6_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁶
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N707
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil6_3
+</td>
+<td>
+ecoli_dil6_3_R1.fastq.gz
+</td>
+<td>
+ecoli_dil6_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁶
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N701
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+ecoli_dil6_4
+</td>
+<td>
+ecoli_dil6_4_R1.fastq.gz
+</td>
+<td>
+ecoli_dil6_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Dilución de E. coli
+</td>
+<td>
+10⁻⁶
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-09
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N707
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_1
+</td>
+<td>
+mock_extr_1_R1.fastq.gz
+</td>
+<td>
+mock_extr_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N711
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_2
+</td>
+<td>
+mock_extr_2_R1.fastq.gz
+</td>
+<td>
+mock_extr_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N712
+</td>
+<td>
+S521
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_3
+</td>
+<td>
+mock_extr_3_R1.fastq.gz
+</td>
+<td>
+mock_extr_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N705
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_4
+</td>
+<td>
+mock_extr_4_R1.fastq.gz
+</td>
+<td>
+mock_extr_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N706
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_5
+</td>
+<td>
+mock_extr_5_R1.fastq.gz
+</td>
+<td>
+mock_extr_5_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N707
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_6
+</td>
+<td>
+mock_extr_6_R1.fastq.gz
+</td>
+<td>
+mock_extr_6_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N710
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_7
+</td>
+<td>
+mock_extr_7_R1.fastq.gz
+</td>
+<td>
+mock_extr_7_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N711
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_extr_8
+</td>
+<td>
+mock_extr_8_R1.fastq.gz
+</td>
+<td>
+mock_extr_8_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N712
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_pcr_1
+</td>
+<td>
+mock_pcr_1_R1.fastq.gz
+</td>
+<td>
+mock_pcr_1_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de PCR
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N714
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_pcr_2
+</td>
+<td>
+mock_pcr_2_R1.fastq.gz
+</td>
+<td>
+mock_pcr_2_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de PCR
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N715
+</td>
+<td>
+S522
+</td>
+</tr>
+<tr>
+<td>
+mock_pcr_3
+</td>
+<td>
+mock_pcr_3_R1.fastq.gz
+</td>
+<td>
+mock_pcr_3_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de PCR
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N716
+</td>
+<td>
+S511
+</td>
+</tr>
+<tr>
+<td>
+mock_pcr_4
+</td>
+<td>
+mock_pcr_4_R1.fastq.gz
+</td>
+<td>
+mock_pcr_4_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de PCR
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N718
+</td>
+<td>
+S511
+</td>
+</tr>
+<tr>
+<td>
+mock_pcr_5
+</td>
+<td>
+mock_pcr_5_R1.fastq.gz
+</td>
+<td>
+mock_pcr_5_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de PCR
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N719
+</td>
+<td>
+S511
+</td>
+</tr>
+<tr>
+<td>
+mock_pcr_6
+</td>
+<td>
+mock_pcr_6_R1.fastq.gz
+</td>
+<td>
+mock_pcr_6_R2.fastq.gz
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+Run1
+</td>
+<td>
+Control positivo
+</td>
+<td>
+Mock de PCR
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+—
+</td>
+<td>
+2026-02-25
+</td>
+<td>
+Etiqueta de origen
+</td>
+<td>
+Ensayo previo/piloto
+</td>
+<td>
+—
+</td>
+<td>
+N720
+</td>
+<td>
+S511
+</td>
+</tr>
+<tr>
+<td>
+cneg_batch_1
+</td>
+<td>
+cneg_batch_1_R1.fastq.gz
+</td>
+<td>
+cneg_batch_1_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Batch
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-22
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N704
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_batch_2
+</td>
+<td>
+cneg_batch_2_R1.fastq.gz
+</td>
+<td>
+cneg_batch_2_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Batch
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-26
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_1
+</td>
+<td>
+cneg_extr_1_R1.fastq.gz
+</td>
+<td>
+cneg_extr_1_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_10
+</td>
+<td>
+cneg_extr_10_R1.fastq.gz
+</td>
+<td>
+cneg_extr_10_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N703
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_2
+</td>
+<td>
+cneg_extr_2_R1.fastq.gz
+</td>
+<td>
+cneg_extr_2_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N707
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_3
+</td>
+<td>
+cneg_extr_3_R1.fastq.gz
+</td>
+<td>
+cneg_extr_3_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N710
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_4
+</td>
+<td>
+cneg_extr_4_R1.fastq.gz
+</td>
+<td>
+cneg_extr_4_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N711
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_5
+</td>
+<td>
+cneg_extr_5_R1.fastq.gz
+</td>
+<td>
+cneg_extr_5_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N712
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_6
+</td>
+<td>
+cneg_extr_6_R1.fastq.gz
+</td>
+<td>
+cneg_extr_6_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N714
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_7
+</td>
+<td>
+cneg_extr_7_R1.fastq.gz
+</td>
+<td>
+cneg_extr_7_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N715
+</td>
+<td>
+S516
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_8
+</td>
+<td>
+cneg_extr_8_R1.fastq.gz
+</td>
+<td>
+cneg_extr_8_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N701
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_extr_9
+</td>
+<td>
+cneg_extr_9_R1.fastq.gz
+</td>
+<td>
+cneg_extr_9_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+Extracción
+</td>
+<td>
+—
+</td>
+<td>
+2026-01-30
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N702
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_1
+</td>
+<td>
+cneg_pcr_1_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_1_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_10
+</td>
+<td>
+cneg_pcr_10_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_10_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_2
+</td>
+<td>
+cneg_pcr_2_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_2_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N706
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_3
+</td>
+<td>
+cneg_pcr_3_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_3_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N707
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_4
+</td>
+<td>
+cneg_pcr_4_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_4_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N710
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_5
+</td>
+<td>
+cneg_pcr_5_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_5_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N711
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_6
+</td>
+<td>
+cneg_pcr_6_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_6_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N712
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_7
+</td>
+<td>
+cneg_pcr_7_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_7_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N714
+</td>
+<td>
+S517
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_8
+</td>
+<td>
+cneg_pcr_8_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_8_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N704
+</td>
+<td>
+S515
+</td>
+</tr>
+<tr>
+<td>
+cneg_pcr_9
+</td>
+<td>
+cneg_pcr_9_R1.fastq.gz
+</td>
+<td>
+cneg_pcr_9_R2.fastq.gz
+</td>
+<td>
+Ensayo ampliado actual
+</td>
+<td>
+Run 3
+</td>
+<td>
+Control negativo
+</td>
+<td>
+PCR
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+2026-08-10
+</td>
+<td>
+Fecha de biblioteca (proxy)
+</td>
+<td>
+Run 3
+</td>
+<td>
+C
+</td>
+<td>
+N705
+</td>
+<td>
+S515
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<noscript>
+<p class="source-note">
+JavaScript está desactivado; se muestran las 198 filas de la tabla completa sin paginación.
+</p>
+</noscript>
+<script src="../assets/js/sample-table-pagination.js"></script>
+<p>La misma información puede descargarse como <a href="../tables/00_design/sample_inventory_public.tsv">TSV curado</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -502,7 +10549,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Se muestran recuentos agregados y, cuando es necesario para QC, códigos técnicos de muestra autorizados. No se publican fechas clínicas, identificadores de paciente ni tablas clínicas individuales.</p>
+<p>Los códigos técnicos <code>01-xxx</code> y los metadatos de laboratorio/secuenciación se han autorizado para esta documentación. No se publican FASTQ, identificadores de paciente, fechas clínicas ni tablas clínicas individuales.</p>
 </div>
 </div>
 
