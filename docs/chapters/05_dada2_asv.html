@@ -55,27 +55,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -401,6 +381,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container">
+  <a href="../chapters/11_references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Referencias</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container">
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -420,12 +406,6 @@ div.csl-indent {
   <div class="sidebar-item-container">
   <a href="../appendices/data_availability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Disponibilidad de datos y licencias</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Referencias</span></a>
   </div>
 </li>
       </ul>
@@ -484,7 +464,7 @@ div.csl-indent {
 </div>
 <section id="procesamiento-separado-por-ensayo" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="procesamiento-separado-por-ensayo"><span class="header-section-number">6.1</span> Procesamiento separado por ensayo</h2>
-<p>Después del recorte de primers, cada ensayo se procesará de forma independiente con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso <span class="citation" data-cites="Callahan2016">(<a href="../appendices/references.html#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>. Esta separación evita asumir que ambos ensayos comparten el mismo perfil de error. La integración posterior se realizará por secuencia exacta, conservando una variable de ensayo para los análisis técnicos.</p>
+<p>Después del recorte de primers, cada ensayo se procesará de forma independiente con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso <span class="citation" data-cites="Callahan2016">(Callahan et&nbsp;al. 2016)</span>. Esta separación evita asumir que ambos ensayos comparten el mismo perfil de error. La integración posterior se realizará por secuencia exacta, conservando una variable de ensayo para los análisis técnicos.</p>
 </section>
 <section id="comandos-y-parámetros" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="comandos-y-parámetros"><span class="header-section-number">6.2</span> Comandos y parámetros</h2>
@@ -520,11 +500,6 @@ div.csl-indent {
 </ol>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-Callahan2016" class="csl-entry" role="listitem">
-Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. <span>«DADA2: High-resolution sample inference from Illumina amplicon data»</span>. <em>Nature Methods</em> 13 (7): 581-83. <a href="https://doi.org/10.1038/nmeth.3869">https://doi.org/10.1038/nmeth.3869</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->

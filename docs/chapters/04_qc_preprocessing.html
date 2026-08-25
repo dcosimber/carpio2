@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -369,6 +349,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container">
+  <a href="../chapters/11_references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Referencias</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container">
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -388,12 +374,6 @@ div.csl-indent {
   <div class="sidebar-item-container">
   <a href="../appendices/data_availability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Disponibilidad de datos y licencias</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Referencias</span></a>
   </div>
 </li>
       </ul>
@@ -496,7 +476,7 @@ Tabla&nbsp;5.1: Bibliotecas y pares de lecturas antes y después del recorte de 
 </section>
 <section id="informes-de-qc-y-multiqc" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="informes-de-qc-y-multiqc"><span class="header-section-number">5.2</span> Informes de QC y MultiQC</h2>
-<p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(<a href="../appendices/references.html#ref-Ewels2016" role="doc-biblioref">Ewels et&nbsp;al. 2016</a>)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/raw/fastqc_raw_multiqc_report.html">informe previo al recorte</a> y el <a href="../multiqc/trimmed/fastqc_trimmed_multiqc_report.html">informe posterior al recorte</a>.</p>
+<p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(Ewels et&nbsp;al. 2016)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/raw/fastqc_raw_multiqc_report.html">informe previo al recorte</a> y el <a href="../multiqc/trimmed/fastqc_trimmed_multiqc_report.html">informe posterior al recorte</a>.</p>
 </section>
 <section id="recorte-y-verificación-de-primers" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="recorte-y-verificación-de-primers"><span class="header-section-number">5.3</span> Recorte y verificación de primers</h2>
@@ -623,11 +603,6 @@ Figura&nbsp;5.1: Profundidad de secuenciación de las ocho biopsias repetidas. C
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-Ewels2016" class="csl-entry" role="listitem">
-Ewels, Philip, Måns Magnusson, Sverker Lundin, y Max Käller. 2016. <span>«MultiQC: Summarize analysis results for multiple tools and samples in a single report»</span>. <em>Bioinformatics</em> 32 (19): 3047-48. <a href="https://doi.org/10.1093/bioinformatics/btw354">https://doi.org/10.1093/bioinformatics/btw354</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->

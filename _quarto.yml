@@ -35,10 +35,10 @@ book:
     - chapters/08_microbiome_results.qmd
     - chapters/09_clinical_associations.qmd
     - chapters/10_conclusions.qmd
+    - chapters/11_references.qmd
   appendices:
     - appendices/reproducibility.qmd
     - appendices/data_availability.qmd
-    - appendices/references.qmd
 
 bibliography: references.bib
 link-citations: true

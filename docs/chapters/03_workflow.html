@@ -55,27 +55,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -401,6 +381,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container">
+  <a href="../chapters/11_references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Referencias</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container">
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -420,12 +406,6 @@ div.csl-indent {
   <div class="sidebar-item-container">
   <a href="../appendices/data_availability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Disponibilidad de datos y licencias</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Referencias</span></a>
   </div>
 </li>
       </ul>
@@ -563,7 +543,7 @@ Tabla&nbsp;4.1: Etapas del flujo bioinformático, herramientas y productos princ
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-p</span> <span class="op">&lt;</span>R2_recortado.fastq.gz<span class="op">&gt;</span> <span class="dt">\</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--json</span> <span class="op">&lt;</span>informe_cutadapt.json<span class="op">&gt;</span> <span class="dt">\</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>R1_crudo.fastq.gz<span class="op">&gt;</span> <span class="op">&lt;</span>R2_crudo.fastq.gz<span class="op">&gt;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>-u 17</code> y <code>-U 21</code> eliminan bases desde el extremo 5′ de R1 y R2, respectivamente. No se utilizó <code>--discard-untrimmed</code> ni se aplicó filtrado de calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta del primer y se reserva el filtrado de calidad para DADA2 <span class="citation" data-cites="Martin2011">(<a href="../appendices/references.html#ref-Martin2011" role="doc-biblioref">Martin 2011</a>)</span>.</p>
+<p><code>-u 17</code> y <code>-U 21</code> eliminan bases desde el extremo 5′ de R1 y R2, respectivamente. No se utilizó <code>--discard-untrimmed</code> ni se aplicó filtrado de calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta del primer y se reserva el filtrado de calidad para DADA2 <span class="citation" data-cites="Martin2011">(Martin 2011)</span>.</p>
 </section>
 <section id="denoising-fusión-e-integración" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="denoising-fusión-e-integración"><span class="header-section-number">4.4</span> Denoising, fusión e integración</h2>
@@ -578,27 +558,13 @@ Tabla&nbsp;4.1: Etapas del flujo bioinformático, herramientas y productos princ
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  denoised_R1, derep_R1, denoised_R2, derep_R2,</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">minOverlap =</span> <span class="dv">20</span>, <span class="at">maxMismatch =</span> <span class="dv">0</span>, <span class="at">trimOverhang =</span> <span class="cn">TRUE</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>truncLen = c(0, 0)</code> conserva longitud variable; <code>maxEE</code> limita el error esperado en R1/R2; <code>truncQ</code> termina lecturas en bases de muy baja calidad; y <code>minLen</code> elimina fragmentos claramente no informativos. La fusión exige al menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando procede. Posteriormente se aplicará eliminación de quimeras por consenso y se guardará el seguimiento por muestra <span class="citation" data-cites="Callahan2016">(<a href="../appendices/references.html#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>.</p>
+<p><code>truncLen = c(0, 0)</code> conserva longitud variable; <code>maxEE</code> limita el error esperado en R1/R2; <code>truncQ</code> termina lecturas en bases de muy baja calidad; y <code>minLen</code> elimina fragmentos claramente no informativos. La fusión exige al menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando procede. Posteriormente se aplicará eliminación de quimeras por consenso y se guardará el seguimiento por muestra <span class="citation" data-cites="Callahan2016">(Callahan et&nbsp;al. 2016)</span>.</p>
 </section>
 <section id="taxonomía-y-controles" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="taxonomía-y-controles"><span class="header-section-number">4.5</span> Taxonomía y controles</h2>
-<p>La taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y <code>minBoot = 50</code>; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad <span class="citation" data-cites="Davis2018 Quast2013">(<a href="../appendices/references.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>; <a href="../appendices/references.html#ref-Quast2013" role="doc-biblioref">Quast et&nbsp;al. 2013</a>)</span>. Los resultados aún no han sido ejecutados y no se presentan como conclusiones.</p>
+<p>La taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y <code>minBoot = 50</code>; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad <span class="citation" data-cites="Davis2018 Quast2013">(Davis et&nbsp;al. 2018; Quast et&nbsp;al. 2013)</span>. Los resultados aún no han sido ejecutados y no se presentan como conclusiones.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-Callahan2016" class="csl-entry" role="listitem">
-Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. <span>«DADA2: High-resolution sample inference from Illumina amplicon data»</span>. <em>Nature Methods</em> 13 (7): 581-83. <a href="https://doi.org/10.1038/nmeth.3869">https://doi.org/10.1038/nmeth.3869</a>.
-</div>
-<div id="ref-Davis2018" class="csl-entry" role="listitem">
-Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. <span>«Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data»</span>. <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
-</div>
-<div id="ref-Martin2011" class="csl-entry" role="listitem">
-Martin, Marcel. 2011. <span>«Cutadapt removes adapter sequences from high-throughput sequencing reads»</span>. <em>EMBnet.journal</em> 17 (1): 10-12. <a href="https://doi.org/10.14806/ej.17.1.200">https://doi.org/10.14806/ej.17.1.200</a>.
-</div>
-<div id="ref-Quast2013" class="csl-entry" role="listitem">
-Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, y Frank Oliver Glöckner. 2013. <span>«The SILVA ribosomal RNA gene database project: improved data processing and web-based tools»</span>. <em>Nucleic Acids Research</em> 41 (D1): D590-96. <a href="https://doi.org/10.1093/nar/gks1219">https://doi.org/10.1093/nar/gks1219</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
