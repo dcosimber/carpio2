@@ -1,0 +1,5 @@
+processing_batch	read	raw_reads_checked	raw_expected_primer_at_start_or_plus1	raw_expected_primer_at_start_or_plus1_pct	trimmed_reads_checked	trimmed_primer_like_start	trimmed_primer_like_start_pct	max_library_residual_pct
+current	R1	301327	293143	97.2840	301327	30	0.0100	0.1000
+current	R2	301327	281701	93.4868	301327	0	0.0000	0.0000
+pilot	R1	92000	88789	96.5098	92000	5	0.0054	0.1000
+pilot	R2	92000	88377	96.0620	92000	0	0.0000	0.0000

@@ -1,0 +1,52 @@
+---
+title: "Contexto y objetivos"
+---
+
+## Un estudio de microbiota tisular en muestras de baja biomasa
+
+Este proyecto estudia la microbiota asociada a biopsias digestivas de pacientes
+con enfermedad de Crohn, con interés particular en el fenotipo fistulizante.
+Las biopsias son muestras de baja biomasa microbiana: el ADN del huésped puede
+ser mucho más abundante que el ADN bacteriano y la señal microbiana puede verse
+afectada por contaminantes de reactivos, extracción o PCR. Por ello, la
+interpretación posterior se apoyará de forma explícita en controles positivos y
+negativos, además de en la calidad de las lecturas.
+
+El objetivo es construir un flujo reproducible de secuenciación de amplicones
+16S que permita describir las comunidades bacterianas tisulares y, en una fase
+posterior, evaluar asociaciones con variables clínicas de forma agregada y
+protegida.
+
+## Del ensayo piloto al ensayo ampliado
+
+Un ensayo previo o piloto evaluó las regiones V4 y V3–V4 en ocho biopsias,
+junto con controles positivos. Esa experiencia indicó que V3–V4 aportaba mayor
+profundidad de entrada y mejor retención durante el procesamiento, además de
+un comportamiento más favorable en los controles de sensibilidad. Por esta
+razón, el ensayo ampliado actual se centra exclusivamente en V3–V4.
+
+La presente fase aumenta el número de biopsias e incorpora controles negativos
+de batch, extracción y PCR. Las ocho biopsias del piloto se conservan como
+repeticiones técnicas entre ensayos; permiten cuantificar diferencias de
+profundidad y, cuando exista la tabla de ASV, estudiar su reproducibilidad.
+
+## Objetivos analíticos
+
+1. Validar la integridad, profundidad y calidad de los FASTQ paired-end.
+2. Inferir variantes de secuencia de amplicón (ASV) por separado en ambos
+   ensayos y combinarlas por secuencia exacta.
+3. Asignar taxonomía con una referencia SILVA versionada y evaluada.
+4. Caracterizar el comportamiento de los controles positivos y detectar
+   contaminantes con los controles negativos.
+5. Definir criterios de exclusión basados en QC antes de los análisis
+   microbiológicos y clínicos.
+6. Evaluar el efecto técnico de ensayo con las biopsias repetidas y preservar
+   un conjunto biológico principal sin duplicados.
+
+::: {.callout-note}
+## Qué no se concluye todavía
+
+Este informe no presenta aún diversidad, composición, taxonomía ni asociaciones
+clínicas. Esas preguntas requieren los resultados de denoising, asignación
+taxonómica y evaluación de contaminación, que todavía no se han incorporado.
+:::

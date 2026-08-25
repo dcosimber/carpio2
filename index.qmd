@@ -1,0 +1,46 @@
+---
+title: "Resumen técnico"
+---
+
+::: {.callout-important}
+## Estado del informe
+
+Esta es una versión pública y curada del análisis de amplicones 16S V3–V4 en
+biopsias digestivas. Documenta los resultados que ya han sido calculados:
+diseño, inventario de entradas, control de calidad, recorte de primers y
+comparación de profundidad de las biopsias repetidas. Las etapas de inferencia
+de ASV, taxonomía, decontaminación y análisis microbiológico se identificarán
+expresamente como pendientes hasta que existan resultados revisados.
+:::
+
+## Hallazgos disponibles
+
+- El conjunto de entrada contiene **198 bibliotecas paired-end**, equivalentes
+  a 198 pares R1/R2 y 396 archivos FASTQ: 152 del ensayo ampliado y 46 del
+  ensayo piloto.
+- El recorte posicional de primers conservó el **100 % de los pares** en ambos
+  ensayos. La comprobación posterior detectó una señal de primer residual de
+  como máximo **0,10 %** por biblioteca.
+- Las ocho biopsias incluidas en ambos ensayos tuvieron mayor profundidad de
+  entrada en el piloto. La comparación es técnica y descriptiva; no constituye
+  una comparación biológica.
+
+## Alcance y lectura responsable
+
+La unidad de análisis de secuenciación es un **par de lecturas**: una lectura
+forward (R1) y su lectura reverse (R2) procedentes de la misma molécula de
+amplicón. Los controles se conservan para el control de calidad, pero no se
+mezclarán con las biopsias en las comparaciones biológicas finales. Las ocho
+biopsias repetidas se utilizarán para evaluar reproducibilidad y efecto de
+ensayo, sin duplicar observaciones en el análisis clínico principal.
+
+Este libro es una capa de publicación separada del análisis. Se actualiza y se
+renderiza únicamente mediante una solicitud manual; no observa ni sincroniza el
+proyecto analítico de forma automática.
+
+## Organización del libro
+
+Los primeros capítulos describen el contexto, el diseño y el preprocesamiento
+ya completado. Los capítulos posteriores establecen de forma transparente el
+plan para DADA2, taxonomía, controles, reproducibilidad y análisis clínicos;
+no adelantan resultados que aún no se hayan producido.

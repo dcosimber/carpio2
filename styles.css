@@ -1,0 +1,155 @@
+/* Estilo editorial del libro Quarto. No se usa logotipo en este proyecto. */
+:root {
+  --carpio-ink: #17324d;
+  --carpio-blue: #1f6f8b;
+  --carpio-teal: #2b7a78;
+  --carpio-sand: #f6f8fa;
+  --carpio-line: #dbe4ea;
+}
+
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+#quarto-document-content {
+  max-width: 58rem;
+}
+
+h1, h2, h3, h4 {
+  color: var(--carpio-ink);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+h1.title {
+  font-size: clamp(2.05rem, 4vw, 3.05rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  border-bottom: 1px solid var(--carpio-line);
+  margin-top: 2.7rem;
+  padding-bottom: 0.35rem;
+}
+
+p, li {
+  line-height: 1.7;
+}
+
+a {
+  color: var(--carpio-blue);
+}
+
+#quarto-sidebar {
+  border-right: 1px solid var(--carpio-line);
+}
+
+#quarto-sidebar .sidebar-title {
+  color: var(--carpio-ink);
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.sidebar-item-text {
+  line-height: 1.35;
+}
+
+.callout {
+  border-radius: 0.45rem;
+  box-shadow: none;
+}
+
+.callout.callout-note {
+  border-left-color: var(--carpio-blue);
+}
+
+.callout.callout-important {
+  border-left-color: var(--carpio-teal);
+}
+
+.callout.callout-caution {
+  border-left-color: #b7791f;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  margin: 1.25rem 0 1.75rem;
+  width: 100%;
+}
+
+table th {
+  background: var(--carpio-sand);
+  color: var(--carpio-ink);
+  font-weight: 650;
+}
+
+table th, table td {
+  border-color: var(--carpio-line) !important;
+  padding: 0.55rem 0.65rem;
+  vertical-align: top;
+}
+
+pre.sourceCode {
+  border: 1px solid var(--carpio-line);
+  border-radius: 0.4rem;
+  padding: 0.9rem;
+}
+
+code {
+  color: #8b2f3d;
+}
+
+.quarto-figure figure {
+  margin: 1.75rem auto;
+}
+
+.quarto-figure img {
+  border: 1px solid var(--carpio-line);
+  border-radius: 0.35rem;
+  background: white;
+}
+
+.figure-caption, figcaption {
+  color: #52616b;
+  font-size: 0.92rem;
+  margin-top: 0.55rem;
+}
+
+.source-note {
+  color: #52616b;
+  font-size: 0.9rem;
+}
+
+.pending-result {
+  background: #fffaf0;
+  border: 1px solid #f2dfbd;
+  border-radius: 0.35rem;
+  padding: 0.9rem 1rem;
+}
+
+@media (max-width: 991.98px) {
+  #quarto-document-content {
+    max-width: none;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --carpio-ink: #dcebf5;
+    --carpio-blue: #75c7e5;
+    --carpio-teal: #76d6c9;
+    --carpio-sand: #263847;
+    --carpio-line: #3b4f5f;
+  }
+
+  .quarto-figure img {
+    background: #fff;
+  }
+}

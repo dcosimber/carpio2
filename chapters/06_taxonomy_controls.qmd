@@ -1,0 +1,64 @@
+---
+title: "Taxonomía, controles y decontaminación"
+---
+
+::: {.callout-caution}
+## Resultado pendiente
+
+La asignación taxonómica y la evaluación de controles aún no se han ejecutado
+en el análisis ampliado. Este capítulo documenta el método previsto y reserva
+el espacio para resultados revisados, sin atribuir composición microbiana a las
+biopsias ni declarar contaminantes antes de su evaluación.
+:::
+
+## Asignación taxonómica con una referencia versionada
+
+Las ASV no quiméricas se anotarán mediante SILVA NR99 138.2. La referencia, su
+versión, checksum y parámetros se conservarán en el proyecto analítico. La
+taxonomía se asignará únicamente después de la fusión por secuencia exacta.
+
+```r
+taxonomy <- assignTaxonomy(
+  seqs = <secuencias_asv>, refFasta = <silva_nr99_138_2>,
+  minBoot = 50, multithread = TRUE
+)
+```
+
+`minBoot = 50` define el soporte mínimo de bootstrap para las asignaciones. La
+salida esperada es una tabla taxonómica vinculada a las ASV y al seguimiento de
+lecturas; se informarán los niveles no resueltos sin forzar anotaciones.
+
+## Controles positivos
+
+Los mocks de extracción, los mocks de PCR y las diluciones de *E. coli* se
+utilizarán para evaluar recuperación taxonómica, consistencia de la preparación
+y sensibilidad. Se compararán con su composición o señal esperada, teniendo en
+cuenta los límites de resolución de 16S y de la base de datos. Los controles
+positivos se mantendrán en QC y no se incluirán en las comparaciones biológicas
+de biopsias.
+
+## Controles negativos y decontaminación
+
+Los controles negativos de batch, extracción y PCR fundamentarán el análisis
+principal de prevalencia de contaminantes. Cuando haya una variable de
+concentración de ADN apropiada y validada, se añadirá un análisis de frecuencia
+como sensibilidad [@Davis2018]. El comando genérico de prevalencia es:
+
+```r
+contaminants <- isContaminant(
+  physeq = <objeto_con_asv_y_metadatos>,
+  method = "prevalence", neg = "is_negative_control",
+  threshold = 0.5
+)
+```
+
+La decisión de filtrado se conservará en tres capas revisables: tabla cruda,
+ASV candidatas a contaminante y tabla filtrada. Ninguna tabla sustituirá a las
+otras; así será posible revisar el impacto de cada decisión de decontaminación.
+
+## Resultados previstos para esta sección
+
+Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de
+los controles positivos, la lista de candidatas a contaminante, los criterios
+aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos
+no se inferirán a partir de los controles.

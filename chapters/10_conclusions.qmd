@@ -1,0 +1,37 @@
+---
+title: "Conclusiones y próximos pasos"
+---
+
+## Conclusiones de la fase actualmente disponible
+
+La estructura de datos y el preprocesamiento ya son trazables: el conjunto
+contiene 198 bibliotecas paired-end completas, el recorte de primers mantuvo
+todos los pares y la señal residual de primer fue mínima. La comparación de las
+ocho biopsias repetidas demuestra una diferencia importante de profundidad de
+entrada entre ensayos que deberá tratarse como un factor técnico en las etapas
+posteriores.
+
+No puede extraerse todavía una conclusión sobre microbiota, taxonomía,
+contaminación o asociación clínica. Esas inferencias requieren resultados que
+aún no han sido calculados o revisados.
+
+## Próximos pasos analíticos
+
+1. Ejecutar DADA2 de manera independiente por ensayo y revisar su seguimiento
+   de lecturas.
+2. Fusionar ASV por secuencia exacta, eliminar quimeras y asignar taxonomía con
+   SILVA 138.2.
+3. Evaluar controles positivos y negativos, conservando tablas crudas,
+   candidatas y filtradas.
+4. Definir el umbral de profundidad con evidencia de QC, incluida la situación
+   de las bibliotecas de baja profundidad.
+5. Evaluar reproducibilidad entre ensayos y preparar el conjunto clínico sin
+   duplicar biopsias.
+6. Actualizar este libro únicamente tras una solicitud explícita de actualización
+   del informe Quarto y una revisión local del render.
+
+## Reproducibilidad y disponibilidad
+
+El código y la configuración del libro se distribuyen bajo MIT; su contenido,
+bajo CC BY 4.0. La documentación operativa, los activos curados y la política
+de disponibilidad de datos se detallan en los apéndices.

@@ -1,0 +1,458 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Proyecto Carpio",
+    "section": "",
+    "text": "0.1 Hallazgos disponibles",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Resumen técnico</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#hallazgos-disponibles",
+    "href": "index.html#hallazgos-disponibles",
+    "title": "Proyecto Carpio",
+    "section": "",
+    "text": "El conjunto de entrada contiene 198 bibliotecas paired-end, equivalentes a 198 pares R1/R2 y 396 archivos FASTQ: 152 del ensayo ampliado y 46 del ensayo piloto.\nEl recorte posicional de primers conservó el 100 % de los pares en ambos ensayos. La comprobación posterior detectó una señal de primer residual de como máximo 0,10 % por biblioteca.\nLas ocho biopsias incluidas en ambos ensayos tuvieron mayor profundidad de entrada en el piloto. La comparación es técnica y descriptiva; no constituye una comparación biológica.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Resumen técnico</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#alcance-y-lectura-responsable",
+    "href": "index.html#alcance-y-lectura-responsable",
+    "title": "Proyecto Carpio",
+    "section": "0.2 Alcance y lectura responsable",
+    "text": "0.2 Alcance y lectura responsable\nLa unidad de análisis de secuenciación es un par de lecturas: una lectura forward (R1) y su lectura reverse (R2) procedentes de la misma molécula de amplicón. Los controles se conservan para el control de calidad, pero no se mezclarán con las biopsias en las comparaciones biológicas finales. Las ocho biopsias repetidas se utilizarán para evaluar reproducibilidad y efecto de ensayo, sin duplicar observaciones en el análisis clínico principal.\nEste libro es una capa de publicación separada del análisis. Se actualiza y se renderiza únicamente mediante una solicitud manual; no observa ni sincroniza el proyecto analítico de forma automática.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Resumen técnico</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#organización-del-libro",
+    "href": "index.html#organización-del-libro",
+    "title": "Proyecto Carpio",
+    "section": "0.3 Organización del libro",
+    "text": "0.3 Organización del libro\nLos primeros capítulos describen el contexto, el diseño y el preprocesamiento ya completado. Los capítulos posteriores establecen de forma transparente el plan para DADA2, taxonomía, controles, reproducibilidad y análisis clínicos; no adelantan resultados que aún no se hayan producido.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Resumen técnico</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_context.html",
+    "href": "chapters/01_context.html",
+    "title": "2  Contexto y objetivos",
+    "section": "",
+    "text": "2.1 Un estudio de microbiota tisular en muestras de baja biomasa\nEste proyecto estudia la microbiota asociada a biopsias digestivas de pacientes con enfermedad de Crohn, con interés particular en el fenotipo fistulizante. Las biopsias son muestras de baja biomasa microbiana: el ADN del huésped puede ser mucho más abundante que el ADN bacteriano y la señal microbiana puede verse afectada por contaminantes de reactivos, extracción o PCR. Por ello, la interpretación posterior se apoyará de forma explícita en controles positivos y negativos, además de en la calidad de las lecturas.\nEl objetivo es construir un flujo reproducible de secuenciación de amplicones 16S que permita describir las comunidades bacterianas tisulares y, en una fase posterior, evaluar asociaciones con variables clínicas de forma agregada y protegida.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contexto y objetivos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_context.html#del-ensayo-piloto-al-ensayo-ampliado",
+    "href": "chapters/01_context.html#del-ensayo-piloto-al-ensayo-ampliado",
+    "title": "2  Contexto y objetivos",
+    "section": "2.2 Del ensayo piloto al ensayo ampliado",
+    "text": "2.2 Del ensayo piloto al ensayo ampliado\nUn ensayo previo o piloto evaluó las regiones V4 y V3–V4 en ocho biopsias, junto con controles positivos. Esa experiencia indicó que V3–V4 aportaba mayor profundidad de entrada y mejor retención durante el procesamiento, además de un comportamiento más favorable en los controles de sensibilidad. Por esta razón, el ensayo ampliado actual se centra exclusivamente en V3–V4.\nLa presente fase aumenta el número de biopsias e incorpora controles negativos de batch, extracción y PCR. Las ocho biopsias del piloto se conservan como repeticiones técnicas entre ensayos; permiten cuantificar diferencias de profundidad y, cuando exista la tabla de ASV, estudiar su reproducibilidad.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contexto y objetivos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_context.html#objetivos-analíticos",
+    "href": "chapters/01_context.html#objetivos-analíticos",
+    "title": "2  Contexto y objetivos",
+    "section": "2.3 Objetivos analíticos",
+    "text": "2.3 Objetivos analíticos\n\nValidar la integridad, profundidad y calidad de los FASTQ paired-end.\nInferir variantes de secuencia de amplicón (ASV) por separado en ambos ensayos y combinarlas por secuencia exacta.\nAsignar taxonomía con una referencia SILVA versionada y evaluada.\nCaracterizar el comportamiento de los controles positivos y detectar contaminantes con los controles negativos.\nDefinir criterios de exclusión basados en QC antes de los análisis microbiológicos y clínicos.\nEvaluar el efecto técnico de ensayo con las biopsias repetidas y preservar un conjunto biológico principal sin duplicados.\n\n\n\n\n\n\n\nNotaQué no se concluye todavía\n\n\n\nEste informe no presenta aún diversidad, composición, taxonomía ni asociaciones clínicas. Esas preguntas requieren los resultados de denoising, asignación taxonómica y evaluación de contaminación, que todavía no se han incorporado.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contexto y objetivos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_design_samples.html",
+    "href": "chapters/02_design_samples.html",
+    "title": "3  Diseño, biopsias y controles",
+    "section": "",
+    "text": "3.1 Cohorte técnica y unidad de análisis\nLa entrada comprende 198 bibliotecas paired-end. Cada biblioteca está representada por dos archivos FASTQ complementarios: R1 y R2. Por tanto, los 198 pares representan 396 archivos, pero no 396 observaciones independientes. Cuando se informa profundidad se usa, salvo indicación contraria, el número de pares de lecturas.\nEl ensayo ampliado contiene 152 bibliotecas y el ensayo piloto aporta 46. En conjunto hay 130 biopsias biológicas únicas, 138 registros de biopsia al contar las ocho repeticiones técnicas, 38 controles positivos y 22 controles negativos. Las repeticiones del piloto no incrementan el tamaño de la cohorte clínica principal.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño, biopsias y controles</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_design_samples.html#cohorte-técnica-y-unidad-de-análisis",
+    "href": "chapters/02_design_samples.html#cohorte-técnica-y-unidad-de-análisis",
+    "title": "3  Diseño, biopsias y controles",
+    "section": "",
+    "text": "Ensayo\nTipo de registro\nSubtipo\nBibliotecas paired-end\n\n\n\n\nAmpliado actual\nBiopsia\nBiopsia digestiva\n130\n\n\nPiloto\nBiopsia repetida\nOcho biopsias presentes en ambos ensayos\n8\n\n\nPiloto\nControl positivo\nMock de extracción\n8\n\n\nPiloto\nControl positivo\nMock de PCR\n6\n\n\nPiloto\nControl positivo\nDiluciones de Escherichia coli\n24\n\n\nAmpliado actual\nControl negativo\nBatch\n2\n\n\nAmpliado actual\nControl negativo\nExtracción\n10\n\n\nAmpliado actual\nControl negativo\nPCR\n10\n\n\nTotal\n\n\n198",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño, biopsias y controles</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_design_samples.html#papel-de-los-controles",
+    "href": "chapters/02_design_samples.html#papel-de-los-controles",
+    "title": "3  Diseño, biopsias y controles",
+    "section": "3.2 Papel de los controles",
+    "text": "3.2 Papel de los controles\nLos controles positivos del piloto cubren el proceso de extracción (mocks de células), PCR (mocks de ADN) y sensibilidad analítica (diluciones seriadas de E. coli). Los controles negativos del ensayo ampliado permiten distinguir contaminación asociada al batch, la extracción o la PCR. Estos controles no formarán parte de las comparaciones biológicas entre biopsias, pero se mantendrán hasta la fase de decontaminación y validación.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño, biopsias y controles</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_design_samples.html#trazabilidad-de-identificadores",
+    "href": "chapters/02_design_samples.html#trazabilidad-de-identificadores",
+    "title": "3  Diseño, biopsias y controles",
+    "section": "3.3 Trazabilidad de identificadores",
+    "text": "3.3 Trazabilidad de identificadores\nEl código biológico de biopsia usa el formato técnico 01-xxx. Las ocho biopsias procedentes del piloto llevan un sufijo que las diferencia del registro del ensayo ampliado. Esta distinción conserva la trazabilidad técnica y evita que una biopsia repetida se interprete como un nuevo individuo. Los metadatos clínicos individuales no forman parte de este repositorio público.\n\n\n\n\n\n\nNotaInformación publicada\n\n\n\nSe muestran recuentos agregados y, cuando es necesario para QC, códigos técnicos de muestra autorizados. No se publican fechas clínicas, identificadores de paciente ni tablas clínicas individuales.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño, biopsias y controles</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_workflow.html",
+    "href": "chapters/03_workflow.html",
+    "title": "4  Flujo bioinformático",
+    "section": "",
+    "text": "4.1 Principio de procesamiento\nLos FASTQ crudos se consideran entradas inmutables. El procesamiento se separa por ensayo hasta el denoising para evitar que perfiles de error distintos se mezclen al aprender el modelo de DADA2. Después, las ASV no quiméricas se integrarán por secuencia exacta y se conservará el identificador de ensayo para cuantificar el efecto técnico.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_workflow.html#principio-de-procesamiento",
+    "href": "chapters/03_workflow.html#principio-de-procesamiento",
+    "title": "4  Flujo bioinformático",
+    "section": "",
+    "text": "Bloque\nHerramienta\nPropósito\nEstado y salida principal\n\n\n\n\nAuditoría de entradas\nscripts de validación\nComprobar pares R1/R2 y metadatos\nCompletado; inventario de bibliotecas\n\n\nQC\nFastQC y MultiQC\nRevisar calidad, longitud y contenido de adaptadores\nCompletado; informes antes y después del recorte\n\n\nRecorte de primers\nCutadapt\nEliminar los extremos de primer validados\nCompletado; FASTQ recortados y métricas JSON\n\n\nDenoising\nDADA2\nFiltrado, modelo de error, ASV, fusión y quimeras\nPendiente; tabla de seguimiento y ASV\n\n\nTaxonomía\nDADA2 + SILVA 138.2\nAsignar taxonomía a ASV\nPendiente; tabla taxonómica\n\n\nControles\ndecontam\nEvaluar contaminantes y sensibilidad\nPendiente; tablas cruda, candidata y filtrada\n\n\nDownstream\nR/phyloseq u herramientas equivalentes\nDiversidad, composición, reproducibilidad y clínica\nPendiente; tablas y figuras agregadas",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_workflow.html#qc-de-lecturas",
+    "href": "chapters/03_workflow.html#qc-de-lecturas",
+    "title": "4  Flujo bioinformático",
+    "section": "4.2 QC de lecturas",
+    "text": "4.2 QC de lecturas\nFastQC se ejecuta sobre cada miembro de cada par y MultiQC integra los resultados por ensayo. El comando genérico es el siguiente:\nfastqc --threads &lt;n_hilos&gt; --outdir &lt;directorio_fastqc&gt; \\\n  &lt;R1.fastq.gz&gt; &lt;R2.fastq.gz&gt;\n\nmultiqc &lt;directorio_fastqc&gt; --outdir &lt;directorio_multiqc&gt;\n--threads adapta el cálculo a los recursos disponibles y --outdir separa los informes de QC de los FASTQ. Esta etapa es diagnóstica: no transforma ni descarta lecturas.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_workflow.html#diagnóstico-y-recorte-de-primers",
+    "href": "chapters/03_workflow.html#diagnóstico-y-recorte-de-primers",
+    "title": "4  Flujo bioinformático",
+    "section": "4.3 Diagnóstico y recorte de primers",
+    "text": "4.3 Diagnóstico y recorte de primers\nSe estudiaron los primers 341F (CCTACGGGNGGCWGCAG) y 805R (GACTACHVGGGTATCTAATCC) por ensayo. El diagnóstico justificó un recorte posicional de 17 nucleótidos en R1 y 21 en R2. El comando aplicado por biblioteca fue:\ncutadapt -j &lt;n_hilos&gt; \\\n  -u 17 -U 21 \\\n  -o &lt;R1_recortado.fastq.gz&gt; \\\n  -p &lt;R2_recortado.fastq.gz&gt; \\\n  --json &lt;informe_cutadapt.json&gt; \\\n  &lt;R1_crudo.fastq.gz&gt; &lt;R2_crudo.fastq.gz&gt;\n-u 17 y -U 21 eliminan bases desde el extremo 5′ de R1 y R2, respectivamente. No se utilizó --discard-untrimmed ni se aplicó filtrado de calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta del primer y se reserva el filtrado de calidad para DADA2 (Martin 2011).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_workflow.html#denoising-fusión-e-integración-planificados",
+    "href": "chapters/03_workflow.html#denoising-fusión-e-integración-planificados",
+    "title": "4  Flujo bioinformático",
+    "section": "4.4 Denoising, fusión e integración planificados",
+    "text": "4.4 Denoising, fusión e integración planificados\nDADA2 se ejecutará de forma independiente en piloto y ensayo ampliado. Los parámetros inicialmente fijados se someterán a revisión mediante el seguimiento de retención por biblioteca, sin recurrir a un truncado fijo de longitud:\nfiltered &lt;- filterAndTrim(\n  fwd = &lt;R1_recortadas&gt;, rev = &lt;R2_recortadas&gt;,\n  truncLen = c(0, 0), maxEE = c(3, 5), truncQ = 2,\n  minLen = 100, multithread = TRUE\n)\n\nmerged &lt;- mergePairs(\n  denoised_R1, derep_R1, denoised_R2, derep_R2,\n  minOverlap = 20, maxMismatch = 0, trimOverhang = TRUE\n)\ntruncLen = c(0, 0) conserva longitud variable; maxEE limita el error esperado en R1/R2; truncQ termina lecturas en bases de muy baja calidad; y minLen elimina fragmentos claramente no informativos. La fusión exige al menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando procede. Posteriormente se aplicará eliminación de quimeras por consenso y se guardará el seguimiento por muestra (Callahan et al. 2016).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_workflow.html#taxonomía-y-controles-planificados",
+    "href": "chapters/03_workflow.html#taxonomía-y-controles-planificados",
+    "title": "4  Flujo bioinformático",
+    "section": "4.5 Taxonomía y controles planificados",
+    "text": "4.5 Taxonomía y controles planificados\nLa taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y minBoot = 50; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad (Davis et al. 2018; Quast et al. 2013). Los resultados aún no han sido ejecutados y no se presentan como conclusiones.\n\n\n\n\nCallahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. «DADA2: High-resolution sample inference from Illumina amplicon data». Nature Methods 13 (7): 581-83. https://doi.org/10.1038/nmeth.3869.\n\n\nDavis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. «Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data». Microbiome 6 (1): 226. https://doi.org/10.1186/s40168-018-0605-2.\n\n\nMartin, Marcel. 2011. «Cutadapt removes adapter sequences from high-throughput sequencing reads». EMBnet.journal 17 (1): 10-12. https://doi.org/10.14806/ej.17.1.200.\n\n\nQuast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, y Frank Oliver Glöckner. 2013. «The SILVA ribosomal RNA gene database project: improved data processing and web-based tools». Nucleic Acids Research 41 (D1): D590-96. https://doi.org/10.1093/nar/gks1219.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flujo bioinformático</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_qc_preprocessing.html",
+    "href": "chapters/04_qc_preprocessing.html",
+    "title": "5  QC y preprocesamiento",
+    "section": "",
+    "text": "5.1 La auditoría confirmó 198 bibliotecas paired-end completas\nSe validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en cada biblioteca.\nLas profundidades agregadas por tipo de biblioteca están disponibles en las tablas de FASTQ crudos y FASTQ recortados.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_qc_preprocessing.html#la-auditoría-confirmó-198-bibliotecas-paired-end-completas",
+    "href": "chapters/04_qc_preprocessing.html#la-auditoría-confirmó-198-bibliotecas-paired-end-completas",
+    "title": "5  QC y preprocesamiento",
+    "section": "",
+    "text": "Ensayo\nBibliotecas\nPares de lecturas crudos\nPares tras recorte\nRetención de pares\n\n\n\n\nPiloto\n46\n30,06 millones\n30,06 millones\n100,00 %\n\n\nAmpliado actual\n152\n29,91 millones\n29,91 millones\n100,00 %\n\n\nTotal\n198\n59,97 millones\n59,97 millones\n100,00 %",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_qc_preprocessing.html#los-informes-multiqc-se-publican-sin-rutas-internas",
+    "href": "chapters/04_qc_preprocessing.html#los-informes-multiqc-se-publican-sin-rutas-internas",
+    "title": "5  QC y preprocesamiento",
+    "section": "5.2 Los informes MultiQC se publican sin rutas internas",
+    "text": "5.2 Los informes MultiQC se publican sin rutas internas\nLos informes de FastQC se integraron con MultiQC antes y después del recorte (Ewels et al. 2016). La versión pública se regenera exclusivamente a partir de copias temporales de los archivos *_fastqc.zip, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el informe previo al recorte y el informe posterior al recorte.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_qc_preprocessing.html#el-recorte-posicional-eliminó-la-señal-de-primer-sin-pérdida-de-pares",
+    "href": "chapters/04_qc_preprocessing.html#el-recorte-posicional-eliminó-la-señal-de-primer-sin-pérdida-de-pares",
+    "title": "5  QC y preprocesamiento",
+    "section": "5.3 El recorte posicional eliminó la señal de primer sin pérdida de pares",
+    "text": "5.3 El recorte posicional eliminó la señal de primer sin pérdida de pares\nEl diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de lecturas. La señal residual compatible con primer fue como máximo 0,10 % por biblioteca y fue nula en R2 en la comprobación agregada.\n\n\n\n\n\n\n\n\n\n\nEnsayo\nPares de entrada\nPares de salida\nBases retenidas\nMáximo residual por biblioteca\n\n\n\n\nPiloto\n30,06 millones\n30,06 millones\n92,48 %\n0,10 %\n\n\nAmpliado actual\n29,91 millones\n29,91 millones\n93,36 %\n0,10 %\n\n\n\nLas métricas reproducibles se encuentran en retención por ensayo y verificación de primers.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_qc_preprocessing.html#las-biopsias-repetidas-muestran-una-diferencia-marcada-de-profundidad-entre-ensayos",
+    "href": "chapters/04_qc_preprocessing.html#las-biopsias-repetidas-muestran-una-diferencia-marcada-de-profundidad-entre-ensayos",
+    "title": "5  QC y preprocesamiento",
+    "section": "5.4 Las biopsias repetidas muestran una diferencia marcada de profundidad entre ensayos",
+    "text": "5.4 Las biopsias repetidas muestran una diferencia marcada de profundidad entre ensayos\nLa comparación pareada utiliza las ocho biopsias presentes en el piloto y el ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de filtrado, fusión de pares o eliminación de quimeras. En todas ellas, la profundidad de entrada fue mayor en el piloto; la media geométrica del cociente piloto/ampliado fue 7,69 y la mediana 7,51. No se aplicó una prueba de hipótesis.\n\n\n\n\n\n\n\n\nMétrica (8 biopsias emparejadas)\nPiloto\nAmpliado actual\n\n\n\n\nPares totales\n11,82 millones\n1,55 millones\n\n\nMedia por biopsia, DE\n1,48 (0,26) millones\n0,19 (0,04) millones\n\n\nMediana por biopsia [RIC]\n1,48 [1,44–1,58] millones\n0,20 [0,16–0,22] millones\n\n\nRango por biopsia\n0,94–1,84 millones\n0,14–0,26 millones\n\n\n\nLa figura muestra pares de lecturas en escala logarítmica. Cada línea une la misma biopsia entre ambos ensayos; el eje vertical está expresado en millones de pares, no en lecturas individuales.\n\n\n\nComparación pareada de profundidad de las ocho biopsias repetidas; cada línea representa una biopsia y el eje vertical usa escala logarítmica.\n\n\nLos valores técnicos individuales y el resumen se ofrecen en la tabla por biopsia y en el resumen descriptivo.\n\n\n\n\n\n\nPrecauciónCriterio de exclusión aún pendiente\n\n\n\nDos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y el umbral de profundidad definido para el análisis final.\n\n\n\n\n\n\nEwels, Philip, Måns Magnusson, Sverker Lundin, y Max Käller. 2016. «MultiQC: Summarize analysis results for multiple tools and samples in a single report». Bioinformatics 32 (19): 3047-48. https://doi.org/10.1093/bioinformatics/btw354.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>QC y preprocesamiento</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_dada2_asv.html",
+    "href": "chapters/05_dada2_asv.html",
+    "title": "6  DADA2 e inferencia de ASV",
+    "section": "",
+    "text": "6.1 Inferencia separada por ensayo\nDespués del recorte de primers, cada ensayo se procesará de forma independiente con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso (Callahan et al. 2016). Esta separación evita asumir que ambos ensayos comparten el mismo perfil de error. La integración posterior se realizará por secuencia exacta, conservando una variable de ensayo para los análisis técnicos.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>DADA2 e inferencia de ASV</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_dada2_asv.html#comando-y-parámetros-previstos",
+    "href": "chapters/05_dada2_asv.html#comando-y-parámetros-previstos",
+    "title": "6  DADA2 e inferencia de ASV",
+    "section": "6.2 Comando y parámetros previstos",
+    "text": "6.2 Comando y parámetros previstos\nLa ejecución se realizará en R y registrará una tabla de seguimiento por biblioteca. El fragmento genérico de filtrado y denoising es:\nfiltered &lt;- filterAndTrim(\n  fwd = &lt;R1_recortadas&gt;, rev = &lt;R2_recortadas&gt;,\n  filt = &lt;R1_filtradas&gt;, filt.rev = &lt;R2_filtradas&gt;,\n  truncLen = c(0, 0), maxEE = c(3, 5), truncQ = 2,\n  minLen = 100, multithread = TRUE\n)\n\nerr_R1 &lt;- learnErrors(&lt;R1_filtradas&gt;, multithread = TRUE)\nerr_R2 &lt;- learnErrors(&lt;R2_filtradas&gt;, multithread = TRUE)\ndenoised_R1 &lt;- dada(&lt;R1_filtradas&gt;, err = err_R1, multithread = TRUE)\ndenoised_R2 &lt;- dada(&lt;R2_filtradas&gt;, err = err_R2, multithread = TRUE)\n\ntruncLen = c(0, 0) preserva la longitud variable observada tras el recorte.\nmaxEE = c(3, 5) limita el error esperado por lectura sin imponer un corte fijo de longitud.\ntruncQ = 2 termina una lectura si alcanza una base de calidad muy baja.\nminLen = 100 descarta fragmentos manifiestamente no informativos.\n\nLa fusión se realizará con al menos 20 nt de solapamiento, cero discrepancias y trimOverhang = TRUE. Se aplicará removeBimeraDenovo(..., method = \"consensus\") a la tabla de secuencias. Antes de fijar los parámetros finales se compararán retención, fallos de fusión y posibles sesgos entre ensayos.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>DADA2 e inferencia de ASV</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_dada2_asv.html#salidas-que-se-incorporarán",
+    "href": "chapters/05_dada2_asv.html#salidas-que-se-incorporarán",
+    "title": "6  DADA2 e inferencia de ASV",
+    "section": "6.3 Salidas que se incorporarán",
+    "text": "6.3 Salidas que se incorporarán\nCuando la etapa esté completada, este capítulo mostrará:\n\nseguimiento de lecturas por biblioteca y por ensayo;\nnúmero de ASV antes y después de quimeras;\ndistribución de longitudes de los amplicones fusionados;\ncriterios documentados para el umbral mínimo de profundidad; y\ntabla de ASV integrada por secuencia exacta, con procedencia de ensayo.\n\n\n\n\n\nCallahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. «DADA2: High-resolution sample inference from Illumina amplicon data». Nature Methods 13 (7): 581-83. https://doi.org/10.1038/nmeth.3869.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>DADA2 e inferencia de ASV</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_taxonomy_controls.html",
+    "href": "chapters/06_taxonomy_controls.html",
+    "title": "7  Taxonomía, controles y decontaminación",
+    "section": "",
+    "text": "7.1 Asignación taxonómica con una referencia versionada\nLas ASV no quiméricas se anotarán mediante SILVA NR99 138.2. La referencia, su versión, checksum y parámetros se conservarán en el proyecto analítico. La taxonomía se asignará únicamente después de la fusión por secuencia exacta.\nminBoot = 50 define el soporte mínimo de bootstrap para las asignaciones. La salida esperada es una tabla taxonómica vinculada a las ASV y al seguimiento de lecturas; se informarán los niveles no resueltos sin forzar anotaciones.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Taxonomía, controles y decontaminación</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_taxonomy_controls.html#asignación-taxonómica-con-una-referencia-versionada",
+    "href": "chapters/06_taxonomy_controls.html#asignación-taxonómica-con-una-referencia-versionada",
+    "title": "7  Taxonomía, controles y decontaminación",
+    "section": "",
+    "text": "taxonomy &lt;- assignTaxonomy(\n  seqs = &lt;secuencias_asv&gt;, refFasta = &lt;silva_nr99_138_2&gt;,\n  minBoot = 50, multithread = TRUE\n)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Taxonomía, controles y decontaminación</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_taxonomy_controls.html#controles-positivos",
+    "href": "chapters/06_taxonomy_controls.html#controles-positivos",
+    "title": "7  Taxonomía, controles y decontaminación",
+    "section": "7.2 Controles positivos",
+    "text": "7.2 Controles positivos\nLos mocks de extracción, los mocks de PCR y las diluciones de E. coli se utilizarán para evaluar recuperación taxonómica, consistencia de la preparación y sensibilidad. Se compararán con su composición o señal esperada, teniendo en cuenta los límites de resolución de 16S y de la base de datos. Los controles positivos se mantendrán en QC y no se incluirán en las comparaciones biológicas de biopsias.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Taxonomía, controles y decontaminación</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_taxonomy_controls.html#controles-negativos-y-decontaminación",
+    "href": "chapters/06_taxonomy_controls.html#controles-negativos-y-decontaminación",
+    "title": "7  Taxonomía, controles y decontaminación",
+    "section": "7.3 Controles negativos y decontaminación",
+    "text": "7.3 Controles negativos y decontaminación\nLos controles negativos de batch, extracción y PCR fundamentarán el análisis principal de prevalencia de contaminantes. Cuando haya una variable de concentración de ADN apropiada y validada, se añadirá un análisis de frecuencia como sensibilidad (Davis et al. 2018). El comando genérico de prevalencia es:\ncontaminants &lt;- isContaminant(\n  physeq = &lt;objeto_con_asv_y_metadatos&gt;,\n  method = \"prevalence\", neg = \"is_negative_control\",\n  threshold = 0.5\n)\nLa decisión de filtrado se conservará en tres capas revisables: tabla cruda, ASV candidatas a contaminante y tabla filtrada. Ninguna tabla sustituirá a las otras; así será posible revisar el impacto de cada decisión de decontaminación.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Taxonomía, controles y decontaminación</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_taxonomy_controls.html#resultados-previstos-para-esta-sección",
+    "href": "chapters/06_taxonomy_controls.html#resultados-previstos-para-esta-sección",
+    "title": "7  Taxonomía, controles y decontaminación",
+    "section": "7.4 Resultados previstos para esta sección",
+    "text": "7.4 Resultados previstos para esta sección\nSe incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de los controles positivos, la lista de candidatas a contaminante, los criterios aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos no se inferirán a partir de los controles.\n\n\n\n\nDavis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. «Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data». Microbiome 6 (1): 226. https://doi.org/10.1186/s40168-018-0605-2.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Taxonomía, controles y decontaminación</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07_reproducibility.html",
+    "href": "chapters/07_reproducibility.html",
+    "title": "8  Reproducibilidad entre ensayos",
+    "section": "",
+    "text": "8.1 La profundidad de entrada difiere entre las ocho biopsias repetidas\nLas ocho biopsias presentes en ambos ensayos proporcionan una comparación pareada del rendimiento técnico. Todas tuvieron mayor número de pares de lecturas crudos en el piloto; la media geométrica del cociente piloto/ampliado fue 7,69. La comparación completa de los FASTQ de entrada se presenta en el capítulo de QC y preprocesamiento.\nEsta diferencia no demuestra un cambio biológico. La lectura adecuada es que la profundidad técnica de entrada está ligada al ensayo; cualquier comparación posterior deberá revisar el efecto de ensayo y aplicar criterios de profundidad definidos tras DADA2.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reproducibilidad entre ensayos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07_reproducibility.html#comparación-de-asv-pendiente",
+    "href": "chapters/07_reproducibility.html#comparación-de-asv-pendiente",
+    "title": "8  Reproducibilidad entre ensayos",
+    "section": "8.2 Comparación de ASV pendiente",
+    "text": "8.2 Comparación de ASV pendiente\n\n\n\n\n\n\nPrecaución\n\n\n\nLa reproducibilidad de composición, diversidad o abundancia no puede evaluarse hasta disponer de ASV, taxonomía y una estrategia de decontaminación. Esta sección no interpreta todavía la identidad microbiológica de las ocho biopsias.\n\n\nCon las tablas procesadas se compararán, de forma pareada y exploratoria:\n\nretención de lecturas por etapa;\nriqueza y diversidad alfa bajo el mismo umbral de profundidad;\ndistancia entre réplicas de la misma biopsia frente a la distancia entre biopsias distintas;\nconcordancia de ASV y perfiles taxonómicos; y\nefecto de ensayo en ordenaciones y modelos apropiados.\n\nLas ocho réplicas permanecerán disponibles para esta evaluación técnica, pero solo una observación por biopsia se empleará en la cohorte clínica principal.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reproducibilidad entre ensayos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08_microbiome_results.html",
+    "href": "chapters/08_microbiome_results.html",
+    "title": "9  Resultados microbiológicos",
+    "section": "",
+    "text": "9.1 Resultados que se incorporarán\nUna vez validado el conjunto final, el capítulo incluirá resultados de:\nLos hallazgos se presentarán con tablas y figuras agregadas, además de una descripción clara de qué es descriptivo y qué depende de contrastes estadísticos posteriores.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Resultados microbiológicos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08_microbiome_results.html#resultados-que-se-incorporarán",
+    "href": "chapters/08_microbiome_results.html#resultados-que-se-incorporarán",
+    "title": "9  Resultados microbiológicos",
+    "section": "",
+    "text": "profundidad final y número de ASV retenidas;\ndiversidad alfa y beta, con definiciones explícitas de denominador y filtros;\ncomposición taxonómica en niveles que la referencia resuelva con soporte;\nabundancias relativas y, cuando proceda, métodos composicionales adecuados;\nsensibilidad a decisiones de profundidad y decontaminación; y\ncomparación entre ensayos para las biopsias repetidas.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Resultados microbiológicos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09_clinical_associations.html",
+    "href": "chapters/09_clinical_associations.html",
+    "title": "10  Asociaciones clínicas agregadas",
+    "section": "",
+    "text": "10.1 Principios para el análisis posterior\nLas asociaciones se iniciarán solo cuando el conjunto microbiológico haya superado los filtros de QC y los metadatos clínicos hayan sido validados para la pregunta concreta. Cada contraste definirá previamente cohorte, denominador, covariables, manejo de valores ausentes y unidad de análisis.\nLas ocho biopsias repetidas no se contarán dos veces. La publicación mostrará únicamente resultados agregados, tamaños de grupo adecuados y medidas de incertidumbre. No se incorporarán hojas clínicas individuales al libro, a sus activos ni al sitio web.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Asociaciones clínicas agregadas</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09_clinical_associations.html#salidas-previstas",
+    "href": "chapters/09_clinical_associations.html#salidas-previstas",
+    "title": "10  Asociaciones clínicas agregadas",
+    "section": "10.2 Salidas previstas",
+    "text": "10.2 Salidas previstas\nCuando proceda, se mostrarán tablas de tamaños de grupo agregados, efectos estimados, intervalos de confianza o medidas equivalentes, y las limitaciones de interpretación. Los resultados serán exploratorios o confirmatorios según el diseño y el análisis que se hayan preregistrado o documentado en ese momento.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Asociaciones clínicas agregadas</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10_conclusions.html",
+    "href": "chapters/10_conclusions.html",
+    "title": "11  Conclusiones y próximos pasos",
+    "section": "",
+    "text": "11.1 Conclusiones de la fase actualmente disponible\nLa estructura de datos y el preprocesamiento ya son trazables: el conjunto contiene 198 bibliotecas paired-end completas, el recorte de primers mantuvo todos los pares y la señal residual de primer fue mínima. La comparación de las ocho biopsias repetidas demuestra una diferencia importante de profundidad de entrada entre ensayos que deberá tratarse como un factor técnico en las etapas posteriores.\nNo puede extraerse todavía una conclusión sobre microbiota, taxonomía, contaminación o asociación clínica. Esas inferencias requieren resultados que aún no han sido calculados o revisados.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conclusiones y próximos pasos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10_conclusions.html#próximos-pasos-analíticos",
+    "href": "chapters/10_conclusions.html#próximos-pasos-analíticos",
+    "title": "11  Conclusiones y próximos pasos",
+    "section": "11.2 Próximos pasos analíticos",
+    "text": "11.2 Próximos pasos analíticos\n\nEjecutar DADA2 de manera independiente por ensayo y revisar su seguimiento de lecturas.\nFusionar ASV por secuencia exacta, eliminar quimeras y asignar taxonomía con SILVA 138.2.\nEvaluar controles positivos y negativos, conservando tablas crudas, candidatas y filtradas.\nDefinir el umbral de profundidad con evidencia de QC, incluida la situación de las bibliotecas de baja profundidad.\nEvaluar reproducibilidad entre ensayos y preparar el conjunto clínico sin duplicar biopsias.\nActualizar este libro únicamente tras una solicitud explícita de actualización del informe Quarto y una revisión local del render.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conclusiones y próximos pasos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10_conclusions.html#reproducibilidad-y-disponibilidad",
+    "href": "chapters/10_conclusions.html#reproducibilidad-y-disponibilidad",
+    "title": "11  Conclusiones y próximos pasos",
+    "section": "11.3 Reproducibilidad y disponibilidad",
+    "text": "11.3 Reproducibilidad y disponibilidad\nEl código y la configuración del libro se distribuyen bajo MIT; su contenido, bajo CC BY 4.0. La documentación operativa, los activos curados y la política de disponibilidad de datos se detallan en los apéndices.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conclusiones y próximos pasos</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/reproducibility.html",
+    "href": "appendices/reproducibility.html",
+    "title": "Apéndice A — Reproducibilidad y actualización manual",
+    "section": "",
+    "text": "A.1 Separación entre análisis y publicación\nEl análisis bioinformático autoritativo se mantiene fuera de este repositorio. Este libro solo recibe figuras, tablas e informes que estén explícitamente autorizados en config/publication_assets.json. La lista funciona como una lista blanca: cualquier activo no enumerado se rechaza.\nEl exportador no recalcula DADA2, taxonomía, decontaminación ni resultados clínicos. Copia activos seleccionados y regenera MultiQC a partir de informes FastQC temporales, excluyendo rutas internas de ejecución.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Reproducibilidad y actualización manual</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/reproducibility.html#comandos-manuales",
+    "href": "appendices/reproducibility.html#comandos-manuales",
+    "title": "Apéndice A — Reproducibilidad y actualización manual",
+    "section": "A.2 Comandos manuales",
+    "text": "A.2 Comandos manuales\nLos siguientes comandos se ejecutan únicamente cuando se ha solicitado una actualización del informe Quarto:\n# Exportar los activos permitidos y renderizar el libro localmente.\nCARPIO_ANALYSIS_DIR=/ruta/al/proyecto_analitico scripts/build_report.sh --export\n\n# Exportar sin renderizar.\nCARPIO_ANALYSIS_DIR=/ruta/al/proyecto_analitico scripts/build_report.sh --export-only\n\n# Renderizar solo lo que ya está versionado en este repositorio.\nscripts/build_report.sh\nEl script registra un log local de build y ejecuta dos comprobaciones: una sobre los activos antes del render y otra sobre el HTML generado. El manifiesto manifests/public_asset_manifest.tsv registra la procedencia relativa, destino, checksum y descripción de los activos exportados, sin rutas absolutas.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Reproducibilidad y actualización manual</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/reproducibility.html#publicación",
+    "href": "appendices/reproducibility.html#publicación",
+    "title": "Apéndice A — Reproducibilidad y actualización manual",
+    "section": "A.3 Publicación",
+    "text": "A.3 Publicación\nEl workflow de GitHub Pages se activa exclusivamente tras un push a main. No exporta datos desde el entorno analítico ni se activa por cambios externos. La publicación requiere una instrucción explícita y una revisión humana previa del render local.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Reproducibilidad y actualización manual</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/data_availability.html",
+    "href": "appendices/data_availability.html",
+    "title": "Apéndice B — Disponibilidad de datos y licencias",
+    "section": "",
+    "text": "B.1 Activos publicados\nEl repositorio público incluye texto del informe, código y configuración del libro, tablas agregadas de QC, una figura de profundidad técnica y versiones saneadas de MultiQC. Los códigos técnicos de muestra necesarios para estas comprobaciones de QC se han autorizado expresamente.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Disponibilidad de datos y licencias</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/data_availability.html#datos-bajo-acceso-controlado",
+    "href": "appendices/data_availability.html#datos-bajo-acceso-controlado",
+    "title": "Apéndice B — Disponibilidad de datos y licencias",
+    "section": "B.2 Datos bajo acceso controlado",
+    "text": "B.2 Datos bajo acceso controlado\nLos FASTQ crudos, objetos intermedios pesados, metadatos clínicos individuales, identificadores de paciente y fechas clínicas no se publican en este sitio. El acceso a datos que puedan permitir reidentificación, o que requieran evaluación ética y de protección de datos, se gestionará bajo acceso controlado y conforme a las autorizaciones aplicables.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Disponibilidad de datos y licencias</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/data_availability.html#licencias",
+    "href": "appendices/data_availability.html#licencias",
+    "title": "Apéndice B — Disponibilidad de datos y licencias",
+    "section": "B.3 Licencias",
+    "text": "B.3 Licencias\nEl código y la configuración se distribuyen bajo la licencia MIT. El texto y los contenidos originales del informe se distribuyen bajo CC BY 4.0, salvo que un activo indique expresamente condiciones distintas. Las referencias bibliográficas y recursos de terceros conservan sus propias condiciones de uso.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Disponibilidad de datos y licencias</span>"
+    ]
+  }
+]

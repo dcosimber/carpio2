@@ -1,0 +1,36 @@
+---
+title: "Reproducibilidad entre ensayos"
+---
+
+## La profundidad de entrada difiere entre las ocho biopsias repetidas
+
+Las ocho biopsias presentes en ambos ensayos proporcionan una comparación
+pareada del rendimiento técnico. Todas tuvieron mayor número de pares de
+lecturas crudos en el piloto; la media geométrica del cociente piloto/ampliado
+fue 7,69. La comparación completa de los FASTQ de entrada se presenta en el
+capítulo de [QC y preprocesamiento](04_qc_preprocessing.qmd).
+
+Esta diferencia no demuestra un cambio biológico. La lectura adecuada es que la
+profundidad técnica de entrada está ligada al ensayo; cualquier comparación
+posterior deberá revisar el efecto de ensayo y aplicar criterios de profundidad
+definidos tras DADA2.
+
+## Comparación de ASV pendiente
+
+::: {.callout-caution}
+La reproducibilidad de composición, diversidad o abundancia no puede evaluarse
+hasta disponer de ASV, taxonomía y una estrategia de decontaminación. Esta
+sección no interpreta todavía la identidad microbiológica de las ocho biopsias.
+:::
+
+Con las tablas procesadas se compararán, de forma pareada y exploratoria:
+
+- retención de lecturas por etapa;
+- riqueza y diversidad alfa bajo el mismo umbral de profundidad;
+- distancia entre réplicas de la misma biopsia frente a la distancia entre
+  biopsias distintas;
+- concordancia de ASV y perfiles taxonómicos; y
+- efecto de ensayo en ordenaciones y modelos apropiados.
+
+Las ocho réplicas permanecerán disponibles para esta evaluación técnica, pero
+solo una observación por biopsia se empleará en la cohorte clínica principal.

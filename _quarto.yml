@@ -1,0 +1,63 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - figures/
+    - tables/
+    - multiqc/
+
+lang: es
+
+book:
+  title: "Proyecto Carpio"
+  site-url: "https://dcosimber.github.io/carpio2/"
+  repo-url: "https://github.com/dcosimber/carpio2"
+  repo-actions: [source]
+  sidebar:
+    search: true
+  author:
+    - name: Daniel Costas Imbernón
+      orcid: 0000-0003-4384-8469
+      email: daniel.costas.imbernon@gmail.com
+      affiliations:
+        - name: Grupo de Microbiología e Infectología, Instituto de Investigación Sanitaria Galicia Sur (IISGS)
+  date: last-modified
+  chapters:
+    - index.qmd
+    - chapters/01_context.qmd
+    - chapters/02_design_samples.qmd
+    - chapters/03_workflow.qmd
+    - chapters/04_qc_preprocessing.qmd
+    - chapters/05_dada2_asv.qmd
+    - chapters/06_taxonomy_controls.qmd
+    - chapters/07_reproducibility.qmd
+    - chapters/08_microbiome_results.qmd
+    - chapters/09_clinical_associations.qmd
+    - chapters/10_conclusions.qmd
+  appendices:
+    - appendices/reproducibility.qmd
+    - appendices/data_availability.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    tbl-cap-location: top
+    fig-cap-location: bottom
+    number-sections: true
+    smooth-scroll: true
+    anchor-sections: true
+    link-external-newwindow: true
+    lightbox:
+      match: auto
+      effect: zoom
+      desc-position: bottom
+    css: styles.css
+    theme:
+      light: cosmo
+      dark: darkly
+
+editor: visual

@@ -1,0 +1,25 @@
+---
+title: "Disponibilidad de datos y licencias"
+---
+
+## Activos publicados
+
+El repositorio público incluye texto del informe, código y configuración del
+libro, tablas agregadas de QC, una figura de profundidad técnica y versiones
+saneadas de MultiQC. Los códigos técnicos de muestra necesarios para estas
+comprobaciones de QC se han autorizado expresamente.
+
+## Datos bajo acceso controlado
+
+Los FASTQ crudos, objetos intermedios pesados, metadatos clínicos individuales,
+identificadores de paciente y fechas clínicas no se publican en este sitio. El
+acceso a datos que puedan permitir reidentificación, o que requieran evaluación
+ética y de protección de datos, se gestionará bajo acceso controlado y conforme
+a las autorizaciones aplicables.
+
+## Licencias
+
+El código y la configuración se distribuyen bajo la licencia MIT. El texto y
+los contenidos originales del informe se distribuyen bajo CC BY 4.0, salvo que
+un activo indique expresamente condiciones distintas. Las referencias
+bibliográficas y recursos de terceros conservan sus propias condiciones de uso.

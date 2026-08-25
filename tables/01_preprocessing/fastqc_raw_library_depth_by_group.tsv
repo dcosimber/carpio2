@@ -1,0 +1,5 @@
+processing_batch	sample_type	libraries	total_pairs	minimum_pairs	median_pairs	maximum_pairs
+current	biopsy	130	25718239	582	194409	358110
+current	negative_control	22	4192039	94303	195957	277457
+pilot	biopsy	8	11815341	937535	1506241	1844859
+pilot	positive_control	38	18249198	211769	442610	1324645

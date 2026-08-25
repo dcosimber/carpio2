@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "analysis_dir_env": "CARPIO_ANALYSIS_DIR",
+  "allowed_assets": [
+    {
+      "id": "raw_depth_by_group",
+      "source": "analysis/tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv",
+      "destination": "tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv",
+      "description": "Profundidad de pares de lectura antes del recorte, agregada por ensayo y tipo de biblioteca."
+    },
+    {
+      "id": "trimmed_depth_by_group",
+      "source": "analysis/tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv",
+      "destination": "tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv",
+      "description": "Profundidad de pares de lectura después del recorte, agregada por ensayo y tipo de biblioteca."
+    },
+    {
+      "id": "primer_retention_by_batch",
+      "source": "analysis/tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv",
+      "destination": "tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv",
+      "description": "Retención de pares y bases tras el recorte posicional de primers."
+    },
+    {
+      "id": "primer_verification_summary",
+      "source": "analysis/tables/01_preprocessing/primer_trimming_verification_summary.tsv",
+      "destination": "tables/01_preprocessing/primer_trimming_verification_summary.tsv",
+      "description": "Verificación agregada de señal residual de primer tras el recorte."
+    },
+    {
+      "id": "repeated_biopsy_depth_comparison",
+      "source": "analysis/tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv",
+      "destination": "tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv",
+      "description": "Profundidad de los FASTQ crudos de las ocho biopsias repetidas; se permiten los códigos técnicos de muestra."
+    },
+    {
+      "id": "repeated_biopsy_depth_summary",
+      "source": "analysis/tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv",
+      "destination": "tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv",
+      "description": "Resumen descriptivo de la comparación pareada de profundidad."
+    },
+    {
+      "id": "repeated_biopsy_depth_plot",
+      "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.png",
+      "destination": "figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png",
+      "description": "Gráfico pareado de profundidad de las ocho biopsias repetidas."
+    },
+    {
+      "id": "repeated_biopsy_depth_plot_pdf",
+      "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.pdf",
+      "destination": "figures/01_preprocessing/repeated_biopsies_raw_depth_paired.pdf",
+      "description": "Versión vectorial del gráfico pareado de profundidad."
+    }
+  ],
+  "multiqc_reports": [
+    {
+      "id": "raw_fastqc",
+      "input_directories": [
+        "analysis/intermediate/pilot/03_fastqc_raw",
+        "analysis/intermediate/current/03_fastqc_raw"
+      ],
+      "destination": "multiqc/raw/fastqc_raw_multiqc_report.html",
+      "filename": "fastqc_raw_multiqc_report.html",
+      "description": "MultiQC saneado de FastQC antes del recorte de primers."
+    },
+    {
+      "id": "trimmed_fastqc",
+      "input_directories": [
+        "analysis/intermediate/pilot/04_fastqc_trimmed",
+        "analysis/intermediate/current/04_fastqc_trimmed"
+      ],
+      "destination": "multiqc/trimmed/fastqc_trimmed_multiqc_report.html",
+      "filename": "fastqc_trimmed_multiqc_report.html",
+      "description": "MultiQC saneado de FastQC después del recorte de primers."
+    }
+  ],
+  "blocked_extensions": [
+    ".fastq",
+    ".fastq.gz",
+    ".fq",
+    ".fq.gz",
+    ".bam",
+    ".cram",
+    ".sam",
+    ".rds",
+    ".rdata",
+    ".rda",
+    ".xlsx",
+    ".xls",
+    ".zip"
+  ],
+  "restricted_table_headers": [
+    "patient_id",
+    "patient_identifier",
+    "record_id",
+    "medical_record",
+    "birth_date",
+    "date_of_birth",
+    "fecha_nacimiento",
+    "fecha_de_nacimiento"
+  ]
+}

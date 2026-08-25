@@ -1,0 +1,54 @@
+---
+title: "Diseño, biopsias y controles"
+---
+
+## Cohorte técnica y unidad de análisis
+
+La entrada comprende **198 bibliotecas paired-end**. Cada biblioteca está
+representada por dos archivos FASTQ complementarios: R1 y R2. Por tanto, los
+198 pares representan 396 archivos, pero no 396 observaciones independientes.
+Cuando se informa profundidad se usa, salvo indicación contraria, el número de
+**pares de lecturas**.
+
+El ensayo ampliado contiene 152 bibliotecas y el ensayo piloto aporta 46. En
+conjunto hay 130 biopsias biológicas únicas, 138 registros de biopsia al contar
+las ocho repeticiones técnicas, 38 controles positivos y 22 controles
+negativos. Las repeticiones del piloto no incrementan el tamaño de la cohorte
+clínica principal.
+
+| Ensayo | Tipo de registro | Subtipo | Bibliotecas paired-end |
+|---|---|---|---:|
+| Ampliado actual | Biopsia | Biopsia digestiva | 130 |
+| Piloto | Biopsia repetida | Ocho biopsias presentes en ambos ensayos | 8 |
+| Piloto | Control positivo | Mock de extracción | 8 |
+| Piloto | Control positivo | Mock de PCR | 6 |
+| Piloto | Control positivo | Diluciones de *Escherichia coli* | 24 |
+| Ampliado actual | Control negativo | Batch | 2 |
+| Ampliado actual | Control negativo | Extracción | 10 |
+| Ampliado actual | Control negativo | PCR | 10 |
+| **Total** |  |  | **198** |
+
+## Papel de los controles
+
+Los controles positivos del piloto cubren el proceso de extracción (mocks de
+células), PCR (mocks de ADN) y sensibilidad analítica (diluciones seriadas de
+*E. coli*). Los controles negativos del ensayo ampliado permiten distinguir
+contaminación asociada al batch, la extracción o la PCR. Estos controles no
+formarán parte de las comparaciones biológicas entre biopsias, pero se
+mantendrán hasta la fase de decontaminación y validación.
+
+## Trazabilidad de identificadores
+
+El código biológico de biopsia usa el formato técnico `01-xxx`. Las ocho
+biopsias procedentes del piloto llevan un sufijo que las diferencia del registro
+del ensayo ampliado. Esta distinción conserva la trazabilidad técnica y evita
+que una biopsia repetida se interprete como un nuevo individuo. Los metadatos
+clínicos individuales no forman parte de este repositorio público.
+
+::: {.callout-note}
+## Información publicada
+
+Se muestran recuentos agregados y, cuando es necesario para QC, códigos técnicos
+de muestra autorizados. No se publican fechas clínicas, identificadores de
+paciente ni tablas clínicas individuales.
+:::

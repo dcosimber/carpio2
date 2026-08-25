@@ -1,0 +1,11 @@
+.DS_Store
+.quarto/
+_freeze/
+*.tmp
+*.bak
+manifests/logs/*.log
+manifests/*.tmp
+
+
+/.quarto/
+**/*.quarto_ipynb

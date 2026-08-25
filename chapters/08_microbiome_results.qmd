@@ -1,0 +1,26 @@
+---
+title: "Resultados microbiológicos"
+---
+
+::: {.callout-caution}
+## Resultados no disponibles todavía
+
+No se presentan resultados microbiológicos en esta versión. La etapa depende de
+la inferencia de ASV, la asignación taxonómica, la revisión de controles y la
+definición documentada de filtros de calidad.
+:::
+
+## Resultados que se incorporarán
+
+Una vez validado el conjunto final, el capítulo incluirá resultados de:
+
+1. profundidad final y número de ASV retenidas;
+2. diversidad alfa y beta, con definiciones explícitas de denominador y filtros;
+3. composición taxonómica en niveles que la referencia resuelva con soporte;
+4. abundancias relativas y, cuando proceda, métodos composicionales adecuados;
+5. sensibilidad a decisiones de profundidad y decontaminación; y
+6. comparación entre ensayos para las biopsias repetidas.
+
+Los hallazgos se presentarán con tablas y figuras agregadas, además de una
+descripción clara de qué es descriptivo y qué depende de contrastes
+estadísticos posteriores.

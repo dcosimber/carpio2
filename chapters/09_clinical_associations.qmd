@@ -1,0 +1,29 @@
+---
+title: "Asociaciones clínicas agregadas"
+---
+
+::: {.callout-caution}
+## Resultados no disponibles todavía
+
+No se han ejecutado asociaciones clínicas en esta fase. Este capítulo no
+contiene datos individuales, fechas clínicas ni identificadores de paciente.
+:::
+
+## Principios para el análisis posterior
+
+Las asociaciones se iniciarán solo cuando el conjunto microbiológico haya
+superado los filtros de QC y los metadatos clínicos hayan sido validados para la
+pregunta concreta. Cada contraste definirá previamente cohorte, denominador,
+covariables, manejo de valores ausentes y unidad de análisis.
+
+Las ocho biopsias repetidas no se contarán dos veces. La publicación mostrará
+únicamente resultados agregados, tamaños de grupo adecuados y medidas de
+incertidumbre. No se incorporarán hojas clínicas individuales al libro, a sus
+activos ni al sitio web.
+
+## Salidas previstas
+
+Cuando proceda, se mostrarán tablas de tamaños de grupo agregados, efectos
+estimados, intervalos de confianza o medidas equivalentes, y las limitaciones
+de interpretación. Los resultados serán exploratorios o confirmatorios según
+el diseño y el análisis que se hayan preregistrado o documentado en ese momento.

@@ -1,0 +1,93 @@
+---
+title: "Flujo bioinformático"
+---
+
+## Principio de procesamiento
+
+Los FASTQ crudos se consideran entradas inmutables. El procesamiento se separa
+por ensayo hasta el denoising para evitar que perfiles de error distintos se
+mezclen al aprender el modelo de DADA2. Después, las ASV no quiméricas se
+integrarán por secuencia exacta y se conservará el identificador de ensayo para
+cuantificar el efecto técnico.
+
+| Bloque | Herramienta | Propósito | Estado y salida principal |
+|---|---|---|---|
+| Auditoría de entradas | scripts de validación | Comprobar pares R1/R2 y metadatos | Completado; inventario de bibliotecas |
+| QC | FastQC y MultiQC | Revisar calidad, longitud y contenido de adaptadores | Completado; informes antes y después del recorte |
+| Recorte de primers | Cutadapt | Eliminar los extremos de primer validados | Completado; FASTQ recortados y métricas JSON |
+| Denoising | DADA2 | Filtrado, modelo de error, ASV, fusión y quimeras | Pendiente; tabla de seguimiento y ASV |
+| Taxonomía | DADA2 + SILVA 138.2 | Asignar taxonomía a ASV | Pendiente; tabla taxonómica |
+| Controles | decontam | Evaluar contaminantes y sensibilidad | Pendiente; tablas cruda, candidata y filtrada |
+| Downstream | R/phyloseq u herramientas equivalentes | Diversidad, composición, reproducibilidad y clínica | Pendiente; tablas y figuras agregadas |
+
+## QC de lecturas
+
+FastQC se ejecuta sobre cada miembro de cada par y MultiQC integra los
+resultados por ensayo. El comando genérico es el siguiente:
+
+```bash
+fastqc --threads <n_hilos> --outdir <directorio_fastqc> \
+  <R1.fastq.gz> <R2.fastq.gz>
+
+multiqc <directorio_fastqc> --outdir <directorio_multiqc>
+```
+
+`--threads` adapta el cálculo a los recursos disponibles y `--outdir` separa
+los informes de QC de los FASTQ. Esta etapa es diagnóstica: no transforma ni
+descarta lecturas.
+
+## Diagnóstico y recorte de primers
+
+Se estudiaron los primers 341F (`CCTACGGGNGGCWGCAG`) y 805R
+(`GACTACHVGGGTATCTAATCC`) por ensayo. El diagnóstico justificó un recorte
+posicional de 17 nucleótidos en R1 y 21 en R2. El comando aplicado por
+biblioteca fue:
+
+```bash
+cutadapt -j <n_hilos> \
+  -u 17 -U 21 \
+  -o <R1_recortado.fastq.gz> \
+  -p <R2_recortado.fastq.gz> \
+  --json <informe_cutadapt.json> \
+  <R1_crudo.fastq.gz> <R2_crudo.fastq.gz>
+```
+
+`-u 17` y `-U 21` eliminan bases desde el extremo 5′ de R1 y R2,
+respectivamente. No se utilizó `--discard-untrimmed` ni se aplicó filtrado de
+calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta
+del primer y se reserva el filtrado de calidad para DADA2 [@Martin2011].
+
+## Denoising, fusión e integración planificados
+
+DADA2 se ejecutará de forma independiente en piloto y ensayo ampliado. Los
+parámetros inicialmente fijados se someterán a revisión mediante el seguimiento
+de retención por biblioteca, sin recurrir a un truncado fijo de longitud:
+
+```r
+filtered <- filterAndTrim(
+  fwd = <R1_recortadas>, rev = <R2_recortadas>,
+  truncLen = c(0, 0), maxEE = c(3, 5), truncQ = 2,
+  minLen = 100, multithread = TRUE
+)
+
+merged <- mergePairs(
+  denoised_R1, derep_R1, denoised_R2, derep_R2,
+  minOverlap = 20, maxMismatch = 0, trimOverhang = TRUE
+)
+```
+
+`truncLen = c(0, 0)` conserva longitud variable; `maxEE` limita el error
+esperado en R1/R2; `truncQ` termina lecturas en bases de muy baja calidad; y
+`minLen` elimina fragmentos claramente no informativos. La fusión exige al
+menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando
+procede. Posteriormente se aplicará eliminación de quimeras por consenso y se
+guardará el seguimiento por muestra [@Callahan2016].
+
+## Taxonomía y controles planificados
+
+La taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y
+`minBoot = 50`; la versión y los checksums de la referencia se conservarán en
+el análisis. Los controles negativos se evaluarán principalmente por
+prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia
+como análisis de sensibilidad [@Davis2018; @Quast2013]. Los resultados aún no
+han sido ejecutados y no se presentan como conclusiones.

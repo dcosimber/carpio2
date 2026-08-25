@@ -1,0 +1,42 @@
+---
+title: "Reproducibilidad y actualización manual"
+---
+
+## Separación entre análisis y publicación
+
+El análisis bioinformático autoritativo se mantiene fuera de este repositorio.
+Este libro solo recibe figuras, tablas e informes que estén explícitamente
+autorizados en `config/publication_assets.json`. La lista funciona como una
+lista blanca: cualquier activo no enumerado se rechaza.
+
+El exportador no recalcula DADA2, taxonomía, decontaminación ni resultados
+clínicos. Copia activos seleccionados y regenera MultiQC a partir de informes
+FastQC temporales, excluyendo rutas internas de ejecución.
+
+## Comandos manuales
+
+Los siguientes comandos se ejecutan únicamente cuando se ha solicitado una
+actualización del informe Quarto:
+
+```bash
+# Exportar los activos permitidos y renderizar el libro localmente.
+CARPIO_ANALYSIS_DIR=/ruta/al/proyecto_analitico scripts/build_report.sh --export
+
+# Exportar sin renderizar.
+CARPIO_ANALYSIS_DIR=/ruta/al/proyecto_analitico scripts/build_report.sh --export-only
+
+# Renderizar solo lo que ya está versionado en este repositorio.
+scripts/build_report.sh
+```
+
+El script registra un log local de build y ejecuta dos comprobaciones: una sobre
+los activos antes del render y otra sobre el HTML generado. El manifiesto
+`manifests/public_asset_manifest.tsv` registra la procedencia relativa,
+destino, checksum y descripción de los activos exportados, sin rutas absolutas.
+
+## Publicación
+
+El workflow de GitHub Pages se activa exclusivamente tras un `push` a `main`.
+No exporta datos desde el entorno analítico ni se activa por cambios externos.
+La publicación requiere una instrucción explícita y una revisión humana previa
+del render local.

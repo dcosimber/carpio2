@@ -1,0 +1,61 @@
+---
+title: "DADA2 e inferencia de ASV"
+---
+
+::: {.callout-caution}
+## Resultado pendiente
+
+Esta etapa todavía no se ha ejecutado para el conjunto ampliado. Por tanto, no
+se informa número de ASV, retención, éxito de fusión ni eliminación de quimeras.
+Los parámetros expuestos a continuación son el plan reproducible que se
+validará con las salidas de seguimiento de DADA2.
+:::
+
+## Inferencia separada por ensayo
+
+Después del recorte de primers, cada ensayo se procesará de forma independiente
+con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de
+pares y eliminación de quimeras por consenso [@Callahan2016]. Esta separación
+evita asumir que ambos ensayos comparten el mismo perfil de error. La integración
+posterior se realizará por secuencia exacta, conservando una variable de ensayo
+para los análisis técnicos.
+
+## Comando y parámetros previstos
+
+La ejecución se realizará en R y registrará una tabla de seguimiento por
+biblioteca. El fragmento genérico de filtrado y denoising es:
+
+```r
+filtered <- filterAndTrim(
+  fwd = <R1_recortadas>, rev = <R2_recortadas>,
+  filt = <R1_filtradas>, filt.rev = <R2_filtradas>,
+  truncLen = c(0, 0), maxEE = c(3, 5), truncQ = 2,
+  minLen = 100, multithread = TRUE
+)
+
+err_R1 <- learnErrors(<R1_filtradas>, multithread = TRUE)
+err_R2 <- learnErrors(<R2_filtradas>, multithread = TRUE)
+denoised_R1 <- dada(<R1_filtradas>, err = err_R1, multithread = TRUE)
+denoised_R2 <- dada(<R2_filtradas>, err = err_R2, multithread = TRUE)
+```
+
+- `truncLen = c(0, 0)` preserva la longitud variable observada tras el recorte.
+- `maxEE = c(3, 5)` limita el error esperado por lectura sin imponer un corte
+  fijo de longitud.
+- `truncQ = 2` termina una lectura si alcanza una base de calidad muy baja.
+- `minLen = 100` descarta fragmentos manifiestamente no informativos.
+
+La fusión se realizará con al menos 20 nt de solapamiento, cero discrepancias y
+`trimOverhang = TRUE`. Se aplicará `removeBimeraDenovo(..., method =
+"consensus")` a la tabla de secuencias. Antes de fijar los parámetros finales
+se compararán retención, fallos de fusión y posibles sesgos entre ensayos.
+
+## Salidas que se incorporarán
+
+Cuando la etapa esté completada, este capítulo mostrará:
+
+1. seguimiento de lecturas por biblioteca y por ensayo;
+2. número de ASV antes y después de quimeras;
+3. distribución de longitudes de los amplicones fusionados;
+4. criterios documentados para el umbral mínimo de profundidad; y
+5. tabla de ASV integrada por secuencia exacta, con procedencia de ensayo.

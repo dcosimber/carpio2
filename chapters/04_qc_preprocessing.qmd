@@ -1,0 +1,78 @@
+---
+title: "QC y preprocesamiento"
+---
+
+## La auditoría confirmó 198 bibliotecas paired-end completas
+
+Se validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único
+par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y
+después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en
+cada biblioteca.
+
+| Ensayo | Bibliotecas | Pares de lecturas crudos | Pares tras recorte | Retención de pares |
+|---|---:|---:|---:|---:|
+| Piloto | 46 | 30,06 millones | 30,06 millones | 100,00 % |
+| Ampliado actual | 152 | 29,91 millones | 29,91 millones | 100,00 % |
+| **Total** | **198** | **59,97 millones** | **59,97 millones** | **100,00 %** |
+
+Las profundidades agregadas por tipo de biblioteca están disponibles en las
+tablas de [FASTQ crudos](../tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv)
+y [FASTQ recortados](../tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv).
+
+## Los informes MultiQC se publican sin rutas internas
+
+Los informes de FastQC se integraron con MultiQC antes y después del recorte
+[@Ewels2016]. La versión pública se regenera exclusivamente a partir de copias
+temporales de los archivos `*_fastqc.zip`, conserva los nombres técnicos
+autorizados y excluye las rutas internas de computación. Se puede consultar el
+[informe previo al recorte](../multiqc/raw/fastqc_raw_multiqc_report.html) y el
+[informe posterior al recorte](../multiqc/trimmed/fastqc_trimmed_multiqc_report.html).
+
+## El recorte posicional eliminó la señal de primer sin pérdida de pares
+
+El diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras
+el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de
+lecturas. La señal residual compatible con primer fue como máximo 0,10 % por
+biblioteca y fue nula en R2 en la comprobación agregada.
+
+| Ensayo | Pares de entrada | Pares de salida | Bases retenidas | Máximo residual por biblioteca |
+|---|---:|---:|---:|---:|
+| Piloto | 30,06 millones | 30,06 millones | 92,48 % | 0,10 % |
+| Ampliado actual | 29,91 millones | 29,91 millones | 93,36 % | 0,10 % |
+
+Las métricas reproducibles se encuentran en [retención por ensayo](../tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv)
+y [verificación de primers](../tables/01_preprocessing/primer_trimming_verification_summary.tsv).
+
+## Las biopsias repetidas muestran una diferencia marcada de profundidad entre ensayos
+
+La comparación pareada utiliza las ocho biopsias presentes en el piloto y el
+ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de
+filtrado, fusión de pares o eliminación de quimeras. En todas ellas, la
+profundidad de entrada fue mayor en el piloto; la media geométrica del cociente
+piloto/ampliado fue 7,69 y la mediana 7,51. No se aplicó una prueba de hipótesis.
+
+| Métrica (8 biopsias emparejadas) | Piloto | Ampliado actual |
+|---|---:|---:|
+| Pares totales | 11,82 millones | 1,55 millones |
+| Media por biopsia, DE | 1,48 (0,26) millones | 0,19 (0,04) millones |
+| Mediana por biopsia [RIC] | 1,48 [1,44–1,58] millones | 0,20 [0,16–0,22] millones |
+| Rango por biopsia | 0,94–1,84 millones | 0,14–0,26 millones |
+
+La figura muestra pares de lecturas en escala logarítmica. Cada línea une la
+misma biopsia entre ambos ensayos; el eje vertical está expresado en millones
+de pares, no en lecturas individuales.
+
+![Comparación pareada de profundidad de las ocho biopsias repetidas; cada línea representa una biopsia y el eje vertical usa escala logarítmica.](../figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png){fig-alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado."}
+
+Los valores técnicos individuales y el resumen se ofrecen en la
+[tabla por biopsia](../tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv)
+y en el [resumen descriptivo](../tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv).
+
+::: {.callout-caution}
+## Criterio de exclusión aún pendiente
+
+Dos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su
+posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino
+tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y
+el umbral de profundidad definido para el análisis final.
+:::
