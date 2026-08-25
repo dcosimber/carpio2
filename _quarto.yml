@@ -40,6 +40,8 @@ book:
     - appendices/data_availability.qmd
 
 bibliography: references.bib
+suppress-bibliography: true
+link-citations: true
 
 format:
   html:

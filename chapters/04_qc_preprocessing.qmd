@@ -100,5 +100,11 @@ el umbral de profundidad definido para el análisis final.
 
 ## Referencias {.unnumbered}
 
-::: {#refs}
+::: {.chapter-references}
+::: {#ref-Ewels2016 .csl-entry}
+Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016.
+“MultiQC: Summarize Analysis Results for Multiple Tools and Samples in a
+Single Report.” *Bioinformatics* 32 (19): 3047–3048.
+<https://doi.org/10.1093/bioinformatics/btw354>.
+:::
 :::

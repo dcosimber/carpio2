@@ -62,5 +62,11 @@ Cuando la etapa esté completada, este capítulo mostrará:
 
 ## Referencias {.unnumbered}
 
-::: {#refs}
+::: {.chapter-references}
+::: {#ref-Callahan2016 .csl-entry}
+Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W.
+Han, Amy Jo A. Johnson, and Susan P. Holmes. 2016. “DADA2:
+High-Resolution Sample Inference from Illumina Amplicon Data.” *Nature
+Methods* 13 (7): 581–583. <https://doi.org/10.1038/nmeth.3869>.
+:::
 :::

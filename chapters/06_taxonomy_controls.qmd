@@ -65,5 +65,11 @@ no se inferirán a partir de los controles.
 
 ## Referencias {.unnumbered}
 
-::: {#refs}
+::: {.chapter-references}
+::: {#ref-Davis2018 .csl-entry}
+Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman,
+and Benjamin J. Callahan. 2018. “Simple Statistical Identification and
+Removal of Contaminant Sequences in Marker-Gene and Metagenomics Data.”
+*Microbiome* 6 (1): 226. <https://doi.org/10.1186/s40168-018-0605-2>.
+:::
 :::

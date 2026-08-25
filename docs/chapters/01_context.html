@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -431,9 +411,9 @@ div.csl-indent {
 
 <section id="introducción" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">2.1</span> Introducción</h2>
-<p>La enfermedad de Crohn es una enfermedad inflamatoria intestinal de curso heterogéneo en la que la interacción entre el huésped, el sistema inmunitario y la microbiota intestinal forma parte del contexto biológico relevante. El estudio de la microbiota asociada a la mucosa mediante biopsias permite aproximarse al microambiente local, aunque las diferencias observadas deben interpretarse como asociaciones y no como evidencia de causalidad. Los cambios en la microbiota mucosa se han descrito desde fases tempranas de la enfermedad <span class="citation" data-cites="Gevers2014">(<a href="01_context.html#ref-Gevers2014" role="doc-biblioref">Gevers et&nbsp;al. 2014</a>)</span>.</p>
-<p>Este proyecto se centra en biopsias digestivas de pacientes con enfermedad de Crohn, con interés específico en el fenotipo fistulizante. La caracterización se basa en la secuenciación de amplicones del gen bacteriano 16S rRNA, un método adecuado para describir comunidades bacterianas de forma reproducible. Sin embargo, la región hipervariable seleccionada y los cebadores empleados pueden modificar la representación taxonómica observada; por ello, su elección debe validarse en el contexto experimental concreto <span class="citation" data-cites="Klindworth2013">(<a href="01_context.html#ref-Klindworth2013" role="doc-biblioref">Klindworth et&nbsp;al. 2013</a>)</span>.</p>
-<p>Las biopsias son muestras de baja biomasa microbiana: la cantidad de ADN bacteriano puede ser limitada en relación con el ADN del huésped. Esta condición incrementa la vulnerabilidad a la contaminación procedente de reactivos, materiales y procedimientos de laboratorio, denominada habitualmente <em>kitoma</em>. Los controles negativos de extracción y PCR son, por tanto, indispensables para evaluar una posible señal contaminante antes de atribuir resultados a la microbiota tisular <span class="citation" data-cites="Salter2014 Eisenhofer2019">(<a href="01_context.html#ref-Salter2014" role="doc-biblioref">Salter et&nbsp;al. 2014</a>; <a href="01_context.html#ref-Eisenhofer2019" role="doc-biblioref">Eisenhofer et&nbsp;al. 2019</a>)</span>. Los controles positivos complementan esta evaluación al permitir examinar recuperación taxonómica, especificidad y sensibilidad del procedimiento.</p>
+<p>La enfermedad de Crohn es una enfermedad inflamatoria intestinal de curso heterogéneo en la que la interacción entre el huésped, el sistema inmunitario y la microbiota intestinal forma parte del contexto biológico relevante. El estudio de la microbiota asociada a la mucosa mediante biopsias permite aproximarse al microambiente local, aunque las diferencias observadas deben interpretarse como asociaciones y no como evidencia de causalidad. Los cambios en la microbiota mucosa se han descrito desde fases tempranas de la enfermedad <span class="citation" data-cites="Gevers2014">(Gevers et&nbsp;al. 2014)</span>.</p>
+<p>Este proyecto se centra en biopsias digestivas de pacientes con enfermedad de Crohn, con interés específico en el fenotipo fistulizante. La caracterización se basa en la secuenciación de amplicones del gen bacteriano 16S rRNA, un método adecuado para describir comunidades bacterianas de forma reproducible. Sin embargo, la región hipervariable seleccionada y los cebadores empleados pueden modificar la representación taxonómica observada; por ello, su elección debe validarse en el contexto experimental concreto <span class="citation" data-cites="Klindworth2013">(Klindworth et&nbsp;al. 2013)</span>.</p>
+<p>Las biopsias son muestras de baja biomasa microbiana: la cantidad de ADN bacteriano puede ser limitada en relación con el ADN del huésped. Esta condición incrementa la vulnerabilidad a la contaminación procedente de reactivos, materiales y procedimientos de laboratorio, denominada habitualmente <em>kitoma</em>. Los controles negativos de extracción y PCR son, por tanto, indispensables para evaluar una posible señal contaminante antes de atribuir resultados a la microbiota tisular <span class="citation" data-cites="Salter2014 Eisenhofer2019">(Salter et&nbsp;al. 2014; Eisenhofer et&nbsp;al. 2019)</span>. Los controles positivos complementan esta evaluación al permitir examinar recuperación taxonómica, especificidad y sensibilidad del procedimiento.</p>
 <p>El análisis actual utiliza exclusivamente la región V3–V4. Esta decisión se sustenta en el ensayo piloto descrito a continuación y se someterá de nuevo a control de calidad, denoising, asignación taxonómica y evaluación de controles antes de cualquier análisis microbiológico o clínico.</p>
 </section>
 <section id="ensayo-piloto" class="level2" data-number="2.2">
@@ -470,62 +450,18 @@ div.csl-indent {
 </section>
 <section id="referencias" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="referencias">Referencias</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-Callahan2016" class="csl-entry" role="listitem">
-Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W.
-Han, Amy Jo A. Johnson, and Susan P. Holmes. 2016. <span>“DADA2:
-High-Resolution Sample Inference from Illumina Amplicon Data.”</span>
-<em>Nature Methods</em> 13 (7): 581–83. <a href="https://doi.org/10.1038/nmeth.3869">https://doi.org/10.1038/nmeth.3869</a>.
-</div>
-<div id="ref-Davis2018" class="csl-entry" role="listitem">
-Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman,
-and Benjamin J. Callahan. 2018. <span>“Simple Statistical Identification
-and Removal of Contaminant Sequences in Marker-Gene and Metagenomics
-Data.”</span> <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
-</div>
-<div id="ref-Eisenhofer2019" class="csl-entry" role="listitem">
-Eisenhofer, Raphael, Jeremy J. Minich, Clarisse Marotz, Aaron Cooper,
-Rob Knight, and Laura S. Weyrich. 2019. <span>“Contamination in Low
-Microbial Biomass Microbiome Studies: Issues and
-Recommendations.”</span> <em>Trends in Microbiology</em> 27 (2): 105–17.
-<a href="https://doi.org/10.1016/j.tim.2018.11.003">https://doi.org/10.1016/j.tim.2018.11.003</a>.
-</div>
-<div id="ref-Ewels2016" class="csl-entry" role="listitem">
-Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016.
-<span>“MultiQC: Summarize Analysis Results for Multiple Tools and
-Samples in a Single Report.”</span> <em>Bioinformatics</em> 32 (19):
-3047–48. <a href="https://doi.org/10.1093/bioinformatics/btw354">https://doi.org/10.1093/bioinformatics/btw354</a>.
-</div>
+<div class="chapter-references">
 <div id="ref-Gevers2014" class="csl-entry" role="listitem">
-Gevers, Dirk, Subra Kugathasan, Lee A. Denson, Yoshiki Vázquez-Baeza,
-Will Van Treuren, Bing Ren, et al. 2014. <span>“The Treatment-Naive
-Microbiome in New-Onset Crohn’s Disease.”</span> <em>Cell Host &amp;
-Microbe</em> 15 (3): 382–92. <a href="https://doi.org/10.1016/j.chom.2014.02.005">https://doi.org/10.1016/j.chom.2014.02.005</a>.
+Gevers, Dirk, Subra Kugathasan, Lee A. Denson, Yoshiki Vázquez-Baeza, Will Van Treuren, Bing Ren, et al.&nbsp;2014. “The Treatment-Naive Microbiome in New-Onset Crohn’s Disease.” <em>Cell Host &amp; Microbe</em> 15 (3): 382–392. <a href="https://doi.org/10.1016/j.chom.2014.02.005" class="uri">https://doi.org/10.1016/j.chom.2014.02.005</a>.
 </div>
 <div id="ref-Klindworth2013" class="csl-entry" role="listitem">
-Klindworth, Anna, Elmar Pruesse, Tim Schweer, Jörg Peplies, Christian
-Quast, Matthias Horn, and Frank Oliver Glöckner. 2013. <span>“Evaluation
-of General 16S Ribosomal RNA Gene PCR Primers for Classical and
-Next-Generation Sequencing-Based Diversity Studies.”</span> <em>Nucleic
-Acids Research</em> 41 (1): e1. <a href="https://doi.org/10.1093/nar/gks808">https://doi.org/10.1093/nar/gks808</a>.
-</div>
-<div id="ref-Martin2011" class="csl-entry" role="listitem">
-Martin, Marcel. 2011. <span>“Cutadapt Removes Adapter Sequences from
-High-Throughput Sequencing Reads.”</span> <em>EMBnet.journal</em> 17
-(1): 10–12. <a href="https://doi.org/10.14806/ej.17.1.200">https://doi.org/10.14806/ej.17.1.200</a>.
-</div>
-<div id="ref-Quast2013" class="csl-entry" role="listitem">
-Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer,
-Pablo Yarza, Jörg Peplies, and Frank Oliver Glöckner. 2013. <span>“The
-SILVA Ribosomal RNA Gene Database Project: Improved Data Processing and
-Web-Based Tools.”</span> <em>Nucleic Acids Research</em> 41 (D1):
-D590–96. <a href="https://doi.org/10.1093/nar/gks1219">https://doi.org/10.1093/nar/gks1219</a>.
+Klindworth, Anna, Elmar Pruesse, Tim Schweer, Jörg Peplies, Christian Quast, Matthias Horn, and Frank Oliver Glöckner. 2013. “Evaluation of General 16S Ribosomal RNA Gene PCR Primers for Classical and Next-Generation Sequencing-Based Diversity Studies.” <em>Nucleic Acids Research</em> 41 (1): e1. <a href="https://doi.org/10.1093/nar/gks808" class="uri">https://doi.org/10.1093/nar/gks808</a>.
 </div>
 <div id="ref-Salter2014" class="csl-entry" role="listitem">
-Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus,
-William O. Cookson, Miriam F. Moffatt, et al. 2014. <span>“Reagent and
-Laboratory Contamination Can Critically Impact Sequence-Based Microbiome
-Analyses.”</span> <em>Genome Biology</em> 15 (12): 564. <a href="https://doi.org/10.1186/s13059-014-0541-7">https://doi.org/10.1186/s13059-014-0541-7</a>.
+Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. Cookson, Miriam F. Moffatt, et al.&nbsp;2014. “Reagent and Laboratory Contamination Can Critically Impact Sequence-Based Microbiome Analyses.” <em>Genome Biology</em> 15 (12): 564. <a href="https://doi.org/10.1186/s13059-014-0541-7" class="uri">https://doi.org/10.1186/s13059-014-0541-7</a>.
+</div>
+<div id="ref-Eisenhofer2019" class="csl-entry" role="listitem">
+Eisenhofer, Raphael, Jeremy J. Minich, Clarisse Marotz, Aaron Cooper, Rob Knight, and Laura S. Weyrich. 2019. “Contamination in Low Microbial Biomass Microbiome Studies: Issues and Recommendations.” <em>Trends in Microbiology</em> 27 (2): 105–117. <a href="https://doi.org/10.1016/j.tim.2018.11.003" class="uri">https://doi.org/10.1016/j.tim.2018.11.003</a>.
 </div>
 </div>
 
