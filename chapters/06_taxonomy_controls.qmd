@@ -1,6 +1,5 @@
 ---
 title: "Taxonomía, controles y decontaminación"
-suppress-bibliography: true
 ---
 
 ::: {.callout-caution}

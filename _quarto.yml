@@ -53,6 +53,7 @@ format:
     number-sections: true
     smooth-scroll: true
     anchor-sections: true
+    citations-hover: true
     link-external-newwindow: true
     lightbox:
       match: auto

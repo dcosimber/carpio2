@@ -1,6 +1,5 @@
 ---
 title: "Introducción, antecedentes y objetivos"
-suppress-bibliography: true
 ---
 
 ## Introducción

@@ -1,6 +1,5 @@
 ---
 title: "Flujo bioinformático"
-suppress-bibliography: true
 ---
 
 ## Estrategia de procesamiento
