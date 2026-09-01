@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Asociaciones clínicas agregadas – Proyecto Carpio</title>
+<title>7&nbsp; Taxonomía, controles y decontaminación – Proyecto Carpio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,10 +17,65 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +85,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/10_conclusions.html" rel="next">
-<link href="../chapters/08_microbiome_results.html" rel="prev">
+<link href="../chapters/07_reproducibilidad_ensayos.html" rel="next">
+<link href="../chapters/05_dada2_inferencia_asv.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -251,8 +306,8 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/09_clinical_associations.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asociaciones clínicas agregadas</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/06_taxonomia_controles.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Taxonomía, controles y decontaminación</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -266,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Proyecto Carpio</a>
+      <a href="../">Proyecto Carpio</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/dcosimber/carpio2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -278,97 +333,97 @@ ul.task-list li input[type="checkbox"] {
         <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container">
+    <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
+  <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumen técnico</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/01_context.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01_introduccion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02_diseno_experimental.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/03_workflow.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03_flujo_bioinformatico.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/04_qc_preprocessing.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04_control_calidad_preprocesamiento.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">QC y preprocesamiento</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/05_dada2_asv.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05_dada2_inferencia_asv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">DADA2 e inferencia de ASV</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/06_taxonomy_controls.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06_taxonomia_controles.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Taxonomía, controles y decontaminación</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/07_reproducibility.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07_reproducibilidad_ensayos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibilidad entre ensayos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/08_microbiome_results.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08_resultados_microbiologicos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Resultados microbiológicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/09_clinical_associations.html" class="sidebar-item-text sidebar-link active">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09_asociaciones_clinicas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asociaciones clínicas agregadas</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/10_conclusions.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10_conclusiones.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/11_references.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11_referencias.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referencias</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Apéndices</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
-          </a>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container">
+  <div class="sidebar-item-container"> 
   <a href="../appendices/reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Reproducibilidad y actualización manual</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container">
+  <div class="sidebar-item-container"> 
   <a href="../appendices/data_availability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Disponibilidad de datos y licencias</span></span></a>
   </div>
@@ -383,12 +438,14 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Tabla de contenidos</h2>
-
+   
   <ul>
-  <li><a href="#plan-de-análisis-clínico" id="toc-plan-de-análisis-clínico" class="nav-link active" data-scroll-target="#plan-de-análisis-clínico"><span class="header-section-number">10.1</span> Plan de análisis clínico</a></li>
-  <li><a href="#presentación-de-resultados" id="toc-presentación-de-resultados" class="nav-link" data-scroll-target="#presentación-de-resultados"><span class="header-section-number">10.2</span> Presentación de resultados</a></li>
+  <li><a href="#asignación-taxonómica" id="toc-asignación-taxonómica" class="nav-link active" data-scroll-target="#asignación-taxonómica"><span class="header-section-number">7.1</span> Asignación taxonómica</a></li>
+  <li><a href="#controles-positivos" id="toc-controles-positivos" class="nav-link" data-scroll-target="#controles-positivos"><span class="header-section-number">7.2</span> Controles positivos</a></li>
+  <li><a href="#controles-negativos-y-decontaminación" id="toc-controles-negativos-y-decontaminación" class="nav-link" data-scroll-target="#controles-negativos-y-decontaminación"><span class="header-section-number">7.3</span> Controles negativos y decontaminación</a></li>
+  <li><a href="#productos-de-salida" id="toc-productos-de-salida" class="nav-link" data-scroll-target="#productos-de-salida"><span class="header-section-number">7.4</span> Productos de salida</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/09_clinical_associations.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/06_taxonomia_controles.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -396,18 +453,18 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asociaciones clínicas agregadas</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Taxonomía, controles y decontaminación</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-
-
-
+    
+  
+    
   </div>
-
+  
 
 
 </header>
@@ -419,23 +476,46 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Precaución</span>Estado de los resultados
+<span class="screen-reader-only">Precaución</span>Estado de la etapa
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>No se han ejecutado asociaciones clínicas en esta fase. Este capítulo no contiene datos individuales, fechas clínicas ni identificadores de paciente.</p>
+<p>La asignación taxonómica y la evaluación de controles aún no se han ejecutado en el análisis ampliado. Este capítulo documenta el método previsto y reserva el espacio para resultados revisados, sin atribuir composición microbiana a las biopsias ni declarar contaminantes antes de su evaluación.</p>
 </div>
 </div>
-<section id="plan-de-análisis-clínico" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="plan-de-análisis-clínico"><span class="header-section-number">10.1</span> Plan de análisis clínico</h2>
-<p>Las asociaciones se iniciarán solo cuando el conjunto microbiológico haya superado los filtros de QC y los metadatos clínicos hayan sido validados para la pregunta concreta. Cada contraste definirá previamente cohorte, denominador, covariables, manejo de valores ausentes y unidad de análisis.</p>
-<p>Las ocho biopsias repetidas no se contarán dos veces. La publicación mostrará únicamente resultados agregados, tamaños de grupo adecuados y medidas de incertidumbre. No se incorporarán hojas clínicas individuales al libro, a sus activos ni al sitio web.</p>
+<section id="asignación-taxonómica" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="asignación-taxonómica"><span class="header-section-number">7.1</span> Asignación taxonómica</h2>
+<p>Las ASV no quiméricas se anotarán mediante SILVA NR99 138.2. La referencia, su versión, checksum y parámetros se conservarán en el proyecto analítico. La taxonomía se asignará únicamente después de la fusión por secuencia exacta.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>taxonomy <span class="ot">&lt;-</span> <span class="fu">assignTaxonomy</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">seqs =</span> <span class="sc">&lt;</span>secuencias_asv<span class="sc">&gt;</span>, <span class="at">refFasta =</span> <span class="sc">&lt;</span>silva_nr99_138_2<span class="sc">&gt;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">minBoot =</span> <span class="dv">50</span>, <span class="at">multithread =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>minBoot = 50</code> define el soporte mínimo de bootstrap para las asignaciones. La salida esperada es una tabla taxonómica vinculada a las ASV y al seguimiento de lecturas; se informarán los niveles no resueltos sin forzar anotaciones.</p>
 </section>
-<section id="presentación-de-resultados" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="presentación-de-resultados"><span class="header-section-number">10.2</span> Presentación de resultados</h2>
-<p>Cuando proceda, se mostrarán tablas de tamaños de grupo agregados, efectos estimados, intervalos de confianza o medidas equivalentes, y las limitaciones de interpretación. Los resultados serán exploratorios o confirmatorios según el diseño y el análisis que se hayan preregistrado o documentado en ese momento.</p>
+<section id="controles-positivos" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="controles-positivos"><span class="header-section-number">7.2</span> Controles positivos</h2>
+<p>Los mocks de extracción, los mocks de PCR y las diluciones de <em>E. coli</em> se utilizarán para evaluar recuperación taxonómica, consistencia de la preparación y sensibilidad. Se compararán con su composición o señal esperada, teniendo en cuenta los límites de resolución de 16S y de la base de datos. Los controles positivos se mantendrán en QC y no se incluirán en las comparaciones biológicas de biopsias.</p>
+</section>
+<section id="controles-negativos-y-decontaminación" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="controles-negativos-y-decontaminación"><span class="header-section-number">7.3</span> Controles negativos y decontaminación</h2>
+<p>Los controles negativos de batch, extracción y PCR fundamentarán el análisis principal de prevalencia de contaminantes. Cuando haya una variable de concentración de ADN apropiada y validada, se añadirá un análisis de frecuencia como sensibilidad <span class="citation" data-cites="Davis2018">(<a href="11_referencias.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>)</span>. El comando genérico de prevalencia es:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>contaminants <span class="ot">&lt;-</span> <span class="fu">isContaminant</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">physeq =</span> <span class="sc">&lt;</span>objeto_con_asv_y_metadatos<span class="sc">&gt;</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">"prevalence"</span>, <span class="at">neg =</span> <span class="st">"is_negative_control"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">threshold =</span> <span class="fl">0.5</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La decisión de filtrado se conservará en tres capas revisables: tabla cruda, ASV candidatas a contaminante y tabla filtrada. Ninguna tabla sustituirá a las otras; así será posible revisar el impacto de cada decisión de decontaminación.</p>
+</section>
+<section id="productos-de-salida" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="productos-de-salida"><span class="header-section-number">7.4</span> Productos de salida</h2>
+<p>Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de los controles positivos, la lista de candidatas a contaminante, los criterios aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos no se inferirán a partir de los controles.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Davis2018" class="csl-entry" role="listitem">
+Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. <span>«Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data»</span>. <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -463,7 +543,7 @@ ul.task-list li input[type="checkbox"] {
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -483,11 +563,11 @@ ul.task-list li input[type="checkbox"] {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copiado");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -569,7 +649,7 @@ ul.task-list li input[type="checkbox"] {
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -644,7 +724,7 @@ ul.task-list li input[type="checkbox"] {
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -672,7 +752,7 @@ ul.task-list li input[type="checkbox"] {
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -696,7 +776,7 @@ ul.task-list li input[type="checkbox"] {
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -736,7 +816,7 @@ ul.task-list li input[type="checkbox"] {
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -859,13 +939,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/08_microbiome_results.html" class="pagination-link" aria-label="Resultados microbiológicos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Resultados microbiológicos</span></span>
-      </a>
+      <a href="../chapters/05_dada2_inferencia_asv.html" class="pagination-link" aria-label="DADA2 e inferencia de ASV">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">DADA2 e inferencia de ASV</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/10_conclusions.html" class="pagination-link" aria-label="Conclusiones y próximos pasos">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/07_reproducibilidad_ensayos.html" class="pagination-link" aria-label="Reproducibilidad entre ensayos">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibilidad entre ensayos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -874,5 +954,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/09_clinical_associations.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/06_taxonomia_controles.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

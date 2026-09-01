@@ -25,17 +25,17 @@ book:
   date: last-modified
   chapters:
     - index.qmd
-    - chapters/01_context.qmd
-    - chapters/02_design_samples.qmd
-    - chapters/03_workflow.qmd
-    - chapters/04_qc_preprocessing.qmd
-    - chapters/05_dada2_asv.qmd
-    - chapters/06_taxonomy_controls.qmd
-    - chapters/07_reproducibility.qmd
-    - chapters/08_microbiome_results.qmd
-    - chapters/09_clinical_associations.qmd
-    - chapters/10_conclusions.qmd
-    - chapters/11_references.qmd
+    - chapters/01_introduccion.qmd
+    - chapters/02_diseno_experimental.qmd
+    - chapters/03_flujo_bioinformatico.qmd
+    - chapters/04_control_calidad_preprocesamiento.qmd
+    - chapters/05_dada2_inferencia_asv.qmd
+    - chapters/06_taxonomia_controles.qmd
+    - chapters/07_reproducibilidad_ensayos.qmd
+    - chapters/08_resultados_microbiologicos.qmd
+    - chapters/09_asociaciones_clinicas.qmd
+    - chapters/10_conclusiones.qmd
+    - chapters/11_referencias.qmd
   appendices:
     - appendices/reproducibility.qmd
     - appendices/data_availability.qmd

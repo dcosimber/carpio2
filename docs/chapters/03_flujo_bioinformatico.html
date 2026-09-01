@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Introducción, antecedentes y objetivos – Proyecto Carpio</title>
+<title>4&nbsp; Flujo bioinformático – Proyecto Carpio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,8 +17,43 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -50,8 +85,8 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/02_design_samples.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../chapters/04_control_calidad_preprocesamiento.html" rel="next">
+<link href="../chapters/02_diseno_experimental.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -271,8 +306,8 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01_context.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03_flujo_bioinformatico.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -286,7 +321,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Proyecto Carpio</a>
+      <a href="../">Proyecto Carpio</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/dcosimber/carpio2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -298,97 +333,97 @@ div.csl-indent {
         <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container">
+    <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
+  <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumen técnico</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/01_context.html" class="sidebar-item-text sidebar-link active">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01_introduccion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/02_design_samples.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02_diseno_experimental.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/03_workflow.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03_flujo_bioinformatico.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/04_qc_preprocessing.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04_control_calidad_preprocesamiento.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">QC y preprocesamiento</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/05_dada2_asv.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05_dada2_inferencia_asv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">DADA2 e inferencia de ASV</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/06_taxonomy_controls.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06_taxonomia_controles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Taxonomía, controles y decontaminación</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/07_reproducibility.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07_reproducibilidad_ensayos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibilidad entre ensayos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/08_microbiome_results.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08_resultados_microbiologicos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Resultados microbiológicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/09_clinical_associations.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09_asociaciones_clinicas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asociaciones clínicas agregadas</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/10_conclusions.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10_conclusiones.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones y próximos pasos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container">
-  <a href="../chapters/11_references.html" class="sidebar-item-text sidebar-link">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11_referencias.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referencias</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Apéndices</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
-          </a>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container">
+  <div class="sidebar-item-container"> 
   <a href="../appendices/reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Reproducibilidad y actualización manual</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container">
+  <div class="sidebar-item-container"> 
   <a href="../appendices/data_availability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Disponibilidad de datos y licencias</span></span></a>
   </div>
@@ -403,13 +438,15 @@ div.csl-indent {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Tabla de contenidos</h2>
-
+   
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">2.1</span> Introducción</a></li>
-  <li><a href="#ensayo-piloto" id="toc-ensayo-piloto" class="nav-link" data-scroll-target="#ensayo-piloto"><span class="header-section-number">2.2</span> Ensayo piloto</a></li>
-  <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos"><span class="header-section-number">2.3</span> Objetivos</a></li>
+  <li><a href="#estrategia-de-procesamiento" id="toc-estrategia-de-procesamiento" class="nav-link active" data-scroll-target="#estrategia-de-procesamiento"><span class="header-section-number">4.1</span> Estrategia de procesamiento</a></li>
+  <li><a href="#control-de-calidad-de-lecturas" id="toc-control-de-calidad-de-lecturas" class="nav-link" data-scroll-target="#control-de-calidad-de-lecturas"><span class="header-section-number">4.2</span> Control de calidad de lecturas</a></li>
+  <li><a href="#diagnóstico-y-recorte-de-primers" id="toc-diagnóstico-y-recorte-de-primers" class="nav-link" data-scroll-target="#diagnóstico-y-recorte-de-primers"><span class="header-section-number">4.3</span> Diagnóstico y recorte de primers</a></li>
+  <li><a href="#denoising-fusión-e-integración" id="toc-denoising-fusión-e-integración" class="nav-link" data-scroll-target="#denoising-fusión-e-integración"><span class="header-section-number">4.4</span> Denoising, fusión e integración</a></li>
+  <li><a href="#taxonomía-y-controles" id="toc-taxonomía-y-controles" class="nav-link" data-scroll-target="#taxonomía-y-controles"><span class="header-section-number">4.5</span> Taxonomía y controles</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/01_context.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/03_flujo_bioinformatico.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -417,75 +454,149 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducción, antecedentes y objetivos</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flujo bioinformático</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-
-
-
+    
+  
+    
   </div>
-
+  
 
 
 </header>
 
 
-<section id="introducción" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">2.1</span> Introducción</h2>
-<p>La enfermedad de Crohn es una enfermedad inflamatoria intestinal de curso heterogéneo en la que la interacción entre el huésped, el sistema inmunitario y la microbiota intestinal forma parte del contexto biológico relevante. El estudio de la microbiota asociada a la mucosa mediante biopsias permite aproximarse al microambiente local, aunque las diferencias observadas deben interpretarse como asociaciones y no como evidencia de causalidad. Los cambios en la microbiota mucosa se han descrito desde fases tempranas de la enfermedad <span class="citation" data-cites="Gevers2014">(<a href="11_references.html#ref-Gevers2014" role="doc-biblioref">Gevers et&nbsp;al. 2014</a>)</span>.</p>
-<p>Este proyecto se centra en biopsias digestivas de pacientes con enfermedad de Crohn, con interés específico en el fenotipo fistulizante. La caracterización se basa en la secuenciación de amplicones del gen bacteriano 16S rRNA, un método adecuado para describir comunidades bacterianas de forma reproducible. Sin embargo, la región hipervariable seleccionada y los cebadores empleados pueden modificar la representación taxonómica observada; por ello, su elección debe validarse en el contexto experimental concreto <span class="citation" data-cites="Klindworth2013">(<a href="11_references.html#ref-Klindworth2013" role="doc-biblioref">Klindworth et&nbsp;al. 2013</a>)</span>.</p>
-<p>Las biopsias son muestras de baja biomasa microbiana: la cantidad de ADN bacteriano puede ser limitada en relación con el ADN del huésped. Esta condición incrementa la vulnerabilidad a la contaminación procedente de reactivos, materiales y procedimientos de laboratorio, denominada habitualmente <em>kitoma</em>. Los controles negativos de extracción y PCR son, por tanto, indispensables para evaluar una posible señal contaminante antes de atribuir resultados a la microbiota tisular <span class="citation" data-cites="Salter2014 Eisenhofer2019">(<a href="11_references.html#ref-Salter2014" role="doc-biblioref">Salter et&nbsp;al. 2014</a>; <a href="11_references.html#ref-Eisenhofer2019" role="doc-biblioref">Eisenhofer et&nbsp;al. 2019</a>)</span>. Los controles positivos complementan esta evaluación al permitir examinar recuperación taxonómica, especificidad y sensibilidad del procedimiento.</p>
-<p>El análisis actual utiliza exclusivamente la región V3–V4. Esta decisión se sustenta en el ensayo piloto descrito a continuación y se someterá de nuevo a control de calidad, denoising, asignación taxonómica y evaluación de controles antes de cualquier análisis microbiológico o clínico.</p>
+<section id="estrategia-de-procesamiento" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="estrategia-de-procesamiento"><span class="header-section-number">4.1</span> Estrategia de procesamiento</h2>
+<p>Los FASTQ crudos se consideran entradas inmutables. El procesamiento se separa por ensayo hasta el denoising para evitar que perfiles de error distintos se mezclen al aprender el modelo de DADA2. Después, las ASV no quiméricas se integrarán por secuencia exacta y se conservará el identificador de ensayo para cuantificar el efecto técnico.</p>
+<p>Las etapas, herramientas y productos previstos se resumen en la <a href="#tbl-workflow-stages" class="quarto-xref">Tabla&nbsp;<span>4.1</span></a>.</p>
+<div id="tbl-workflow-stages" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-workflow-stages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.1: Etapas del flujo bioinformático, herramientas y productos principales.
+</figcaption>
+<div aria-describedby="tbl-workflow-stages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Herramienta</th>
+<th>Propósito</th>
+<th>Estado y salida principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Auditoría de entradas</td>
+<td>scripts de validación</td>
+<td>Comprobar pares R1/R2 y metadatos</td>
+<td>Completado; inventario de bibliotecas</td>
+</tr>
+<tr class="even">
+<td>QC</td>
+<td>FastQC y MultiQC</td>
+<td>Revisar calidad, longitud y contenido de adaptadores</td>
+<td>Completado; informes antes y después del recorte</td>
+</tr>
+<tr class="odd">
+<td>Recorte de primers</td>
+<td>Cutadapt</td>
+<td>Eliminar los extremos de primer validados</td>
+<td>Completado; FASTQ recortados y métricas JSON</td>
+</tr>
+<tr class="even">
+<td>Denoising</td>
+<td>DADA2</td>
+<td>Filtrado, modelo de error, ASV, fusión y quimeras</td>
+<td>Pendiente; tabla de seguimiento y ASV</td>
+</tr>
+<tr class="odd">
+<td>Taxonomía</td>
+<td>DADA2 + SILVA 138.2</td>
+<td>Asignar taxonomía a ASV</td>
+<td>Pendiente; tabla taxonómica</td>
+</tr>
+<tr class="even">
+<td>Controles</td>
+<td>decontam</td>
+<td>Evaluar contaminantes y sensibilidad</td>
+<td>Pendiente; tablas cruda, candidata y filtrada</td>
+</tr>
+<tr class="odd">
+<td>Downstream</td>
+<td>R/phyloseq u herramientas equivalentes</td>
+<td>Diversidad, composición, reproducibilidad y clínica</td>
+<td>Pendiente; tablas y figuras agregadas</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="ensayo-piloto" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="ensayo-piloto"><span class="header-section-number">2.2</span> Ensayo piloto</h2>
-<p>El ensayo piloto se diseñó para optimizar el flujo de trabajo antes de ampliar la cohorte. Incluyó ocho biopsias digestivas, controles positivos de extracción y PCR, y diluciones seriadas de <em>Escherichia coli</em>. Las biopsias se amplificaron por duplicado para las regiones V4 y V3–V4 y se secuenciaron en Illumina NextSeq con lecturas paired-end de 2 × 300 pb.</p>
-<p>En el análisis preliminar, V3–V4 presentó mayor profundidad de entrada y mayor retención tras filtrado, fusión de pares y eliminación de quimeras que V4. Para las biopsias, el informe del piloto registró aproximadamente un millón de lecturas de entrada por biblioteca V3–V4 frente a 0,38 millones para V4, y unas 0,38 frente a 0,17 millones tras el procesamiento. V3–V4 también mostró mayor diversidad alfa, mejor sensibilidad en las diluciones de <em>E. coli</em>, menor proporción de asignaciones taxonómicas inciertas y mayor concordancia de las comunidades mock con su composición esperada.</p>
-<p>La composición microbiana observada varió entre regiones, un resultado esperado dado el sesgo introducido por la elección del amplicón. En consecuencia, las comparaciones entre V4 y V3–V4 no se interpretan como equivalencias directas. El piloto aportó la justificación experimental para seleccionar V3–V4 en el ensayo ampliado, pero sus resultados no sustituyen la validación independiente del conjunto actual.</p>
+<section id="control-de-calidad-de-lecturas" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="control-de-calidad-de-lecturas"><span class="header-section-number">4.2</span> Control de calidad de lecturas</h2>
+<p>FastQC se ejecuta sobre cada miembro de cada par y MultiQC integra los resultados por ensayo. El comando genérico es el siguiente:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fastqc</span> <span class="at">--threads</span> <span class="op">&lt;</span>n_hilos<span class="op">&gt;</span> --outdir <span class="op">&lt;</span>directorio_fastqc<span class="op">&gt;</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>R1.fastq.gz<span class="op">&gt;</span> <span class="op">&lt;</span>R2.fastq.gz<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">multiqc</span> <span class="op">&lt;</span>directorio_fastqc<span class="op">&gt;</span> --outdir <span class="op">&lt;</span>directorio_multiqc<span class="op">&gt;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>--threads</code> adapta el cálculo a los recursos disponibles y <code>--outdir</code> separa los informes de QC de los FASTQ. Esta etapa es diagnóstica: no transforma ni descarta lecturas.</p>
 </section>
-<section id="objetivos" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="objetivos"><span class="header-section-number">2.3</span> Objetivos</h2>
-<p>El objetivo general es establecer un conjunto de datos de microbiota tisular de calidad controlada para biopsias digestivas de pacientes con enfermedad de Crohn, preparado para análisis microbiológicos y clínicos posteriores.</p>
-<p>Los objetivos específicos son:</p>
-<ol type="1">
-<li>Caracterizar la microbiota bacteriana mediante la región V3–V4 del gen 16S rRNA en una cohorte ampliada de biopsias digestivas.</li>
-<li>Implementar un flujo reproducible desde FASTQ paired-end hasta una tabla de variantes de secuencia de amplicón (ASV) con anotación taxonómica.</li>
-<li>Evaluar la profundidad y calidad de cada biblioteca y establecer criterios de exclusión antes de los análisis estadísticos.</li>
-<li>Evaluar el rendimiento analítico mediante controles positivos y caracterizar la contaminación potencial mediante controles negativos de batch, extracción y PCR.</li>
-<li>Cuantificar la reproducibilidad y el posible efecto de ensayo en las ocho biopsias repetidas entre el piloto y el ensayo ampliado.</li>
-<li>Generar un conjunto microbiológico final que permita integrar, en una etapa posterior, abundancias microbianas y metadatos clínicos armonizados sin duplicar observaciones biológicas.</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Alcance de los resultados disponibles
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Este informe no presenta todavía diversidad, composición, taxonomía ni asociaciones clínicas. Estas preguntas requieren completar DADA2, la asignación taxonómica y la evaluación de contaminación antes de incorporarse como resultados.</p>
-</div>
-</div>
+<section id="diagnóstico-y-recorte-de-primers" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="diagnóstico-y-recorte-de-primers"><span class="header-section-number">4.3</span> Diagnóstico y recorte de primers</h2>
+<p>Se estudiaron los primers 341F (<code>CCTACGGGNGGCWGCAG</code>) y 805R (<code>GACTACHVGGGTATCTAATCC</code>) por ensayo. El diagnóstico justificó un recorte posicional de 17 nucleótidos en R1 y 21 en R2. El comando aplicado por biblioteca fue:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cutadapt</span> <span class="at">-j</span> <span class="op">&lt;</span>n_hilos<span class="op">&gt;</span> <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-u</span> 17 <span class="at">-U</span> 21 <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-o</span> <span class="op">&lt;</span>R1_recortado.fastq.gz<span class="op">&gt;</span> <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-p</span> <span class="op">&lt;</span>R2_recortado.fastq.gz<span class="op">&gt;</span> <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--json</span> <span class="op">&lt;</span>informe_cutadapt.json<span class="op">&gt;</span> <span class="dt">\</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>R1_crudo.fastq.gz<span class="op">&gt;</span> <span class="op">&lt;</span>R2_crudo.fastq.gz<span class="op">&gt;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>-u 17</code> y <code>-U 21</code> eliminan bases desde el extremo 5′ de R1 y R2, respectivamente. No se utilizó <code>--discard-untrimmed</code> ni se aplicó filtrado de calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta del primer y se reserva el filtrado de calidad para DADA2 <span class="citation" data-cites="Martin2011">(<a href="11_referencias.html#ref-Martin2011" role="doc-biblioref">Martin 2011</a>)</span>.</p>
+</section>
+<section id="denoising-fusión-e-integración" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="denoising-fusión-e-integración"><span class="header-section-number">4.4</span> Denoising, fusión e integración</h2>
+<p>DADA2 se ejecutará de forma independiente en piloto y ensayo ampliado. Los parámetros inicialmente fijados se someterán a revisión mediante el seguimiento de retención por biblioteca, sin recurrir a un truncado fijo de longitud:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>filtered <span class="ot">&lt;-</span> <span class="fu">filterAndTrim</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">fwd =</span> <span class="sc">&lt;</span>R1_recortadas<span class="sc">&gt;</span>, <span class="at">rev =</span> <span class="sc">&lt;</span>R2_recortadas<span class="sc">&gt;</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">truncLen =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">maxEE =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>), <span class="at">truncQ =</span> <span class="dv">2</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">minLen =</span> <span class="dv">100</span>, <span class="at">multithread =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>merged <span class="ot">&lt;-</span> <span class="fu">mergePairs</span>(</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  denoised_R1, derep_R1, denoised_R2, derep_R2,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">minOverlap =</span> <span class="dv">20</span>, <span class="at">maxMismatch =</span> <span class="dv">0</span>, <span class="at">trimOverhang =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>truncLen = c(0, 0)</code> conserva longitud variable; <code>maxEE</code> limita el error esperado en R1/R2; <code>truncQ</code> termina lecturas en bases de muy baja calidad; y <code>minLen</code> elimina fragmentos claramente no informativos. La fusión exige al menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando procede. Posteriormente se aplicará eliminación de quimeras por consenso y se guardará el seguimiento por muestra <span class="citation" data-cites="Callahan2016">(<a href="11_referencias.html#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>.</p>
+</section>
+<section id="taxonomía-y-controles" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="taxonomía-y-controles"><span class="header-section-number">4.5</span> Taxonomía y controles</h2>
+<p>La taxonomía se asignará sobre ASV no quiméricas con SILVA NR99 138.2 y <code>minBoot = 50</code>; la versión y los checksums de la referencia se conservarán en el análisis. Los controles negativos se evaluarán principalmente por prevalencia y, cuando exista concentración de ADN apropiada, por frecuencia como análisis de sensibilidad <span class="citation" data-cites="Davis2018 Quast2013">(<a href="11_referencias.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>; <a href="11_referencias.html#ref-Quast2013" role="doc-biblioref">Quast et&nbsp;al. 2013</a>)</span>. Los resultados aún no han sido ejecutados y no se presentan como conclusiones.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-Eisenhofer2019" class="csl-entry" role="listitem">
-Eisenhofer, Raphael, Jeremy J. Minich, Clarisse Marotz, Aaron Cooper, Rob Knight, y Laura S. Weyrich. 2019. <span>«Contamination in low microbial biomass microbiome studies: Issues and recommendations»</span>. <em>Trends in Microbiology</em> 27 (2): 105-17. <a href="https://doi.org/10.1016/j.tim.2018.11.003">https://doi.org/10.1016/j.tim.2018.11.003</a>.
+<div id="ref-Callahan2016" class="csl-entry" role="listitem">
+Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo A. Johnson, y Susan P. Holmes. 2016. <span>«DADA2: High-resolution sample inference from Illumina amplicon data»</span>. <em>Nature Methods</em> 13 (7): 581-83. <a href="https://doi.org/10.1038/nmeth.3869">https://doi.org/10.1038/nmeth.3869</a>.
 </div>
-<div id="ref-Gevers2014" class="csl-entry" role="listitem">
-Gevers, Dirk, Subra Kugathasan, Lee A. Denson, Yoshiki Vázquez-Baeza, Will Van Treuren, Bing Ren, et&nbsp;al. 2014. <span>«The treatment-naive microbiome in new-onset Crohn’s disease»</span>. <em>Cell Host &amp; Microbe</em> 15 (3): 382-92. <a href="https://doi.org/10.1016/j.chom.2014.02.005">https://doi.org/10.1016/j.chom.2014.02.005</a>.
+<div id="ref-Davis2018" class="csl-entry" role="listitem">
+Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. <span>«Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data»</span>. <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
 </div>
-<div id="ref-Klindworth2013" class="csl-entry" role="listitem">
-Klindworth, Anna, Elmar Pruesse, Tim Schweer, Jörg Peplies, Christian Quast, Matthias Horn, y Frank Oliver Glöckner. 2013. <span>«Evaluation of general 16S ribosomal RNA gene PCR primers for classical and next-generation sequencing-based diversity studies»</span>. <em>Nucleic Acids Research</em> 41 (1): e1. <a href="https://doi.org/10.1093/nar/gks808">https://doi.org/10.1093/nar/gks808</a>.
+<div id="ref-Martin2011" class="csl-entry" role="listitem">
+Martin, Marcel. 2011. <span>«Cutadapt removes adapter sequences from high-throughput sequencing reads»</span>. <em>EMBnet.journal</em> 17 (1): 10-12. <a href="https://doi.org/10.14806/ej.17.1.200">https://doi.org/10.14806/ej.17.1.200</a>.
 </div>
-<div id="ref-Salter2014" class="csl-entry" role="listitem">
-Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. Cookson, Miriam F. Moffatt, et&nbsp;al. 2014. <span>«Reagent and laboratory contamination can critically impact sequence-based microbiome analyses»</span>. <em>Genome Biology</em> 15 (12): 564. <a href="https://doi.org/10.1186/s13059-014-0541-7">https://doi.org/10.1186/s13059-014-0541-7</a>.
+<div id="ref-Quast2013" class="csl-entry" role="listitem">
+Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, y Frank Oliver Glöckner. 2013. <span>«The SILVA ribosomal RNA gene database project: improved data processing and web-based tools»</span>. <em>Nucleic Acids Research</em> 41 (D1): D590-96. <a href="https://doi.org/10.1093/nar/gks1219">https://doi.org/10.1093/nar/gks1219</a>.
 </div>
 </div>
 </section>
@@ -515,7 +626,7 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -535,11 +646,11 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copiado");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -621,7 +732,7 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -696,7 +807,7 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -724,7 +835,7 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -748,7 +859,7 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -788,7 +899,7 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -911,13 +1022,13 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Resumen técnico">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumen técnico</span></span>
-      </a>
+      <a href="../chapters/02_diseno_experimental.html" class="pagination-link" aria-label="Diseño experimental y muestras">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/02_design_samples.html" class="pagination-link" aria-label="Diseño experimental y muestras">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diseño experimental y muestras</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/04_control_calidad_preprocesamiento.html" class="pagination-link" aria-label="QC y preprocesamiento">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">QC y preprocesamiento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -926,5 +1037,5 @@ Salter, Susannah J., Michael J. Cox, Eliza M. Turek, Stijn T. Calus, William O. 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/01_context.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/03_flujo_bioinformatico.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

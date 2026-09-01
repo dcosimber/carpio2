@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dcosimber.github.io/carpio2/index.html</loc>
-    <lastmod>2026-08-25T11:33:26.000Z</lastmod>
+    <lastmod>2026-09-01T10:23:46.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/01_context.html</loc>
+    <loc>https://dcosimber.github.io/carpio2/chapters/01_introduccion.html</loc>
+    <lastmod>2026-09-01T08:18:03.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dcosimber.github.io/carpio2/chapters/02_diseno_experimental.html</loc>
+    <lastmod>2026-09-01T10:39:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dcosimber.github.io/carpio2/chapters/03_flujo_bioinformatico.html</loc>
     <lastmod>2026-08-25T17:00:23.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/02_design_samples.html</loc>
-    <lastmod>2026-08-25T11:57:30.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/03_workflow.html</loc>
+    <loc>https://dcosimber.github.io/carpio2/chapters/04_control_calidad_preprocesamiento.html</loc>
     <lastmod>2026-08-25T17:00:23.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/04_qc_preprocessing.html</loc>
+    <loc>https://dcosimber.github.io/carpio2/chapters/05_dada2_inferencia_asv.html</loc>
     <lastmod>2026-08-25T17:00:23.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/05_dada2_asv.html</loc>
+    <loc>https://dcosimber.github.io/carpio2/chapters/06_taxonomia_controles.html</loc>
     <lastmod>2026-08-25T17:00:23.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/06_taxonomy_controls.html</loc>
-    <lastmod>2026-08-25T17:00:23.000Z</lastmod>
+    <loc>https://dcosimber.github.io/carpio2/chapters/07_reproducibilidad_ensayos.html</loc>
+    <lastmod>2026-09-01T08:18:45.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/07_reproducibility.html</loc>
-    <lastmod>2026-08-25T11:34:13.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/08_microbiome_results.html</loc>
+    <loc>https://dcosimber.github.io/carpio2/chapters/08_resultados_microbiologicos.html</loc>
     <lastmod>2026-08-25T11:34:14.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/09_clinical_associations.html</loc>
+    <loc>https://dcosimber.github.io/carpio2/chapters/09_asociaciones_clinicas.html</loc>
+    <lastmod>2026-09-01T10:23:46.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dcosimber.github.io/carpio2/chapters/10_conclusiones.html</loc>
     <lastmod>2026-08-25T11:34:15.000Z</lastmod>
   </url>
   <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/10_conclusions.html</loc>
-    <lastmod>2026-08-25T11:34:15.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dcosimber.github.io/carpio2/chapters/11_references.html</loc>
+    <loc>https://dcosimber.github.io/carpio2/chapters/11_referencias.html</loc>
     <lastmod>2026-08-25T17:00:23.000Z</lastmod>
   </url>
   <url>
@@ -54,6 +54,6 @@
   </url>
   <url>
     <loc>https://dcosimber.github.io/carpio2/appendices/data_availability.html</loc>
-    <lastmod>2026-08-25T10:28:57.000Z</lastmod>
+    <lastmod>2026-09-01T10:23:46.000Z</lastmod>
   </url>
 </urlset>

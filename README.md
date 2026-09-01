@@ -2,8 +2,9 @@
 
 Libro Quarto del análisis de microbiota en biopsias digestivas mediante
 amplicones 16S rRNA V3–V4. El repositorio contiene una versión pública,
-curada y reproducible del informe; no contiene datos crudos de secuenciación
-ni metadatos clínicos individuales.
+curada y reproducible del informe; incluye los metadatos técnicos y clínicos
+individuales cuya publicación ha sido autorizada expresamente para CARPIO, pero
+no contiene datos crudos de secuenciación.
 
 ## Estado actual
 
@@ -49,9 +50,13 @@ activos desde el proyecto analítico.
 - Se publican figuras, tablas y MultiQC saneado necesarios para el informe.
 - Los códigos técnicos de muestra `01-xxx` pueden aparecer en activos
   aprobados.
-- No se publican FASTQ, objetos pesados, identificadores de paciente, fechas
-  clínicas, metadatos clínicos por muestra ni rutas internas de ejecución.
-- Las asociaciones clínicas se mostrarán solo como resultados agregados.
+- Por autorización expresa registrada el 2026-09-01, se publican los
+  metadatos técnicos y clínicos individuales de CARPIO, incluidos los códigos
+  de muestra no trazables a pacientes dentro del alcance de este proyecto.
+- No se publican FASTQ, objetos pesados ni rutas absolutas o internas de
+  ejecución.
+- Las asociaciones clínicas se mostrarán preferentemente como resultados
+  agregados para facilitar su interpretación.
 
 ## Estructura
 

@@ -5,8 +5,9 @@ title: "Asociaciones clínicas agregadas"
 ::: {.callout-caution}
 ## Estado de los resultados
 
-No se han ejecutado asociaciones clínicas en esta fase. Este capítulo no
-contiene datos individuales, fechas clínicas ni identificadores de paciente.
+No se han ejecutado asociaciones clínicas en esta fase. Los metadatos
+individuales autorizados se documentan en el capítulo de diseño experimental;
+este capítulo se reserva para los resultados de asociación una vez validados.
 :::
 
 ## Plan de análisis clínico
@@ -16,10 +17,10 @@ superado los filtros de QC y los metadatos clínicos hayan sido validados para l
 pregunta concreta. Cada contraste definirá previamente cohorte, denominador,
 covariables, manejo de valores ausentes y unidad de análisis.
 
-Las ocho biopsias repetidas no se contarán dos veces. La publicación mostrará
-únicamente resultados agregados, tamaños de grupo adecuados y medidas de
-incertidumbre. No se incorporarán hojas clínicas individuales al libro, a sus
-activos ni al sitio web.
+Las ocho biopsias repetidas no se contarán dos veces. La presentación
+priorizará tamaños de grupo agregados y medidas de incertidumbre para facilitar
+la interpretación; los metadatos autorizados permanecen disponibles en el
+capítulo de diseño experimental.
 
 ## Presentación de resultados
 

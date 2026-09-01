@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "analysis_dir_env": "CARPIO_ANALYSIS_DIR",
   "allowed_assets": [
     {
@@ -51,66 +51,64 @@
       "description": "Versión vectorial del gráfico pareado de profundidad."
     }
   ],
-  "curated_tsv_assets": [
+  "authorized_metadata_assets": [
     {
-      "id": "sample_inventory_public",
-      "source": "reports/tables/sample_sequencing_metadata.tsv",
-      "destination": "tables/00_design/sample_inventory_public.tsv",
-      "include_destination": "chapters/includes/sample_inventory_table.html",
+      "id": "technical_metadata_tsv",
+      "source": "metadata/CARPIO_technical_metadata.tsv",
+      "destination": "tables/00_metadata/CARPIO_technical_metadata.tsv",
+      "format": "tsv",
       "expected_rows": 198,
-      "description": "Inventario técnico completo de las 198 bibliotecas, curado para publicación sin record_id ni metadatos clínicos.",
-      "fields": [
-        {"source": "raw_sample_name", "output": "registro_tecnico", "label": "Registro técnico"},
-        {"source": "r1_filename", "output": "fastq_r1", "label": "FASTQ R1"},
-        {"source": "r2_filename", "output": "fastq_r2", "label": "FASTQ R2"},
-        {"source": "assay_id", "output": "ensayo", "label": "Ensayo"},
-        {"source": "metadata_sheet", "output": "hoja_metadatos", "label": "Hoja"},
-        {"source": "sample_type", "output": "tipo_muestra", "label": "Tipo"},
-        {"source": "control_type", "output": "tipo_control", "label": "Control"},
-        {"source": "dilution", "output": "dilucion", "label": "Dilución"},
-        {"source": "extraction_date", "output": "fecha_extraccion", "label": "Extracción"},
-        {"source": "library_date", "output": "fecha_biblioteca", "label": "Biblioteca"},
-        {"source": "sequencing_date", "output": "fecha_secuenciacion", "label": "Secuenciación"},
-        {"source": "sequencing_date_basis", "output": "origen_fecha_secuenciacion", "label": "Base de fecha"},
-        {"source": "sequencing_run", "output": "carrera", "label": "Carrera"},
-        {"source": "index_set", "output": "set_indices", "label": "Set índices"},
-        {"source": "index_forward", "output": "indice_i7", "label": "Índice i7"},
-        {"source": "index_reverse", "output": "indice_i5", "label": "Índice i5"}
-      ],
-      "value_maps": {
-        "assay_id": {
-          "carpio1": "Ensayo previo/piloto",
-          "carpio2_run3": "Ensayo ampliado actual"
-        },
-        "sample_type": {
-          "biopsy": "Biopsia",
-          "positive_control": "Control positivo",
-          "negative_control": "Control negativo"
-        },
-        "control_type": {
-          "batch": "Batch",
-          "ecoli_dilution": "Dilución de E. coli",
-          "extraction": "Extracción",
-          "mock_extraction": "Mock de extracción",
-          "mock_pcr": "Mock de PCR",
-          "pcr": "PCR"
-        },
-        "dilution": {
-          "1": "10⁻¹",
-          "2": "10⁻²",
-          "3": "10⁻³",
-          "4": "10⁻⁴",
-          "5": "10⁻⁵",
-          "6": "10⁻⁶"
-        },
-        "sequencing_date_basis": {
-          "library_date_proxy": "Fecha de biblioteca (proxy)",
-          "source_label_date": "Etiqueta de origen"
-        },
-        "sequencing_run": {
-          "3.0": "Run 3",
-          "carpio1": "Ensayo previo/piloto"
-        }
+      "description": "Metadatos técnicos normalizados de las 198 bibliotecas del proyecto.",
+      "table": {
+        "include_destination": "chapters/includes/technical_metadata_table.html",
+        "table_id": "technical-metadata-table",
+        "table_label": "tabla de metadatos técnicos",
+        "caption": "Metadatos técnicos normalizados de las 198 bibliotecas incluidas en el análisis.",
+        "page_size": 10
+      }
+    },
+    {
+      "id": "technical_metadata_xlsx",
+      "source": "metadata/CARPIO_technical_metadata.xlsx",
+      "destination": "tables/00_metadata/CARPIO_technical_metadata.xlsx",
+      "format": "xlsx",
+      "description": "Libro Excel fuente de los metadatos técnicos, autorizado para publicación en el proyecto CARPIO."
+    },
+    {
+      "id": "clinical_metadata_tsv",
+      "source": "metadata/CARPIO_clinical_metadata.tsv",
+      "destination": "tables/00_metadata/CARPIO_clinical_metadata.tsv",
+      "format": "tsv",
+      "expected_rows": 184,
+      "description": "Metadatos clínicos normalizados de la cohorte CARPIO, autorizados para publicación.",
+      "table": {
+        "include_destination": "chapters/includes/clinical_metadata_table.html",
+        "table_id": "clinical-metadata-table",
+        "table_label": "tabla de metadatos clínicos",
+        "caption": "Metadatos clínicos normalizados de los 184 registros de la cohorte.",
+        "page_size": 10
+      }
+    },
+    {
+      "id": "clinical_metadata_xlsx",
+      "source": "metadata/CARPIO_clinical_metadata.xlsx",
+      "destination": "tables/00_metadata/CARPIO_clinical_metadata.xlsx",
+      "format": "xlsx",
+      "description": "Libro Excel fuente de los metadatos clínicos, autorizado para publicación en el proyecto CARPIO."
+    },
+    {
+      "id": "analysis_metadata_tsv",
+      "source": "metadata/CARPIO_analysis_metadata.tsv",
+      "destination": "tables/00_metadata/CARPIO_analysis_metadata.tsv",
+      "format": "tsv",
+      "expected_rows": 198,
+      "description": "Tabla maestra normalizada que integra metadatos técnicos y clínicos para el análisis bioinformático.",
+      "table": {
+        "include_destination": "chapters/includes/analysis_metadata_table.html",
+        "table_id": "analysis-metadata-table",
+        "table_label": "tabla de metadatos de análisis",
+        "caption": "Metadatos de análisis normalizados de las 198 bibliotecas incluidas en el proyecto.",
+        "page_size": 10
       }
     }
   ],

@@ -19,12 +19,18 @@ decontaminación ni análisis clínicos.
 
 ## Política de datos públicos
 
-- No incluir FASTQ, BAM, objetos R, metadatos clínicos por individuo,
-  identificadores de paciente, fechas clínicas ni rutas internas.
-- Se permiten figuras y tablas curadas con los códigos técnicos de muestra
-  aprobados (`01-xxx`).
-- Las asociaciones clínicas públicas se presentan únicamente de forma
-  agregada.
+- Por autorización expresa de la persona responsable del proyecto, registrada
+  el 2026-09-01, pueden incorporarse al repositorio los metadatos técnicos y
+  clínicos individuales de CARPIO, incluidos sus libros Excel, tablas TSV y
+  los códigos de muestra. En el alcance de este proyecto, esos códigos no son
+  trazables a pacientes.
+- Esta autorización es específica de CARPIO y no se extrapola a otros
+  proyectos ni a fuentes de datos nuevas sin una indicación explícita.
+- No incluir FASTQ, BAM, CRAM, SAM, objetos R, archivos comprimidos de datos
+  crudos ni rutas absolutas o internas de ejecución.
+- Las asociaciones clínicas se presentarán preferentemente de forma agregada
+  por claridad analítica; esa elección no limita la disponibilidad autorizada
+  de los metadatos de este proyecto.
 - Todos los activos se incorporan mediante `scripts/export_public_assets.py`
   y se validan con `scripts/validate_public_assets.py`.
 

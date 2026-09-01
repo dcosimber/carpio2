@@ -8,7 +8,7 @@ Las ocho biopsias presentes en ambos ensayos proporcionan una comparación
 pareada del rendimiento técnico. Todas tuvieron mayor número de pares de
 lecturas crudos en el piloto; la media geométrica del cociente piloto/ampliado
 fue 7,69. La comparación completa de los FASTQ de entrada se presenta en el
-capítulo de [QC y preprocesamiento](04_qc_preprocessing.qmd).
+capítulo de [QC y preprocesamiento](04_control_calidad_preprocesamiento.qmd).
 
 Esta diferencia no demuestra un cambio biológico. La lectura adecuada es que la
 profundidad técnica de entrada está ligada al ensayo; cualquier comparación

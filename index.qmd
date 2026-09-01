@@ -35,9 +35,10 @@ y 22 controles negativos; el conjunto ocupa 14,19 GB.
 - Las ocho biopsias presentes en ambos ensayos tuvieron mayor profundidad de
   entrada en el piloto. La comparación es técnica y descriptiva; no constituye
   una comparación biológica.
-- El libro incorpora un inventario técnico completo, paginado, de las 198
-  bibliotecas. Los códigos `01-xxx` están autorizados; no se publican
-  identificadores de paciente ni variables clínicas individuales.
+- El libro incorpora tablas paginadas de los metadatos técnicos, clínicos y
+  de análisis. Su publicación individual está autorizada expresamente para
+  CARPIO; los códigos de muestra no son trazables a pacientes en este
+  proyecto.
 
 ## Criterios de interpretación
 

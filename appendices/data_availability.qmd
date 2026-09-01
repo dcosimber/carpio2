@@ -9,13 +9,18 @@ libro, tablas agregadas de QC, una figura de profundidad técnica y versiones
 saneadas de MultiQC. Los códigos técnicos de muestra necesarios para estas
 comprobaciones de QC se han autorizado expresamente.
 
-## Datos bajo acceso controlado
+## Metadatos autorizados
 
-Los FASTQ crudos, objetos intermedios pesados, metadatos clínicos individuales,
-identificadores de paciente y fechas clínicas no se publican en este sitio. El
-acceso a datos que puedan permitir reidentificación, o que requieran evaluación
-ética y de protección de datos, se gestionará bajo acceso controlado y conforme
-a las autorizaciones aplicables.
+Por autorización expresa de la persona responsable del proyecto, registrada el
+2026-09-01, este sitio puede incluir los metadatos técnicos y clínicos
+individuales de CARPIO, sus tablas normalizadas y los libros Excel originales.
+Los códigos de muestra publicados no son trazables a pacientes dentro del
+alcance de este proyecto.
+
+## Datos no publicados
+
+Los FASTQ crudos, objetos intermedios pesados, archivos de alineamiento y rutas
+absolutas o internas de ejecución no se publican en este sitio.
 
 ## Licencias
 
