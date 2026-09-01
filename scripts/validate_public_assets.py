@@ -14,38 +14,50 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "config" / "publication_assets.json"
-PUBLIC_ASSET_DIRS = ("figures", "tables", "multiqc")
+PUBLIC_ASSET_DIRS = ("data", "figures", "tables", "multiqc")
 INCLUDE_ROOT = REPO_ROOT / "chapters" / "includes"
 SOURCE_TEXT_DIRS = (REPO_ROOT / "chapters", REPO_ROOT / "appendices")
 PATH_PATTERN = re.compile(r"/(?:mnt|home|tmp|var/tmp|Users|private)(?:/|\Z)")
 HTML_ID_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
+CHAPTER_DIRECTORY_PATTERN = re.compile(
+    r"^(?P<chapter>0?[1-9][0-9]?)_[a-z0-9]+(?:_[a-z0-9]+)*$"
+)
+TABLE_FILENAME_PATTERN = re.compile(
+    r"^Table-(?P<chapter>[1-9][0-9]?)\.(?P<number>[1-9][0-9]*)-[a-z0-9]+(?:-[a-z0-9]+)*\.(?:tsv|csv)$"
+)
+FIGURE_FILENAME_PATTERN = re.compile(
+    r"^Fig-(?P<chapter>[1-9][0-9]?)\.(?P<number>[1-9][0-9]*)-[a-z0-9]+(?:-[a-z0-9]+)*\.(?:png|pdf|svg|jpg|jpeg|webp)$"
+)
+MULTIQC_FILENAME_PATTERN = re.compile(
+    r"^MultiQC-(?P<chapter>[1-9][0-9]?)\.(?P<number>[1-9][0-9]*)-[a-z0-9]+(?:-[a-z0-9]+)*\.html$"
+)
 
 # Es la misma excepción mínima que aplica el exportador. Un XLSX solo se acepta
 # si está asociado a una de estas rutas completas, no por su extensión.
 AUTHORIZED_METADATA_ASSETS = {
     "technical_metadata_tsv": {
         "source": "metadata/CARPIO_technical_metadata.tsv",
-        "destination": "tables/00_metadata/CARPIO_technical_metadata.tsv",
+        "destination": "data/metadata/CARPIO_technical_metadata.tsv",
         "format": "tsv",
     },
     "technical_metadata_xlsx": {
         "source": "metadata/CARPIO_technical_metadata.xlsx",
-        "destination": "tables/00_metadata/CARPIO_technical_metadata.xlsx",
+        "destination": "data/metadata/CARPIO_technical_metadata.xlsx",
         "format": "xlsx",
     },
     "clinical_metadata_tsv": {
         "source": "metadata/CARPIO_clinical_metadata.tsv",
-        "destination": "tables/00_metadata/CARPIO_clinical_metadata.tsv",
+        "destination": "data/metadata/CARPIO_clinical_metadata.tsv",
         "format": "tsv",
     },
     "clinical_metadata_xlsx": {
         "source": "metadata/CARPIO_clinical_metadata.xlsx",
-        "destination": "tables/00_metadata/CARPIO_clinical_metadata.xlsx",
+        "destination": "data/metadata/CARPIO_clinical_metadata.xlsx",
         "format": "xlsx",
     },
     "analysis_metadata_tsv": {
         "source": "metadata/CARPIO_analysis_metadata.tsv",
-        "destination": "tables/00_metadata/CARPIO_analysis_metadata.tsv",
+        "destination": "data/metadata/CARPIO_analysis_metadata.tsv",
         "format": "tsv",
     },
 }
@@ -98,8 +110,8 @@ def configured_metadata_assets(config: dict) -> dict[str, dict]:
         destination = str(asset["destination"])
         if destination in by_destination:
             raise ValidationError("Hay destinos de metadatos duplicados.")
-        if not destination.startswith("tables/00_metadata/"):
-            raise ValidationError("Un metadato autorizado no se dirige a tables/00_metadata/.")
+        if not destination.startswith("data/metadata/"):
+            raise ValidationError("Un metadato autorizado no se dirige a data/metadata/.")
         if not destination.lower().endswith("." + expected["format"]):
             raise ValidationError("La extensión de un metadato no coincide con su formato.")
 
@@ -140,6 +152,40 @@ def configured_metadata_assets(config: dict) -> dict[str, dict]:
 def contains_blocked_extension(path: Path, extensions: list[str]) -> bool:
     name = path.name.lower()
     return any(name.endswith(extension) for extension in extensions)
+
+
+def check_report_asset_path(
+    canonical_relative: str, metadata_asset: dict | None
+) -> list[str]:
+    """Exige rutas ordenadas para los activos públicos de informe."""
+    parts = Path(canonical_relative).parts
+    if not parts:
+        return []
+    root = parts[0]
+    if root == "data":
+        if metadata_asset is None:
+            return [f"{canonical_relative}: dato público fuera de la lista blanca"]
+        if len(parts) != 3 or parts[:2] != ("data", "metadata"):
+            return [f"{canonical_relative}: ruta de metadatos no conforme"]
+        return []
+    if root not in {"tables", "figures", "multiqc"}:
+        return []
+    if len(parts) != 3:
+        return [f"{canonical_relative}: activo sin carpeta de capítulo"]
+    directory_match = CHAPTER_DIRECTORY_PATTERN.fullmatch(parts[1])
+    if directory_match is None:
+        return [f"{canonical_relative}: carpeta de capítulo no conforme"]
+    patterns = {
+        "tables": TABLE_FILENAME_PATTERN,
+        "figures": FIGURE_FILENAME_PATTERN,
+        "multiqc": MULTIQC_FILENAME_PATTERN,
+    }
+    filename_match = patterns[root].fullmatch(parts[2])
+    if filename_match is None:
+        return [f"{canonical_relative}: nombre de activo no conforme"]
+    if int(directory_match["chapter"]) != int(filename_match["chapter"]):
+        return [f"{canonical_relative}: capítulo de carpeta y nombre no coincide"]
+    return []
 
 
 def check_table_header(path: Path, restricted: set[str]) -> list[str]:
@@ -246,7 +292,8 @@ def main() -> int:
                 relative.removeprefix("docs/") if relative.startswith("docs/") else relative
             )
             metadata_asset = metadata_by_destination.get(canonical_relative)
-            in_metadata_root = canonical_relative.startswith("tables/00_metadata/")
+            errors.extend(check_report_asset_path(canonical_relative, metadata_asset))
+            in_metadata_root = canonical_relative.startswith("data/metadata/")
             if in_metadata_root and metadata_asset is None:
                 errors.append(f"{relative}: activo de metadatos fuera de la lista blanca")
             extension_is_allowed_metadata = (

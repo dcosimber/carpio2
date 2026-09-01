@@ -31,8 +31,8 @@ from typing import Iterable
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "config" / "publication_assets.json"
 MANIFEST_PATH = REPO_ROOT / "manifests" / "public_asset_manifest.tsv"
-ALLOWED_PUBLIC_ROOTS = ("tables", "figures", "multiqc")
-METADATA_PUBLIC_ROOT = "tables/00_metadata"
+ALLOWED_PUBLIC_ROOTS = ("data", "tables", "figures", "multiqc")
+METADATA_PUBLIC_ROOT = "data/metadata"
 INCLUDE_ROOT = REPO_ROOT / "chapters" / "includes"
 ABSOLUTE_PATH_PATTERN = re.compile(r"/(?:mnt|home|tmp|var/tmp|Users|private)(?:/|\Z)")
 HTML_ID_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
@@ -42,27 +42,27 @@ HTML_ID_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
 AUTHORIZED_METADATA_ASSETS = {
     "technical_metadata_tsv": {
         "source": "metadata/CARPIO_technical_metadata.tsv",
-        "destination": "tables/00_metadata/CARPIO_technical_metadata.tsv",
+        "destination": "data/metadata/CARPIO_technical_metadata.tsv",
         "format": "tsv",
     },
     "technical_metadata_xlsx": {
         "source": "metadata/CARPIO_technical_metadata.xlsx",
-        "destination": "tables/00_metadata/CARPIO_technical_metadata.xlsx",
+        "destination": "data/metadata/CARPIO_technical_metadata.xlsx",
         "format": "xlsx",
     },
     "clinical_metadata_tsv": {
         "source": "metadata/CARPIO_clinical_metadata.tsv",
-        "destination": "tables/00_metadata/CARPIO_clinical_metadata.tsv",
+        "destination": "data/metadata/CARPIO_clinical_metadata.tsv",
         "format": "tsv",
     },
     "clinical_metadata_xlsx": {
         "source": "metadata/CARPIO_clinical_metadata.xlsx",
-        "destination": "tables/00_metadata/CARPIO_clinical_metadata.xlsx",
+        "destination": "data/metadata/CARPIO_clinical_metadata.xlsx",
         "format": "xlsx",
     },
     "analysis_metadata_tsv": {
         "source": "metadata/CARPIO_analysis_metadata.tsv",
-        "destination": "tables/00_metadata/CARPIO_analysis_metadata.tsv",
+        "destination": "data/metadata/CARPIO_analysis_metadata.tsv",
         "format": "tsv",
     },
 }
@@ -136,6 +136,16 @@ def validate_extension(path: Path, blocked_extensions: Iterable[str]) -> None:
     lower_name = path.name.lower()
     if any(lower_name.endswith(extension) for extension in blocked_extensions):
         raise ExportError(f"Extensión no publicable: {path.name}")
+
+
+def normalize_delimited_newlines(path: Path) -> None:
+    """Conserva TSV/CSV con LF para que checksum, Git y descarga coincidan."""
+    if path.suffix.lower() not in {".tsv", ".csv"}:
+        return
+    content = path.read_bytes()
+    normalized = content.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    if normalized != content:
+        path.write_bytes(normalized)
 
 
 def validate_table_headers(path: Path, restricted_headers: Iterable[str]) -> None:
@@ -325,7 +335,7 @@ def build_authorized_metadata_asset(
     destination = resolve_destination(asset["destination"])
     expected = AUTHORIZED_METADATA_ASSETS[asset["id"]]
     if destination.parent != (REPO_ROOT / METADATA_PUBLIC_ROOT):
-        raise ExportError("El metadato autorizado no se dirige a tables/00_metadata/.")
+        raise ExportError("El metadato autorizado no se dirige a data/metadata/.")
 
     headers: list[str] = []
     values: list[list[str]] = []
@@ -349,6 +359,7 @@ def build_authorized_metadata_asset(
     if not dry_run:
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
+        normalize_delimited_newlines(destination)
         if expected["format"] == "tsv":
             read_tsv_rows(destination)
             validate_text_has_no_internal_paths(destination)
@@ -385,6 +396,7 @@ def copy_asset(
     if not dry_run:
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
+        normalize_delimited_newlines(destination)
         validate_table_headers(destination, config["restricted_table_headers"])
         validate_text_has_no_internal_paths(destination)
     return {
@@ -635,7 +647,7 @@ def write_manifest(rows: list[dict], dry_run: bool) -> None:
         "description",
     ]
     with MANIFEST_PATH.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t")
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({"exported_at_utc": timestamp, **row})

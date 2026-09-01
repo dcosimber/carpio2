@@ -6,7 +6,7 @@ title: "Diseño experimental y muestras"
 
 El ensayo actual se centra exclusivamente en la región V3–V4 del gen bacteriano 16S rRNA. En el ensayo piloto se evaluó adicionalmente la región hipervariable V4; esta no forma parte del presente análisis. La combinación del tamaño esperado del amplicón y las lecturas *paired-end* proporciona solapamiento suficiente para fusionar R1 y R2; los parámetros finales de calidad y fusión se validan con los perfiles reales de las lecturas.
 
-La configuración de la región amplificada y de la secuenciación se resume en la Tabla @tbl-sequencing-configuration.
+La configuración de la región amplificada y de la secuenciación se resume en la @tbl-sequencing-configuration.
 
 ::: {#tbl-sequencing-configuration}
 | Característica | Descripción |
@@ -26,7 +26,7 @@ La configuración de la región amplificada y de la secuenciación se resume en 
 
 ## Conjunto de datos
 
-El conjunto de datos reúne **198 bibliotecas paired-end** (equivalentes a 198 pares R1/R2) y **396 archivos FASTQ** (Tabla @tbl-library-composition). Cada biblioteca constituye una observación técnica; R1 y R2 son las dos lecturas complementarias del mismo amplicón y no dos muestras independientes.
+El conjunto de datos reúne **198 bibliotecas paired-end** (equivalentes a 198 pares R1/R2) y **396 archivos FASTQ** (@tbl-library-composition). Cada biblioteca constituye una observación técnica; R1 y R2 son las dos lecturas complementarias del mismo amplicón y no dos muestras independientes.
 
 Se incluyen 138 registros de biopsia: 130 bibliotecas del ensayo ampliado y ocho bibliotecas del piloto correspondientes a biopsias resecuenciadas. Por tanto, la cohorte clínica principal contiene 130 códigos biológicos únicos; las ocho bibliotecas del piloto se conservarán para evaluar la reproducibilidad entre ensayos y no se contabilizarán como observaciones biológicas adicionales.
 
@@ -52,8 +52,8 @@ Se incluyen 138 registros de biopsia: 130 bibliotecas del ensayo ampliado y ocho
 
 Los 38 controles positivos proceden del ensayo piloto y cubren etapas complementarias del proceso analítico.
 
-- **Mock de PCR (`mock_pcr_*`)**. Corresponde al material genómico comercial [ATCC MSA-1003](https://www.atcc.org/products/msa-1003), una mezcla escalonada de ADN genómico de 20 cepas (Tabla @tbl-mock-pcr-composition). Controla las etapas posteriores a la extracción: amplificación, preparación de librerías, secuenciación y asignación taxonómica [@ATCC_MSA1003].
-- **Mock de extracción (`mock_extr_*`)**. Corresponde a [ATCC MSA-2006](https://www.atcc.org/products/msa-2006), una mezcla liofilizada de células completas de 12 especies de microbiota intestinal (Tabla @tbl-mock-extraction-composition). Al incorporarse antes de la extracción, permite evaluar el proceso completo, incluida la recuperación del ADN [@ATCC_MSA2006].
+- **Mock de PCR (`mock_pcr_*`)**. Corresponde al material genómico comercial [ATCC MSA-1003](https://www.atcc.org/products/msa-1003), una mezcla escalonada de ADN genómico de 20 cepas (@tbl-mock-pcr-composition). Controla las etapas posteriores a la extracción: amplificación, preparación de librerías, secuenciación y asignación taxonómica [@ATCC_MSA1003].
+- **Mock de extracción (`mock_extr_*`)**. Corresponde a [ATCC MSA-2006](https://www.atcc.org/products/msa-2006), una mezcla liofilizada de células completas de 12 especies de microbiota intestinal (@tbl-mock-extraction-composition). Al incorporarse antes de la extracción, permite evaluar el proceso completo, incluida la recuperación del ADN [@ATCC_MSA2006].
 - **Diluciones de *Escherichia coli* (`ecoli_dilN_R`)**. Son 24 bibliotecas distribuidas en seis diluciones decimales seriadas (10⁻¹–10⁻⁶; cuatro réplicas por dilución) y se utilizarán para examinar sensibilidad y límite de detección.
 
 ::: {#tbl-mock-pcr-composition}
@@ -114,7 +114,7 @@ El análisis principal de contaminación utilizará la prevalencia de cada ASV e
 
 El libro técnico fuente se conserva como `CARPIO_technical_metadata.xlsx`. La hoja `Run1` aporta la información de laboratorio del ensayo piloto y la hoja `Run 3` la del ensayo ampliado. Para garantizar una estructura homogénea, se generó `CARPIO_technical_metadata.tsv`, con una fila por cada una de las 198 bibliotecas V3–V4 incluidas en el análisis. Sus nombres de variables están normalizados en minúsculas y con guiones bajos; las fechas se expresan en formato ISO (`YYYY-MM-DD`).
 
-La tabla navegable contiene los 198 registros técnicos. Puede descargarse como [TSV normalizado](../tables/00_metadata/CARPIO_technical_metadata.tsv) o como [libro Excel técnico fuente](../tables/00_metadata/CARPIO_technical_metadata.xlsx).
+La tabla navegable contiene los 198 registros técnicos. Puede descargarse como [TSV normalizado](../data/metadata/CARPIO_technical_metadata.tsv) o como [libro Excel técnico fuente](../data/metadata/CARPIO_technical_metadata.xlsx).
 
 {{< include includes/technical_metadata_table.html >}}
 
@@ -130,7 +130,7 @@ Las variables abarcan características demográficas y cronológicas, fenotipo y
 La tabla mantiene una fila por registro clínico. Los bloques principales incluyen: cronología y datos demográficos (`birth_date`, `inclusion_date`, `age`, `sex`); fenotipo de enfermedad y afectación perianal; localización y comportamiento de Montreal; actividad luminal, rectal e histológica; exposiciones y antecedentes; y tratamientos recibidos. El diccionario de variables se conserva en la hoja `Variable_Dictionary` del libro Excel.
 :::
 
-La tabla navegable muestra los 184 registros clínicos normalizados. Puede descargarse como [TSV normalizado](../tables/00_metadata/CARPIO_clinical_metadata.tsv) o como [libro Excel clínico fuente](../tables/00_metadata/CARPIO_clinical_metadata.xlsx).
+La tabla navegable muestra los 184 registros clínicos normalizados. Puede descargarse como [TSV normalizado](../data/metadata/CARPIO_clinical_metadata.tsv) o como [libro Excel clínico fuente](../data/metadata/CARPIO_clinical_metadata.xlsx).
 
 {{< include includes/clinical_metadata_table.html >}}
 
@@ -138,7 +138,7 @@ La tabla navegable muestra los 184 registros clínicos normalizados. Puede desca
 
 `CARPIO_analysis_metadata.tsv` es la tabla maestra empleada por el flujo bioinformático. Contiene una fila por registro técnico de ensayo (198 en total) e integra los campos técnicos y clínicos mediante `sample_id`. `record_id` identifica de forma única el registro de ensayo y `fastq_id` identifica de forma única el par de archivos FASTQ; las ocho biopsias repetidas conservan el mismo `sample_id` en ambos ensayos y se distinguen por su registro técnico.
 
-La tabla mantiene las variables clínicas con el prefijo `clinical_` y conserva los campos de trazabilidad de biblioteca, índices y archivos. Es la fuente configurada para las etapas de análisis y puede descargarse como [TSV de metadatos de análisis](../tables/00_metadata/CARPIO_analysis_metadata.tsv). La normalización de nombres, fechas y claves se describe en esta sección.
+La tabla mantiene las variables clínicas con el prefijo `clinical_` y conserva los campos de trazabilidad de biblioteca, índices y archivos. Es la fuente configurada para las etapas de análisis y puede descargarse como [TSV de metadatos de análisis](../data/metadata/CARPIO_analysis_metadata.tsv). La normalización de nombres, fechas y claves se describe en esta sección.
 
 {{< include includes/analysis_metadata_table.html >}}
 

@@ -1,53 +1,53 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "analysis_dir_env": "CARPIO_ANALYSIS_DIR",
   "allowed_assets": [
     {
       "id": "raw_depth_by_group",
       "source": "analysis/tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv",
-      "destination": "tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.1-profundidad-bibliotecas-crudas.tsv",
       "description": "Profundidad de pares de lectura antes del recorte, agregada por ensayo y tipo de biblioteca."
     },
     {
       "id": "trimmed_depth_by_group",
       "source": "analysis/tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv",
-      "destination": "tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.1-profundidad-bibliotecas-recortadas.tsv",
       "description": "Profundidad de pares de lectura después del recorte, agregada por ensayo y tipo de biblioteca."
     },
     {
       "id": "primer_retention_by_batch",
       "source": "analysis/tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv",
-      "destination": "tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-retencion-primers-por-ensayo.tsv",
       "description": "Retención de pares y bases tras el recorte posicional de primers."
     },
     {
       "id": "primer_verification_summary",
       "source": "analysis/tables/01_preprocessing/primer_trimming_verification_summary.tsv",
-      "destination": "tables/01_preprocessing/primer_trimming_verification_summary.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-residuales.tsv",
       "description": "Verificación agregada de señal residual de primer tras el recorte."
     },
     {
       "id": "repeated_biopsy_depth_comparison",
       "source": "analysis/tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv",
-      "destination": "tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.3-profundidad-biopsias-repetidas.tsv",
       "description": "Profundidad de los FASTQ crudos de las ocho biopsias repetidas; se permiten los códigos técnicos de muestra."
     },
     {
       "id": "repeated_biopsy_depth_summary",
       "source": "analysis/tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv",
-      "destination": "tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.3-resumen-profundidad-biopsias-repetidas.tsv",
       "description": "Resumen descriptivo de la comparación pareada de profundidad."
     },
     {
       "id": "repeated_biopsy_depth_plot",
       "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.png",
-      "destination": "figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png",
+      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.1-profundidad-biopsias-repetidas.png",
       "description": "Gráfico pareado de profundidad de las ocho biopsias repetidas."
     },
     {
       "id": "repeated_biopsy_depth_plot_pdf",
       "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.pdf",
-      "destination": "figures/01_preprocessing/repeated_biopsies_raw_depth_paired.pdf",
+      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.1-profundidad-biopsias-repetidas.pdf",
       "description": "Versión vectorial del gráfico pareado de profundidad."
     }
   ],
@@ -55,7 +55,7 @@
     {
       "id": "technical_metadata_tsv",
       "source": "metadata/CARPIO_technical_metadata.tsv",
-      "destination": "tables/00_metadata/CARPIO_technical_metadata.tsv",
+      "destination": "data/metadata/CARPIO_technical_metadata.tsv",
       "format": "tsv",
       "expected_rows": 198,
       "description": "Metadatos técnicos normalizados de las 198 bibliotecas del proyecto.",
@@ -70,14 +70,14 @@
     {
       "id": "technical_metadata_xlsx",
       "source": "metadata/CARPIO_technical_metadata.xlsx",
-      "destination": "tables/00_metadata/CARPIO_technical_metadata.xlsx",
+      "destination": "data/metadata/CARPIO_technical_metadata.xlsx",
       "format": "xlsx",
       "description": "Libro Excel fuente de los metadatos técnicos, autorizado para publicación en el proyecto CARPIO."
     },
     {
       "id": "clinical_metadata_tsv",
       "source": "metadata/CARPIO_clinical_metadata.tsv",
-      "destination": "tables/00_metadata/CARPIO_clinical_metadata.tsv",
+      "destination": "data/metadata/CARPIO_clinical_metadata.tsv",
       "format": "tsv",
       "expected_rows": 184,
       "description": "Metadatos clínicos normalizados de la cohorte CARPIO, autorizados para publicación.",
@@ -92,14 +92,14 @@
     {
       "id": "clinical_metadata_xlsx",
       "source": "metadata/CARPIO_clinical_metadata.xlsx",
-      "destination": "tables/00_metadata/CARPIO_clinical_metadata.xlsx",
+      "destination": "data/metadata/CARPIO_clinical_metadata.xlsx",
       "format": "xlsx",
       "description": "Libro Excel fuente de los metadatos clínicos, autorizado para publicación en el proyecto CARPIO."
     },
     {
       "id": "analysis_metadata_tsv",
       "source": "metadata/CARPIO_analysis_metadata.tsv",
-      "destination": "tables/00_metadata/CARPIO_analysis_metadata.tsv",
+      "destination": "data/metadata/CARPIO_analysis_metadata.tsv",
       "format": "tsv",
       "expected_rows": 198,
       "description": "Tabla maestra normalizada que integra metadatos técnicos y clínicos para el análisis bioinformático.",
@@ -119,8 +119,8 @@
         "analysis/intermediate/pilot/03_fastqc_raw",
         "analysis/intermediate/current/03_fastqc_raw"
       ],
-      "destination": "multiqc/raw/fastqc_raw_multiqc_report.html",
-      "filename": "fastqc_raw_multiqc_report.html",
+      "destination": "multiqc/04_control_calidad_preprocesamiento/MultiQC-4.1-fastqc-crudo.html",
+      "filename": "MultiQC-4.1-fastqc-crudo.html",
       "description": "MultiQC saneado de FastQC antes del recorte de primers."
     },
     {
@@ -129,8 +129,8 @@
         "analysis/intermediate/pilot/04_fastqc_trimmed",
         "analysis/intermediate/current/04_fastqc_trimmed"
       ],
-      "destination": "multiqc/trimmed/fastqc_trimmed_multiqc_report.html",
-      "filename": "fastqc_trimmed_multiqc_report.html",
+      "destination": "multiqc/04_control_calidad_preprocesamiento/MultiQC-4.2-fastqc-recortado.html",
+      "filename": "MultiQC-4.2-fastqc-recortado.html",
       "description": "MultiQC saneado de FastQC después del recorte de primers."
     }
   ],

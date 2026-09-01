@@ -29,18 +29,10 @@ jobs:
         with:
           enablement: true
 
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: 1.8.27
-
       - name: Validate curated assets
         run: python3 scripts/validate_public_assets.py
 
-      - name: Render Quarto site
-        run: quarto render
-
-      - name: Validate rendered site
+      - name: Validate committed static site
         run: python3 scripts/validate_public_assets.py --include-docs
 
       - name: Upload artifact

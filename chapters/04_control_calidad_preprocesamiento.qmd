@@ -23,8 +23,8 @@ El resumen de bibliotecas y pares de lecturas se presenta en la
 :::
 
 Las profundidades agregadas por tipo de biblioteca están disponibles en las
-tablas de [FASTQ crudos](../tables/01_preprocessing/fastqc_raw_library_depth_by_group.tsv)
-y [FASTQ recortados](../tables/01_preprocessing/fastqc_trimmed_library_depth_by_group.tsv).
+tablas de [FASTQ crudos](../tables/04_control_calidad_preprocesamiento/Table-4.1-profundidad-bibliotecas-crudas.tsv)
+y [FASTQ recortados](../tables/04_control_calidad_preprocesamiento/Table-4.1-profundidad-bibliotecas-recortadas.tsv).
 
 ## Informes de QC y MultiQC
 
@@ -32,8 +32,8 @@ Los informes de FastQC se integraron con MultiQC antes y después del recorte
 [@Ewels2016]. La versión pública se regenera exclusivamente a partir de copias
 temporales de los archivos `*_fastqc.zip`, conserva los nombres técnicos
 autorizados y excluye las rutas internas de computación. Se puede consultar el
-[informe previo al recorte](../multiqc/raw/fastqc_raw_multiqc_report.html) y el
-[informe posterior al recorte](../multiqc/trimmed/fastqc_trimmed_multiqc_report.html).
+[informe previo al recorte](../multiqc/04_control_calidad_preprocesamiento/MultiQC-4.1-fastqc-crudo.html) y el
+[informe posterior al recorte](../multiqc/04_control_calidad_preprocesamiento/MultiQC-4.2-fastqc-recortado.html).
 
 ## Recorte y verificación de primers
 
@@ -54,8 +54,8 @@ La retención de lecturas y el residual de primer se detallan en la
 : Retención de pares y verificación de primers tras el recorte.
 :::
 
-Las métricas reproducibles se encuentran en [retención por ensayo](../tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv)
-y [verificación de primers](../tables/01_preprocessing/primer_trimming_verification_summary.tsv).
+Las métricas reproducibles se encuentran en [retención por ensayo](../tables/04_control_calidad_preprocesamiento/Table-4.2-retencion-primers-por-ensayo.tsv)
+y [verificación de primers](../tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-residuales.tsv).
 
 ## Profundidad de secuenciación de las biopsias repetidas
 
@@ -83,11 +83,11 @@ La @fig-repeated-depth muestra pares de lecturas en escala logarítmica. Cada
 línea une la misma biopsia entre ambos ensayos; el eje vertical está expresado
 en millones de pares, no en lecturas individuales.
 
-![Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas.](../figures/01_preprocessing/repeated_biopsies_raw_depth_paired.png){#fig-repeated-depth fig-alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado."}
+![Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas.](../figures/04_control_calidad_preprocesamiento/Fig-4.1-profundidad-biopsias-repetidas.png){#fig-repeated-depth fig-alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado."}
 
 Los valores técnicos individuales y el resumen se ofrecen en la
-[tabla por biopsia](../tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv)
-y en el [resumen descriptivo](../tables/01_preprocessing/repeated_biopsies_raw_depth_summary.tsv).
+[tabla por biopsia](../tables/04_control_calidad_preprocesamiento/Table-4.3-profundidad-biopsias-repetidas.tsv)
+y en el [resumen descriptivo](../tables/04_control_calidad_preprocesamiento/Table-4.3-resumen-profundidad-biopsias-repetidas.tsv).
 
 ::: {.callout-caution}
 ## Criterios de exclusión

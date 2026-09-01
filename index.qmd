@@ -1,6 +1,4 @@
----
-title: "Resumen técnico"
----
+# Resumen técnico {.unnumbered}
 
 ::: {.callout-important}
 ## Estado del informe

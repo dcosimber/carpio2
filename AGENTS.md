@@ -14,8 +14,8 @@ decontaminación ni análisis clínicos.
   informe Quarto.
 - Publicar en GitHub Pages únicamente tras una instrucción explícita de
   publicar o hacer `push`.
-- El workflow de GitHub Actions solo renderiza los activos ya presentes en el
-  repositorio; nunca accede al proyecto analítico.
+- El workflow de GitHub Actions despliega el sitio estático validado presente
+  en el repositorio; nunca accede al proyecto analítico ni vuelve a renderizar.
 
 ## Política de datos públicos
 
@@ -37,24 +37,60 @@ decontaminación ni análisis clínicos.
 ## Estructura y renderizado
 
 - Las fuentes Quarto viven en `index.qmd`, `chapters/` y `appendices/`.
-- Los activos públicos viven en `figures/`, `tables/` y `multiqc/`.
+- Los datos públicos descargables expresamente autorizados viven en `data/`.
+- Los activos del informe viven en `figures/`, `tables/` y `multiqc/`.
 - `docs/` es la salida estática para GitHub Pages y futura migración a
   Cloudflare Pages.
 - `config/publication_assets.json` es la lista permitida de activos externos.
 - Los logs y manifiestos viven en `manifests/`.
 
+## Convención permanente de tablas, figuras y datos
+
+- `index.qmd` es una portada/resumen sin número. Por tanto,
+  `chapters/01_*` es el capítulo 1, `chapters/02_*` el capítulo 2, etc.
+- Las tablas y figuras citables se numeran automáticamente con Quarto por
+  capítulo (`Tabla N.M` y `Figura N.M`). Sus etiquetas son semánticas
+  (`#tbl-*`, `#fig-*`), nunca codifican números que Quarto ya gestiona.
+- Todo activo externo asociado a una tabla o figura se guarda en una carpeta
+  de capítulo: `tables/NN_nombre_capitulo/` o
+  `figures/NN_nombre_capitulo/`. Sus nombres siguen
+  `Table-N.M-identificador.ext` y `Fig-N.M-identificador.ext`, con rutas y
+  slugs ASCII. Las versiones PNG/PDF de una misma figura comparten prefijo.
+- Los ficheros de detalle que sustentan la misma tabla pueden compartir `N.M`
+  y se distinguen por el identificador; no se duplican tablas escritas de forma
+  nativa en los capítulos solo para crear un TSV.
+- Los libros y TSV completos de metadatos son datos descargables, no tablas
+  científicas adicionales. Se conservan con su nombre canónico autorizado en
+  `data/metadata/` (`CARPIO_*_metadata.*`) y no consumen un número de tabla.
+- No usar directorios genéricos o heredados de etapas analíticas como `00_*` o
+  `01_preprocessing` en la capa pública. La validación de activos aplica esta
+  convención y bloquea rutas no conformes.
+- La política legible para colaboradores se conserva en
+  `ASSET_CONVENTIONS.md`; `config/publication_assets.json` y su manifiesto
+  contienen la trazabilidad por activo.
+
 ## Comandos manuales
 
 ```bash
 # Exportar activos curados y renderizar: solo bajo petición explícita.
+# Reutiliza los MultiQC ya validados.
 CARPIO_ANALYSIS_DIR=/ruta/a/CARPIO2 scripts/build_report.sh --export
 
-# Renderizar solo los activos ya exportados.
+# Regenerar MultiQC solo cuando hayan cambiado sus FastQC de origen.
+CARPIO_ANALYSIS_DIR=/ruta/a/CARPIO2 scripts/build_report.sh --export --rebuild-multiqc
+
+# Renderizar solo los activos ya exportados; este es el render completo previo
+# a un commit o despliegue.
 scripts/build_report.sh
+
+# Revisión rápida de un único capítulo durante la edición local. No sustituye
+# al render completo previo a publicar.
+scripts/build_report.sh --chapter chapters/04_control_calidad_preprocesamiento.qmd
 
 # Exportar sin renderizar.
 CARPIO_ANALYSIS_DIR=/ruta/a/CARPIO2 scripts/build_report.sh --export-only
 ```
 
-Antes de publicar, revisar el sitio local y el manifiesto. No crear remotos ni
-hacer `push` sin una indicación inequívoca de la persona responsable.
+Antes de publicar, revisar el sitio local, el manifiesto y el render completo.
+No crear remotos ni hacer `push` sin una indicación inequívoca de la persona
+responsable.
