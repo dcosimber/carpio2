@@ -31,8 +31,8 @@ from typing import Iterable
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "config" / "publication_assets.json"
 MANIFEST_PATH = REPO_ROOT / "manifests" / "public_asset_manifest.tsv"
-ALLOWED_PUBLIC_ROOTS = ("data", "tables", "figures", "multiqc")
-METADATA_PUBLIC_ROOT = "data/metadata"
+ALLOWED_PUBLIC_ROOTS = ("tables", "figures", "multiqc")
+METADATA_PUBLIC_ROOT = "tables/02_diseno_experimental"
 INCLUDE_ROOT = REPO_ROOT / "chapters" / "includes"
 ABSOLUTE_PATH_PATTERN = re.compile(r"/(?:mnt|home|tmp|var/tmp|Users|private)(?:/|\Z)")
 HTML_ID_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
@@ -42,27 +42,27 @@ HTML_ID_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
 AUTHORIZED_METADATA_ASSETS = {
     "technical_metadata_tsv": {
         "source": "metadata/CARPIO_technical_metadata.tsv",
-        "destination": "data/metadata/CARPIO_technical_metadata.tsv",
+        "destination": "tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.tsv",
         "format": "tsv",
     },
     "technical_metadata_xlsx": {
         "source": "metadata/CARPIO_technical_metadata.xlsx",
-        "destination": "data/metadata/CARPIO_technical_metadata.xlsx",
+        "destination": "tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.xlsx",
         "format": "xlsx",
     },
     "clinical_metadata_tsv": {
         "source": "metadata/CARPIO_clinical_metadata.tsv",
-        "destination": "data/metadata/CARPIO_clinical_metadata.tsv",
+        "destination": "tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.tsv",
         "format": "tsv",
     },
     "clinical_metadata_xlsx": {
         "source": "metadata/CARPIO_clinical_metadata.xlsx",
-        "destination": "data/metadata/CARPIO_clinical_metadata.xlsx",
+        "destination": "tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.xlsx",
         "format": "xlsx",
     },
     "analysis_metadata_tsv": {
         "source": "metadata/CARPIO_analysis_metadata.tsv",
-        "destination": "data/metadata/CARPIO_analysis_metadata.tsv",
+        "destination": "tables/02_diseno_experimental/Table-2.7-metadatos-analisis.tsv",
         "format": "tsv",
     },
 }
@@ -318,7 +318,7 @@ def render_authorized_metadata_table_html(
         f"data-table-label=\"{html.escape(table_label)}\" role=\"region\" "
         f"aria-label=\"{html.escape(table_label)}\" tabindex=\"0\">\n"
         f"<table id=\"{html.escape(table_id)}\" class=\"sample-inventory metadata-table\">\n"
-        f"<caption>{html.escape(caption)}</caption>\n"
+        f'<caption class="visually-hidden">{html.escape(caption)}</caption>\n'
         f"<thead><tr>{header_html}</tr></thead>\n"
         f"<tbody>\n{body_html}\n</tbody>\n"
         "</table>\n"
@@ -335,7 +335,7 @@ def build_authorized_metadata_asset(
     destination = resolve_destination(asset["destination"])
     expected = AUTHORIZED_METADATA_ASSETS[asset["id"]]
     if destination.parent != (REPO_ROOT / METADATA_PUBLIC_ROOT):
-        raise ExportError("El metadato autorizado no se dirige a data/metadata/.")
+        raise ExportError("El metadato autorizado no se dirige a tables/02_diseno_experimental/.")
 
     headers: list[str] = []
     values: list[list[str]] = []

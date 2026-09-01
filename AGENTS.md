@@ -59,9 +59,10 @@ decontaminación ni análisis clínicos.
 - Los ficheros de detalle que sustentan la misma tabla pueden compartir `N.M`
   y se distinguen por el identificador; no se duplican tablas escritas de forma
   nativa en los capítulos solo para crear un TSV.
-- Los libros y TSV completos de metadatos son datos descargables, no tablas
-  científicas adicionales. Se conservan con su nombre canónico autorizado en
-  `data/metadata/` (`CARPIO_*_metadata.*`) y no consumen un número de tabla.
+- Las tablas navegables de metadatos se citan como Tablas 2.5–2.7. Sus TSV y
+  libros Excel asociados se conservan como formatos alternativos con el mismo
+  prefijo `Table-2.N-` directamente en `tables/02_diseno_experimental/`; no
+  consumen un número de tabla adicional.
 - No usar directorios genéricos o heredados de etapas analíticas como `00_*` o
   `01_preprocessing` en la capa pública. La validación de activos aplica esta
   convención y bloquea rutas no conformes.
@@ -94,3 +95,11 @@ CARPIO_ANALYSIS_DIR=/ruta/a/CARPIO2 scripts/build_report.sh --export-only
 Antes de publicar, revisar el sitio local, el manifiesto y el render completo.
 No crear remotos ni hacer `push` sin una indicación inequívoca de la persona
 responsable.
+
+## Estilo editorial
+
+El libro se redacta en español con registro de artículo científico-técnico y
+formulaciones impersonales. Los tiempos verbales se eligen según el contenido:
+pasado para procedimientos y resultados ya realizados; presente para hechos,
+definiciones y criterios metodológicos vigentes; y futuro únicamente para
+análisis, decisiones o etapas programadas que todavía no se han ejecutado.

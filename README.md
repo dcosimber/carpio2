@@ -66,9 +66,7 @@ renderizarlo ni sincroniza activos desde el proyecto analítico.
 ## Convención de activos
 
 Las tablas y figuras se organizan por capítulo y se nombran como
-`Table-N.M-identificador.ext` y `Fig-N.M-identificador.ext`. Los metadatos
-completos son datos descargables y conservan sus nombres canónicos en
-`data/metadata/`. La política y sus excepciones se describen en
+`Table-N.M-identificador.ext` y `Fig-N.M-identificador.ext`. Las tablas navegables de metadatos se corresponden con las Tablas 2.5–2.7 y sus formatos descargables comparten el prefijo `Table-2.N-` en `tables/02_diseno_experimental/`. La política y sus excepciones se describen en
 [ASSET_CONVENTIONS.md](ASSET_CONVENTIONS.md) y se comprueban automáticamente
 antes de cada render y despliegue.
 
@@ -81,7 +79,6 @@ antes de cada render y despliegue.
 ├── appendices/         reproducibilidad y disponibilidad de datos
 ├── chapters/           capítulos y fragmentos HTML curados del libro
 ├── config/             lista permitida de activos y reglas de exportación
-├── data/               metadatos públicos descargables autorizados
 ├── figures/            figuras curadas, agrupadas por capítulo
 ├── manifests/          trazabilidad de las exportaciones y builds
 ├── multiqc/            informes MultiQC saneados, agrupados por capítulo
@@ -91,9 +88,7 @@ antes de cada render y despliegue.
 ```
 
 La vista se ha generado con `find` porque `tree` no está disponible en el
-entorno de trabajo. `data/` contiene únicamente los cinco metadatos públicos
-explícitamente autorizados; los FASTQ y otros datos no públicos permanecen en
-el proyecto analítico.
+entorno de trabajo. `tables/02_diseno_experimental/` contiene las Tablas 2.5–2.7 y sus cinco archivos descargables de metadatos explícitamente autorizados; los FASTQ y otros datos no públicos permanecen en el proyecto analítico.
 
 ## Licencias
 

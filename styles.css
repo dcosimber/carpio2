@@ -188,6 +188,13 @@ code {
   white-space: nowrap;
 }
 
+.metadata-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.8rem 0 1.5rem;
+}
+
 .sample-pagination {
   align-items: center;
   display: flex;

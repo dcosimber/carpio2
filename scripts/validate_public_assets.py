@@ -15,6 +15,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "config" / "publication_assets.json"
 PUBLIC_ASSET_DIRS = ("data", "figures", "tables", "multiqc")
+METADATA_PUBLIC_ROOT = ("tables", "02_diseno_experimental")
 INCLUDE_ROOT = REPO_ROOT / "chapters" / "includes"
 SOURCE_TEXT_DIRS = (REPO_ROOT / "chapters", REPO_ROOT / "appendices")
 PATH_PATTERN = re.compile(r"/(?:mnt|home|tmp|var/tmp|Users|private)(?:/|\Z)")
@@ -37,27 +38,27 @@ MULTIQC_FILENAME_PATTERN = re.compile(
 AUTHORIZED_METADATA_ASSETS = {
     "technical_metadata_tsv": {
         "source": "metadata/CARPIO_technical_metadata.tsv",
-        "destination": "data/metadata/CARPIO_technical_metadata.tsv",
+        "destination": "tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.tsv",
         "format": "tsv",
     },
     "technical_metadata_xlsx": {
         "source": "metadata/CARPIO_technical_metadata.xlsx",
-        "destination": "data/metadata/CARPIO_technical_metadata.xlsx",
+        "destination": "tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.xlsx",
         "format": "xlsx",
     },
     "clinical_metadata_tsv": {
         "source": "metadata/CARPIO_clinical_metadata.tsv",
-        "destination": "data/metadata/CARPIO_clinical_metadata.tsv",
+        "destination": "tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.tsv",
         "format": "tsv",
     },
     "clinical_metadata_xlsx": {
         "source": "metadata/CARPIO_clinical_metadata.xlsx",
-        "destination": "data/metadata/CARPIO_clinical_metadata.xlsx",
+        "destination": "tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.xlsx",
         "format": "xlsx",
     },
     "analysis_metadata_tsv": {
         "source": "metadata/CARPIO_analysis_metadata.tsv",
-        "destination": "data/metadata/CARPIO_analysis_metadata.tsv",
+        "destination": "tables/02_diseno_experimental/Table-2.7-metadatos-analisis.tsv",
         "format": "tsv",
     },
 }
@@ -110,8 +111,8 @@ def configured_metadata_assets(config: dict) -> dict[str, dict]:
         destination = str(asset["destination"])
         if destination in by_destination:
             raise ValidationError("Hay destinos de metadatos duplicados.")
-        if not destination.startswith("data/metadata/"):
-            raise ValidationError("Un metadato autorizado no se dirige a data/metadata/.")
+        if not destination.startswith("/".join(METADATA_PUBLIC_ROOT) + "/"):
+            raise ValidationError("Un metadato autorizado no se dirige a tables/02_diseno_experimental/.")
         if not destination.lower().endswith("." + expected["format"]):
             raise ValidationError("La extensión de un metadato no coincide con su formato.")
 
@@ -163,9 +164,9 @@ def check_report_asset_path(
         return []
     root = parts[0]
     if root == "data":
-        if metadata_asset is None:
-            return [f"{canonical_relative}: dato público fuera de la lista blanca"]
-        if len(parts) != 3 or parts[:2] != ("data", "metadata"):
+        return [f"{canonical_relative}: el directorio data/ no está permitido"]
+    if metadata_asset is not None:
+        if len(parts) != 3 or parts[:2] != METADATA_PUBLIC_ROOT:
             return [f"{canonical_relative}: ruta de metadatos no conforme"]
         return []
     if root not in {"tables", "figures", "multiqc"}:
@@ -293,9 +294,6 @@ def main() -> int:
             )
             metadata_asset = metadata_by_destination.get(canonical_relative)
             errors.extend(check_report_asset_path(canonical_relative, metadata_asset))
-            in_metadata_root = canonical_relative.startswith("data/metadata/")
-            if in_metadata_root and metadata_asset is None:
-                errors.append(f"{relative}: activo de metadatos fuera de la lista blanca")
             extension_is_allowed_metadata = (
                 metadata_asset is not None
                 and metadata_asset["format"] == "xlsx"

@@ -43,22 +43,24 @@ sustenta; se diferencia mediante un identificador final, por ejemplo
 archivo `.qmd` no se duplican como archivos de datos: la fuente Quarto es su
 única fuente canónica.
 
-## Datos descargables
+## Tablas de metadatos y archivos descargables
 
-Los TSV y libros Excel completos de metadatos no son tablas científicas
-numeradas. Se guardan en `data/metadata/` con sus nombres canónicos autorizados:
+Las tablas navegables de metadatos se integran en el capítulo 2 como Tablas
+2.5–2.7. Los activos descargables asociados comparten el prefijo de su tabla
+formal y se almacenan directamente en `tables/02_diseno_experimental/`:
 
 ```text
-CARPIO_technical_metadata.tsv
-CARPIO_technical_metadata.xlsx
-CARPIO_clinical_metadata.tsv
-CARPIO_clinical_metadata.xlsx
-CARPIO_analysis_metadata.tsv
+Table-2.5-metadatos-tecnicos.tsv
+Table-2.5-metadatos-tecnicos.xlsx
+Table-2.6-metadatos-clinicos.tsv
+Table-2.6-metadatos-clinicos.xlsx
+Table-2.7-metadatos-analisis.tsv
 ```
 
-Esta excepción evita renombrar o duplicar datos de descarga para forzar una
-numeración de informe. La lista blanca de publicación sigue siendo restrictiva:
-solo esos cinco ficheros pueden existir bajo `data/metadata/`.
+Los ficheros TSV y XLSX de una misma tabla representan formatos alternativos
+del mismo activo y no consumen numeración adicional. La lista blanca de
+publicación sigue siendo restrictiva y solo autoriza estos cinco ficheros de
+metadatos.
 
 ## Control y actualización
 

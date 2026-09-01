@@ -405,7 +405,7 @@ div.csl-indent {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#región-amplificada-y-configuración-de-secuenciación" id="toc-región-amplificada-y-configuración-de-secuenciación" class="nav-link active" data-scroll-target="#región-amplificada-y-configuración-de-secuenciación"><span class="header-section-number">2.1</span> Región amplificada y configuración de secuenciación</a></li>
+  <li><a href="#preparación-de-bibliotecas-de-arnr-16s-y-secuenciación" id="toc-preparación-de-bibliotecas-de-arnr-16s-y-secuenciación" class="nav-link active" data-scroll-target="#preparación-de-bibliotecas-de-arnr-16s-y-secuenciación"><span class="header-section-number">2.1</span> Preparación de bibliotecas de ARNr 16S y secuenciación</a></li>
   <li><a href="#conjunto-de-datos" id="toc-conjunto-de-datos" class="nav-link" data-scroll-target="#conjunto-de-datos"><span class="header-section-number">2.2</span> Conjunto de datos</a></li>
   <li><a href="#controles-experimentales" id="toc-controles-experimentales" class="nav-link" data-scroll-target="#controles-experimentales"><span class="header-section-number">2.3</span> Controles experimentales</a>
   <ul class="collapse">
@@ -444,14 +444,14 @@ div.csl-indent {
 </header>
 
 
-<section id="región-amplificada-y-configuración-de-secuenciación" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="región-amplificada-y-configuración-de-secuenciación"><span class="header-section-number">2.1</span> Región amplificada y configuración de secuenciación</h2>
-<p>El ensayo actual se centra exclusivamente en la región V3–V4 del gen bacteriano 16S rRNA. En el ensayo piloto se evaluó adicionalmente la región hipervariable V4; esta no forma parte del presente análisis. La combinación del tamaño esperado del amplicón y las lecturas <em>paired-end</em> proporciona solapamiento suficiente para fusionar R1 y R2; los parámetros finales de calidad y fusión se validan con los perfiles reales de las lecturas.</p>
+<section id="preparación-de-bibliotecas-de-arnr-16s-y-secuenciación" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="preparación-de-bibliotecas-de-arnr-16s-y-secuenciación"><span class="header-section-number">2.1</span> Preparación de bibliotecas de ARNr 16S y secuenciación</h2>
+<p>El ADN microbiano total se extrajo con el kit PowerFecal Pro DNA Kit (QIAGEN). La región V3–V4 del gen del ARNr 16S bacteriano se amplificó mediante PCR y se secuenció mediante lecturas pareadas.</p>
 <p>La configuración de la región amplificada y de la secuenciación se resume en la <a href="#tbl-sequencing-configuration" class="quarto-xref">Tabla&nbsp;<span>2.1</span></a>.</p>
 <div id="tbl-sequencing-configuration" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sequencing-configuration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;2.1: Configuración de la amplificación y secuenciación de la región 16S V3–V4 utilizadas en el estudio.
+Tabla&nbsp;2.1: Configuración de la extracción, amplificación y secuenciación de la región 16S V3–V4 utilizada en el estudio.
 </figcaption>
 <div aria-describedby="tbl-sequencing-configuration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -467,38 +467,42 @@ Tabla&nbsp;2.1: Configuración de la amplificación y secuenciación de la regi�
 </thead>
 <tbody>
 <tr class="odd">
-<td>Gen diana</td>
-<td>Gen bacteriano 16S rRNA, región V3–V4</td>
+<td>Extracción de ADN</td>
+<td>PowerFecal Pro DNA Kit (QIAGEN)</td>
 </tr>
 <tr class="even">
-<td>Cebador directo</td>
-<td>341F (<code>CCTACGGGNGGCWGCAG</code>)</td>
+<td>Gen diana</td>
+<td>Gen del ARNr 16S bacteriano, región V3–V4</td>
 </tr>
 <tr class="odd">
-<td>Cebador inverso</td>
-<td>805R (<code>GACTACHVGGGTATCTAATCC</code>)</td>
+<td>Cebador directo</td>
+<td>341F (<code>CCTACGGGNGGCWGCAG</code>) <span class="citation" data-cites="Klindworth2013">(<a href="11_referencias.html#ref-Klindworth2013" role="doc-biblioref">Klindworth et&nbsp;al. 2013</a>)</span></td>
 </tr>
 <tr class="even">
+<td>Cebador inverso</td>
+<td>805R (<code>GACTACHVGGGTATCTAATCC</code>) <span class="citation" data-cites="Klindworth2013">(<a href="11_referencias.html#ref-Klindworth2013" role="doc-biblioref">Klindworth et&nbsp;al. 2013</a>)</span></td>
+</tr>
+<tr class="odd">
 <td>Tamaño esperado del amplicón</td>
 <td>Aproximadamente 464 pb</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Adaptadores</td>
 <td>Overhangs compatibles con indexación Illumina</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Preparación de librerías</td>
 <td>Índices Nextera XT, con protocolo modificado</td>
 </tr>
-<tr class="odd">
-<td>Plataforma descrita</td>
+<tr class="even">
+<td>Plataforma de secuenciación</td>
 <td>Illumina NextSeq</td>
 </tr>
-<tr class="even">
-<td>Configuración</td>
+<tr class="odd">
+<td>Configuración de lectura</td>
 <td>Paired-end 2 × 300 pb, 600 ciclos</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>PCR</td>
 <td>35 ciclos; anillamiento a 53 °C</td>
 </tr>
@@ -510,8 +514,8 @@ Tabla&nbsp;2.1: Configuración de la amplificación y secuenciación de la regi�
 </section>
 <section id="conjunto-de-datos" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="conjunto-de-datos"><span class="header-section-number">2.2</span> Conjunto de datos</h2>
-<p>El conjunto de datos reúne <strong>198 bibliotecas paired-end</strong> (equivalentes a 198 pares R1/R2) y <strong>396 archivos FASTQ</strong> (<a href="#tbl-library-composition" class="quarto-xref">Tabla&nbsp;<span>2.2</span></a>). Cada biblioteca constituye una observación técnica; R1 y R2 son las dos lecturas complementarias del mismo amplicón y no dos muestras independientes.</p>
-<p>Se incluyen 138 registros de biopsia: 130 bibliotecas del ensayo ampliado y ocho bibliotecas del piloto correspondientes a biopsias resecuenciadas. Por tanto, la cohorte clínica principal contiene 130 códigos biológicos únicos; las ocho bibliotecas del piloto se conservarán para evaluar la reproducibilidad entre ensayos y no se contabilizarán como observaciones biológicas adicionales.</p>
+<p>El conjunto de datos comprende <strong>198 bibliotecas de lecturas pareadas</strong> (198 pares R1/R2) y <strong>396 archivos FASTQ</strong> (<a href="#tbl-library-composition" class="quarto-xref">Tabla&nbsp;<span>2.2</span></a>). Cada biblioteca representa un registro técnico; R1 y R2 son lecturas complementarias del mismo amplicón y no muestras independientes.</p>
+<p>Se incluyeron 138 registros de biopsia: 130 bibliotecas del ensayo ampliado y ocho bibliotecas del piloto correspondientes a biopsias resecuenciadas. La cohorte clínica principal quedó constituida por 130 muestras de biopsia únicas; las ocho bibliotecas del piloto se conservaron para evaluar la reproducibilidad entre ensayos.</p>
 <div id="tbl-library-composition" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-library-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -520,12 +524,12 @@ Tabla&nbsp;2.2: Descripción del conjunto de datos analizado.
 <div aria-describedby="tbl-library-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -533,7 +537,7 @@ Tabla&nbsp;2.2: Descripción del conjunto de datos analizado.
 <th>Tipo de muestra</th>
 <th>Código de muestra</th>
 <th>Subtipo</th>
-<th style="text-align: right;">Bibliotecas paired-end</th>
+<th style="text-align: right;">Bibliotecas de lecturas pareadas</th>
 <th style="text-align: right;">FASTQ</th>
 </tr>
 </thead>
@@ -563,16 +567,16 @@ Tabla&nbsp;2.2: Descripción del conjunto de datos analizado.
 <td style="text-align: right;">16</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
+<td>Piloto</td>
+<td>Control positivo</td>
 <td><code>mock_pcr_1</code>–<code>mock_pcr_6</code></td>
 <td>Mock de PCR</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">12</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
+<td>Piloto</td>
+<td>Control positivo</td>
 <td><code>ecoli_dil1_1</code>–<code>ecoli_dil6_4</code></td>
 <td>Diluciones de <em>Escherichia coli</em></td>
 <td style="text-align: right;">24</td>
@@ -587,16 +591,16 @@ Tabla&nbsp;2.2: Descripción del conjunto de datos analizado.
 <td style="text-align: right;">4</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
+<td>Ampliado</td>
+<td>Control negativo</td>
 <td><code>cneg_extr_1</code>–<code>cneg_extr_10</code></td>
 <td>Extracción</td>
 <td style="text-align: right;">10</td>
 <td style="text-align: right;">20</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
+<td>Ampliado</td>
+<td>Control negativo</td>
 <td><code>cneg_pcr_1</code>–<code>cneg_pcr_10</code></td>
 <td>PCR</td>
 <td style="text-align: right;">10</td>
@@ -622,14 +626,14 @@ Tabla&nbsp;2.2: Descripción del conjunto de datos analizado.
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="controles-positivos"><span class="header-section-number">2.3.1</span> Controles positivos</h3>
 <p>Los 38 controles positivos proceden del ensayo piloto y cubren etapas complementarias del proceso analítico.</p>
 <ul>
-<li><strong>Mock de PCR (<code>mock_pcr_*</code>)</strong>. Corresponde al material genómico comercial <a href="https://www.atcc.org/products/msa-1003">ATCC MSA-1003</a>, una mezcla escalonada de ADN genómico de 20 cepas (<a href="#tbl-mock-pcr-composition" class="quarto-xref">Tabla&nbsp;<span>2.3</span></a>). Controla las etapas posteriores a la extracción: amplificación, preparación de librerías, secuenciación y asignación taxonómica <span class="citation" data-cites="ATCC_MSA1003">(<a href="11_referencias.html#ref-ATCC_MSA1003" role="doc-biblioref">American Type Culture Collection 2026a</a>)</span>.</li>
-<li><strong>Mock de extracción (<code>mock_extr_*</code>)</strong>. Corresponde a <a href="https://www.atcc.org/products/msa-2006">ATCC MSA-2006</a>, una mezcla liofilizada de células completas de 12 especies de microbiota intestinal (<a href="#tbl-mock-extraction-composition" class="quarto-xref">Tabla&nbsp;<span>2.4</span></a>). Al incorporarse antes de la extracción, permite evaluar el proceso completo, incluida la recuperación del ADN <span class="citation" data-cites="ATCC_MSA2006">(<a href="11_referencias.html#ref-ATCC_MSA2006" role="doc-biblioref">American Type Culture Collection 2026b</a>)</span>.</li>
-<li><strong>Diluciones de <em>Escherichia coli</em> (<code>ecoli_dilN_R</code>)</strong>. Son 24 bibliotecas distribuidas en seis diluciones decimales seriadas (10⁻¹–10⁻⁶; cuatro réplicas por dilución) y se utilizarán para examinar sensibilidad y límite de detección.</li>
+<li><strong>Mock de PCR (<code>mock_pcr_*</code>)</strong>. Corresponde al material genómico comercial <a href="https://www.atcc.org/products/msa-1003">ATCC MSA-1003</a>, una mezcla escalonada de ADN genómico de 20 cepas (<a href="#tbl-mock-pcr-composition" class="quarto-xref">Tabla&nbsp;<span>2.3</span></a>). Controla las etapas posteriores a la extracción: amplificación, preparación de librerías, secuenciación y asignación taxonómica.</li>
+<li><strong>Mock de extracción (<code>mock_extr_*</code>)</strong>. Corresponde a <a href="https://www.atcc.org/products/msa-2006">ATCC MSA-2006</a>, una mezcla liofilizada de células completas de 12 especies de microbiota intestinal (<a href="#tbl-mock-extraction-composition" class="quarto-xref">Tabla&nbsp;<span>2.4</span></a>). Al incorporarse antes de la extracción, permite evaluar el proceso completo, incluida la recuperación del ADN.</li>
+<li><strong>Diluciones de <em>Escherichia coli</em> (<code>ecoli_dilN_R</code>)</strong>. Son 24 bibliotecas distribuidas en seis diluciones decimales seriadas (10⁻¹–10⁻⁶; cuatro réplicas por dilución) y se incluyeron para evaluar la sensibilidad analítica y el límite de detección.</li>
 </ul>
 <div id="tbl-mock-pcr-composition" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mock-pcr-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;2.3: Composición teórica del control de PCR ATCC MSA-1003 (mezcla escalonada de ADN genómico de 20 cepas) <span class="citation" data-cites="ATCC_MSA1003">(<a href="11_referencias.html#ref-ATCC_MSA1003" role="doc-biblioref">American Type Culture Collection 2026a</a>)</span>.
+Tabla&nbsp;2.3: Composición teórica del control de PCR ATCC MSA-1003 (mezcla escalonada de ADN genómico de 20 cepas).
 </figcaption>
 <div aria-describedby="tbl-mock-pcr-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -749,7 +753,7 @@ Tabla&nbsp;2.3: Composición teórica del control de PCR ATCC MSA-1003 (mezcla e
 <div id="tbl-mock-extraction-composition" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mock-extraction-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;2.4: Composición teórica del control de extracción ATCC MSA-2006 (mezcla de células completas de 12 especies) <span class="citation" data-cites="ATCC_MSA2006">(<a href="11_referencias.html#ref-ATCC_MSA2006" role="doc-biblioref">American Type Culture Collection 2026b</a>)</span>.
+Tabla&nbsp;2.4: Composición teórica del control de extracción ATCC MSA-2006 (mezcla de células completas de 12 especies).
 </figcaption>
 <div aria-describedby="tbl-mock-extraction-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -829,19 +833,41 @@ Tabla&nbsp;2.4: Composición teórica del control de extracción ATCC MSA-2006 (
 </section>
 <section id="controles-negativos" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="controles-negativos"><span class="header-section-number">2.3.2</span> Controles negativos</h3>
-<p>El ensayo ampliado incluye dos blancos de lote (<code>cneg_batch_*</code>), diez blancos de extracción con agua libre de nucleasas (<code>cneg_extr_*</code>) y diez blancos de PCR sin paso de extracción (<code>cneg_pcr_*</code>). Se conservarán fuera de las comparaciones biológicas entre biopsias y se evaluarán junto con ellas para identificar ASV candidatas a contaminación.</p>
-<p>El análisis principal de contaminación utilizará la prevalencia de cada ASV en los controles negativos; cuando se disponga de medidas de concentración adecuadas, se añadirá un análisis de sensibilidad basado en frecuencia. Las ASV candidatas se revisarán y filtrarán mediante criterios documentados, en lugar de restar de forma indiscriminada taxones presentes en los blancos, siguiendo el marco implementado por <code>decontam</code> <span class="citation" data-cites="Davis2018">(<a href="11_referencias.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>)</span>.</p>
+<p>El ensayo ampliado incluye 22 controles negativos, que cubren las etapas de extracción y amplificación:</p>
+<ul>
+<li><strong>Blancos de lote (<code>cneg_batch_*</code>)</strong>. Corresponden a dos controles negativos de lote asociados a fechas de extracción distintas. Permiten detectar señal de fondo vinculada a reactivos, ambiente de trabajo, analista o procesado por lote.</li>
+<li><strong>Blancos de extracción (<code>cneg_extr_*</code>)</strong>. Corresponden a diez réplicas de agua libre de nucleasas sometidas al procedimiento de extracción. Permiten evaluar la contribución de reactivos de extracción y posibles contaminaciones introducidas antes de la PCR.</li>
+<li><strong>Blancos de PCR (<code>cneg_pcr_*</code>)</strong>. Correspondieron a diez réplicas sin ADN molde ni fase previa de extracción. Permiten evaluar la señal introducida durante la preparación de la PCR, la amplificación y la preparación de bibliotecas.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Uso de los controles negativos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Uso de los controles negativos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los controles negativos no se incorporarán a las comparaciones biológicas entre biopsias. Se emplearán para identificar ASV candidatas a contaminación en la etapa específica de control de contaminación.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="metadatos" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="metadatos"><span class="header-section-number">2.4</span> Metadatos</h2>
 <section id="metadatos-técnicos" class="level3" data-number="2.4.1">
 <h3 data-number="2.4.1" class="anchored" data-anchor-id="metadatos-técnicos"><span class="header-section-number">2.4.1</span> Metadatos técnicos</h3>
-<p>El libro técnico fuente se conserva como <code>CARPIO_technical_metadata.xlsx</code>. La hoja <code>Run1</code> aporta la información de laboratorio del ensayo piloto y la hoja <code>Run 3</code> la del ensayo ampliado. Para garantizar una estructura homogénea, se generó <code>CARPIO_technical_metadata.tsv</code>, con una fila por cada una de las 198 bibliotecas V3–V4 incluidas en el análisis. Sus nombres de variables están normalizados en minúsculas y con guiones bajos; las fechas se expresan en formato ISO (<code>YYYY-MM-DD</code>).</p>
-<p>La tabla navegable contiene los 198 registros técnicos. Puede descargarse como <a href="../data/metadata/CARPIO_technical_metadata.tsv">TSV normalizado</a> o como <a href="../data/metadata/CARPIO_technical_metadata.xlsx">libro Excel técnico fuente</a>.</p>
+<p>Los metadatos técnicos de la secuenciación proceden del libro Excel <code>CARPIO_technical_metadata.xlsx</code>. La hoja <code>Run1</code> contiene la información de laboratorio del ensayo piloto y la hoja <code>Run 3</code>, la del ensayo ampliado. Para consolidar la información de ambos ensayos, se generó una tabla normalizada con una fila por cada una de las 198 bibliotecas V3–V4 incluidas en el análisis (<a href="#tbl-technical-metadata" class="quarto-xref">Tabla&nbsp;<span>2.5</span></a>). Los nombres de variables se normalizaron en minúsculas y con guiones bajos, y las fechas se expresaron en formato ISO (<code>YYYY-MM-DD</code>).</p>
+<div id="tbl-technical-metadata" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-technical-metadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2.5: Metadatos técnicos normalizados de las 198 bibliotecas incluidas en el análisis.
+</figcaption>
+<div aria-describedby="tbl-technical-metadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div id="technical-metadata-table-region" class="sample-table-scroll metadata-table-scroll" data-table-pagination="" data-page-size="10" data-table-label="tabla de metadatos técnicos" role="region" aria-label="tabla de metadatos técnicos" tabindex="0">
 <table id="technical-metadata-table" class="sample-inventory metadata-table">
-<caption>
+<caption class="visually-hidden">
 Metadatos técnicos normalizados de las 198 bibliotecas incluidas en el análisis.
 </caption>
 <thead>
@@ -16173,28 +16199,40 @@ data/raw_data/cneg_pcr_9_R2.fastq.gz
 </tbody>
 </table>
 </div>
+</div>
+</figure>
+</div>
+<div class="metadata-downloads">
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.tsv" role="button" download="" aria-label="Descargar Tabla 2.5 en formato TSV">Descargar tabla TSV normalizada</a>
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.xlsx" role="button" download="" aria-label="Descargar Tabla 2.5 en formato Excel">Descargar tabla Excel original</a>
+</div>
 </section>
 <section id="metadatos-clínicos" class="level3" data-number="2.4.2">
 <h3 data-number="2.4.2" class="anchored" data-anchor-id="metadatos-clínicos"><span class="header-section-number">2.4.2</span> Metadatos clínicos</h3>
-<p>El libro clínico fuente se conserva como <code>CARPIO_clinical_metadata.xlsx</code>. Su primera hoja, <code>Database_Template</code>, contiene los registros clínicos; se excluyeron únicamente las filas de plantilla vacías, por lo que el TSV normalizado contiene 184 registros y 40 variables. El identificador se normalizó como <code>sample_id</code>, conservando el código directo de muestra.</p>
-<p>Las variables abarcan características demográficas y cronológicas, fenotipo y actividad de la enfermedad, antecedentes y exposiciones, tratamientos, actividad histológica rectal y cuestionario dietético. Las fechas se expresan en formato ISO y las categorías textuales se han armonizado en minúsculas para facilitar la integración con la tabla de análisis.</p>
+<p>Los metadatos clínicos proceden del libro Excel <code>CARPIO_clinical_metadata.xlsx</code>. Su primera hoja, <code>Database_Template</code>, contiene los registros clínicos; se excluyeron únicamente las filas de plantilla vacías, por lo que el TSV normalizado reúne 184 registros y 40 variables. El identificador se normalizó como <code>sample_id</code>, conservando el código directo de muestra. La tabla clínica normalizada se presenta en <a href="#tbl-clinical-metadata" class="quarto-xref">Tabla&nbsp;<span>2.6</span></a>.</p>
+<p>Las variables abarcan características demográficas y cronológicas, fenotipo y actividad de la enfermedad, antecedentes y exposiciones, tratamientos, actividad histológica rectal y cuestionario dietético. Las fechas se expresan en formato ISO y las categorías textuales se armonizaron en minúsculas para facilitar la integración con la tabla de análisis.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Estructura de los metadatos clínicos
+<span class="screen-reader-only">Nota</span>Variables clínicas
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>La tabla mantiene una fila por registro clínico. Los bloques principales incluyen: cronología y datos demográficos (<code>birth_date</code>, <code>inclusion_date</code>, <code>age</code>, <code>sex</code>); fenotipo de enfermedad y afectación perianal; localización y comportamiento de Montreal; actividad luminal, rectal e histológica; exposiciones y antecedentes; y tratamientos recibidos. El diccionario de variables se conserva en la hoja <code>Variable_Dictionary</code> del libro Excel.</p>
+<p>Los metadatos clínicos incluyen cronología y datos demográficos (<code>birth_date</code>, <code>inclusion_date</code>, <code>age</code>, <code>sex</code>), fenotipo de enfermedad y afectación perianal, localización y comportamiento de Montreal, actividad luminal, rectal e histológica, exposiciones y antecedentes, y tratamientos recibidos. El diccionario de variables clínicas se conserva en la hoja <code>Variable_Dictionary</code> del libro Excel.</p>
 </div>
 </div>
-<p>La tabla navegable muestra los 184 registros clínicos normalizados. Puede descargarse como <a href="../data/metadata/CARPIO_clinical_metadata.tsv">TSV normalizado</a> o como <a href="../data/metadata/CARPIO_clinical_metadata.xlsx">libro Excel clínico fuente</a>.</p>
+<div id="tbl-clinical-metadata" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-clinical-metadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2.6: Metadatos clínicos normalizados de los 184 registros de la cohorte.
+</figcaption>
+<div aria-describedby="tbl-clinical-metadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div id="clinical-metadata-table-region" class="sample-table-scroll metadata-table-scroll" data-table-pagination="" data-page-size="10" data-table-label="tabla de metadatos clínicos" role="region" aria-label="tabla de metadatos clínicos" tabindex="0">
 <table id="clinical-metadata-table" class="sample-inventory metadata-table">
-<caption>
+<caption class="visually-hidden">
 Metadatos clínicos normalizados de los 184 registros de la cohorte.
 </caption>
 <thead>
@@ -38773,14 +38811,27 @@ NA
 </tbody>
 </table>
 </div>
+</div>
+</figure>
+</div>
+<div class="metadata-downloads">
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.tsv" role="button" download="" aria-label="Descargar Tabla 2.6 en formato TSV">Descargar tabla TSV normalizada</a>
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.xlsx" role="button" download="" aria-label="Descargar Tabla 2.6 en formato Excel">Descargar tabla Excel original</a>
+</div>
 </section>
 <section id="metadatos-de-análisis" class="level3" data-number="2.4.3">
 <h3 data-number="2.4.3" class="anchored" data-anchor-id="metadatos-de-análisis"><span class="header-section-number">2.4.3</span> Metadatos de análisis</h3>
-<p><code>CARPIO_analysis_metadata.tsv</code> es la tabla maestra empleada por el flujo bioinformático. Contiene una fila por registro técnico de ensayo (198 en total) e integra los campos técnicos y clínicos mediante <code>sample_id</code>. <code>record_id</code> identifica de forma única el registro de ensayo y <code>fastq_id</code> identifica de forma única el par de archivos FASTQ; las ocho biopsias repetidas conservan el mismo <code>sample_id</code> en ambos ensayos y se distinguen por su registro técnico.</p>
-<p>La tabla mantiene las variables clínicas con el prefijo <code>clinical_</code> y conserva los campos de trazabilidad de biblioteca, índices y archivos. Es la fuente configurada para las etapas de análisis y puede descargarse como <a href="../data/metadata/CARPIO_analysis_metadata.tsv">TSV de metadatos de análisis</a>. La normalización de nombres, fechas y claves se describe en esta sección.</p>
+<p><code>CARPIO_analysis_metadata.tsv</code> es la tabla maestra empleada por el flujo bioinformático. Contiene una fila por registro técnico de ensayo (198 en total) e integra los campos técnicos y clínicos mediante <code>sample_id</code>. <code>record_id</code> identifica de forma única el registro de ensayo y <code>fastq_id</code> identifica de forma única el par de archivos FASTQ; las ocho biopsias repetidas conservaron el mismo <code>sample_id</code> en ambos ensayos y se distinguieron por su registro técnico.</p>
+<p>La tabla mantiene las variables clínicas con el prefijo <code>clinical_</code> y conserva los campos de trazabilidad de biblioteca, índices y archivos. Constituye la fuente configurada para las etapas de análisis y se presenta en <a href="#tbl-analysis-metadata" class="quarto-xref">Tabla&nbsp;<span>2.7</span></a>. La normalización de nombres, fechas y claves se describe en esta sección.</p>
+<div id="tbl-analysis-metadata" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-analysis-metadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2.7: Metadatos de análisis normalizados de las 198 bibliotecas incluidas en el proyecto.
+</figcaption>
+<div aria-describedby="tbl-analysis-metadata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div id="analysis-metadata-table-region" class="sample-table-scroll metadata-table-scroll" data-table-pagination="" data-page-size="10" data-table-label="tabla de metadatos de análisis" role="region" aria-label="tabla de metadatos de análisis" tabindex="0">
 <table id="analysis-metadata-table" class="sample-inventory metadata-table">
-<caption>
+<caption class="visually-hidden">
 Metadatos de análisis normalizados de las 198 bibliotecas incluidas en el proyecto.
 </caption>
 <thead>
@@ -77992,6 +78043,12 @@ data/raw_data/cneg_pcr_9_R2.fastq.gz
 </tbody>
 </table>
 </div>
+</div>
+</figure>
+</div>
+<div class="metadata-downloads">
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.7-metadatos-analisis.tsv" role="button" download="" aria-label="Descargar Tabla 2.7 en formato TSV">Descargar tabla TSV</a>
+</div>
 <noscript>
 <p class="source-note">
 </p><p>JavaScript está desactivado; se muestran todas las filas de cada tabla sin paginación.</p>
@@ -78001,14 +78058,8 @@ data/raw_data/cneg_pcr_9_R2.fastq.gz
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-ATCC_MSA1003" class="csl-entry" role="listitem">
-American Type Culture Collection. 2026a. <span>«20 Strain Staggered Mix Genomic Material (<span>MSA-1003</span>)»</span>. <a href="https://www.atcc.org/products/msa-1003">https://www.atcc.org/products/msa-1003</a>.
-</div>
-<div id="ref-ATCC_MSA2006" class="csl-entry" role="listitem">
-———. 2026b. <span>«Gut Microbiome Whole Cell Mix (<span>MSA-2006</span>)»</span>. <a href="https://www.atcc.org/products/msa-2006">https://www.atcc.org/products/msa-2006</a>.
-</div>
-<div id="ref-Davis2018" class="csl-entry" role="listitem">
-Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. <span>«Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data»</span>. <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
+<div id="ref-Klindworth2013" class="csl-entry" role="listitem">
+Klindworth, Anna, Elmar Pruesse, Tim Schweer, Jörg Peplies, Christian Quast, Matthias Horn, y Frank Oliver Glöckner. 2013. <span>«Evaluation of general 16S ribosomal RNA gene PCR primers for classical and next-generation sequencing-based diversity studies»</span>. <em>Nucleic Acids Research</em> 41 (1): e1. <a href="https://doi.org/10.1093/nar/gks808">https://doi.org/10.1093/nar/gks808</a>.
 </div>
 </div>
 </section>

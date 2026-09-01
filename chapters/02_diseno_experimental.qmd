@@ -2,45 +2,46 @@
 title: "Diseño experimental y muestras"
 ---
 
-## Región amplificada y configuración de secuenciación
+## Preparación de bibliotecas de ARNr 16S y secuenciación
 
-El ensayo actual se centra exclusivamente en la región V3–V4 del gen bacteriano 16S rRNA. En el ensayo piloto se evaluó adicionalmente la región hipervariable V4; esta no forma parte del presente análisis. La combinación del tamaño esperado del amplicón y las lecturas *paired-end* proporciona solapamiento suficiente para fusionar R1 y R2; los parámetros finales de calidad y fusión se validan con los perfiles reales de las lecturas.
+El ADN microbiano total se extrajo con el kit PowerFecal Pro DNA Kit (QIAGEN). La región V3–V4 del gen del ARNr 16S bacteriano se amplificó mediante PCR y se secuenció mediante lecturas pareadas.
 
 La configuración de la región amplificada y de la secuenciación se resume en la @tbl-sequencing-configuration.
 
 ::: {#tbl-sequencing-configuration}
 | Característica | Descripción |
-|---|---|
-| Gen diana | Gen bacteriano 16S rRNA, región V3–V4 |
-| Cebador directo | 341F (`CCTACGGGNGGCWGCAG`) |
-| Cebador inverso | 805R (`GACTACHVGGGTATCTAATCC`) |
+|------------------------------------|------------------------------------|
+| Extracción de ADN | PowerFecal Pro DNA Kit (QIAGEN) |
+| Gen diana | Gen del ARNr 16S bacteriano, región V3–V4 |
+| Cebador directo | 341F (`CCTACGGGNGGCWGCAG`) [@Klindworth2013] |
+| Cebador inverso | 805R (`GACTACHVGGGTATCTAATCC`) [@Klindworth2013] |
 | Tamaño esperado del amplicón | Aproximadamente 464 pb |
 | Adaptadores | Overhangs compatibles con indexación Illumina |
 | Preparación de librerías | Índices Nextera XT, con protocolo modificado |
-| Plataforma descrita | Illumina NextSeq |
-| Configuración | Paired-end 2 × 300 pb, 600 ciclos |
+| Plataforma de secuenciación | Illumina NextSeq |
+| Configuración de lectura | Paired-end 2 × 300 pb, 600 ciclos |
 | PCR | 35 ciclos; anillamiento a 53 °C |
 
-: Configuración de la amplificación y secuenciación de la región 16S V3–V4 utilizadas en el estudio.
+: Configuración de la extracción, amplificación y secuenciación de la región 16S V3–V4 utilizada en el estudio.
 :::
 
 ## Conjunto de datos
 
-El conjunto de datos reúne **198 bibliotecas paired-end** (equivalentes a 198 pares R1/R2) y **396 archivos FASTQ** (@tbl-library-composition). Cada biblioteca constituye una observación técnica; R1 y R2 son las dos lecturas complementarias del mismo amplicón y no dos muestras independientes.
+El conjunto de datos comprende **198 bibliotecas de lecturas pareadas** (198 pares R1/R2) y **396 archivos FASTQ** (@tbl-library-composition). Cada biblioteca representa un registro técnico; R1 y R2 son lecturas complementarias del mismo amplicón y no muestras independientes.
 
-Se incluyen 138 registros de biopsia: 130 bibliotecas del ensayo ampliado y ocho bibliotecas del piloto correspondientes a biopsias resecuenciadas. Por tanto, la cohorte clínica principal contiene 130 códigos biológicos únicos; las ocho bibliotecas del piloto se conservarán para evaluar la reproducibilidad entre ensayos y no se contabilizarán como observaciones biológicas adicionales.
+Se incluyeron 138 registros de biopsia: 130 bibliotecas del ensayo ampliado y ocho bibliotecas del piloto correspondientes a biopsias resecuenciadas. La cohorte clínica principal quedó constituida por 130 muestras de biopsia únicas; las ocho bibliotecas del piloto se conservaron para evaluar la reproducibilidad entre ensayos.
 
 ::: {#tbl-library-composition}
-| Ensayo | Tipo de muestra | Código de muestra | Subtipo | Bibliotecas paired-end | FASTQ |
-|---|---|---|---|---:|---:|
+| Ensayo | Tipo de muestra | Código de muestra | Subtipo | Bibliotecas de lecturas pareadas | FASTQ |
+|------------|------------|------------|------------|-----------:|-----------:|
 | Ampliado | Biopsia | `01-049`–`01-186` | Biopsia digestiva | 130 | 260 |
 | Piloto | Biopsia | `01-049_carpio1`–`01-056_carpio1` | Biopsias resecuenciadas | 8 | 16 |
 | Piloto | Control positivo | `mock_extr_1`–`mock_extr_8` | Mock de extracción | 8 | 16 |
-|  |  | `mock_pcr_1`–`mock_pcr_6` | Mock de PCR | 6 | 12 |
-|  |  | `ecoli_dil1_1`–`ecoli_dil6_4` | Diluciones de *Escherichia coli* | 24 | 48 |
+| Piloto | Control positivo | `mock_pcr_1`–`mock_pcr_6` | Mock de PCR | 6 | 12 |
+| Piloto | Control positivo | `ecoli_dil1_1`–`ecoli_dil6_4` | Diluciones de *Escherichia coli* | 24 | 48 |
 | Ampliado | Control negativo | `cneg_batch_1`–`cneg_batch_2` | Lote | 2 | 4 |
-|  |  | `cneg_extr_1`–`cneg_extr_10` | Extracción | 10 | 20 |
-|  |  | `cneg_pcr_1`–`cneg_pcr_10` | PCR | 10 | 20 |
+| Ampliado | Control negativo | `cneg_extr_1`–`cneg_extr_10` | Extracción | 10 | 20 |
+| Ampliado | Control negativo | `cneg_pcr_1`–`cneg_pcr_10` | PCR | 10 | 20 |
 | **Total** |  |  |  | **198** | **396** |
 
 : Descripción del conjunto de datos analizado.
@@ -52,40 +53,40 @@ Se incluyen 138 registros de biopsia: 130 bibliotecas del ensayo ampliado y ocho
 
 Los 38 controles positivos proceden del ensayo piloto y cubren etapas complementarias del proceso analítico.
 
-- **Mock de PCR (`mock_pcr_*`)**. Corresponde al material genómico comercial [ATCC MSA-1003](https://www.atcc.org/products/msa-1003), una mezcla escalonada de ADN genómico de 20 cepas (@tbl-mock-pcr-composition). Controla las etapas posteriores a la extracción: amplificación, preparación de librerías, secuenciación y asignación taxonómica [@ATCC_MSA1003].
-- **Mock de extracción (`mock_extr_*`)**. Corresponde a [ATCC MSA-2006](https://www.atcc.org/products/msa-2006), una mezcla liofilizada de células completas de 12 especies de microbiota intestinal (@tbl-mock-extraction-composition). Al incorporarse antes de la extracción, permite evaluar el proceso completo, incluida la recuperación del ADN [@ATCC_MSA2006].
-- **Diluciones de *Escherichia coli* (`ecoli_dilN_R`)**. Son 24 bibliotecas distribuidas en seis diluciones decimales seriadas (10⁻¹–10⁻⁶; cuatro réplicas por dilución) y se utilizarán para examinar sensibilidad y límite de detección.
+-   **Mock de PCR (`mock_pcr_*`)**. Corresponde al material genómico comercial [ATCC MSA-1003](https://www.atcc.org/products/msa-1003), una mezcla escalonada de ADN genómico de 20 cepas (@tbl-mock-pcr-composition). Controla las etapas posteriores a la extracción: amplificación, preparación de librerías, secuenciación y asignación taxonómica.
+-   **Mock de extracción (`mock_extr_*`)**. Corresponde a [ATCC MSA-2006](https://www.atcc.org/products/msa-2006), una mezcla liofilizada de células completas de 12 especies de microbiota intestinal (@tbl-mock-extraction-composition). Al incorporarse antes de la extracción, permite evaluar el proceso completo, incluida la recuperación del ADN.
+-   **Diluciones de *Escherichia coli* (`ecoli_dilN_R`)**. Son 24 bibliotecas distribuidas en seis diluciones decimales seriadas (10⁻¹–10⁻⁶; cuatro réplicas por dilución) y se incluyeron para evaluar la sensibilidad analítica y el límite de detección.
 
 ::: {#tbl-mock-pcr-composition}
-| Taxón | Cepa ATCC | Abundancia teórica (%) |
-|---|---:|---:|
-| *Escherichia coli* | 700926 | 18,00 |
-| *Porphyromonas gingivalis* | 33277 | 18,00 |
-| *Cereibacter sphaeroides* | 17029 | 18,00 |
-| *Staphylococcus epidermidis* | 12228 | 18,00 |
-| *Streptococcus mutans* | 700610 | 18,00 |
-| *Bacillus pacificus* | 10987 | 1,80 |
-| *Clostridium beijerinckii* | 35702 | 1,80 |
-| *Pseudomonas paraeruginosa* | 9027 | 1,80 |
-| *Staphylococcus aureus* | BAA-1556 | 1,80 |
-| *Streptococcus agalactiae* | BAA-611 | 1,80 |
-| *Acinetobacter baumannii* | 17978 | 0,18 |
-| *Cutibacterium acnes* | 11828 | 0,18 |
-| *Helicobacter pylori* | 700392 | 0,18 |
-| *Lactobacillus gasseri* | 33323 | 0,18 |
-| *Neisseria meningitidis* | BAA-335 | 0,18 |
-| *Phocaeicola vulgatus* | 8482 | 0,02 |
-| *Bifidobacterium adolescentis* | 15703 | 0,02 |
-| *Deinococcus radiodurans* | BAA-816 | 0,02 |
-| *Enterococcus faecalis* | 47077 | 0,02 |
-| *Schaalia odontolytica* | 17982 | 0,02 |
+| Taxón                          | Cepa ATCC | Abundancia teórica (%) |
+|--------------------------------|----------:|-----------------------:|
+| *Escherichia coli*             |    700926 |                  18,00 |
+| *Porphyromonas gingivalis*     |     33277 |                  18,00 |
+| *Cereibacter sphaeroides*      |     17029 |                  18,00 |
+| *Staphylococcus epidermidis*   |     12228 |                  18,00 |
+| *Streptococcus mutans*         |    700610 |                  18,00 |
+| *Bacillus pacificus*           |     10987 |                   1,80 |
+| *Clostridium beijerinckii*     |     35702 |                   1,80 |
+| *Pseudomonas paraeruginosa*    |      9027 |                   1,80 |
+| *Staphylococcus aureus*        |  BAA-1556 |                   1,80 |
+| *Streptococcus agalactiae*     |   BAA-611 |                   1,80 |
+| *Acinetobacter baumannii*      |     17978 |                   0,18 |
+| *Cutibacterium acnes*          |     11828 |                   0,18 |
+| *Helicobacter pylori*          |    700392 |                   0,18 |
+| *Lactobacillus gasseri*        |     33323 |                   0,18 |
+| *Neisseria meningitidis*       |   BAA-335 |                   0,18 |
+| *Phocaeicola vulgatus*         |      8482 |                   0,02 |
+| *Bifidobacterium adolescentis* |     15703 |                   0,02 |
+| *Deinococcus radiodurans*      |   BAA-816 |                   0,02 |
+| *Enterococcus faecalis*        |     47077 |                   0,02 |
+| *Schaalia odontolytica*        |     17982 |                   0,02 |
 
-: Composición teórica del control de PCR ATCC MSA-1003 (mezcla escalonada de ADN genómico de 20 cepas) [@ATCC_MSA1003].
+: Composición teórica del control de PCR ATCC MSA-1003 (mezcla escalonada de ADN genómico de 20 cepas).
 :::
 
 ::: {#tbl-mock-extraction-composition}
 | Taxón | Cepa ATCC | Abundancia teórica (%) |
-|---|---:|---:|
+|----|---:|---:|
 | *Bacteroides fragilis* | 25285 | 8,3 |
 | *Phocaeicola vulgatus* | 8482 | 8,3 |
 | *Bifidobacterium adolescentis* | 15703 | 8,3 |
@@ -99,48 +100,76 @@ Los 38 controles positivos proceden del ensayo piloto y cubren etapas complement
 | *Yersinia enterocolitica* | 27729 | 8,3 |
 | *Fusobacterium nucleatum* subsp. *nucleatum* | 25586 | 8,3 |
 
-: Composición teórica del control de extracción ATCC MSA-2006 (mezcla de células completas de 12 especies) [@ATCC_MSA2006].
+: Composición teórica del control de extracción ATCC MSA-2006 (mezcla de células completas de 12 especies).
 :::
 
 ### Controles negativos
 
-El ensayo ampliado incluye dos blancos de lote (`cneg_batch_*`), diez blancos de extracción con agua libre de nucleasas (`cneg_extr_*`) y diez blancos de PCR sin paso de extracción (`cneg_pcr_*`). Se conservarán fuera de las comparaciones biológicas entre biopsias y se evaluarán junto con ellas para identificar ASV candidatas a contaminación.
+El ensayo ampliado incluye 22 controles negativos, que cubren las etapas de extracción y amplificación:
 
-El análisis principal de contaminación utilizará la prevalencia de cada ASV en los controles negativos; cuando se disponga de medidas de concentración adecuadas, se añadirá un análisis de sensibilidad basado en frecuencia. Las ASV candidatas se revisarán y filtrarán mediante criterios documentados, en lugar de restar de forma indiscriminada taxones presentes en los blancos, siguiendo el marco implementado por `decontam` [@Davis2018].
+-   **Blancos de lote (`cneg_batch_*`)**. Corresponden a dos controles negativos de lote asociados a fechas de extracción distintas. Permiten detectar señal de fondo vinculada a reactivos, ambiente de trabajo, analista o procesado por lote.
+-   **Blancos de extracción (`cneg_extr_*`)**. Corresponden a diez réplicas de agua libre de nucleasas sometidas al procedimiento de extracción. Permiten evaluar la contribución de reactivos de extracción y posibles contaminaciones introducidas antes de la PCR.
+-   **Blancos de PCR (`cneg_pcr_*`)**. Correspondieron a diez réplicas sin ADN molde ni fase previa de extracción. Permiten evaluar la señal introducida durante la preparación de la PCR, la amplificación y la preparación de bibliotecas.
+
+::: {.callout-note title="Uso de los controles negativos"}
+Los controles negativos no se incorporarán a las comparaciones biológicas entre biopsias. Se emplearán para identificar ASV candidatas a contaminación en la etapa específica de control de contaminación.
+:::
 
 ## Metadatos
 
 ### Metadatos técnicos
 
-El libro técnico fuente se conserva como `CARPIO_technical_metadata.xlsx`. La hoja `Run1` aporta la información de laboratorio del ensayo piloto y la hoja `Run 3` la del ensayo ampliado. Para garantizar una estructura homogénea, se generó `CARPIO_technical_metadata.tsv`, con una fila por cada una de las 198 bibliotecas V3–V4 incluidas en el análisis. Sus nombres de variables están normalizados en minúsculas y con guiones bajos; las fechas se expresan en formato ISO (`YYYY-MM-DD`).
+Los metadatos técnicos de la secuenciación proceden del libro Excel `CARPIO_technical_metadata.xlsx`. La hoja `Run1` contiene la información de laboratorio del ensayo piloto y la hoja `Run 3`, la del ensayo ampliado. Para consolidar la información de ambos ensayos, se generó una tabla normalizada con una fila por cada una de las 198 bibliotecas V3–V4 incluidas en el análisis (@tbl-technical-metadata). Los nombres de variables se normalizaron en minúsculas y con guiones bajos, y las fechas se expresaron en formato ISO (`YYYY-MM-DD`).
 
-La tabla navegable contiene los 198 registros técnicos. Puede descargarse como [TSV normalizado](../data/metadata/CARPIO_technical_metadata.tsv) o como [libro Excel técnico fuente](../data/metadata/CARPIO_technical_metadata.xlsx).
-
+::: {#tbl-technical-metadata tbl-cap="Metadatos técnicos normalizados de las 198 bibliotecas incluidas en el análisis."}
 {{< include includes/technical_metadata_table.html >}}
+:::
+
+```{=html}
+<div class="metadata-downloads">
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.tsv" role="button" download aria-label="Descargar Tabla 2.5 en formato TSV">Descargar tabla TSV normalizada</a>
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.xlsx" role="button" download aria-label="Descargar Tabla 2.5 en formato Excel">Descargar tabla Excel original</a>
+</div>
+```
 
 ### Metadatos clínicos
 
-El libro clínico fuente se conserva como `CARPIO_clinical_metadata.xlsx`. Su primera hoja, `Database_Template`, contiene los registros clínicos; se excluyeron únicamente las filas de plantilla vacías, por lo que el TSV normalizado contiene 184 registros y 40 variables. El identificador se normalizó como `sample_id`, conservando el código directo de muestra.
+Los metadatos clínicos proceden del libro Excel `CARPIO_clinical_metadata.xlsx`. Su primera hoja, `Database_Template`, contiene los registros clínicos; se excluyeron únicamente las filas de plantilla vacías, por lo que el TSV normalizado reúne 184 registros y 40 variables. El identificador se normalizó como `sample_id`, conservando el código directo de muestra. La tabla clínica normalizada se presenta en @tbl-clinical-metadata.
 
-Las variables abarcan características demográficas y cronológicas, fenotipo y actividad de la enfermedad, antecedentes y exposiciones, tratamientos, actividad histológica rectal y cuestionario dietético. Las fechas se expresan en formato ISO y las categorías textuales se han armonizado en minúsculas para facilitar la integración con la tabla de análisis.
+Las variables abarcan características demográficas y cronológicas, fenotipo y actividad de la enfermedad, antecedentes y exposiciones, tratamientos, actividad histológica rectal y cuestionario dietético. Las fechas se expresan en formato ISO y las categorías textuales se armonizaron en minúsculas para facilitar la integración con la tabla de análisis.
 
-::: {.callout-note}
-## Estructura de los metadatos clínicos
+::: callout-note
+## Variables clínicas
 
-La tabla mantiene una fila por registro clínico. Los bloques principales incluyen: cronología y datos demográficos (`birth_date`, `inclusion_date`, `age`, `sex`); fenotipo de enfermedad y afectación perianal; localización y comportamiento de Montreal; actividad luminal, rectal e histológica; exposiciones y antecedentes; y tratamientos recibidos. El diccionario de variables se conserva en la hoja `Variable_Dictionary` del libro Excel.
+Los metadatos clínicos incluyen cronología y datos demográficos (`birth_date`, `inclusion_date`, `age`, `sex`), fenotipo de enfermedad y afectación perianal, localización y comportamiento de Montreal, actividad luminal, rectal e histológica, exposiciones y antecedentes, y tratamientos recibidos. El diccionario de variables clínicas se conserva en la hoja `Variable_Dictionary` del libro Excel.
 :::
 
-La tabla navegable muestra los 184 registros clínicos normalizados. Puede descargarse como [TSV normalizado](../data/metadata/CARPIO_clinical_metadata.tsv) o como [libro Excel clínico fuente](../data/metadata/CARPIO_clinical_metadata.xlsx).
-
+::: {#tbl-clinical-metadata tbl-cap="Metadatos clínicos normalizados de los 184 registros de la cohorte."}
 {{< include includes/clinical_metadata_table.html >}}
+:::
+
+```{=html}
+<div class="metadata-downloads">
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.tsv" role="button" download aria-label="Descargar Tabla 2.6 en formato TSV">Descargar tabla TSV normalizada</a>
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.xlsx" role="button" download aria-label="Descargar Tabla 2.6 en formato Excel">Descargar tabla Excel original</a>
+</div>
+```
 
 ### Metadatos de análisis
 
-`CARPIO_analysis_metadata.tsv` es la tabla maestra empleada por el flujo bioinformático. Contiene una fila por registro técnico de ensayo (198 en total) e integra los campos técnicos y clínicos mediante `sample_id`. `record_id` identifica de forma única el registro de ensayo y `fastq_id` identifica de forma única el par de archivos FASTQ; las ocho biopsias repetidas conservan el mismo `sample_id` en ambos ensayos y se distinguen por su registro técnico.
+`CARPIO_analysis_metadata.tsv` es la tabla maestra empleada por el flujo bioinformático. Contiene una fila por registro técnico de ensayo (198 en total) e integra los campos técnicos y clínicos mediante `sample_id`. `record_id` identifica de forma única el registro de ensayo y `fastq_id` identifica de forma única el par de archivos FASTQ; las ocho biopsias repetidas conservaron el mismo `sample_id` en ambos ensayos y se distinguieron por su registro técnico.
 
-La tabla mantiene las variables clínicas con el prefijo `clinical_` y conserva los campos de trazabilidad de biblioteca, índices y archivos. Es la fuente configurada para las etapas de análisis y puede descargarse como [TSV de metadatos de análisis](../data/metadata/CARPIO_analysis_metadata.tsv). La normalización de nombres, fechas y claves se describe en esta sección.
+La tabla mantiene las variables clínicas con el prefijo `clinical_` y conserva los campos de trazabilidad de biblioteca, índices y archivos. Constituye la fuente configurada para las etapas de análisis y se presenta en @tbl-analysis-metadata. La normalización de nombres, fechas y claves se describe en esta sección.
 
+::: {#tbl-analysis-metadata tbl-cap="Metadatos de análisis normalizados de las 198 bibliotecas incluidas en el proyecto."}
 {{< include includes/analysis_metadata_table.html >}}
+:::
+
+```{=html}
+<div class="metadata-downloads">
+  <a class="btn btn-outline-primary" href="../tables/02_diseno_experimental/Table-2.7-metadatos-analisis.tsv" role="button" download aria-label="Descargar Tabla 2.7 en formato TSV">Descargar tabla TSV</a>
+</div>
+```
 
 <noscript>
 

@@ -55,7 +55,7 @@
     {
       "id": "technical_metadata_tsv",
       "source": "metadata/CARPIO_technical_metadata.tsv",
-      "destination": "data/metadata/CARPIO_technical_metadata.tsv",
+      "destination": "tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.tsv",
       "format": "tsv",
       "expected_rows": 198,
       "description": "Metadatos técnicos normalizados de las 198 bibliotecas del proyecto.",
@@ -70,14 +70,14 @@
     {
       "id": "technical_metadata_xlsx",
       "source": "metadata/CARPIO_technical_metadata.xlsx",
-      "destination": "data/metadata/CARPIO_technical_metadata.xlsx",
+      "destination": "tables/02_diseno_experimental/Table-2.5-metadatos-tecnicos.xlsx",
       "format": "xlsx",
       "description": "Libro Excel fuente de los metadatos técnicos, autorizado para publicación en el proyecto CARPIO."
     },
     {
       "id": "clinical_metadata_tsv",
       "source": "metadata/CARPIO_clinical_metadata.tsv",
-      "destination": "data/metadata/CARPIO_clinical_metadata.tsv",
+      "destination": "tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.tsv",
       "format": "tsv",
       "expected_rows": 184,
       "description": "Metadatos clínicos normalizados de la cohorte CARPIO, autorizados para publicación.",
@@ -92,14 +92,14 @@
     {
       "id": "clinical_metadata_xlsx",
       "source": "metadata/CARPIO_clinical_metadata.xlsx",
-      "destination": "data/metadata/CARPIO_clinical_metadata.xlsx",
+      "destination": "tables/02_diseno_experimental/Table-2.6-metadatos-clinicos.xlsx",
       "format": "xlsx",
       "description": "Libro Excel fuente de los metadatos clínicos, autorizado para publicación en el proyecto CARPIO."
     },
     {
       "id": "analysis_metadata_tsv",
       "source": "metadata/CARPIO_analysis_metadata.tsv",
-      "destination": "data/metadata/CARPIO_analysis_metadata.tsv",
+      "destination": "tables/02_diseno_experimental/Table-2.7-metadatos-analisis.tsv",
       "format": "tsv",
       "expected_rows": 198,
       "description": "Tabla maestra normalizada que integra metadatos técnicos y clínicos para el análisis bioinformático.",
