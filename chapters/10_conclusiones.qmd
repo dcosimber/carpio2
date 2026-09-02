@@ -5,11 +5,13 @@ title: "Conclusiones y próximos pasos"
 ## Síntesis técnica de la fase actual
 
 La estructura de datos y el preprocesamiento ya son trazables: el conjunto
-contiene 198 bibliotecas paired-end completas, el recorte de primers mantuvo
-todos los pares y la señal residual de primer fue mínima. La comparación de las
-ocho biopsias repetidas demuestra una diferencia importante de profundidad de
-entrada entre ensayos que deberá tratarse como un factor técnico en las etapas
-posteriores.
+contiene 198 bibliotecas paired-end completas y Cutadapt 5.2 buscó los primers
+completos anclados al extremo 5′, sin indels y con error máximo de 0,15. Solo se
+recortaron las lecturas con coincidencia, por lo que se mantuvieron todos los
+pares y las lecturas sin coincidencia permanecieron intactas. Los 16 controles
+formales de preprocesamiento se superaron. La comparación de las ocho biopsias
+repetidas demuestra una diferencia importante de profundidad de entrada entre
+ensayos que deberá tratarse como un factor técnico en las etapas posteriores.
 
 No puede extraerse todavía una conclusión sobre microbiota, taxonomía,
 contaminación o asociación clínica. Esas inferencias requieren resultados que

@@ -4,10 +4,11 @@ title: "QC y preprocesamiento"
 
 ## Auditoría de bibliotecas y pares FASTQ
 
-Se validaron 198 registros técnicos y 396 FASTQ. Cada biblioteca tiene un único
-par R1/R2 y no se identificaron FASTQ no referenciados. El QC se ejecutó antes y
-después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en
-cada biblioteca.
+Se validaron 198 registros técnicos y 396 FASTQ: 46 bibliotecas del ensayo
+`pilot` y 152 del ensayo `current`. Cada biblioteca tiene un único par R1/R2 y
+no se identificaron FASTQ no referenciados. FastQC y MultiQC se ejecutaron antes
+y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden
+en cada biblioteca.
 
 El resumen de bibliotecas y pares de lecturas se presenta en la
 @tbl-preprocessing-summary.
@@ -19,7 +20,8 @@ El resumen de bibliotecas y pares de lecturas se presenta en la
 | Ampliado actual | 152 | 29,91 millones | 29,91 millones | 100,00 % |
 | **Total** | **198** | **59,97 millones** | **59,97 millones** | **100,00 %** |
 
-: Bibliotecas y pares de lecturas antes y después del recorte de primers.
+: Bibliotecas y pares de lecturas antes y después del recorte de primers por
+secuencia. Las profundidades son idénticas porque no se descartó ningún par.
 :::
 
 Las profundidades agregadas por tipo de biblioteca están disponibles en las
@@ -35,27 +37,42 @@ autorizados y excluye las rutas internas de computación. Se puede consultar el
 [informe previo al recorte](../multiqc/04_control_calidad_preprocesamiento/MultiQC-4.1-fastqc-crudo.html) y el
 [informe posterior al recorte](../multiqc/04_control_calidad_preprocesamiento/MultiQC-4.2-fastqc-recortado.html).
 
+La @fig-fastqc-raw-profiles presenta los perfiles de calidad de los FASTQ
+crudos por ensayo y sentido de lectura. La @fig-fastqc-trimmed-profiles muestra
+la misma evaluación después del recorte por secuencia.
+
+![Perfiles de calidad FastQC de los FASTQ crudos, estratificados por ensayo y sentido de lectura.](../figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-crudo-por-ensayo.png){#fig-fastqc-raw-profiles fig-alt="Perfiles de calidad de los FASTQ crudos para los ensayos pilot y current, con paneles separados para R1 y R2."}
+
+![Perfiles de calidad FastQC de los FASTQ tras el recorte por secuencia, estratificados por ensayo y sentido de lectura.](../figures/04_control_calidad_preprocesamiento/Fig-4.3-perfiles-calidad-fastq-recortado-por-ensayo.png){#fig-fastqc-trimmed-profiles fig-alt="Perfiles de calidad de los FASTQ recortados para los ensayos pilot y current, con paneles separados para R1 y R2."}
+
 ## Recorte y verificación de primers
 
-El diagnóstico mostró la señal esperada de 341F y 805R en los extremos 5′. Tras
-el recorte de 17 nt en R1 y 21 nt en R2, se conservaron todos los pares de
-lecturas. La señal residual compatible con primer fue como máximo 0,10 % por
-biblioteca y fue nula en R2 en la comprobación agregada.
+Cutadapt 5.2 buscó 341F (`CCTACGGGNGGCWGCAG`) en R1 y 805R
+(`GACTACHVGGGTATCTAATCC`) en R2. Ambos primers se buscaron completos y
+anclados al extremo 5′ (`^primer`), con tasa máxima de error de 0,15 y sin
+indels. No se usaron `-u`, `-U` ni `--discard-untrimmed`.
 
-La retención de lecturas y el residual de primer se detallan en la
+Una lectura solo pierde 17 nt en R1 o 21 nt en R2 cuando Cutadapt detecta el
+primer configurado; las lecturas sin coincidencia se preservan intactas. La no
+coincidencia no demuestra la ausencia de primer: demuestra únicamente que no
+existe evidencia configurada para cortar bases. Se retuvo el 100 % de los pares
+en ambos ensayos y los 16 controles formales de preprocesamiento se superaron.
+
+La retención y las coincidencias de primer se detallan en la
 @tbl-primer-trimming.
 
 ::: {#tbl-primer-trimming}
-| Ensayo | Pares de entrada | Pares de salida | Bases retenidas | Máximo residual por biblioteca |
-|---|---:|---:|---:|---:|
-| Piloto | 30,06 millones | 30,06 millones | 92,48 % | 0,10 % |
-| Ampliado actual | 29,91 millones | 29,91 millones | 93,36 % | 0,10 % |
+| Ensayo | Pares de entrada | Pares de salida | Retención | Coincidencia R1 | Coincidencia R2 | R1 sin coincidencia, preservadas | R2 sin coincidencia, preservadas |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Piloto | 30,06 millones | 30,06 millones | 100,00 % | 57,8550 % | 19,3697 % | 42,1450 % | 80,6303 % |
+| Ampliado actual | 29,91 millones | 29,91 millones | 100,00 % | 72,0326 % | 7,5323 % | 27,9674 % | 92,4677 % |
 
-: Retención de pares y verificación de primers tras el recorte.
+: Retención de pares, coincidencias completas ancladas de primer y lecturas sin
+coincidencia preservadas tras el recorte por secuencia.
 :::
 
 Las métricas reproducibles se encuentran en [retención por ensayo](../tables/04_control_calidad_preprocesamiento/Table-4.2-retencion-primers-por-ensayo.tsv)
-y [verificación de primers](../tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-residuales.tsv).
+y [verificación de primers por secuencia](../tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-por-secuencia.tsv).
 
 ## Profundidad de secuenciación de las biopsias repetidas
 

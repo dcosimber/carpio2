@@ -1,0 +1,5 @@
+processing_batch	read	libraries	reads_examined	complete_anchored_primer_matches	complete_anchored_primer_match_pct	no_primer_match_reads_preserved	no_primer_match_reads_preserved_pct	minimum_library_match_pct	maximum_library_match_pct
+current	R1	152	29910278	21545142	72.0326	8365136	27.9674	46.9573	81.6734
+current	R2	152	29910278	2252941	7.5323	27657337	92.4677	2.3803	11.9345
+pilot	R1	46	30064539	17393832	57.8550	12670707	42.1450	13.3941	81.1147
+pilot	R2	46	30064539	5823424	19.3697	24241115	80.6303	13.1957	38.2157

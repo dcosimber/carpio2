@@ -45,30 +45,37 @@ descarta lecturas.
 
 ## Diagnóstico y recorte de primers
 
-Se estudiaron los primers 341F (`CCTACGGGNGGCWGCAG`) y 805R
-(`GACTACHVGGGTATCTAATCC`) por ensayo. El diagnóstico justificó un recorte
-posicional de 17 nucleótidos en R1 y 21 en R2. El comando aplicado por
+Con Cutadapt 5.2 se buscaron los primers 341F (`CCTACGGGNGGCWGCAG`) en R1 y 805R
+(`GACTACHVGGGTATCTAATCC`) en R2 por ensayo. El comando aplicado por
 biblioteca fue:
 
 ```bash
 cutadapt -j <n_hilos> \
-  -u 17 -U 21 \
+  --no-indels -e 0.15 \
+  -g "^CCTACGGGNGGCWGCAG" \
+  -G "^GACTACHVGGGTATCTAATCC" \
   -o <R1_recortado.fastq.gz> \
   -p <R2_recortado.fastq.gz> \
   --json <informe_cutadapt.json> \
   <R1_crudo.fastq.gz> <R2_crudo.fastq.gz>
 ```
 
-`-u 17` y `-U 21` eliminan bases desde el extremo 5′ de R1 y R2,
-respectivamente. No se utilizó `--discard-untrimmed` ni se aplicó filtrado de
-calidad en Cutadapt: así se evita un descarte selectivo por detección imperfecta
-del primer y se reserva el filtrado de calidad para DADA2 [@Martin2011].
+El prefijo `^` ancla cada primer al extremo 5′ y exige una coincidencia de la
+longitud completa; `-e 0.15` fija la tasa máxima de error y `--no-indels`
+prohíbe inserciones y deleciones. No se utilizaron `-u`, `-U` ni
+`--discard-untrimmed`, ni se aplicó filtrado de calidad en Cutadapt. Por tanto,
+una lectura solo pierde 17 nt en R1 o 21 nt en R2 cuando se detecta su primer;
+una lectura sin coincidencia se conserva intacta. La no coincidencia no prueba
+la ausencia de primer, sino que no aporta evidencia configurada para cortar
+bases. El filtrado de calidad permanece reservado para una futura etapa DADA2
+[@Martin2011].
 
 ## Denoising, fusión e integración
 
-DADA2 se ejecutará de forma independiente en piloto y ensayo ampliado. Los
-parámetros inicialmente fijados se someterán a revisión mediante el seguimiento
-de retención por biblioteca, sin recurrir a un truncado fijo de longitud:
+DADA2 se ejecutará de forma independiente en piloto y ensayo ampliado solo tras
+una autorización explícita. Los siguientes valores son candidatos que deberán
+revisarse mediante el seguimiento de retención por biblioteca; no representan
+una ejecución realizada ni parámetros aprobados:
 
 ```r
 filtered <- filterAndTrim(
@@ -83,12 +90,13 @@ merged <- mergePairs(
 )
 ```
 
-`truncLen = c(0, 0)` conserva longitud variable; `maxEE` limita el error
-esperado en R1/R2; `truncQ` termina lecturas en bases de muy baja calidad; y
-`minLen` elimina fragmentos claramente no informativos. La fusión exige al
-menos 20 nt de solapamiento, sin discrepancias, y corrige overhangs cuando
-procede. Posteriormente se aplicará eliminación de quimeras por consenso y se
-guardará el seguimiento por muestra [@Callahan2016].
+Como candidatos, `truncLen = c(0, 0)` conservaría longitud variable; `maxEE`
+limitaría el error esperado en R1/R2; `truncQ` terminaría lecturas en bases de
+muy baja calidad; y `minLen` eliminaría fragmentos claramente no informativos.
+La fusión propuesta exigiría al menos 20 nt de solapamiento, sin discrepancias,
+y corregiría overhangs cuando proceda. Tras una autorización y ejecución
+posteriores, se aplicaría eliminación de quimeras por consenso y se guardaría el
+seguimiento por muestra [@Callahan2016].
 
 ## Taxonomía y controles
 

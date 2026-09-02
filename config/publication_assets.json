@@ -18,13 +18,37 @@
       "id": "primer_retention_by_batch",
       "source": "analysis/tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv",
       "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-retencion-primers-por-ensayo.tsv",
-      "description": "Retención de pares y bases tras el recorte posicional de primers."
+      "description": "Retención de pares, coincidencias de primer y lecturas sin coincidencia preservadas tras el recorte por secuencia."
     },
     {
       "id": "primer_verification_summary",
       "source": "analysis/tables/01_preprocessing/primer_trimming_verification_summary.tsv",
-      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-residuales.tsv",
-      "description": "Verificación agregada de señal residual de primer tras el recorte."
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-por-secuencia.tsv",
+      "description": "Verificación agregada de coincidencias completas de primer ancladas y lecturas sin coincidencia preservadas."
+    },
+    {
+      "id": "fastqc_raw_quality_profiles_by_batch",
+      "source": "analysis/plots/01_preprocessing/qc/fastqc_raw_quality_profiles_by_batch.png",
+      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-crudo-por-ensayo.png",
+      "description": "Perfiles FastQC de calidad de los FASTQ crudos por ensayo y sentido de lectura."
+    },
+    {
+      "id": "fastqc_raw_quality_profiles_by_batch_pdf",
+      "source": "analysis/plots/01_preprocessing/qc/fastqc_raw_quality_profiles_by_batch.pdf",
+      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-crudo-por-ensayo.pdf",
+      "description": "Versión vectorial de los perfiles FastQC de calidad de los FASTQ crudos por ensayo y sentido de lectura."
+    },
+    {
+      "id": "fastqc_trimmed_quality_profiles_by_batch",
+      "source": "analysis/plots/01_preprocessing/qc/fastqc_trimmed_quality_profiles_by_batch.png",
+      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.3-perfiles-calidad-fastq-recortado-por-ensayo.png",
+      "description": "Perfiles FastQC de calidad de los FASTQ tras el recorte por secuencia, por ensayo y sentido de lectura."
+    },
+    {
+      "id": "fastqc_trimmed_quality_profiles_by_batch_pdf",
+      "source": "analysis/plots/01_preprocessing/qc/fastqc_trimmed_quality_profiles_by_batch.pdf",
+      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.3-perfiles-calidad-fastq-recortado-por-ensayo.pdf",
+      "description": "Versión vectorial de los perfiles FastQC de calidad de los FASTQ tras el recorte por secuencia, por ensayo y sentido de lectura."
     },
     {
       "id": "repeated_biopsy_depth_comparison",

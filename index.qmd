@@ -27,9 +27,10 @@ y 22 controles negativos; el conjunto ocupa 14,19 GB.
 
 ## Resultados disponibles
 
-- El recorte posicional de primers conservó el **100 % de los pares** en ambos
-  ensayos. La comprobación posterior detectó una señal de primer residual de
-  como máximo **0,10 %** por biblioteca.
+- Cutadapt 5.2 buscó por secuencia 341F en R1 y 805R en R2, anclados al extremo
+  5′, con coincidencia completa, error máximo de 0,15 y sin indels. No se
+  utilizaron `-u`, `-U` ni `--discard-untrimmed`: se conservó el **100 % de los
+  pares** y toda lectura sin coincidencia permaneció intacta.
 - Las ocho biopsias presentes en ambos ensayos tuvieron mayor profundidad de
   entrada en el piloto. La comparación es técnica y descriptiva; no constituye
   una comparación biológica.
