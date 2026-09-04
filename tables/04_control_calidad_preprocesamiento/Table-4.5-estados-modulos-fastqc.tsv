@@ -1,0 +1,177 @@
+stage	processing_batch	sample_type	read	module	n_libraries	n_pass	n_warn	n_fail	pct_pass	pct_warn	pct_fail
+raw	current	biopsy	R1	Adapter Content	130	93	28	9	71.538462	21.538462	6.923077
+raw	current	biopsy	R1	Basic Statistics	130	130	0	0	100.000000	0.000000	0.000000
+raw	current	biopsy	R1	Overrepresented sequences	130	0	10	120	0.000000	7.692308	92.307692
+raw	current	biopsy	R1	Per base N content	130	130	0	0	100.000000	0.000000	0.000000
+raw	current	biopsy	R1	Per base sequence content	130	0	0	130	0.000000	0.000000	100.000000
+raw	current	biopsy	R1	Per base sequence quality	130	0	130	0	0.000000	100.000000	0.000000
+raw	current	biopsy	R1	Per sequence GC content	130	0	11	119	0.000000	8.461538	91.538462
+raw	current	biopsy	R1	Per sequence quality scores	130	130	0	0	100.000000	0.000000	0.000000
+raw	current	biopsy	R1	Per tile sequence quality	130	0	0	130	0.000000	0.000000	100.000000
+raw	current	biopsy	R1	Sequence Duplication Levels	130	2	7	121	1.538462	5.384615	93.076923
+raw	current	biopsy	R1	Sequence Length Distribution	130	0	130	0	0.000000	100.000000	0.000000
+raw	current	biopsy	R2	Adapter Content	130	130	0	0	100.000000	0.000000	0.000000
+raw	current	biopsy	R2	Basic Statistics	130	130	0	0	100.000000	0.000000	0.000000
+raw	current	biopsy	R2	Overrepresented sequences	130	114	16	0	87.692308	12.307692	0.000000
+raw	current	biopsy	R2	Per base N content	130	0	0	130	0.000000	0.000000	100.000000
+raw	current	biopsy	R2	Per base sequence content	130	0	0	130	0.000000	0.000000	100.000000
+raw	current	biopsy	R2	Per base sequence quality	130	0	0	130	0.000000	0.000000	100.000000
+raw	current	biopsy	R2	Per sequence GC content	130	0	0	130	0.000000	0.000000	100.000000
+raw	current	biopsy	R2	Per sequence quality scores	130	130	0	0	100.000000	0.000000	0.000000
+raw	current	biopsy	R2	Per tile sequence quality	130	0	0	130	0.000000	0.000000	100.000000
+raw	current	biopsy	R2	Sequence Duplication Levels	130	130	0	0	100.000000	0.000000	0.000000
+raw	current	biopsy	R2	Sequence Length Distribution	130	0	130	0	0.000000	100.000000	0.000000
+raw	current	negative_control	R1	Adapter Content	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R1	Basic Statistics	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R1	Overrepresented sequences	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R1	Per base N content	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R1	Per base sequence content	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R1	Per base sequence quality	22	0	22	0	0.000000	100.000000	0.000000
+raw	current	negative_control	R1	Per sequence GC content	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R1	Per sequence quality scores	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R1	Per tile sequence quality	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R1	Sequence Duplication Levels	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R1	Sequence Length Distribution	22	0	22	0	0.000000	100.000000	0.000000
+raw	current	negative_control	R2	Adapter Content	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R2	Basic Statistics	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R2	Overrepresented sequences	22	0	21	1	0.000000	95.454545	4.545455
+raw	current	negative_control	R2	Per base N content	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R2	Per base sequence content	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R2	Per base sequence quality	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R2	Per sequence GC content	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R2	Per sequence quality scores	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R2	Per tile sequence quality	22	0	0	22	0.000000	0.000000	100.000000
+raw	current	negative_control	R2	Sequence Duplication Levels	22	22	0	0	100.000000	0.000000	0.000000
+raw	current	negative_control	R2	Sequence Length Distribution	22	0	22	0	0.000000	100.000000	0.000000
+raw	pilot	biopsy	R1	Adapter Content	8	2	4	2	25.000000	50.000000	25.000000
+raw	pilot	biopsy	R1	Basic Statistics	8	8	0	0	100.000000	0.000000	0.000000
+raw	pilot	biopsy	R1	Overrepresented sequences	8	0	1	7	0.000000	12.500000	87.500000
+raw	pilot	biopsy	R1	Per base N content	8	8	0	0	100.000000	0.000000	0.000000
+raw	pilot	biopsy	R1	Per base sequence content	8	0	0	8	0.000000	0.000000	100.000000
+raw	pilot	biopsy	R1	Per base sequence quality	8	0	8	0	0.000000	100.000000	0.000000
+raw	pilot	biopsy	R1	Per sequence GC content	8	0	0	8	0.000000	0.000000	100.000000
+raw	pilot	biopsy	R1	Per sequence quality scores	8	8	0	0	100.000000	0.000000	0.000000
+raw	pilot	biopsy	R1	Per tile sequence quality	8	0	0	8	0.000000	0.000000	100.000000
+raw	pilot	biopsy	R1	Sequence Duplication Levels	8	0	0	8	0.000000	0.000000	100.000000
+raw	pilot	biopsy	R1	Sequence Length Distribution	8	0	8	0	0.000000	100.000000	0.000000
+raw	pilot	biopsy	R2	Adapter Content	8	8	0	0	100.000000	0.000000	0.000000
+raw	pilot	biopsy	R2	Basic Statistics	8	8	0	0	100.000000	0.000000	0.000000
+raw	pilot	biopsy	R2	Overrepresented sequences	8	0	7	1	0.000000	87.500000	12.500000
+raw	pilot	biopsy	R2	Per base N content	8	8	0	0	100.000000	0.000000	0.000000
+raw	pilot	biopsy	R2	Per base sequence content	8	0	0	8	0.000000	0.000000	100.000000
+raw	pilot	biopsy	R2	Per base sequence quality	8	0	0	8	0.000000	0.000000	100.000000
+raw	pilot	biopsy	R2	Per sequence GC content	8	0	0	8	0.000000	0.000000	100.000000
+raw	pilot	biopsy	R2	Per sequence quality scores	8	8	0	0	100.000000	0.000000	0.000000
+raw	pilot	biopsy	R2	Per tile sequence quality	8	0	8	0	0.000000	100.000000	0.000000
+raw	pilot	biopsy	R2	Sequence Duplication Levels	8	0	4	4	0.000000	50.000000	50.000000
+raw	pilot	biopsy	R2	Sequence Length Distribution	8	0	8	0	0.000000	100.000000	0.000000
+raw	pilot	positive_control	R1	Adapter Content	38	32	6	0	84.210526	15.789474	0.000000
+raw	pilot	positive_control	R1	Basic Statistics	38	38	0	0	100.000000	0.000000	0.000000
+raw	pilot	positive_control	R1	Overrepresented sequences	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R1	Per base N content	38	22	10	6	57.894737	26.315789	15.789474
+raw	pilot	positive_control	R1	Per base sequence content	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R1	Per base sequence quality	38	0	1	37	0.000000	2.631579	97.368421
+raw	pilot	positive_control	R1	Per sequence GC content	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R1	Per sequence quality scores	38	33	0	5	86.842105	0.000000	13.157895
+raw	pilot	positive_control	R1	Per tile sequence quality	38	0	9	29	0.000000	23.684211	76.315789
+raw	pilot	positive_control	R1	Sequence Duplication Levels	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R1	Sequence Length Distribution	38	0	38	0	0.000000	100.000000	0.000000
+raw	pilot	positive_control	R2	Adapter Content	38	32	6	0	84.210526	15.789474	0.000000
+raw	pilot	positive_control	R2	Basic Statistics	38	38	0	0	100.000000	0.000000	0.000000
+raw	pilot	positive_control	R2	Overrepresented sequences	38	0	1	37	0.000000	2.631579	97.368421
+raw	pilot	positive_control	R2	Per base N content	38	22	10	6	57.894737	26.315789	15.789474
+raw	pilot	positive_control	R2	Per base sequence content	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R2	Per base sequence quality	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R2	Per sequence GC content	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R2	Per sequence quality scores	38	32	0	6	84.210526	0.000000	15.789474
+raw	pilot	positive_control	R2	Per tile sequence quality	38	0	38	0	0.000000	100.000000	0.000000
+raw	pilot	positive_control	R2	Sequence Duplication Levels	38	0	0	38	0.000000	0.000000	100.000000
+raw	pilot	positive_control	R2	Sequence Length Distribution	38	0	38	0	0.000000	100.000000	0.000000
+trimmed	current	biopsy	R1	Adapter Content	130	93	28	9	71.538462	21.538462	6.923077
+trimmed	current	biopsy	R1	Basic Statistics	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R1	Overrepresented sequences	130	0	0	130	0.000000	0.000000	100.000000
+trimmed	current	biopsy	R1	Per base N content	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R1	Per base sequence content	130	0	0	130	0.000000	0.000000	100.000000
+trimmed	current	biopsy	R1	Per base sequence quality	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R1	Per sequence GC content	130	0	12	118	0.000000	9.230769	90.769231
+trimmed	current	biopsy	R1	Per sequence quality scores	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R1	Per tile sequence quality	130	0	40	90	0.000000	30.769231	69.230769
+trimmed	current	biopsy	R1	Sequence Duplication Levels	130	0	3	127	0.000000	2.307692	97.692308
+trimmed	current	biopsy	R1	Sequence Length Distribution	130	0	6	124	0.000000	4.615385	95.384615
+trimmed	current	biopsy	R2	Adapter Content	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R2	Basic Statistics	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R2	Overrepresented sequences	130	0	74	56	0.000000	56.923077	43.076923
+trimmed	current	biopsy	R2	Per base N content	130	0	0	130	0.000000	0.000000	100.000000
+trimmed	current	biopsy	R2	Per base sequence content	130	0	0	130	0.000000	0.000000	100.000000
+trimmed	current	biopsy	R2	Per base sequence quality	130	0	0	130	0.000000	0.000000	100.000000
+trimmed	current	biopsy	R2	Per sequence GC content	130	0	0	130	0.000000	0.000000	100.000000
+trimmed	current	biopsy	R2	Per sequence quality scores	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R2	Per tile sequence quality	130	0	0	130	0.000000	0.000000	100.000000
+trimmed	current	biopsy	R2	Sequence Duplication Levels	130	130	0	0	100.000000	0.000000	0.000000
+trimmed	current	biopsy	R2	Sequence Length Distribution	130	0	17	113	0.000000	13.076923	86.923077
+trimmed	current	negative_control	R1	Adapter Content	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R1	Basic Statistics	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R1	Overrepresented sequences	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R1	Per base N content	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R1	Per base sequence content	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R1	Per base sequence quality	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R1	Per sequence GC content	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R1	Per sequence quality scores	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R1	Per tile sequence quality	22	0	3	19	0.000000	13.636364	86.363636
+trimmed	current	negative_control	R1	Sequence Duplication Levels	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R1	Sequence Length Distribution	22	0	5	17	0.000000	22.727273	77.272727
+trimmed	current	negative_control	R2	Adapter Content	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R2	Basic Statistics	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R2	Overrepresented sequences	22	0	15	7	0.000000	68.181818	31.818182
+trimmed	current	negative_control	R2	Per base N content	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R2	Per base sequence content	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R2	Per base sequence quality	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R2	Per sequence GC content	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R2	Per sequence quality scores	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R2	Per tile sequence quality	22	0	0	22	0.000000	0.000000	100.000000
+trimmed	current	negative_control	R2	Sequence Duplication Levels	22	22	0	0	100.000000	0.000000	0.000000
+trimmed	current	negative_control	R2	Sequence Length Distribution	22	0	9	13	0.000000	40.909091	59.090909
+trimmed	pilot	biopsy	R1	Adapter Content	8	2	4	2	25.000000	50.000000	25.000000
+trimmed	pilot	biopsy	R1	Basic Statistics	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R1	Overrepresented sequences	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R1	Per base N content	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R1	Per base sequence content	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R1	Per base sequence quality	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R1	Per sequence GC content	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R1	Per sequence quality scores	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R1	Per tile sequence quality	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R1	Sequence Duplication Levels	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R1	Sequence Length Distribution	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R2	Adapter Content	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R2	Basic Statistics	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R2	Overrepresented sequences	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R2	Per base N content	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R2	Per base sequence content	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R2	Per base sequence quality	8	0	8	0	0.000000	100.000000	0.000000
+trimmed	pilot	biopsy	R2	Per sequence GC content	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	biopsy	R2	Per sequence quality scores	8	8	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R2	Per tile sequence quality	8	0	8	0	0.000000	100.000000	0.000000
+trimmed	pilot	biopsy	R2	Sequence Duplication Levels	8	0	2	6	0.000000	25.000000	75.000000
+trimmed	pilot	biopsy	R2	Sequence Length Distribution	8	0	0	8	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R1	Adapter Content	38	32	6	0	84.210526	15.789474	0.000000
+trimmed	pilot	positive_control	R1	Basic Statistics	38	38	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	positive_control	R1	Overrepresented sequences	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R1	Per base N content	38	21	11	6	55.263158	28.947368	15.789474
+trimmed	pilot	positive_control	R1	Per base sequence content	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R1	Per base sequence quality	38	32	0	6	84.210526	0.000000	15.789474
+trimmed	pilot	positive_control	R1	Per sequence GC content	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R1	Per sequence quality scores	38	33	0	5	86.842105	0.000000	13.157895
+trimmed	pilot	positive_control	R1	Per tile sequence quality	38	0	2	36	0.000000	5.263158	94.736842
+trimmed	pilot	positive_control	R1	Sequence Duplication Levels	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R1	Sequence Length Distribution	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R2	Adapter Content	38	32	6	0	84.210526	15.789474	0.000000
+trimmed	pilot	positive_control	R2	Basic Statistics	38	38	0	0	100.000000	0.000000	0.000000
+trimmed	pilot	positive_control	R2	Overrepresented sequences	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R2	Per base N content	38	22	9	7	57.894737	23.684211	18.421053
+trimmed	pilot	positive_control	R2	Per base sequence content	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R2	Per base sequence quality	38	0	29	9	0.000000	76.315789	23.684211
+trimmed	pilot	positive_control	R2	Per sequence GC content	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R2	Per sequence quality scores	38	32	0	6	84.210526	0.000000	15.789474
+trimmed	pilot	positive_control	R2	Per tile sequence quality	38	0	38	0	0.000000	100.000000	0.000000
+trimmed	pilot	positive_control	R2	Sequence Duplication Levels	38	0	0	38	0.000000	0.000000	100.000000
+trimmed	pilot	positive_control	R2	Sequence Length Distribution	38	0	0	38	0.000000	0.000000	100.000000

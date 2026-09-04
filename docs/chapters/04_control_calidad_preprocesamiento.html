@@ -411,7 +411,15 @@ div.csl-indent {
   <li><a href="#auditoría-de-bibliotecas-y-pares-fastq" id="toc-auditoría-de-bibliotecas-y-pares-fastq" class="nav-link active" data-scroll-target="#auditoría-de-bibliotecas-y-pares-fastq"><span class="header-section-number">4.1</span> Auditoría de bibliotecas y pares FASTQ</a></li>
   <li><a href="#informes-de-qc-y-multiqc" id="toc-informes-de-qc-y-multiqc" class="nav-link" data-scroll-target="#informes-de-qc-y-multiqc"><span class="header-section-number">4.2</span> Informes de QC y MultiQC</a></li>
   <li><a href="#recorte-y-verificación-de-primers" id="toc-recorte-y-verificación-de-primers" class="nav-link" data-scroll-target="#recorte-y-verificación-de-primers"><span class="header-section-number">4.3</span> Recorte y verificación de primers</a></li>
-  <li><a href="#profundidad-de-secuenciación-de-las-biopsias-repetidas" id="toc-profundidad-de-secuenciación-de-las-biopsias-repetidas" class="nav-link" data-scroll-target="#profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">4.4</span> Profundidad de secuenciación de las biopsias repetidas</a></li>
+  <li><a href="#exploración-y-elección-de-la-estrategia-de-recorte" id="toc-exploración-y-elección-de-la-estrategia-de-recorte" class="nav-link" data-scroll-target="#exploración-y-elección-de-la-estrategia-de-recorte"><span class="header-section-number">4.4</span> Exploración y elección de la estrategia de recorte</a></li>
+  <li><a href="#profundidad-de-secuenciación-de-las-biopsias-repetidas" id="toc-profundidad-de-secuenciación-de-las-biopsias-repetidas" class="nav-link" data-scroll-target="#profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">4.5</span> Profundidad de secuenciación de las biopsias repetidas</a></li>
+  <li><a href="#auditoría-integral-de-fastqcmultiqc" id="toc-auditoría-integral-de-fastqcmultiqc" class="nav-link" data-scroll-target="#auditoría-integral-de-fastqcmultiqc"><span class="header-section-number">4.6</span> Auditoría integral de FastQC/MultiQC</a>
+  <ul class="collapse">
+  <li><a href="#estados-fastqc-y-alcance-de-cada-módulo" id="toc-estados-fastqc-y-alcance-de-cada-módulo" class="nav-link" data-scroll-target="#estados-fastqc-y-alcance-de-cada-módulo"><span class="header-section-number">4.6.1</span> Estados FastQC y alcance de cada módulo</a></li>
+  <li><a href="#calidad-longitud-y-composición" id="toc-calidad-longitud-y-composición" class="nav-link" data-scroll-target="#calidad-longitud-y-composición"><span class="header-section-number">4.6.2</span> Calidad, longitud y composición</a></li>
+  <li><a href="#por-qué-no-se-truncó-por-posición" id="toc-por-qué-no-se-truncó-por-posición" class="nav-link" data-scroll-target="#por-qué-no-se-truncó-por-posición"><span class="header-section-number">4.6.3</span> Por qué no se truncó por posición</a></li>
+  <li><a href="#duplicación-secuencias-sobrerrepresentadas-y-adaptadores" id="toc-duplicación-secuencias-sobrerrepresentadas-y-adaptadores" class="nav-link" data-scroll-target="#duplicación-secuencias-sobrerrepresentadas-y-adaptadores"><span class="header-section-number">4.6.4</span> Duplicación, secuencias sobrerrepresentadas y adaptadores</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/04_control_calidad_preprocesamiento.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -440,7 +448,8 @@ div.csl-indent {
 
 <section id="auditoría-de-bibliotecas-y-pares-fastq" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="auditoría-de-bibliotecas-y-pares-fastq"><span class="header-section-number">4.1</span> Auditoría de bibliotecas y pares FASTQ</h2>
-<p>Se validaron 198 registros técnicos y 396 FASTQ: 46 bibliotecas del ensayo <code>pilot</code> y 152 del ensayo <code>current</code>. Cada biblioteca tiene un único par R1/R2 y no se identificaron FASTQ no referenciados. FastQC y MultiQC se ejecutaron antes y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en cada biblioteca.</p>
+<p>Se validaron 198 registros técnicos y 396 FASTQ: 46 bibliotecas del ensayo <code>pilot</code> y 152 del ensayo <code>current</code>. La validación de entrada confirmó un <code>fastq_id</code> único por archivo técnico, un único par R1/R2 por biblioteca y 396/396 coincidencias MD5 entre el inventario fuente y el destino de análisis. No se identificaron FASTQ no referenciados. FastQC y MultiQC se ejecutaron antes y después del recorte de primers; por diseño, los conteos de R1 y R2 coinciden en cada biblioteca.</p>
+<p>Los FASTQ raw y los controles negativos son inputs inmutables: las copias recortadas son derivados trazables y no sustituyen los archivos de origen. Esta distinción es importante para interpretar los capítulos siguientes: los controles se conservan en la tabla canónica para QC, pero todavía no autorizan una exclusión, una inferencia de contaminantes ni una comparación biológica.</p>
 <p>El resumen de bibliotecas y pares de lecturas se presenta en la <a href="#tbl-preprocessing-summary" class="quarto-xref">Tabla&nbsp;<span>4.1</span></a>.</p>
 <div id="tbl-preprocessing-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -493,41 +502,108 @@ Tabla&nbsp;4.1: Bibliotecas y pares de lecturas antes y después del recorte de 
 </figure>
 </div>
 <p>Las profundidades agregadas por tipo de biblioteca están disponibles en las tablas de <a href="../tables/04_control_calidad_preprocesamiento/Table-4.1-profundidad-bibliotecas-crudas.tsv">FASTQ crudos</a> y <a href="../tables/04_control_calidad_preprocesamiento/Table-4.1-profundidad-bibliotecas-recortadas.tsv">FASTQ recortados</a>.</p>
+<div id="tbl-library-scope" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-library-scope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.2: Alcance técnico de las bibliotecas. Las ocho biopsias de <code>pilot</code> se conservan como pares de sensibilidad respecto al ensayo ampliado, no como réplicas biológicas independientes.
+</figcaption>
+<div aria-describedby="tbl-library-scope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ensayo</th>
+<th>Tipo técnico</th>
+<th style="text-align: right;">Bibliotecas</th>
+<th style="text-align: right;">Pares crudos</th>
+<th>Papel en esta etapa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Piloto</td>
+<td>Biopsias</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">11.815.341</td>
+<td>Biopsias repetidas; QC técnico pareado.</td>
+</tr>
+<tr class="even">
+<td>Piloto</td>
+<td>Controles positivos</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">18.249.198</td>
+<td>Recuperación técnica y composición de controles.</td>
+</tr>
+<tr class="odd">
+<td>Ampliado actual</td>
+<td>Biopsias</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">25.718.239</td>
+<td>Cohorte de biopsias para el handoff canónico.</td>
+</tr>
+<tr class="even">
+<td>Ampliado actual</td>
+<td>Controles negativos</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">4.192.039</td>
+<td>Preservados para una evaluación posterior de prevalencia/decontaminación.</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>—</strong></td>
+<td style="text-align: right;"><strong>198</strong></td>
+<td style="text-align: right;"><strong>59.974.817</strong></td>
+<td><strong>Sin descarte en el preprocesamiento.</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La matriz de 16 comprobaciones de preprocesamiento hizo explícita la cadena de custodia de cada ensayo: manifiesto de bibliotecas, inventarios FastQC raw y trimmed, presencia de FASTQ trimmed, conteos pareados raw y trimmed, retención de pares y verificación del recorte por secuencia. Las ocho comprobaciones pasaron en <code>pilot</code> (46 bibliotecas; 92 FASTQ por inventario) y las mismas ocho en <code>current</code> (152 bibliotecas; 304 FASTQ por inventario). El detalle se puede consultar en la <a href="../tables/04_control_calidad_preprocesamiento/Table-4.6-validacion-etapas-preprocesamiento.tsv">matriz de validación de etapas</a>.</p>
 </section>
 <section id="informes-de-qc-y-multiqc" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="informes-de-qc-y-multiqc"><span class="header-section-number">4.2</span> Informes de QC y MultiQC</h2>
 <p>Los informes de FastQC se integraron con MultiQC antes y después del recorte <span class="citation" data-cites="Ewels2016">(<a href="11_referencias.html#ref-Ewels2016" role="doc-biblioref">Ewels et&nbsp;al. 2016</a>)</span>. La versión pública se regenera exclusivamente a partir de copias temporales de los archivos <code>*_fastqc.zip</code>, conserva los nombres técnicos autorizados y excluye las rutas internas de computación. Se puede consultar el <a href="../multiqc/04_control_calidad_preprocesamiento/MultiQC-4.1-fastqc-crudo.html">informe previo al recorte</a> y el <a href="../multiqc/04_control_calidad_preprocesamiento/MultiQC-4.2-fastqc-recortado.html">informe posterior al recorte</a>.</p>
-<p>La <a href="#fig-fastqc-raw-profiles" class="quarto-xref">Figura&nbsp;<span>4.1</span></a> presenta los perfiles de calidad de los FASTQ crudos por ensayo y sentido de lectura. La <a href="#fig-fastqc-trimmed-profiles" class="quarto-xref">Figura&nbsp;<span>4.2</span></a> muestra la misma evaluación después del recorte por secuencia.</p>
-<div id="fig-fastqc-raw-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Perfiles de calidad de los FASTQ crudos para los ensayos pilot y current, con paneles separados para R1 y R2.">
+<p>La <a href="#fig-fastqc-raw-profiles" class="quarto-xref">Figura&nbsp;<span>4.1</span></a> presenta los perfiles de calidad de los FASTQ crudos por ensayo, tipo de biblioteca y sentido de lectura. La <a href="#fig-fastqc-trimmed-profiles" class="quarto-xref">Figura&nbsp;<span>4.2</span></a> muestra la misma evaluación después del recorte por secuencia.</p>
+<div id="fig-fastqc-raw-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Perfiles de calidad de los FASTQ crudos para biopsias, controles positivos y controles negativos de los ensayos pilot y current, con paneles separados para R1 y R2.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fastqc-raw-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-crudo-por-ensayo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;4.1: Perfiles de calidad FastQC de los FASTQ crudos, estratificados por ensayo y sentido de lectura."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-crudo-por-ensayo.png" class="img-fluid figure-img" alt="Perfiles de calidad de los FASTQ crudos para los ensayos pilot y current, con paneles separados para R1 y R2."></a>
+<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.1-perfiles-calidad-fastq-crudo-por-ensayo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;4.1: Perfiles de calidad FastQC de los FASTQ crudos, estratificados por ensayo, tipo de biblioteca y sentido de lectura."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.1-perfiles-calidad-fastq-crudo-por-ensayo.png" class="img-fluid figure-img" alt="Perfiles de calidad de los FASTQ crudos para biopsias, controles positivos y controles negativos de los ensayos pilot y current, con paneles separados para R1 y R2."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-raw-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;4.1: Perfiles de calidad FastQC de los FASTQ crudos, estratificados por ensayo y sentido de lectura.
+Figura&nbsp;4.1: Perfiles de calidad FastQC de los FASTQ crudos, estratificados por ensayo, tipo de biblioteca y sentido de lectura.
 </figcaption>
 </figure>
 </div>
-<div id="fig-fastqc-trimmed-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Perfiles de calidad de los FASTQ recortados para los ensayos pilot y current, con paneles separados para R1 y R2.">
+<div id="fig-fastqc-trimmed-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Perfiles de calidad de los FASTQ recortados para biopsias, controles positivos y controles negativos de los ensayos pilot y current, con paneles separados para R1 y R2.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fastqc-trimmed-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.3-perfiles-calidad-fastq-recortado-por-ensayo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;4.2: Perfiles de calidad FastQC de los FASTQ tras el recorte por secuencia, estratificados por ensayo y sentido de lectura."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.3-perfiles-calidad-fastq-recortado-por-ensayo.png" class="img-fluid figure-img" alt="Perfiles de calidad de los FASTQ recortados para los ensayos pilot y current, con paneles separados para R1 y R2."></a>
+<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-recortado-por-ensayo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;4.2: Perfiles de calidad FastQC de los FASTQ tras el recorte por secuencia, estratificados por ensayo, tipo de biblioteca y sentido de lectura."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-recortado-por-ensayo.png" class="img-fluid figure-img" alt="Perfiles de calidad de los FASTQ recortados para biopsias, controles positivos y controles negativos de los ensayos pilot y current, con paneles separados para R1 y R2."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-trimmed-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;4.2: Perfiles de calidad FastQC de los FASTQ tras el recorte por secuencia, estratificados por ensayo y sentido de lectura.
+Figura&nbsp;4.2: Perfiles de calidad FastQC de los FASTQ tras el recorte por secuencia, estratificados por ensayo, tipo de biblioteca y sentido de lectura.
 </figcaption>
 </figure>
 </div>
+<p>En estas figuras, <code>pilot</code> separa biopsias y controles positivos, mientras que <code>current</code> separa biopsias y negativos. La comparación raw→trimmed es descriptiva: el recorte se condicionó a evidencia de primer y no fue un filtro de calidad ni de bibliotecas. Por ello, una diferencia de perfil después del recorte no debe leerse como pérdida selectiva de muestras; el contraste de retención y de fusión se evalúa después con DADA2 (<a href="05_dada2_inferencia_asv.html#sec-dada2-filtering" class="quarto-xref"><span>Sección 5.3</span></a>).</p>
 </section>
 <section id="recorte-y-verificación-de-primers" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="recorte-y-verificación-de-primers"><span class="header-section-number">4.3</span> Recorte y verificación de primers</h2>
-<p>Cutadapt 5.2 buscó 341F (<code>CCTACGGGNGGCWGCAG</code>) en R1 y 805R (<code>GACTACHVGGGTATCTAATCC</code>) en R2. Ambos primers se buscaron completos y anclados al extremo 5′ (<code>^primer</code>), con tasa máxima de error de 0,15 y sin indels. No se usaron <code>-u</code>, <code>-U</code> ni <code>--discard-untrimmed</code>.</p>
-<p>Una lectura solo pierde 17 nt en R1 o 21 nt en R2 cuando Cutadapt detecta el primer configurado; las lecturas sin coincidencia se preservan intactas. La no coincidencia no demuestra la ausencia de primer: demuestra únicamente que no existe evidencia configurada para cortar bases. Se retuvo el 100 % de los pares en ambos ensayos y los 16 controles formales de preprocesamiento se superaron.</p>
-<p>La retención y las coincidencias de primer se detallan en la <a href="#tbl-primer-trimming" class="quarto-xref">Tabla&nbsp;<span>4.2</span></a>.</p>
+<p>Cutadapt 5.2 <span class="citation" data-cites="Martin2011">(<a href="11_referencias.html#ref-Martin2011" role="doc-biblioref">Martin 2011</a>)</span> aplicó cuatro adaptadores terminales completos: 341F (<code>CCTACGGGNGGCWGCAG</code>) anclado a R1-5′ y 805R (<code>GACTACHVGGGTATCTAATCC</code>) anclado a R2-5′, junto con rc805R (<code>GGATTAGATACCCBDGTAGTC</code>) anclado a R1-3′ y rc341F (<code>CTGCWGCCNCCCGTAGG</code>) anclado a R2-3′. Los adaptadores 5′ se expresan como <code>^primer</code> y los RC 3′ como <code>primer$</code>.</p>
+<p>Cada coincidencia debía cubrir el primer completo: 17/21 nt en 5′ para R1/R2 y 21/17 nt en 3′ para R1/R2. Se aplicaron tasa máxima de error <code>e=0,15</code>, sin indels y <code>--times 2</code>, de modo que el procedimiento puede comprobar de forma iterativa los extremos configurados. No se usaron <code>-u</code>, <code>-U</code> ni <code>--discard-untrimmed</code>. Por tanto, solo se retiran bases de una coincidencia terminal observada; una lectura sin coincidencia en cualquiera de los extremos se conserva intacta en ese extremo.</p>
+<p>La no coincidencia no demuestra ausencia biológica de primer: demuestra únicamente que no existe evidencia configurada para retirar esas bases. Se retuvo el 100 % de los pares en ambos ensayos y los 16 controles formales de preprocesamiento se superaron.</p>
+<p>La retención y las coincidencias de primer se detallan en la <a href="#tbl-primer-trimming" class="quarto-xref">Tabla&nbsp;<span>4.3</span></a>.</p>
 <div id="tbl-primer-trimming" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-primer-trimming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;4.2: Retención de pares, coincidencias completas ancladas de primer y lecturas sin coincidencia preservadas tras el recorte por secuencia.
+Tabla&nbsp;4.3: Retención de pares y coincidencias completas de los primers 5′ y RC 3′ anclados tras el recorte por secuencia. Las lecturas sin coincidencia terminal se preservaron, sin descartarlas.
 </figcaption>
 <div aria-describedby="tbl-primer-trimming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -547,10 +623,10 @@ Tabla&nbsp;4.2: Retención de pares, coincidencias completas ancladas de primer 
 <th style="text-align: right;">Pares de entrada</th>
 <th style="text-align: right;">Pares de salida</th>
 <th style="text-align: right;">Retención</th>
-<th style="text-align: right;">Coincidencia R1</th>
-<th style="text-align: right;">Coincidencia R2</th>
-<th style="text-align: right;">R1 sin coincidencia, preservadas</th>
-<th style="text-align: right;">R2 sin coincidencia, preservadas</th>
+<th style="text-align: right;">341F, R1-5′</th>
+<th style="text-align: right;">805R, R2-5′</th>
+<th style="text-align: right;">rc805R, R1-3′</th>
+<th style="text-align: right;">rc341F, R2-3′</th>
 </tr>
 </thead>
 <tbody>
@@ -559,36 +635,133 @@ Tabla&nbsp;4.2: Retención de pares, coincidencias completas ancladas de primer 
 <td style="text-align: right;">30,06 millones</td>
 <td style="text-align: right;">30,06 millones</td>
 <td style="text-align: right;">100,00 %</td>
-<td style="text-align: right;">57,8550 %</td>
-<td style="text-align: right;">19,3697 %</td>
-<td style="text-align: right;">42,1450 %</td>
-<td style="text-align: right;">80,6303 %</td>
+<td style="text-align: right;">57,7628 %</td>
+<td style="text-align: right;">19,3149 %</td>
+<td style="text-align: right;">7,9562 %</td>
+<td style="text-align: right;">7,0211 %</td>
 </tr>
 <tr class="even">
 <td>Ampliado actual</td>
 <td style="text-align: right;">29,91 millones</td>
 <td style="text-align: right;">29,91 millones</td>
 <td style="text-align: right;">100,00 %</td>
-<td style="text-align: right;">72,0326 %</td>
-<td style="text-align: right;">7,5323 %</td>
-<td style="text-align: right;">27,9674 %</td>
-<td style="text-align: right;">92,4677 %</td>
+<td style="text-align: right;">71,9893 %</td>
+<td style="text-align: right;">7,5226 %</td>
+<td style="text-align: right;">12,9895 %</td>
+<td style="text-align: right;">16,3764 %</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
+<p>Las fracciones sin coincidencia 5′ preservadas fueron 42,2372 % (R1) y 80,6851 % (R2) en el piloto, y 28,0107 % (R1) y 92,4774 % (R2) en el ensayo ampliado. Para los RC 3′ fueron 92,0438 % y 92,9789 % en el piloto, y 87,0105 % y 83,6236 % en el ensayo ampliado, para R1 y R2 respectivamente. Estos valores describen coincidencia terminal bajo la configuración aplicada; no son una clasificación biológica de las lecturas sin coincidencia.</p>
+<p>La auditoría raw independiente confirmó la orientación canónica de estas señales. La coocurrencia 5′ 341F@R1 + 805R@R2 fue 13,4864 % en el piloto y 6,6080 % en el ensayo ampliado; la coocurrencia RC 3′ rc805R@R1 + rc341F@R2 fue 3,2383 % y 10,2288 %, respectivamente. Las llamadas 5′ de Cutadapt no excedieron las coincidencias terminales raw del escáner en las 396 comparaciones revisadas. No se exige igualdad exacta porque Cutadapt aplica los cuatro adaptadores iterativamente con <code>--times 2</code>, mientras que el escáner cuenta los patrones raw de forma independiente.</p>
+<div id="tbl-primer-orientation-pairing" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-primer-orientation-pairing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.4: Coocurrencia de señales de primer en pares raw. El par canónico 5′ es 341F@R1 + 805R@R2; el par canónico RC 3′ es rc805R@R1 + rc341F@R2. Las orientaciones invertidas son los pares intercambiados equivalentes.
+</figcaption>
+<div aria-describedby="tbl-primer-orientation-pairing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ensayo</th>
+<th style="text-align: right;">Par canónico 5′</th>
+<th style="text-align: right;">Par 5′ invertido</th>
+<th style="text-align: right;">Par canónico RC 3′</th>
+<th style="text-align: right;">Par RC 3′ invertido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Piloto</td>
+<td style="text-align: right;">13,4864 %</td>
+<td style="text-align: right;">0,0032 %</td>
+<td style="text-align: right;">3,2383 %</td>
+<td style="text-align: right;">0,0003 %</td>
+</tr>
+<tr class="even">
+<td>Ampliado actual</td>
+<td style="text-align: right;">6,6080 %</td>
+<td style="text-align: right;">0,0004 %</td>
+<td style="text-align: right;">10,2288 %</td>
+<td style="text-align: right;">0,0006 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La diferencia entre los pares canónicos e invertidos de la <a href="#tbl-primer-orientation-pairing" class="quarto-xref">Tabla&nbsp;<span>4.4</span></a> aporta evidencia técnica de orientación, no una asignación taxonómica. En particular, la señal RC 3′ canónica es compatible con <em>read-through</em> y motivó incorporar ambos complementarios inversos al método final. El recorte retiró 1.081.443.452 bases en total (503.286.462 en <code>pilot</code> y 578.156.990 en <code>current</code>) sin perder un solo par. La tabla completa de esta auditoría se publica como <a href="../tables/04_control_calidad_preprocesamiento/Table-4.2-orientacion-pareada-primers.tsv">orientación pareada de primers</a>, junto con la <a href="../tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-por-secuencia.tsv">verificación por secuencia</a>.</p>
 <p>Las métricas reproducibles se encuentran en <a href="../tables/04_control_calidad_preprocesamiento/Table-4.2-retencion-primers-por-ensayo.tsv">retención por ensayo</a> y <a href="../tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-por-secuencia.tsv">verificación de primers por secuencia</a>.</p>
 </section>
-<section id="profundidad-de-secuenciación-de-las-biopsias-repetidas" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">4.4</span> Profundidad de secuenciación de las biopsias repetidas</h2>
+<section id="exploración-y-elección-de-la-estrategia-de-recorte" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="exploración-y-elección-de-la-estrategia-de-recorte"><span class="header-section-number">4.4</span> Exploración y elección de la estrategia de recorte</h2>
+<p>La estrategia no se eligió por la mera posición esperada de los oligos. Se validaron primero el manifiesto técnico y la correspondencia de los 198 pares R1/R2, y se contrastó el recorte fijo histórico de 17 nt en R1 y 21 nt en R2 con la búsqueda de primers completos en los extremos de cada lectura. El recorte fijo conserva una sensibilidad aislada y reproducible; no es el input de la rama canónica.</p>
+<div id="tbl-trimming-branch-role" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-trimming-branch-role-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.5: Ramas que se distinguen a lo largo del informe. La comparación fijo/anclado mantiene DADA2 3/5 para no confundir la estrategia de recorte con el filtro final <code>strict</code> 2/4.
+</figcaption>
+<div aria-describedby="tbl-trimming-branch-role-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rama</th>
+<th>Regla de recorte</th>
+<th>DADA2 asociado</th>
+<th>Uso editorial</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Canónica</td>
+<td>Búsqueda anclada 341F/805R en 5′ y RC en 3′</td>
+<td><code>strict</code> 2/4</td>
+<td>Tabla final para taxonomía y etapas posteriores autorizadas.</td>
+</tr>
+<tr class="even">
+<td>Sensibilidad anclada</td>
+<td>El mismo recorte anclado</td>
+<td>3/5</td>
+<td>Comparación controlada con el recorte fijo.</td>
+</tr>
+<tr class="odd">
+<td>Sensibilidad fija</td>
+<td>17 nt de R1 y 21 nt de R2 en todas las lecturas</td>
+<td>3/5</td>
+<td>Referencia histórica aislada; no tabla principal.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El motivo de descartarlo como estrategia principal es metodológico: cortar 17/21 bases en todas las lecturas presupone que esas posiciones contienen el primer, incluso cuando no se observa una coincidencia terminal configurada. La búsqueda anclada elimina bases sólo ante esa evidencia y, además, la auditoría de orientación mostró la señal canónica de <em>read-through</em> en los extremos 3′. La coocurrencia rc805R@R1-3′ + rc341F@R2-3′ fue 3,2383 % en <code>pilot</code> y 10,2288 % en <code>current</code>, frente a 0,0003 % y 0,0006 % para la orientación invertida. Esto justificó incorporar los reversos complementarios 3′ al método final.</p>
+<p>La comparación posterior de estrategias se mantuvo deliberadamente aislada: ambas se procesaron con DADA2 <code>maxEE=c(3,5)</code> para atribuir la diferencia al recorte y no al filtro. El fijo produjo más ASVs, pero el anclado alcanzó mayor fracción de lecturas asignadas a género (89,88 % frente a 79,85 % en <code>pilot</code>; 75,07 % frente a 62,61 % en <code>current</code>). La comparación no permite separar el efecto de cada componente del protocolo —corte posicional universal frente a búsqueda anclada y tratamiento de RC 3′— ni afirmar que cada ASV adicional del fijo sea un artefacto. Sí aporta una razón cuantitativa para preferir una rama principal conservadora, que se desarrolla en el <a href="../chapters/05_dada2_inferencia_asv.html#sec-fixed-anchored-comparison">capítulo DADA2</a>. La tabla principal usa, por ello, el recorte anclado y la selección final <code>strict</code> 2/4.</p>
+</section>
+<section id="profundidad-de-secuenciación-de-las-biopsias-repetidas" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="profundidad-de-secuenciación-de-las-biopsias-repetidas"><span class="header-section-number">4.5</span> Profundidad de secuenciación de las biopsias repetidas</h2>
 <p>La comparación pareada utiliza las ocho biopsias presentes en el piloto y el ensayo ampliado. Se trata de una comparación técnica de FASTQ crudos antes de filtrado, fusión de pares o eliminación de quimeras. En todas ellas, la profundidad de entrada fue mayor en el piloto; la media geométrica del cociente piloto/ampliado fue 7,69 y la mediana 7,51. No se aplicó una prueba de hipótesis.</p>
-<p>El resumen descriptivo de esta comparación se presenta en la <a href="#tbl-repeated-depth-summary" class="quarto-xref">Tabla&nbsp;<span>4.3</span></a>.</p>
+<p>El resumen descriptivo de esta comparación se presenta en la <a href="#tbl-repeated-depth-summary" class="quarto-xref">Tabla&nbsp;<span>4.6</span></a>.</p>
 <div id="tbl-repeated-depth-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-repeated-depth-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;4.3: Profundidad de los pares de lecturas crudos en las biopsias repetidas.
+Tabla&nbsp;4.6: Profundidad de los pares de lecturas crudos en las biopsias repetidas.
 </figcaption>
 <div aria-describedby="tbl-repeated-depth-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -634,7 +807,7 @@ Tabla&nbsp;4.3: Profundidad de los pares de lecturas crudos en las biopsias repe
 <div id="fig-repeated-depth" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-repeated-depth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.1-profundidad-biopsias-repetidas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;4.3: Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.1-profundidad-biopsias-repetidas.png" class="img-fluid figure-img" alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado."></a>
+<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.3-profundidad-biopsias-repetidas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;4.3: Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.3-profundidad-biopsias-repetidas.png" class="img-fluid figure-img" alt="Gráfico de líneas pareadas que compara la profundidad de las ocho biopsias repetidas entre el piloto y el ensayo ampliado."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-repeated-depth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.3: Profundidad de secuenciación de las ocho biopsias repetidas. Cada línea representa una biopsia; el eje vertical está en escala logarítmica y expresa millones de pares de lecturas.
@@ -642,6 +815,294 @@ Figura&nbsp;4.3: Profundidad de secuenciación de las ocho biopsias repetidas. C
 </figure>
 </div>
 <p>Los valores técnicos individuales y el resumen se ofrecen en la <a href="../tables/04_control_calidad_preprocesamiento/Table-4.3-profundidad-biopsias-repetidas.tsv">tabla por biopsia</a> y en el <a href="../tables/04_control_calidad_preprocesamiento/Table-4.3-resumen-profundidad-biopsias-repetidas.tsv">resumen descriptivo</a>.</p>
+</section>
+<section id="auditoría-integral-de-fastqcmultiqc" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="auditoría-integral-de-fastqcmultiqc"><span class="header-section-number">4.6</span> Auditoría integral de FastQC/MultiQC</h2>
+<p>La auditoría vuelve a leer los 396 informes FastQC de FASTQ crudos y los 396 informes posteriores al recorte, sin ejecutar FastQC, Cutadapt, DADA2 ni etapas posteriores. Para cada etapa se comprobaron los 11 módulos que muestra MultiQC, las estadísticas básicas y los estados frente a los informes de <code>pilot</code> y <code>current</code>. Los 16 controles de esta comprobación (cobertura de informes, profundidad y estadísticas básicas, estados de módulo y perfiles Phred, por etapa y ensayo) resultaron conformes. Los perfiles Phred ya informados se reprodujeron a la precisión histórica de tres decimales.</p>
+<p>Las cifras siguientes son intervalos de las medianas por biblioteca entre los 16 grupos públicos (etapa, ensayo, tipo de biblioteca y R1/R2); no exponen métricas por biblioteca. El detalle completo, con mediana, P10, P90, mínimo y máximo, puede descargarse en el <a href="../tables/04_control_calidad_preprocesamiento/Table-4.4-resumen-cuantitativo-modulos-fastqc.tsv">resumen cuantitativo de módulos FastQC</a>.</p>
+<div id="tbl-fastqc-audit-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fastqc-audit-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.7: Indicadores FastQC agregados por grupo. Los intervalos corresponden al rango de las medianas de biblioteca de los grupos públicos, no al rango de lecturas individuales.
+</figcaption>
+<div aria-describedby="tbl-fastqc-audit-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicador agregado</th>
+<th style="text-align: right;">Crudos</th>
+<th style="text-align: right;">Recortados</th>
+<th>Lectura descriptiva</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Informes y módulos comprobados</td>
+<td style="text-align: right;">396; 11/11</td>
+<td style="text-align: right;">396; 11/11</td>
+<td>Cobertura completa de R1 y R2.</td>
+</tr>
+<tr class="even">
+<td>Calidad media por secuencia (Phred)</td>
+<td style="text-align: right;">Q33,31–Q36,99</td>
+<td style="text-align: right;">Q33,36–Q37,19</td>
+<td>La distribución por lectura permanece alta en las medianas de grupo.</td>
+</tr>
+<tr class="odd">
+<td>Lecturas con calidad media ≤ Q20</td>
+<td style="text-align: right;">0,90–4,27 %</td>
+<td style="text-align: right;">1,04–4,27 %</td>
+<td>Se conserva como diagnóstico de la cola de calidad.</td>
+</tr>
+<tr class="even">
+<td>Longitud mediana</td>
+<td style="text-align: right;">301 nt</td>
+<td style="text-align: right;">284,5–301 nt</td>
+<td>El recorte es por coincidencia de primer; por ello persiste longitud variable.</td>
+</tr>
+<tr class="odd">
+<td>%GC de estadísticas básicas</td>
+<td style="text-align: right;">50,0–55,0 %</td>
+<td style="text-align: right;">50,0–55,0 %</td>
+<td>Se interpreta junto con la distribución de GC del amplicón.</td>
+</tr>
+<tr class="even">
+<td>Máximo contenido de N por ciclo</td>
+<td style="text-align: right;">1,14–50,57 %</td>
+<td style="text-align: right;">0,89–47,95 %</td>
+<td>Los máximos terminales, especialmente en R2, son una señal diagnóstica explícita.</td>
+</tr>
+<tr class="odd">
+<td>Lecturas duplicadas; sobrerrepresentadas</td>
+<td style="text-align: right;">2,60–93,25 %; 0–65,33 %</td>
+<td style="text-align: right;">9,42–94,90 %; 3,95–77,93 %</td>
+<td>Compatibles con la estructura de una biblioteca de amplicones; no son una regla de exclusión.</td>
+</tr>
+<tr class="even">
+<td>Máximo contenido de adaptador</td>
+<td style="text-align: right;">0,37–7,08 %</td>
+<td style="text-align: right;">0,37–7,08 %</td>
+<td>Se mantiene visible para seguimiento técnico.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<section id="estados-fastqc-y-alcance-de-cada-módulo" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="estados-fastqc-y-alcance-de-cada-módulo"><span class="header-section-number">4.6.1</span> Estados FastQC y alcance de cada módulo</h3>
+<p>La <a href="#fig-fastqc-module-status" class="quarto-xref">Figura&nbsp;<span>4.4</span></a> conserva literalmente los estados <code>pass</code>, <code>warn</code> y <code>fail</code>. Por ejemplo, <em>Basic Statistics</em> fue <code>pass</code> en los 396 informes de cada etapa; <em>Per sequence quality scores</em> fue <code>pass</code> en 385/396 crudos y 385/396 recortados. En cambio, la composición de bases fue <code>fail</code> en todos los informes; la distribución de longitudes fue <code>warn</code> en los 396 raw y, tras el recorte por coincidencia, <code>warn</code> en 37 y <code>fail</code> en 359 informes. Estos últimos estados describen las características de las lecturas 16S y del método de recorte; no constituyen por sí mismos una decisión de descarte.</p>
+<div id="fig-fastqc-module-status" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Matriz de los once módulos FastQC. Las columnas separan crudo y recortado, ensayo, tipo de biblioteca y R1/R2; cada celda muestra conteos pass, warn y fail.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fastqc-module-status-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.4-estados-modulos-fastqc-por-etapa.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;4.4: Estados FastQC agregados por etapa, ensayo, tipo de biblioteca y lectura. Cada celda contiene el número de informes pass/warn/fail y el color indica el peor estado presente."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.4-estados-modulos-fastqc-por-etapa.png" class="img-fluid figure-img" alt="Matriz de los once módulos FastQC. Las columnas separan crudo y recortado, ensayo, tipo de biblioteca y R1/R2; cada celda muestra conteos pass, warn y fail."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-module-status-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.4: Estados FastQC agregados por etapa, ensayo, tipo de biblioteca y lectura. Cada celda contiene el número de informes pass/warn/fail y el color indica el peor estado presente.
+</figcaption>
+</figure>
+</div>
+<p>La <a href="../tables/04_control_calidad_preprocesamiento/Table-4.5-estados-modulos-fastqc.tsv">matriz descargable de estados FastQC</a> contiene los conteos y porcentajes por grupo. La <a href="#tbl-fastqc-modules" class="quarto-xref">Tabla&nbsp;<span>4.8</span></a> explica el valor conservado para cada uno de los 11 módulos y su lectura en este diseño.</p>
+<div id="tbl-fastqc-modules" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fastqc-modules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.8: Cobertura de los 11 módulos FastQC y lectura contextualizada. Los estados se mantienen literalmente en la matriz descargable.
+</figcaption>
+<div aria-describedby="tbl-fastqc-modules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Módulo FastQC</th>
+<th>Valor agregado conservado</th>
+<th>Interpretación en amplicones 16S</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Basic Statistics</td>
+<td>Lecturas, bases, %GC, lecturas de baja calidad y rango de longitud</td>
+<td>Verifica profundidad y consistencia de los inputs; no hubo pérdida de pares.</td>
+</tr>
+<tr class="even">
+<td>Per base sequence quality</td>
+<td>Media, mediana, P10/P90 y cuartiles Phred por ciclo</td>
+<td>Localiza ciclos con menor calidad y se consulta con el perfil, sin fijar aquí truncamientos.</td>
+</tr>
+<tr class="odd">
+<td>Per tile sequence quality</td>
+<td>Máxima desviación media por tile</td>
+<td>Señala heterogeneidad espacial potencial; es diagnóstico de instrumento, no una exclusión automática.</td>
+</tr>
+<tr class="even">
+<td>Per sequence quality scores</td>
+<td>Calidad media por lectura y fracciones ≤Q20/≤Q30</td>
+<td>Resume la distribución de calidad por lectura más allá de un ciclo concreto.</td>
+</tr>
+<tr class="odd">
+<td>Per base sequence content</td>
+<td>Máximo desequilibrio entre A/C/G/T</td>
+<td>El sesgo inicial de bases puede reflejar primers y diseño de amplicón; <code>fail</code> no equivale a muestra inválida.</td>
+</tr>
+<tr class="even">
+<td>Per sequence GC content</td>
+<td>Media y P10–P90 de GC por secuencia</td>
+<td>Una distribución no normal es esperable en comunidades y controles de 16S; se conserva para detectar desviaciones.</td>
+</tr>
+<tr class="odd">
+<td>Per base N content</td>
+<td>Máximo porcentaje de N por ciclo</td>
+<td>Hace visible la incertidumbre de bases, incluida la señal terminal observada en algunos grupos R2.</td>
+</tr>
+<tr class="even">
+<td>Sequence Length Distribution</td>
+<td>Longitud mínima, media, mediana y máxima</td>
+<td>El intervalo variable documenta qué lecturas coincidieron con los primers terminales configurados; no supone recorte posicional.</td>
+</tr>
+<tr class="odd">
+<td>Sequence Duplication Levels</td>
+<td>Fracción deduplicada/duplicada y con nivel &gt;10</td>
+<td>La duplicación alta puede ser inherente a amplicones y a controles; requiere contexto, no descarte automático.</td>
+</tr>
+<tr class="even">
+<td>Overrepresented sequences</td>
+<td>Fracción total y fracción de la secuencia principal</td>
+<td>Puede reflejar amplicones, primers o controles; se muestra como señal, sin clasificarla como contaminante.</td>
+</tr>
+<tr class="odd">
+<td>Adapter Content</td>
+<td>Máximo porcentaje de adaptador</td>
+<td>Permite vigilar contenido residual de adaptadores sin modificar el procedimiento aplicado.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="calidad-longitud-y-composición" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="calidad-longitud-y-composición"><span class="header-section-number">4.6.2</span> Calidad, longitud y composición</h3>
+<p>La <a href="#fig-fastqc-quality-length" class="quarto-xref">Figura&nbsp;<span>4.5</span></a> resume la calidad media de las lecturas, la fracción con calidad media baja y las longitudes. Las medianas de calidad media por secuencia se sitúan entre Q33,31 y Q36,99 en crudos y entre Q33,36 y Q37,19 tras el recorte. La longitud mediana pasa de 301 nt a 284,5–301 nt: es el patrón esperado de un recorte condicionado a coincidencias de 341F/805R y sus RC terminales, no un indicador de que todas las lecturas se hayan acortado por posición fija.</p>
+<div id="fig-fastqc-quality-length" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cuatro paneles de barras con calidad media por lectura, porcentaje de lecturas con calidad media menor o igual a Q20, longitud mediana y longitud mínima; naranja crudo y azul recortado.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fastqc-quality-length-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.5-calidad-por-secuencia-y-longitud-fastqc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura&nbsp;4.5: Calidad por secuencia y longitudes FastQC agregadas por etapa y grupo técnico."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.5-calidad-por-secuencia-y-longitud-fastqc.png" class="img-fluid figure-img" alt="Cuatro paneles de barras con calidad media por lectura, porcentaje de lecturas con calidad media menor o igual a Q20, longitud mediana y longitud mínima; naranja crudo y azul recortado."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-quality-length-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.5: Calidad por secuencia y longitudes FastQC agregadas por etapa y grupo técnico.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="por-qué-no-se-truncó-por-posición" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="por-qué-no-se-truncó-por-posición"><span class="header-section-number">4.6.3</span> Por qué no se truncó por posición</h3>
+<p>La calidad no justificó imponer una longitud única antes del denoising. En los FASTQ recortados, a 250 nt todas las bibliotecas cumplen simultáneamente calidad media por lectura ≥Q30 y cuartil inferior ≥Q20; sin embargo, el P10 de la fracción de lecturas que alcanza esa longitud ya es 46,39 % (R1) y 46,74 % (R2) en <code>pilot</code>, frente a 73,24 % y 76,81 % en <code>current</code>. A 280 nt desciende a 44,30 % y 38,38 % en <code>pilot</code>, y a 64,52 % y 63,31 % en <code>current</code>.</p>
+<div id="tbl-truncation-diagnostic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-truncation-diagnostic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.9: Diagnóstico de longitud alcanzada tras el recorte anclado. La calidad en los puntos 250 y 280 nt cumple los umbrales indicados en todas las bibliotecas; el P10 describe el extremo inferior de la distribución entre bibliotecas.
+</figcaption>
+<div aria-describedby="tbl-truncation-diagnostic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ensayo</th>
+<th>Mate</th>
+<th style="text-align: right;">P10 de lecturas ≥250 nt</th>
+<th style="text-align: right;">P10 de lecturas ≥280 nt</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Piloto</td>
+<td>R1</td>
+<td style="text-align: right;">46,39 %</td>
+<td style="text-align: right;">44,30 %</td>
+<td>Un corte fijo perdería una fracción heterogénea de lecturas aunque la calidad siga siendo alta.</td>
+</tr>
+<tr class="even">
+<td>Piloto</td>
+<td>R2</td>
+<td style="text-align: right;">46,74 %</td>
+<td style="text-align: right;">38,38 %</td>
+<td>La pérdida potencial es mayor en el extremo de 280 nt.</td>
+</tr>
+<tr class="odd">
+<td>Ampliado actual</td>
+<td>R1</td>
+<td style="text-align: right;">73,24 %</td>
+<td style="text-align: right;">64,52 %</td>
+<td>Conserva más longitud que <code>pilot</code>, por lo que no comparte un punto de corte natural.</td>
+</tr>
+<tr class="even">
+<td>Ampliado actual</td>
+<td>R2</td>
+<td style="text-align: right;">76,81 %</td>
+<td style="text-align: right;">63,31 %</td>
+<td>La variación entre ensayos y mates desaconseja un truncamiento posicional común.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Por esta razón la configuración final usó <code>truncLen=c(0,0)</code>: conserva la longitud variable y deja que <code>minOverlap=20</code>, <code>maxMismatch=0</code> y la evaluación de fusión de DADA2 impongan el requisito de solapamiento real. La serie completa de posiciones candidatas está disponible en la <a href="../tables/04_control_calidad_preprocesamiento/Table-4.7-candidatos-truncamiento-fastqc.tsv">tabla de diagnóstico de truncamiento</a>; los resultados de filtros y fusión se desarrollan en el capítulo 5.</p>
+<p>La <a href="#fig-fastqc-composition-gc-n" class="quarto-xref">Figura&nbsp;<span>4.6</span></a> muestra el desequilibrio de bases, GC y N. El desequilibrio máximo de A/C/G/T de las medianas de grupo es 62,92–99,24 % en raw y 60,86–90,98 % tras el recorte; junto con los estados de composición/GC, no se usa como filtro porque es compatible con la preparación de bibliotecas 16S. La señal de N máxima llega a 50,57 % en crudos y 47,95 % tras el recorte en grupos R2; se identifica como un patrón terminal que debe seguirse aguas abajo, no como autorización para retirar bibliotecas o modificar DADA2.</p>
+<div id="fig-fastqc-composition-gc-n" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cuatro paneles con desequilibrio máximo de bases, porcentaje GC, intervalo P10-P90 de GC por secuencia y máximo contenido de N, para grupos crudos y recortados.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fastqc-composition-gc-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.6-composicion-gc-y-n-fastqc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;4.6: Composición de bases, GC y contenido de N de FastQC agregados por etapa y grupo técnico."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.6-composicion-gc-y-n-fastqc.png" class="img-fluid figure-img" alt="Cuatro paneles con desequilibrio máximo de bases, porcentaje GC, intervalo P10-P90 de GC por secuencia y máximo contenido de N, para grupos crudos y recortados."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-composition-gc-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.6: Composición de bases, GC y contenido de N de FastQC agregados por etapa y grupo técnico.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="duplicación-secuencias-sobrerrepresentadas-y-adaptadores" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="duplicación-secuencias-sobrerrepresentadas-y-adaptadores"><span class="header-section-number">4.6.4</span> Duplicación, secuencias sobrerrepresentadas y adaptadores</h3>
+<p>La <a href="#fig-fastqc-technical-signals" class="quarto-xref">Figura&nbsp;<span>4.7</span></a> presenta señales que FastQC suele marcar en amplicones. Las medianas de duplicación alcanzan 93,25 % en crudos y 94,90 % tras el recorte; las de secuencias sobrerrepresentadas alcanzan 65,33 % y 77,93 %, respectivamente. Estas proporciones se reportan para transparentar la complejidad de biblioteca y los controles, no para deduplicar ni excluir por esta auditoría. El máximo de adaptadores se mantiene entre 0,37 y 7,08 % según grupo y etapa.</p>
+<div id="fig-fastqc-technical-signals" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cuatro paneles de barras con porcentaje de lecturas duplicadas, porcentaje con nivel de duplicación mayor que diez, secuencias sobrerrepresentadas y máximo contenido de adaptadores; naranja crudo y azul recortado.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fastqc-technical-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/04_control_calidad_preprocesamiento/Fig-4.7-duplicacion-sobrerrepresentadas-y-adaptadores-fastqc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figura&nbsp;4.7: Duplicación, secuencias sobrerrepresentadas y contenido de adaptadores FastQC agregados por etapa y grupo técnico."><img src="../figures/04_control_calidad_preprocesamiento/Fig-4.7-duplicacion-sobrerrepresentadas-y-adaptadores-fastqc.png" class="img-fluid figure-img" alt="Cuatro paneles de barras con porcentaje de lecturas duplicadas, porcentaje con nivel de duplicación mayor que diez, secuencias sobrerrepresentadas y máximo contenido de adaptadores; naranja crudo y azul recortado."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-technical-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.7: Duplicación, secuencias sobrerrepresentadas y contenido de adaptadores FastQC agregados por etapa y grupo técnico.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Uso de esta auditoría
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La auditoría es descriptiva y trazable: aporta valores y señales diagnósticas para las etapas raw y trimmed, pero no aprueba por sí misma filtros, truncamientos ni exclusiones. La decisión DADA2 posterior se documenta en el capítulo 5 y se basó adicionalmente en retención, fusión, quimeras y profundidad de controles.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -652,7 +1113,7 @@ Figura&nbsp;4.3: Profundidad de secuenciación de las ocho biopsias repetidas. C
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Dos biopsias de profundidad muy baja se conservan en el conjunto inicial. Su posible exclusión no se decidirá a partir del FASTQ crudo de forma aislada, sino tras revisar la retención completa de DADA2, la fusión de pares, las quimeras y el umbral de profundidad definido para el análisis final.</p>
+<p>Dos biopsias de profundidad muy baja se conservaron tras DADA2 (18 y 48 lecturas no quiméricas, respectivamente). Su posible exclusión no se decidirá a partir del FASTQ crudo ni de esta auditoría de forma aislada: requiere una etapa autorizada de QC conjunto, controles y un umbral explícito antes de cualquier análisis downstream.</p>
 </div>
 </div>
 
@@ -661,7 +1122,11 @@ Figura&nbsp;4.3: Profundidad de secuenciación de las ocho biopsias repetidas. C
 <div id="ref-Ewels2016" class="csl-entry" role="listitem">
 Ewels, Philip, Måns Magnusson, Sverker Lundin, y Max Käller. 2016. <span>«MultiQC: Summarize analysis results for multiple tools and samples in a single report»</span>. <em>Bioinformatics</em> 32 (19): 3047-48. <a href="https://doi.org/10.1093/bioinformatics/btw354">https://doi.org/10.1093/bioinformatics/btw354</a>.
 </div>
+<div id="ref-Martin2011" class="csl-entry" role="listitem">
+Martin, Marcel. 2011. <span>«Cutadapt removes adapter sequences from high-throughput sequencing reads»</span>. <em>EMBnet.journal</em> 17 (1): 10-12. <a href="https://doi.org/10.14806/ej.17.1.200">https://doi.org/10.14806/ej.17.1.200</a>.
 </div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,5 +1,5 @@
-processing_batch	read	libraries	reads_examined	complete_anchored_primer_matches	complete_anchored_primer_match_pct	no_primer_match_reads_preserved	no_primer_match_reads_preserved_pct	minimum_library_match_pct	maximum_library_match_pct
-current	R1	152	29910278	21545142	72.0326	8365136	27.9674	46.9573	81.6734
-current	R2	152	29910278	2252941	7.5323	27657337	92.4677	2.3803	11.9345
-pilot	R1	46	30064539	17393832	57.8550	12670707	42.1450	13.3941	81.1147
-pilot	R2	46	30064539	5823424	19.3697	24241115	80.6303	13.1957	38.2157
+processing_batch	read	libraries	reads_examined	complete_anchored_primer_matches	complete_anchored_primer_match_pct	no_primer_match_reads_preserved	no_primer_match_reads_preserved_pct	minimum_library_match_pct	maximum_library_match_pct	complete_anchored_3prime_rc_primer_matches	complete_anchored_3prime_rc_primer_match_pct	no_3prime_rc_primer_match_reads_preserved	no_3prime_rc_primer_match_reads_preserved_pct	minimum_library_3prime_match_pct	maximum_library_3prime_match_pct
+current	R1	152	29910278	21532192	71.9893	8378086	28.0107	46.9441	81.6684	3885204	12.9895	26025074	87.0105	0.3444	55.3183
+current	R2	152	29910278	2250031	7.5226	27660247	92.4774	2.3778	11.8450	4898223	16.3764	25012055	83.6236	0.4195	57.1465
+pilot	R1	46	30064539	17366124	57.7628	12698415	42.2372	13.0756	81.1080	2391997	7.9562	27672542	92.0438	0.4358	22.8109
+pilot	R2	46	30064539	5806950	19.3149	24257589	80.6851	13.1056	38.2077	2110851	7.0211	27953688	92.9789	0.1796	27.1235

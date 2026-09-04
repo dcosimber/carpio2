@@ -1,0 +1,417 @@
+stage	processing_batch	sample_type	read	module	metric	unit	n_libraries	median	p10	p90	minimum	maximum
+raw	current	biopsy	R1	Adapter Content	maximum_adapter_content	percent	130	2.151130	0.363060	9.155522	0.083422	13.218834
+raw	current	biopsy	R1	Basic Statistics	percent_gc	percent	130	51.000000	50.000000	52.000000	47.000000	56.000000
+raw	current	biopsy	R1	Basic Statistics	poor_quality_sequences	reads	130	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	current	biopsy	R1	Basic Statistics	total_bases	bases	130	56200000.000000	35320000.000000	76720000.000000	167000.000000	103500000.000000
+raw	current	biopsy	R1	Basic Statistics	total_sequences	reads	130	194021.500000	121129.200000	278381.300000	582.000000	358110.000000
+raw	current	biopsy	R1	Overrepresented sequences	overrepresented_reads	percent	130	26.242480	12.250860	34.657902	5.997564	100.000000
+raw	current	biopsy	R1	Overrepresented sequences	top_overrepresented_sequence	percent	130	2.134005	1.149026	3.783189	0.640994	7.677623
+raw	current	biopsy	R1	Per base N content	maximum_n_content	percent	130	1.139844	1.118293	1.201094	0.877193	1.372195
+raw	current	biopsy	R1	Per base sequence content	maximum_base_composition_range	percent	130	97.324083	97.067536	97.656623	96.818678	98.657718
+raw	current	biopsy	R1	Per base sequence quality	median_mean_base_quality	Phred	130	37.801362	37.194642	38.029269	35.359127	38.179346
+raw	current	biopsy	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	130	12.000000	12.000000	12.000000	12.000000	12.000000
+raw	current	biopsy	R1	Per base sequence quality	minimum_mean_base_quality	Phred	130	24.741774	24.273050	25.148803	23.821166	25.747798
+raw	current	biopsy	R1	Per sequence GC content	gc_content_p10	percent	130	43.000000	40.000000	47.000000	40.000000	50.000000
+raw	current	biopsy	R1	Per sequence GC content	gc_content_p90	percent	130	58.000000	56.000000	63.000000	55.000000	64.000000
+raw	current	biopsy	R1	Per sequence GC content	mean_gc_content	percent	130	51.998934	50.597861	52.833653	48.121880	56.392207
+raw	current	biopsy	R1	Per sequence quality scores	mean_sequence_quality	Phred	130	36.991306	36.513154	37.191524	34.958389	37.320420
+raw	current	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	130	0.896699	0.687496	1.372957	0.609578	3.624161
+raw	current	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	130	7.150267	6.492638	8.860125	5.924270	17.718121
+raw	current	biopsy	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	130	30.453072	29.977923	31.030078	28.739149	31.292930
+raw	current	biopsy	R1	Sequence Duplication Levels	deduplicated_reads	percent	130	34.073485	27.270468	47.837226	19.283085	84.697987
+raw	current	biopsy	R1	Sequence Duplication Levels	duplicate_reads	percent	130	65.926515	52.162774	72.729532	15.302013	80.716915
+raw	current	biopsy	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	130	53.375203	37.479087	61.836405	2.577320	72.208149
+raw	current	biopsy	R1	Sequence Length Distribution	maximum_read_length	nt	130	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	current	biopsy	R1	Sequence Length Distribution	mean_read_length	nt	130	288.382624	271.188946	297.896376	230.501285	300.027373
+raw	current	biopsy	R1	Sequence Length Distribution	median_read_length	nt	130	301.000000	301.000000	301.000000	254.500000	301.000000
+raw	current	biopsy	R1	Sequence Length Distribution	minimum_read_length	nt	130	30.000000	30.000000	30.000000	30.000000	30.000000
+raw	current	biopsy	R2	Adapter Content	maximum_adapter_content	percent	130	0.607098	0.288066	1.517977	0.160927	2.544278
+raw	current	biopsy	R2	Basic Statistics	percent_gc	percent	130	51.000000	50.000000	53.000000	47.000000	55.000000
+raw	current	biopsy	R2	Basic Statistics	poor_quality_sequences	reads	130	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	current	biopsy	R2	Basic Statistics	total_bases	bases	130	56150000.000000	35240000.000000	76800000.000000	166600.000000	103500000.000000
+raw	current	biopsy	R2	Basic Statistics	total_sequences	reads	130	194021.500000	121129.200000	278381.300000	582.000000	358110.000000
+raw	current	biopsy	R2	Overrepresented sequences	overrepresented_reads	percent	130	0.000000	0.000000	0.120518	0.000000	100.000000
+raw	current	biopsy	R2	Overrepresented sequences	top_overrepresented_sequence	percent	130	0.000000	0.000000	0.120518	0.000000	0.343643
+raw	current	biopsy	R2	Per base N content	maximum_n_content	percent	130	50.354569	49.258035	51.125907	46.040268	51.836362
+raw	current	biopsy	R2	Per base sequence content	maximum_base_composition_range	percent	130	62.923918	43.705459	79.423635	41.890705	86.002023
+raw	current	biopsy	R2	Per base sequence quality	median_mean_base_quality	Phred	130	35.014252	34.232239	35.451330	33.281306	35.880602
+raw	current	biopsy	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	130	2.000000	2.000000	2.000000	2.000000	2.000000
+raw	current	biopsy	R2	Per base sequence quality	minimum_mean_base_quality	Phred	130	9.461673	9.315000	9.656749	9.222801	10.150336
+raw	current	biopsy	R2	Per sequence GC content	gc_content_p10	percent	130	41.000000	38.000000	48.000000	37.000000	50.000000
+raw	current	biopsy	R2	Per sequence GC content	gc_content_p90	percent	130	57.000000	56.000000	60.000000	55.000000	62.000000
+raw	current	biopsy	R2	Per sequence GC content	mean_gc_content	percent	130	51.179152	49.405232	52.743924	46.295449	55.203548
+raw	current	biopsy	R2	Per sequence quality scores	mean_sequence_quality	Phred	130	33.307533	32.439217	33.755045	31.480559	34.207113
+raw	current	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	130	2.959339	2.499405	4.438068	2.117052	6.483069
+raw	current	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	130	18.689793	15.994219	24.250011	13.443564	30.455099
+raw	current	biopsy	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	130	14.261003	14.023686	14.542180	13.909866	14.991897
+raw	current	biopsy	R2	Sequence Duplication Levels	deduplicated_reads	percent	130	97.402753	92.543490	98.896776	83.997358	100.000000
+raw	current	biopsy	R2	Sequence Duplication Levels	duplicate_reads	percent	130	2.597247	1.103224	7.456510	0.000000	16.002642
+raw	current	biopsy	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	130	0.491284	0.239856	1.708751	0.000000	7.694846
+raw	current	biopsy	R2	Sequence Length Distribution	maximum_read_length	nt	130	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	current	biopsy	R2	Sequence Length Distribution	mean_read_length	nt	130	288.986434	272.095010	298.309767	231.384762	300.458158
+raw	current	biopsy	R2	Sequence Length Distribution	median_read_length	nt	130	301.000000	301.000000	301.000000	264.500000	301.000000
+raw	current	biopsy	R2	Sequence Length Distribution	minimum_read_length	nt	130	30.000000	30.000000	30.000000	30.000000	30.000000
+raw	current	negative_control	R1	Adapter Content	maximum_adapter_content	percent	22	1.946516	1.542961	2.453922	1.183029	3.177920
+raw	current	negative_control	R1	Basic Statistics	percent_gc	percent	22	50.000000	50.000000	50.000000	50.000000	51.000000
+raw	current	negative_control	R1	Basic Statistics	poor_quality_sequences	reads	22	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	current	negative_control	R1	Basic Statistics	total_bases	bases	22	57550000.000000	33670000.000000	71470000.000000	27800000.000000	81600000.000000
+raw	current	negative_control	R1	Basic Statistics	total_sequences	reads	22	195938.500000	114592.700000	243195.000000	94303.000000	277457.000000
+raw	current	negative_control	R1	Overrepresented sequences	overrepresented_reads	percent	22	24.009396	22.881800	26.791502	22.075337	27.612926
+raw	current	negative_control	R1	Overrepresented sequences	top_overrepresented_sequence	percent	22	1.911731	1.681020	2.258076	1.594528	2.471607
+raw	current	negative_control	R1	Per base N content	maximum_n_content	percent	22	1.490903	1.339986	1.725941	1.182868	2.737722
+raw	current	negative_control	R1	Per base sequence content	maximum_base_composition_range	percent	22	97.142946	96.967540	97.434283	96.775809	97.470052
+raw	current	negative_control	R1	Per base sequence quality	median_mean_base_quality	Phred	22	37.823334	37.716926	37.897609	37.695126	37.965955
+raw	current	negative_control	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	22	12.000000	12.000000	12.000000	12.000000	12.000000
+raw	current	negative_control	R1	Per base sequence quality	minimum_mean_base_quality	Phred	22	24.858432	24.527925	25.081021	24.225131	25.146273
+raw	current	negative_control	R1	Per sequence GC content	gc_content_p10	percent	22	42.000000	40.000000	42.000000	39.000000	43.000000
+raw	current	negative_control	R1	Per sequence GC content	gc_content_p90	percent	22	56.000000	56.000000	56.000000	56.000000	57.000000
+raw	current	negative_control	R1	Per sequence GC content	mean_gc_content	percent	22	49.677336	49.077618	50.063524	47.433236	50.471604
+raw	current	negative_control	R1	Per sequence quality scores	mean_sequence_quality	Phred	22	36.856937	36.682373	36.913868	36.289187	36.978817
+raw	current	negative_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	22	1.354658	1.190277	1.539536	1.043861	2.718994
+raw	current	negative_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	22	7.525455	7.377538	8.105058	7.041731	9.088089
+raw	current	negative_control	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	22	30.233866	29.904159	30.557960	29.498431	30.808542
+raw	current	negative_control	R1	Sequence Duplication Levels	deduplicated_reads	percent	22	33.032480	30.581098	37.744514	29.524575	40.476295
+raw	current	negative_control	R1	Sequence Duplication Levels	duplicate_reads	percent	22	66.967521	62.255486	69.418902	59.523705	70.475425
+raw	current	negative_control	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	22	54.180083	48.000520	56.988272	46.216658	58.726938
+raw	current	negative_control	R1	Sequence Length Distribution	maximum_read_length	nt	22	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	current	negative_control	R1	Sequence Length Distribution	mean_read_length	nt	22	293.832237	292.855603	294.997023	287.703342	295.578412
+raw	current	negative_control	R1	Sequence Length Distribution	median_read_length	nt	22	301.000000	301.000000	301.000000	301.000000	301.000000
+raw	current	negative_control	R1	Sequence Length Distribution	minimum_read_length	nt	22	30.000000	30.000000	30.000000	30.000000	30.000000
+raw	current	negative_control	R2	Adapter Content	maximum_adapter_content	percent	22	0.370424	0.295628	0.453218	0.268090	0.532562
+raw	current	negative_control	R2	Basic Statistics	percent_gc	percent	22	51.000000	51.000000	51.000000	51.000000	51.000000
+raw	current	negative_control	R2	Basic Statistics	poor_quality_sequences	reads	22	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	current	negative_control	R2	Basic Statistics	total_bases	bases	22	57500000.000000	33660000.000000	71370000.000000	27800000.000000	81500000.000000
+raw	current	negative_control	R2	Basic Statistics	total_sequences	reads	22	195938.500000	114592.700000	243195.000000	94303.000000	277457.000000
+raw	current	negative_control	R2	Overrepresented sequences	overrepresented_reads	percent	22	0.447055	0.330202	0.679711	0.120647	1.676694
+raw	current	negative_control	R2	Overrepresented sequences	top_overrepresented_sequence	percent	22	0.447055	0.330202	0.679711	0.120647	1.676694
+raw	current	negative_control	R2	Per base N content	maximum_n_content	percent	22	50.570274	50.026321	50.994671	49.819819	51.298048
+raw	current	negative_control	R2	Per base sequence content	maximum_base_composition_range	percent	22	63.315399	61.410920	67.190145	61.133174	69.219753
+raw	current	negative_control	R2	Per base sequence quality	median_mean_base_quality	Phred	22	35.087539	34.878113	35.339091	34.805572	35.383384
+raw	current	negative_control	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	22	2.000000	2.000000	2.000000	2.000000	2.000000
+raw	current	negative_control	R2	Per base sequence quality	minimum_mean_base_quality	Phred	22	9.396498	9.332743	9.517297	9.309036	9.623933
+raw	current	negative_control	R2	Per sequence GC content	gc_content_p10	percent	22	39.000000	38.000000	40.000000	37.000000	40.000000
+raw	current	negative_control	R2	Per sequence GC content	gc_content_p90	percent	22	56.000000	56.000000	56.000000	56.000000	57.000000
+raw	current	negative_control	R2	Per sequence GC content	mean_gc_content	percent	22	49.505542	48.831242	49.966946	47.202405	50.144576
+raw	current	negative_control	R2	Per sequence quality scores	mean_sequence_quality	Phred	22	33.332784	33.021445	33.556612	32.689089	33.575452
+raw	current	negative_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	22	3.474327	3.193700	3.844424	3.057701	5.068706
+raw	current	negative_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	22	18.030186	16.758581	19.746117	16.436187	20.542277
+raw	current	negative_control	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	22	14.150834	13.949051	14.545574	13.898842	14.718894
+raw	current	negative_control	R2	Sequence Duplication Levels	deduplicated_reads	percent	22	96.372284	94.428809	98.297217	93.483093	98.475698
+raw	current	negative_control	R2	Sequence Duplication Levels	duplicate_reads	percent	22	3.627716	1.702783	5.571191	1.524302	6.516907
+raw	current	negative_control	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	22	0.998290	0.706149	1.677124	0.657944	3.106504
+raw	current	negative_control	R2	Sequence Length Distribution	maximum_read_length	nt	22	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	current	negative_control	R2	Sequence Length Distribution	mean_read_length	nt	22	294.302179	293.330914	295.387683	288.236109	295.971152
+raw	current	negative_control	R2	Sequence Length Distribution	median_read_length	nt	22	301.000000	301.000000	301.000000	301.000000	301.000000
+raw	current	negative_control	R2	Sequence Length Distribution	minimum_read_length	nt	22	30.000000	30.000000	30.000000	30.000000	30.000000
+raw	pilot	biopsy	R1	Adapter Content	maximum_adapter_content	percent	8	7.084515	2.716697	12.494904	1.119484	15.068024
+raw	pilot	biopsy	R1	Basic Statistics	percent_gc	percent	8	52.000000	51.000000	52.300000	51.000000	53.000000
+raw	pilot	biopsy	R1	Basic Statistics	poor_quality_sequences	reads	8	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	pilot	biopsy	R1	Basic Statistics	total_bases	bases	8	406150000.000000	332400000.000000	436620000.000000	252600000.000000	442500000.000000
+raw	pilot	biopsy	R1	Basic Statistics	total_sequences	reads	8	1480307.000000	1279158.100000	1706452.900000	937535.000000	1844859.000000
+raw	pilot	biopsy	R1	Overrepresented sequences	overrepresented_reads	percent	8	26.051834	19.086356	39.092846	17.230802	46.437841
+raw	pilot	biopsy	R1	Overrepresented sequences	top_overrepresented_sequence	percent	8	2.181128	1.684020	2.910366	0.975684	3.175226
+raw	pilot	biopsy	R1	Per base N content	maximum_n_content	percent	8	2.841913	2.805962	2.881742	2.781547	2.894096
+raw	pilot	biopsy	R1	Per base sequence content	maximum_base_composition_range	percent	8	99.244222	99.186874	99.352135	99.161040	99.367439
+raw	pilot	biopsy	R1	Per base sequence quality	median_mean_base_quality	Phred	8	37.626460	37.057103	38.200613	37.020196	38.262693
+raw	pilot	biopsy	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	8	12.000000	12.000000	12.000000	12.000000	12.000000
+raw	pilot	biopsy	R1	Per base sequence quality	minimum_mean_base_quality	Phred	8	22.678793	21.508871	23.445493	21.245752	23.879897
+raw	pilot	biopsy	R1	Per sequence GC content	gc_content_p10	percent	8	45.000000	42.100000	46.000000	40.000000	46.000000
+raw	pilot	biopsy	R1	Per sequence GC content	gc_content_p90	percent	8	61.500000	58.700000	63.000000	58.000000	63.000000
+raw	pilot	biopsy	R1	Per sequence GC content	mean_gc_content	percent	8	52.345705	51.620304	53.482010	51.561139	54.009772
+raw	pilot	biopsy	R1	Per sequence quality scores	mean_sequence_quality	Phred	8	36.943626	36.408528	37.496252	36.348445	37.563109
+raw	pilot	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	8	1.063080	0.629855	1.507282	0.578296	1.543424
+raw	pilot	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	8	6.314977	4.664587	7.929220	4.483336	8.725008
+raw	pilot	biopsy	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	8	11.545236	11.438134	11.605701	11.423773	11.643143
+raw	pilot	biopsy	R1	Sequence Duplication Levels	deduplicated_reads	percent	8	21.890739	14.078663	25.365624	10.956972	28.785982
+raw	pilot	biopsy	R1	Sequence Duplication Levels	duplicate_reads	percent	8	78.109261	74.634376	85.921337	71.214018	89.043028
+raw	pilot	biopsy	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	8	68.428921	63.533026	80.009911	60.017600	84.038046
+raw	pilot	biopsy	R1	Sequence Length Distribution	maximum_read_length	nt	8	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	pilot	biopsy	R1	Sequence Length Distribution	mean_read_length	nt	8	272.611717	235.497089	282.493894	235.067337	282.951606
+raw	pilot	biopsy	R1	Sequence Length Distribution	median_read_length	nt	8	301.000000	294.500000	301.000000	294.500000	301.000000
+raw	pilot	biopsy	R1	Sequence Length Distribution	minimum_read_length	nt	8	30.000000	30.000000	30.000000	30.000000	30.000000
+raw	pilot	biopsy	R2	Adapter Content	maximum_adapter_content	percent	8	1.871210	1.138712	2.970148	1.035236	3.148262
+raw	pilot	biopsy	R2	Basic Statistics	percent_gc	percent	8	52.000000	50.700000	52.300000	50.000000	53.000000
+raw	pilot	biopsy	R2	Basic Statistics	poor_quality_sequences	reads	8	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	pilot	biopsy	R2	Basic Statistics	total_bases	bases	8	406250000.000000	333780000.000000	438030000.000000	253000000.000000	443000000.000000
+raw	pilot	biopsy	R2	Basic Statistics	total_sequences	reads	8	1480307.000000	1279158.100000	1706452.900000	937535.000000	1844859.000000
+raw	pilot	biopsy	R2	Overrepresented sequences	overrepresented_reads	percent	8	3.845921	2.531198	5.311376	1.221882	7.827223
+raw	pilot	biopsy	R2	Overrepresented sequences	top_overrepresented_sequence	percent	8	0.645994	0.349563	0.984893	0.280239	1.073666
+raw	pilot	biopsy	R2	Per base N content	maximum_n_content	percent	8	1.931674	1.907131	1.956071	1.903024	1.963691
+raw	pilot	biopsy	R2	Per base sequence content	maximum_base_composition_range	percent	8	98.678741	98.458079	99.274549	98.361485	99.314189
+raw	pilot	biopsy	R2	Per base sequence quality	median_mean_base_quality	Phred	8	35.891925	35.790624	36.250616	35.660355	36.641429
+raw	pilot	biopsy	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	8	12.000000	12.000000	12.000000	12.000000	12.000000
+raw	pilot	biopsy	R2	Per base sequence quality	minimum_mean_base_quality	Phred	8	19.178434	19.090261	19.377591	19.079222	19.625446
+raw	pilot	biopsy	R2	Per sequence GC content	gc_content_p10	percent	8	42.500000	38.800000	47.300000	36.000000	48.000000
+raw	pilot	biopsy	R2	Per sequence GC content	gc_content_p90	percent	8	60.500000	58.700000	61.600000	58.000000	63.000000
+raw	pilot	biopsy	R2	Per sequence GC content	mean_gc_content	percent	8	52.234225	50.887230	52.804060	50.524934	53.197279
+raw	pilot	biopsy	R2	Per sequence quality scores	mean_sequence_quality	Phred	8	34.418589	34.170368	35.079263	34.016806	35.428725
+raw	pilot	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	8	2.428905	1.657280	2.937483	1.359107	3.003408
+raw	pilot	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	8	13.334842	10.392992	14.486615	7.488103	15.276870
+raw	pilot	biopsy	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	8	7.140492	7.046603	7.303758	6.983222	7.463628
+raw	pilot	biopsy	R2	Sequence Duplication Levels	deduplicated_reads	percent	8	50.735321	32.043014	57.107764	26.912673	58.667040
+raw	pilot	biopsy	R2	Sequence Duplication Levels	duplicate_reads	percent	8	49.264679	42.892236	67.956986	41.332960	73.087327
+raw	pilot	biopsy	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	8	39.024057	31.095151	58.675211	30.591715	64.450649
+raw	pilot	biopsy	R2	Sequence Length Distribution	maximum_read_length	nt	8	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	pilot	biopsy	R2	Sequence Length Distribution	mean_read_length	nt	8	273.376331	236.896038	283.528845	236.414728	284.032532
+raw	pilot	biopsy	R2	Sequence Length Distribution	median_read_length	nt	8	301.000000	301.000000	301.000000	301.000000	301.000000
+raw	pilot	biopsy	R2	Sequence Length Distribution	minimum_read_length	nt	8	30.000000	30.000000	30.000000	30.000000	30.000000
+raw	pilot	positive_control	R1	Adapter Content	maximum_adapter_content	percent	38	0.981907	0.648667	5.855510	0.557457	9.418643
+raw	pilot	positive_control	R1	Basic Statistics	percent_gc	percent	38	54.000000	52.000000	57.300000	51.000000	63.000000
+raw	pilot	positive_control	R1	Basic Statistics	poor_quality_sequences	reads	38	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	pilot	positive_control	R1	Basic Statistics	total_bases	bases	38	116300000.000000	73720000.000000	163250000.000000	61700000.000000	351000000.000000
+raw	pilot	positive_control	R1	Basic Statistics	total_sequences	reads	38	441160.500000	275402.300000	618210.000000	211769.000000	1324645.000000
+raw	pilot	positive_control	R1	Overrepresented sequences	overrepresented_reads	percent	38	65.327730	61.275902	81.748528	58.095886	82.548171
+raw	pilot	positive_control	R1	Overrepresented sequences	top_overrepresented_sequence	percent	38	10.175494	2.942506	29.646094	2.486178	48.160602
+raw	pilot	positive_control	R1	Per base N content	maximum_n_content	percent	38	3.469644	2.800779	29.946686	2.775146	48.566884
+raw	pilot	positive_control	R1	Per base sequence content	maximum_base_composition_range	percent	38	98.939484	96.293631	99.357475	95.114829	99.501891
+raw	pilot	positive_control	R1	Per base sequence quality	median_mean_base_quality	Phred	38	38.710241	38.129903	38.881409	36.606974	38.937006
+raw	pilot	positive_control	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	38	12.000000	2.000000	12.000000	2.000000	12.000000
+raw	pilot	positive_control	R1	Per base sequence quality	minimum_mean_base_quality	Phred	38	19.872552	16.670040	20.342794	12.959862	20.696427
+raw	pilot	positive_control	R1	Per sequence GC content	gc_content_p10	percent	38	1.000000	0.000000	50.000000	0.000000	50.000000
+raw	pilot	positive_control	R1	Per sequence GC content	gc_content_p90	percent	38	56.000000	55.000000	61.000000	55.000000	62.000000
+raw	pilot	positive_control	R1	Per sequence GC content	mean_gc_content	percent	38	47.112893	34.682785	49.963634	28.247895	50.906082
+raw	pilot	positive_control	R1	Per sequence quality scores	mean_sequence_quality	Phred	38	36.929742	26.815616	37.500521	20.062833	37.762552
+raw	pilot	positive_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	38	3.381588	1.617115	29.855531	1.110458	48.315209
+raw	pilot	positive_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	38	6.011947	4.484060	32.453669	3.622526	50.245537
+raw	pilot	positive_control	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	38	11.332256	8.673508	12.066770	8.120031	13.300400
+raw	pilot	positive_control	R1	Sequence Duplication Levels	deduplicated_reads	percent	38	6.751381	4.634039	10.731054	4.010208	11.982801
+raw	pilot	positive_control	R1	Sequence Duplication Levels	duplicate_reads	percent	38	93.248619	89.268946	95.365961	88.017199	95.989792
+raw	pilot	positive_control	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	38	89.905889	84.039517	93.112595	82.274498	93.969015
+raw	pilot	positive_control	R1	Sequence Length Distribution	maximum_read_length	nt	38	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	pilot	positive_control	R1	Sequence Length Distribution	mean_read_length	nt	38	287.117361	165.333361	295.241333	104.298959	297.275937
+raw	pilot	positive_control	R1	Sequence Length Distribution	median_read_length	nt	38	301.000000	166.500000	301.000000	34.500000	301.000000
+raw	pilot	positive_control	R1	Sequence Length Distribution	minimum_read_length	nt	38	30.000000	30.000000	30.000000	30.000000	30.000000
+raw	pilot	positive_control	R2	Adapter Content	maximum_adapter_content	percent	38	0.902234	0.584313	5.817599	0.487566	8.870029
+raw	pilot	positive_control	R2	Basic Statistics	percent_gc	percent	38	55.000000	52.000000	57.300000	51.000000	62.000000
+raw	pilot	positive_control	R2	Basic Statistics	poor_quality_sequences	reads	38	0.000000	0.000000	0.000000	0.000000	0.000000
+raw	pilot	positive_control	R2	Basic Statistics	total_bases	bases	38	115450000.000000	73420000.000000	162880000.000000	61400000.000000	350500000.000000
+raw	pilot	positive_control	R2	Basic Statistics	total_sequences	reads	38	441160.500000	275402.300000	618210.000000	211769.000000	1324645.000000
+raw	pilot	positive_control	R2	Overrepresented sequences	overrepresented_reads	percent	38	37.805217	13.153480	50.007246	10.681002	51.995807
+raw	pilot	positive_control	R2	Overrepresented sequences	top_overrepresented_sequence	percent	38	3.234255	1.292270	30.512695	0.894938	49.301058
+raw	pilot	positive_control	R2	Per base N content	maximum_n_content	percent	38	3.413429	1.908434	30.819757	1.888438	49.713123
+raw	pilot	positive_control	R2	Per base sequence content	maximum_base_composition_range	percent	38	98.986756	96.605305	99.308171	95.026629	99.416156
+raw	pilot	positive_control	R2	Per base sequence quality	median_mean_base_quality	Phred	38	37.003316	36.479950	37.450407	35.157932	37.676668
+raw	pilot	positive_control	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	38	12.000000	2.000000	12.000000	2.000000	12.000000
+raw	pilot	positive_control	R2	Per base sequence quality	minimum_mean_base_quality	Phred	38	18.811228	14.179364	19.278652	10.812219	19.539164
+raw	pilot	positive_control	R2	Per sequence GC content	gc_content_p10	percent	38	1.000000	0.000000	49.000000	0.000000	50.000000
+raw	pilot	positive_control	R2	Per sequence GC content	gc_content_p90	percent	38	57.000000	56.000000	63.000000	56.000000	64.000000
+raw	pilot	positive_control	R2	Per sequence GC content	mean_gc_content	percent	38	47.237505	34.493486	50.686543	27.917724	51.254972
+raw	pilot	positive_control	R2	Per sequence quality scores	mean_sequence_quality	Phred	38	34.745966	24.735450	35.627856	18.197306	35.725621
+raw	pilot	positive_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	38	4.266252	2.399077	31.547044	1.848351	50.083154
+raw	pilot	positive_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	38	9.349525	6.841734	40.110307	6.375946	58.634351
+raw	pilot	positive_control	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	38	7.273207	6.984886	7.711786	6.911806	8.068242
+raw	pilot	positive_control	R2	Sequence Duplication Levels	deduplicated_reads	percent	38	19.697224	13.113574	22.935112	11.457071	26.814292
+raw	pilot	positive_control	R2	Sequence Duplication Levels	duplicate_reads	percent	38	80.302776	77.064888	86.886426	73.185708	88.542929
+raw	pilot	positive_control	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	38	72.365955	69.209498	82.137146	63.630405	84.380440
+raw	pilot	positive_control	R2	Sequence Length Distribution	maximum_read_length	nt	38	302.000000	302.000000	302.000000	302.000000	302.000000
+raw	pilot	positive_control	R2	Sequence Length Distribution	mean_read_length	nt	38	287.086161	164.857492	295.265594	102.880201	297.262243
+raw	pilot	positive_control	R2	Sequence Length Distribution	median_read_length	nt	38	301.000000	166.500000	301.000000	34.500000	301.000000
+raw	pilot	positive_control	R2	Sequence Length Distribution	minimum_read_length	nt	38	30.000000	30.000000	30.000000	30.000000	30.000000
+trimmed	current	biopsy	R1	Adapter Content	maximum_adapter_content	percent	130	2.151130	0.363060	9.155522	0.083422	13.218834
+trimmed	current	biopsy	R1	Basic Statistics	percent_gc	percent	130	50.000000	49.000000	51.000000	45.000000	55.000000
+trimmed	current	biopsy	R1	Basic Statistics	poor_quality_sequences	reads	130	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	current	biopsy	R1	Basic Statistics	total_bases	bases	130	53250000.000000	33660000.000000	72860000.000000	157400.000000	96800000.000000
+trimmed	current	biopsy	R1	Basic Statistics	total_sequences	reads	130	194021.500000	121129.200000	278381.300000	582.000000	358110.000000
+trimmed	current	biopsy	R1	Overrepresented sequences	overrepresented_reads	percent	130	58.772108	35.098739	69.151650	18.092113	100.000000
+trimmed	current	biopsy	R1	Overrepresented sequences	top_overrepresented_sequence	percent	130	10.338444	4.955963	22.377640	2.014101	50.054211
+trimmed	current	biopsy	R1	Per base N content	maximum_n_content	percent	130	0.925556	0.804691	0.964395	0.702424	1.042831
+trimmed	current	biopsy	R1	Per base sequence content	maximum_base_composition_range	percent	130	67.375426	43.054675	79.247633	36.946102	83.784976
+trimmed	current	biopsy	R1	Per base sequence quality	median_mean_base_quality	Phred	130	37.749434	37.116864	37.991105	35.355415	38.158812
+trimmed	current	biopsy	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	130	24.000000	24.000000	40.000000	21.600000	40.000000
+trimmed	current	biopsy	R1	Per base sequence quality	minimum_mean_base_quality	Phred	130	34.313343	32.406703	34.903859	30.001509	35.390605
+trimmed	current	biopsy	R1	Per sequence GC content	gc_content_p10	percent	130	39.000000	37.000000	47.000000	35.000000	49.000000
+trimmed	current	biopsy	R1	Per sequence GC content	gc_content_p90	percent	130	59.000000	55.000000	63.000000	54.000000	67.000000
+trimmed	current	biopsy	R1	Per sequence GC content	mean_gc_content	percent	130	50.898525	49.291431	51.900480	46.660313	55.388263
+trimmed	current	biopsy	R1	Per sequence quality scores	mean_sequence_quality	Phred	130	37.193079	36.689287	37.392295	35.130201	37.522558
+trimmed	current	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	130	1.039125	0.811289	1.522546	0.720419	4.026846
+trimmed	current	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	130	7.123455	6.479610	8.878577	5.949103	17.181208
+trimmed	current	biopsy	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	130	11.267683	8.189101	18.936769	7.077844	30.288994
+trimmed	current	biopsy	R1	Sequence Duplication Levels	deduplicated_reads	percent	130	22.988968	18.099736	35.635572	13.120359	56.778523
+trimmed	current	biopsy	R1	Sequence Duplication Levels	duplicate_reads	percent	130	77.011032	64.364428	81.900264	43.221477	86.879641
+trimmed	current	biopsy	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	130	70.897634	55.471143	76.435674	36.039238	82.280527
+trimmed	current	biopsy	R1	Sequence Length Distribution	maximum_read_length	nt	130	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	current	biopsy	R1	Sequence Length Distribution	mean_read_length	nt	130	273.392872	256.536509	284.858664	208.745601	286.996654
+trimmed	current	biopsy	R1	Sequence Length Distribution	median_read_length	nt	130	284.500000	284.500000	284.500000	244.500000	284.500000
+trimmed	current	biopsy	R1	Sequence Length Distribution	minimum_read_length	nt	130	0.000000	0.000000	0.000000	0.000000	10.000000
+trimmed	current	biopsy	R2	Adapter Content	maximum_adapter_content	percent	130	0.607098	0.288066	1.517977	0.160927	2.544278
+trimmed	current	biopsy	R2	Basic Statistics	percent_gc	percent	130	51.000000	49.000000	53.000000	46.000000	55.000000
+trimmed	current	biopsy	R2	Basic Statistics	poor_quality_sequences	reads	130	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	current	biopsy	R2	Basic Statistics	total_bases	bases	130	55450000.000000	34920000.000000	75450000.000000	163500.000000	101100000.000000
+trimmed	current	biopsy	R2	Basic Statistics	total_sequences	reads	130	194021.500000	121129.200000	278381.300000	582.000000	358110.000000
+trimmed	current	biopsy	R2	Overrepresented sequences	overrepresented_reads	percent	130	3.949744	1.684952	5.616603	0.601496	100.000000
+trimmed	current	biopsy	R2	Overrepresented sequences	top_overrepresented_sequence	percent	130	0.916184	0.422487	2.053709	0.226413	5.881699
+trimmed	current	biopsy	R2	Per base N content	maximum_n_content	percent	130	47.947096	47.103131	48.609873	43.624161	49.308951
+trimmed	current	biopsy	R2	Per base sequence content	maximum_base_composition_range	percent	130	62.020199	39.384459	78.869785	36.257855	85.473629
+trimmed	current	biopsy	R2	Per base sequence quality	median_mean_base_quality	Phred	130	34.979833	34.194521	35.411708	33.231699	35.846952
+trimmed	current	biopsy	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	130	2.000000	2.000000	2.000000	2.000000	2.000000
+trimmed	current	biopsy	R2	Per base sequence quality	minimum_mean_base_quality	Phred	130	10.994010	10.597924	11.446589	10.037457	11.926318
+trimmed	current	biopsy	R2	Per sequence GC content	gc_content_p10	percent	130	39.000000	37.000000	48.000000	36.000000	50.000000
+trimmed	current	biopsy	R2	Per sequence GC content	gc_content_p90	percent	130	57.000000	56.000000	60.000000	55.000000	62.000000
+trimmed	current	biopsy	R2	Per sequence GC content	mean_gc_content	percent	130	50.576572	49.083583	52.412631	46.385260	54.923501
+trimmed	current	biopsy	R2	Per sequence quality scores	mean_sequence_quality	Phred	130	33.359760	32.442783	33.811794	31.460020	34.289543
+trimmed	current	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	130	3.061918	2.535925	4.653005	2.138267	6.564372
+trimmed	current	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	130	18.744335	15.995456	24.416934	13.356835	30.700017
+trimmed	current	biopsy	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	130	16.145886	14.906168	17.192900	14.369038	18.135032
+trimmed	current	biopsy	R2	Sequence Duplication Levels	deduplicated_reads	percent	130	90.582713	85.116496	95.069994	78.455675	97.594502
+trimmed	current	biopsy	R2	Sequence Duplication Levels	duplicate_reads	percent	130	9.417288	4.930006	14.883504	2.405498	21.544325
+trimmed	current	biopsy	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	130	6.934944	3.912433	10.542174	0.000000	13.987684
+trimmed	current	biopsy	R2	Sequence Length Distribution	maximum_read_length	nt	130	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	current	biopsy	R2	Sequence Length Distribution	mean_read_length	nt	130	284.610528	265.644065	296.046419	219.263524	298.285021
+trimmed	current	biopsy	R2	Sequence Length Distribution	median_read_length	nt	130	301.000000	301.000000	301.000000	244.500000	301.000000
+trimmed	current	biopsy	R2	Sequence Length Distribution	minimum_read_length	nt	130	0.000000	0.000000	0.000000	0.000000	10.000000
+trimmed	current	negative_control	R1	Adapter Content	maximum_adapter_content	percent	22	1.946516	1.542961	2.453922	1.183029	3.177920
+trimmed	current	negative_control	R1	Basic Statistics	percent_gc	percent	22	50.000000	49.000000	50.000000	49.000000	50.000000
+trimmed	current	negative_control	R1	Basic Statistics	poor_quality_sequences	reads	22	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	current	negative_control	R1	Basic Statistics	total_bases	bases	22	54700000.000000	31980000.000000	67970000.000000	26500000.000000	77500000.000000
+trimmed	current	negative_control	R1	Basic Statistics	total_sequences	reads	22	195938.500000	114592.700000	243195.000000	94303.000000	277457.000000
+trimmed	current	negative_control	R1	Overrepresented sequences	overrepresented_reads	percent	22	57.527983	56.589717	59.933276	55.358542	60.616868
+trimmed	current	negative_control	R1	Overrepresented sequences	top_overrepresented_sequence	percent	22	10.337896	9.558128	11.173985	9.046535	11.570227
+trimmed	current	negative_control	R1	Per base N content	maximum_n_content	percent	22	0.891339	0.859370	1.109124	0.855511	2.134421
+trimmed	current	negative_control	R1	Per base sequence content	maximum_base_composition_range	percent	22	67.766827	65.668762	69.798238	65.496085	70.543563
+trimmed	current	negative_control	R1	Per base sequence quality	median_mean_base_quality	Phred	22	37.781684	37.692524	37.843286	37.662157	37.905949
+trimmed	current	negative_control	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	22	24.000000	24.000000	24.000000	24.000000	24.000000
+trimmed	current	negative_control	R1	Per base sequence quality	minimum_mean_base_quality	Phred	22	33.772974	33.508739	34.140569	33.197403	34.243366
+trimmed	current	negative_control	R1	Per sequence GC content	gc_content_p10	percent	22	39.000000	38.100000	40.000000	36.000000	41.000000
+trimmed	current	negative_control	R1	Per sequence GC content	gc_content_p90	percent	22	55.000000	55.000000	56.000000	55.000000	56.000000
+trimmed	current	negative_control	R1	Per sequence GC content	mean_gc_content	percent	22	49.333157	48.790996	49.579354	47.630820	49.708755
+trimmed	current	negative_control	R1	Per sequence quality scores	mean_sequence_quality	Phred	22	37.041567	36.868257	37.100351	36.475291	37.165223
+trimmed	current	negative_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	22	1.490687	1.313500	1.677831	1.187260	2.854283
+trimmed	current	negative_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	22	7.485807	7.358258	8.076328	7.021089	9.056219
+trimmed	current	negative_control	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	22	12.072950	9.914167	12.820272	9.111094	13.778891
+trimmed	current	negative_control	R1	Sequence Duplication Levels	deduplicated_reads	percent	22	22.649971	21.018926	24.902852	20.402036	27.393057
+trimmed	current	negative_control	R1	Sequence Duplication Levels	duplicate_reads	percent	22	77.350029	75.097148	78.981073	72.606943	79.597964
+trimmed	current	negative_control	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	22	71.445809	69.255408	73.143818	65.574430	73.887894
+trimmed	current	negative_control	R1	Sequence Length Distribution	maximum_read_length	nt	22	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	current	negative_control	R1	Sequence Length Distribution	mean_read_length	nt	22	280.009740	278.295946	281.542568	273.683204	281.924385
+trimmed	current	negative_control	R1	Sequence Length Distribution	median_read_length	nt	22	284.500000	284.500000	284.500000	284.500000	284.500000
+trimmed	current	negative_control	R1	Sequence Length Distribution	minimum_read_length	nt	22	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	current	negative_control	R2	Adapter Content	maximum_adapter_content	percent	22	0.370424	0.295628	0.453218	0.268090	0.532562
+trimmed	current	negative_control	R2	Basic Statistics	percent_gc	percent	22	51.000000	50.100000	51.000000	50.000000	51.000000
+trimmed	current	negative_control	R2	Basic Statistics	poor_quality_sequences	reads	22	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	current	negative_control	R2	Basic Statistics	total_bases	bases	22	56850000.000000	33180000.000000	70570000.000000	27500000.000000	80500000.000000
+trimmed	current	negative_control	R2	Basic Statistics	total_sequences	reads	22	195938.500000	114592.700000	243195.000000	94303.000000	277457.000000
+trimmed	current	negative_control	R2	Overrepresented sequences	overrepresented_reads	percent	22	3.995453	3.266750	4.991269	3.194238	5.611707
+trimmed	current	negative_control	R2	Overrepresented sequences	top_overrepresented_sequence	percent	22	0.963166	0.733254	1.200003	0.694835	1.676694
+trimmed	current	negative_control	R2	Per base N content	maximum_n_content	percent	22	47.866294	47.282500	48.709855	47.060685	48.903589
+trimmed	current	negative_control	R2	Per base sequence content	maximum_base_composition_range	percent	22	62.476564	60.446014	66.288470	60.062687	68.327524
+trimmed	current	negative_control	R2	Per base sequence quality	median_mean_base_quality	Phred	22	35.060927	34.815045	35.292632	34.761843	35.355120
+trimmed	current	negative_control	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	22	2.000000	2.000000	2.000000	2.000000	2.000000
+trimmed	current	negative_control	R2	Per base sequence quality	minimum_mean_base_quality	Phred	22	11.038469	10.771269	11.358451	10.691730	11.595996
+trimmed	current	negative_control	R2	Per sequence GC content	gc_content_p10	percent	22	39.000000	38.000000	40.000000	36.000000	40.000000
+trimmed	current	negative_control	R2	Per sequence GC content	gc_content_p90	percent	22	56.000000	56.000000	57.000000	56.000000	57.000000
+trimmed	current	negative_control	R2	Per sequence GC content	mean_gc_content	percent	22	49.534959	48.866001	49.975922	47.249070	50.065381
+trimmed	current	negative_control	R2	Per sequence quality scores	mean_sequence_quality	Phred	22	33.398133	33.079358	33.627712	32.750879	33.652333
+trimmed	current	negative_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	22	3.487782	3.203910	3.848849	3.061929	5.096887
+trimmed	current	negative_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	22	17.914280	16.641866	19.632491	16.300936	20.424419
+trimmed	current	negative_control	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	22	16.250652	15.439575	16.784353	15.175534	17.325062
+trimmed	current	negative_control	R2	Sequence Duplication Levels	deduplicated_reads	percent	22	90.457537	86.387864	93.209181	83.851514	93.544613
+trimmed	current	negative_control	R2	Sequence Duplication Levels	duplicate_reads	percent	22	9.542464	6.790819	13.612136	6.455387	16.148486
+trimmed	current	negative_control	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	22	7.278982	5.726718	11.321737	5.552315	12.756979
+trimmed	current	negative_control	R2	Sequence Length Distribution	maximum_read_length	nt	22	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	current	negative_control	R2	Sequence Length Distribution	mean_read_length	nt	22	290.663982	288.903236	291.978096	284.067586	292.321665
+trimmed	current	negative_control	R2	Sequence Length Distribution	median_read_length	nt	22	301.000000	301.000000	301.000000	301.000000	301.000000
+trimmed	current	negative_control	R2	Sequence Length Distribution	minimum_read_length	nt	22	0.000000	0.000000	0.000000	0.000000	10.000000
+trimmed	pilot	biopsy	R1	Adapter Content	maximum_adapter_content	percent	8	7.084515	2.716697	12.494904	1.119484	15.068024
+trimmed	pilot	biopsy	R1	Basic Statistics	percent_gc	percent	8	52.000000	51.000000	52.300000	51.000000	53.000000
+trimmed	pilot	biopsy	R1	Basic Statistics	poor_quality_sequences	reads	8	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R1	Basic Statistics	total_bases	bases	8	388450000.000000	316850000.000000	419060000.000000	244400000.000000	426200000.000000
+trimmed	pilot	biopsy	R1	Basic Statistics	total_sequences	reads	8	1480307.000000	1279158.100000	1706452.900000	937535.000000	1844859.000000
+trimmed	pilot	biopsy	R1	Overrepresented sequences	overrepresented_reads	percent	8	36.784641	29.138932	59.092776	29.006030	64.542063
+trimmed	pilot	biopsy	R1	Overrepresented sequences	top_overrepresented_sequence	percent	8	11.369573	6.232995	13.841524	5.307235	14.617736
+trimmed	pilot	biopsy	R1	Per base N content	maximum_n_content	percent	8	1.719479	1.476680	2.226825	1.476428	2.395288
+trimmed	pilot	biopsy	R1	Per base sequence content	maximum_base_composition_range	percent	8	60.858435	51.269576	65.714713	46.876107	71.043434
+trimmed	pilot	biopsy	R1	Per base sequence quality	median_mean_base_quality	Phred	8	37.601084	37.058325	38.236509	36.996644	38.306755
+trimmed	pilot	biopsy	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	8	24.000000	18.000000	24.000000	18.000000	24.000000
+trimmed	pilot	biopsy	R1	Per base sequence quality	minimum_mean_base_quality	Phred	8	31.009675	29.236782	33.172406	29.145791	34.001217
+trimmed	pilot	biopsy	R1	Per sequence GC content	gc_content_p10	percent	8	39.000000	36.700000	41.600000	36.000000	43.000000
+trimmed	pilot	biopsy	R1	Per sequence GC content	gc_content_p90	percent	8	63.500000	62.000000	65.300000	62.000000	66.000000
+trimmed	pilot	biopsy	R1	Per sequence GC content	mean_gc_content	percent	8	52.076820	51.555933	52.893858	51.500782	53.013877
+trimmed	pilot	biopsy	R1	Per sequence quality scores	mean_sequence_quality	Phred	8	36.945309	36.409994	37.547606	36.355928	37.617189
+trimmed	pilot	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	8	1.171031	0.743818	1.623514	0.707075	1.674540
+trimmed	pilot	biopsy	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	8	6.520406	4.788636	8.121204	4.635033	8.859321
+trimmed	pilot	biopsy	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	8	16.082118	11.577736	24.374185	11.336253	26.134828
+trimmed	pilot	biopsy	R1	Sequence Duplication Levels	deduplicated_reads	percent	8	18.850976	11.203665	22.307165	8.276030	25.973220
+trimmed	pilot	biopsy	R1	Sequence Duplication Levels	duplicate_reads	percent	8	81.149024	77.692835	88.796335	74.026780	91.723970
+trimmed	pilot	biopsy	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	8	73.235444	68.847718	84.162760	64.549741	88.072467
+trimmed	pilot	biopsy	R1	Sequence Length Distribution	maximum_read_length	nt	8	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	pilot	biopsy	R1	Sequence Length Distribution	mean_read_length	nt	8	263.189594	225.153114	270.255495	224.089063	271.177119
+trimmed	pilot	biopsy	R1	Sequence Length Distribution	median_read_length	nt	8	284.500000	284.500000	284.500000	284.500000	284.500000
+trimmed	pilot	biopsy	R1	Sequence Length Distribution	minimum_read_length	nt	8	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R2	Adapter Content	maximum_adapter_content	percent	8	1.871210	1.138712	2.970148	1.035236	3.148262
+trimmed	pilot	biopsy	R2	Basic Statistics	percent_gc	percent	8	52.000000	50.700000	52.000000	50.000000	52.000000
+trimmed	pilot	biopsy	R2	Basic Statistics	poor_quality_sequences	reads	8	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	pilot	biopsy	R2	Basic Statistics	total_bases	bases	8	398900000.000000	323140000.000000	426020000.000000	248100000.000000	432600000.000000
+trimmed	pilot	biopsy	R2	Basic Statistics	total_sequences	reads	8	1480307.000000	1279158.100000	1706452.900000	937535.000000	1844859.000000
+trimmed	pilot	biopsy	R2	Overrepresented sequences	overrepresented_reads	percent	8	12.441497	8.778364	14.240310	6.622132	14.339550
+trimmed	pilot	biopsy	R2	Overrepresented sequences	top_overrepresented_sequence	percent	8	3.880500	2.074668	6.162276	1.888581	8.399246
+trimmed	pilot	biopsy	R2	Per base N content	maximum_n_content	percent	8	1.729796	1.657832	1.810509	1.637693	1.849292
+trimmed	pilot	biopsy	R2	Per base sequence content	maximum_base_composition_range	percent	8	84.529942	80.808504	86.238723	80.143021	88.347785
+trimmed	pilot	biopsy	R2	Per base sequence quality	median_mean_base_quality	Phred	8	35.900993	35.715672	36.242728	35.619507	36.668818
+trimmed	pilot	biopsy	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	8	12.000000	12.000000	12.000000	12.000000	12.000000
+trimmed	pilot	biopsy	R2	Per base sequence quality	minimum_mean_base_quality	Phred	8	22.443114	21.534658	22.824240	21.463383	22.924067
+trimmed	pilot	biopsy	R2	Per sequence GC content	gc_content_p10	percent	8	36.500000	35.000000	38.600000	35.000000	40.000000
+trimmed	pilot	biopsy	R2	Per sequence GC content	gc_content_p90	percent	8	64.000000	63.000000	65.300000	63.000000	66.000000
+trimmed	pilot	biopsy	R2	Per sequence GC content	mean_gc_content	percent	8	51.817908	51.032628	52.017829	50.766610	52.204903
+trimmed	pilot	biopsy	R2	Per sequence quality scores	mean_sequence_quality	Phred	8	34.581771	34.322837	35.239070	34.139734	35.604373
+trimmed	pilot	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	8	2.445000	1.672843	2.952315	1.377083	3.021859
+trimmed	pilot	biopsy	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	8	13.257079	10.322699	14.420844	7.394544	15.255555
+trimmed	pilot	biopsy	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	8	6.351090	6.221037	6.659516	6.143515	6.810783
+trimmed	pilot	biopsy	R2	Sequence Duplication Levels	deduplicated_reads	percent	8	46.926890	28.646352	52.377184	23.166786	55.336888
+trimmed	pilot	biopsy	R2	Sequence Duplication Levels	duplicate_reads	percent	8	53.073110	47.622816	71.353648	44.663112	76.833214
+trimmed	pilot	biopsy	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	8	43.864955	36.952025	63.469803	34.856389	69.527945
+trimmed	pilot	biopsy	R2	Sequence Length Distribution	maximum_read_length	nt	8	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	pilot	biopsy	R2	Sequence Length Distribution	mean_read_length	nt	8	267.972780	229.160081	277.837420	228.659342	277.865883
+trimmed	pilot	biopsy	R2	Sequence Length Distribution	median_read_length	nt	8	301.000000	291.500000	301.000000	284.500000	301.000000
+trimmed	pilot	biopsy	R2	Sequence Length Distribution	minimum_read_length	nt	8	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	pilot	positive_control	R1	Adapter Content	maximum_adapter_content	percent	38	0.981907	0.648667	5.855510	0.557457	9.418643
+trimmed	pilot	positive_control	R1	Basic Statistics	percent_gc	percent	38	53.000000	51.000000	57.300000	51.000000	63.000000
+trimmed	pilot	positive_control	R1	Basic Statistics	poor_quality_sequences	reads	38	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	pilot	positive_control	R1	Basic Statistics	total_bases	bases	38	110050000.000000	70220000.000000	155720000.000000	58800000.000000	334800000.000000
+trimmed	pilot	positive_control	R1	Basic Statistics	total_sequences	reads	38	441160.500000	275402.300000	618210.000000	211769.000000	1324645.000000
+trimmed	pilot	positive_control	R1	Overrepresented sequences	overrepresented_reads	percent	38	77.927335	68.180458	86.446031	66.622595	86.641267
+trimmed	pilot	positive_control	R1	Overrepresented sequences	top_overrepresented_sequence	percent	38	38.906787	16.665177	71.838295	15.823716	72.669276
+trimmed	pilot	positive_control	R1	Per base N content	maximum_n_content	percent	38	4.451804	2.602268	31.524396	2.469725	52.334493
+trimmed	pilot	positive_control	R1	Per base sequence content	maximum_base_composition_range	percent	38	81.460287	66.180021	84.666698	61.341599	85.668642
+trimmed	pilot	positive_control	R1	Per base sequence quality	median_mean_base_quality	Phred	38	38.698819	38.119005	38.867524	36.591038	38.936085
+trimmed	pilot	positive_control	R1	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	38	32.000000	2.000000	40.000000	2.000000	40.000000
+trimmed	pilot	positive_control	R1	Per base sequence quality	minimum_mean_base_quality	Phred	38	34.541989	23.319873	35.365170	15.332663	35.649997
+trimmed	pilot	positive_control	R1	Per sequence GC content	gc_content_p10	percent	38	41.000000	0.000000	51.300000	0.000000	52.000000
+trimmed	pilot	positive_control	R1	Per sequence GC content	gc_content_p90	percent	38	56.000000	54.000000	63.300000	54.000000	64.000000
+trimmed	pilot	positive_control	R1	Per sequence GC content	mean_gc_content	percent	38	48.333373	39.523788	50.437381	33.728497	50.838177
+trimmed	pilot	positive_control	R1	Per sequence quality scores	mean_sequence_quality	Phred	38	36.986311	26.796448	37.566507	19.981953	37.837217
+trimmed	pilot	positive_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	38	3.456804	1.704757	29.919800	1.177313	48.386544
+trimmed	pilot	positive_control	R1	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	38	6.093511	4.552200	32.656703	3.676967	50.553809
+trimmed	pilot	positive_control	R1	Per tile sequence quality	maximum_tile_mean_deviation	Phred	38	28.232274	13.142634	30.343553	8.217445	30.554465
+trimmed	pilot	positive_control	R1	Sequence Duplication Levels	deduplicated_reads	percent	38	5.096858	3.846449	8.284422	3.258141	9.603165
+trimmed	pilot	positive_control	R1	Sequence Duplication Levels	duplicate_reads	percent	38	94.903143	91.715578	96.153551	90.396835	96.741859
+trimmed	pilot	positive_control	R1	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	38	92.504225	87.865800	94.379266	85.960435	95.236613
+trimmed	pilot	positive_control	R1	Sequence Length Distribution	maximum_read_length	nt	38	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	pilot	positive_control	R1	Sequence Length Distribution	mean_read_length	nt	38	274.043760	156.872096	282.228195	99.387119	284.091825
+trimmed	pilot	positive_control	R1	Sequence Length Distribution	median_read_length	nt	38	284.500000	135.500000	284.500000	34.500000	284.500000
+trimmed	pilot	positive_control	R1	Sequence Length Distribution	minimum_read_length	nt	38	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	pilot	positive_control	R2	Adapter Content	maximum_adapter_content	percent	38	0.902234	0.584313	5.817599	0.487566	8.870029
+trimmed	pilot	positive_control	R2	Basic Statistics	percent_gc	percent	38	55.000000	52.000000	58.000000	52.000000	63.000000
+trimmed	pilot	positive_control	R2	Basic Statistics	poor_quality_sequences	reads	38	0.000000	0.000000	0.000000	0.000000	0.000000
+trimmed	pilot	positive_control	R2	Basic Statistics	total_bases	bases	38	111550000.000000	72070000.000000	159700000.000000	59700000.000000	346200000.000000
+trimmed	pilot	positive_control	R2	Basic Statistics	total_sequences	reads	38	441160.500000	275402.300000	618210.000000	211769.000000	1324645.000000
+trimmed	pilot	positive_control	R2	Overrepresented sequences	overrepresented_reads	percent	38	46.931787	23.387787	58.068196	21.823302	62.743367
+trimmed	pilot	positive_control	R2	Overrepresented sequences	top_overrepresented_sequence	percent	38	17.006405	4.099247	33.408838	3.124794	49.301058
+trimmed	pilot	positive_control	R2	Per base N content	maximum_n_content	percent	38	3.463530	1.667049	32.280055	1.499761	53.086062
+trimmed	pilot	positive_control	R2	Per base sequence content	maximum_base_composition_range	percent	38	90.976697	74.175982	92.678472	66.676480	93.899479
+trimmed	pilot	positive_control	R2	Per base sequence quality	median_mean_base_quality	Phred	38	37.027881	36.345081	37.482523	35.081224	37.634019
+trimmed	pilot	positive_control	R2	Per base sequence quality	minimum_lower_quartile_base_quality	Phred	38	12.000000	2.000000	12.000000	2.000000	12.000000
+trimmed	pilot	positive_control	R2	Per base sequence quality	minimum_mean_base_quality	Phred	38	22.313674	17.281660	24.229625	13.178119	25.601585
+trimmed	pilot	positive_control	R2	Per sequence GC content	gc_content_p10	percent	38	1.000000	0.000000	47.300000	0.000000	49.000000
+trimmed	pilot	positive_control	R2	Per sequence GC content	gc_content_p90	percent	38	58.000000	56.000000	66.000000	56.000000	67.000000
+trimmed	pilot	positive_control	R2	Per sequence GC content	mean_gc_content	percent	38	47.770472	38.290203	50.941299	32.476093	51.423143
+trimmed	pilot	positive_control	R2	Per sequence quality scores	mean_sequence_quality	Phred	38	34.906527	25.005825	35.764395	18.470106	35.937680
+trimmed	pilot	positive_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_20	percent	38	4.272038	2.403084	31.591002	1.851733	50.145642
+trimmed	pilot	positive_control	R2	Per sequence quality scores	pct_reads_mean_quality_le_30	percent	38	9.256158	6.766045	39.777215	6.288932	58.223636
+trimmed	pilot	positive_control	R2	Per tile sequence quality	maximum_tile_mean_deviation	Phred	38	6.114757	5.568190	6.456316	5.274517	6.827134
+trimmed	pilot	positive_control	R2	Sequence Duplication Levels	deduplicated_reads	percent	38	16.731811	11.473563	18.685856	10.073873	21.970173
+trimmed	pilot	positive_control	R2	Sequence Duplication Levels	duplicate_reads	percent	38	83.268189	81.314144	88.526437	78.029827	89.926127
+trimmed	pilot	positive_control	R2	Sequence Duplication Levels	reads_duplication_level_gt_10	percent	38	76.619331	74.191109	84.506375	70.166119	86.441232
+trimmed	pilot	positive_control	R2	Sequence Length Distribution	maximum_read_length	nt	38	302.000000	302.000000	302.000000	302.000000	302.000000
+trimmed	pilot	positive_control	R2	Sequence Length Distribution	mean_read_length	nt	38	279.928153	159.557871	290.728979	99.394508	291.743973
+trimmed	pilot	positive_control	R2	Sequence Length Distribution	median_read_length	nt	38	301.000000	149.500000	301.000000	34.500000	301.000000
+trimmed	pilot	positive_control	R2	Sequence Length Distribution	minimum_read_length	nt	38	0.000000	0.000000	0.000000	0.000000	0.000000

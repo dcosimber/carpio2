@@ -3,59 +3,202 @@ title: "DADA2 e inferencia de ASV"
 ---
 
 ::: {.callout-caution}
-## Estado de la etapa
+## Resultado y límite de la etapa
 
-Esta etapa todavía no se ha ejecutado para el conjunto ampliado. Por tanto, no
-se informa número de ASV, retención, éxito de fusión ni eliminación de quimeras.
-Los parámetros expuestos a continuación son el plan reproducible que se
-validará con las salidas de seguimiento de DADA2.
+La rama principal está completada: recorte de primers anclado bilateral y DADA2
+`strict`, `maxEE=c(2,4)`. La tabla canónica no quimérica conserva 198
+bibliotecas, 15.219 ASVs y 20.459.014 lecturas. Los controles, la prevalencia,
+la decontaminación y cualquier análisis downstream permanecen pendientes de
+autorización; no se aplicaron filtros adicionales a esta tabla.
+:::
+
+## Mapa de ramas y alcance de la comparación
+
+El análisis distingue tres rutas para evitar que una exploración histórica se
+confunda con el resultado formal.
+
+::: {#tbl-dada2-branches}
+| Rama | Recorte | DADA2 | Uso |
+|---|---|---|---|
+| Canónica | Anclado en 5′ y RC en 3′ | `strict` 2/4 | Resultado formal, taxonomía y handoff posterior. |
+| Sensibilidad de filtros | Anclado en 5′ y RC en 3′ | 2/4, 3/5, 4/6 | Elección del filtro final. |
+| Validación aislada | Fijo 17/21 frente a anclado | 3/5 en ambas | Evalúa el recorte sin cambiar el filtro; no sustituye la rama canónica. |
+
+: Ramas que se mantienen separadas en la documentación. La equivalencia de
+filtro 3/5 en la última fila es una condición de comparación, no el parámetro
+final de la tabla canónica.
 :::
 
 ## Procesamiento separado por ensayo
 
-Después del recorte de primers, cada ensayo se procesará de forma independiente
-con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de
-pares y eliminación de quimeras por consenso [@Callahan2016]. Esta separación
-evita asumir que ambos ensayos comparten el mismo perfil de error. La integración
-posterior se realizará por secuencia exacta, conservando una variable de ensayo
-para los análisis técnicos.
+Después del recorte anclado, `pilot` y `current` se procesaron por separado con
+DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares
+y eliminación de quimeras por consenso [@Callahan2016]. Cada ensayo y cada mate
+usaron su propio modelo de error, sin *pooling*. Así no se presupone que la
+calidad, la longitud o la retención sean intercambiables entre el piloto y el
+ensayo ampliado.
 
-## Comandos y parámetros
+La diferencia entre ensayos ya es visible después de `filterAndTrim`: la
+mediana de retención por biblioteca bajo `strict` fue 79,62 % en `pilot` y
+41,56 % en `current`. Las @fig-dada2-retention-pilot y
+@fig-dada2-retention-current muestran la distribución completa por tipo técnico,
+no sólo el agregado. Ninguna de las cuatro combinaciones ensayo × tipo de
+biblioteca quedó a cero tras filtrado, fusión o retirada de quimeras.
 
-La ejecución se realizará en R y registrará una tabla de seguimiento por
-biblioteca. El fragmento genérico de filtrado y denoising es:
+![Retención por biblioteca tras `filterAndTrim` en la rama `strict` del ensayo `pilot`, separada entre biopsias y controles positivos.](../figures/05_dada2_inferencia_asv/Fig-5.1-retencion-filtrado-pilot.pdf){#fig-dada2-retention-pilot fig-alt="Boxplot de retención porcentual tras filterAndTrim para las biopsias y controles positivos del ensayo pilot en DADA2 strict."}
 
-```r
-filtered <- filterAndTrim(
-  fwd = <R1_recortadas>, rev = <R2_recortadas>,
-  filt = <R1_filtradas>, filt.rev = <R2_filtradas>,
-  truncLen = c(0, 0), maxEE = c(3, 5), truncQ = 2,
-  minLen = 100, multithread = TRUE
-)
+![Retención por biblioteca tras `filterAndTrim` en la rama `strict` del ensayo `current`, separada entre biopsias y controles negativos.](../figures/05_dada2_inferencia_asv/Fig-5.2-retencion-filtrado-current.pdf){#fig-dada2-retention-current fig-alt="Boxplot de retención porcentual tras filterAndTrim para las biopsias y controles negativos del ensayo current en DADA2 strict."}
 
-err_R1 <- learnErrors(<R1_filtradas>, multithread = TRUE)
-err_R2 <- learnErrors(<R2_filtradas>, multithread = TRUE)
-denoised_R1 <- dada(<R1_filtradas>, err = err_R1, multithread = TRUE)
-denoised_R2 <- dada(<R2_filtradas>, err = err_R2, multithread = TRUE)
-```
+Los ejes verticales de ambas figuras no son iguales, por lo que la comparación
+cuantitativa debe hacerse con la @tbl-dada2-sensitivity y la
+@tbl-dada2-retention-by-type, no por altura visual. La heterogeneidad de
+retención es una característica técnica que justifica modelos separados; no se
+interpreta como una diferencia biológica entre grupos.
 
-- `truncLen = c(0, 0)` preserva la longitud variable observada tras el recorte.
-- `maxEE = c(3, 5)` limita el error esperado por lectura sin imponer un corte
-  fijo de longitud.
-- `truncQ = 2` termina una lectura si alcanza una base de calidad muy baja.
-- `minLen = 100` descarta fragmentos manifiestamente no informativos.
+## Exploración de filtros y decisión {#sec-dada2-filtering}
 
-La fusión se realizará con al menos 20 nt de solapamiento, cero discrepancias y
-`trimOverhang = TRUE`. Se aplicará `removeBimeraDenovo(..., method =
-"consensus")` a la tabla de secuencias. Antes de fijar los parámetros finales
-se compararán retención, fallos de fusión y posibles sesgos entre ensayos.
+Se evaluaron tres candidatos sobre los FASTQ definitivos ya recortados de forma
+anclada: `strict` 2/4, `configured_current` 3/5 y `permissive` 4/6. El
+criterio preespecificado fue elegir el candidato más estricto que retuviese al
+menos el 90 % de los pares del permisivo, mantuviese al menos el 95 % de la
+mejor tasa de fusión y de fracción no quimérica, y preservase profundidad
+suficiente de controles. Los tres candidatos superaron los criterios en ambos
+ensayos; por tanto, se eligió `strict`.
 
-## Productos de salida
+::: {#tbl-dada2-sensitivity}
+| Ensayo | Candidato | maxEE R1/R2 | Filtradas | Mediana por biblioteca | Fusión / filtradas | No quiméricas / fusión | ASVs no quiméricas | Pares vs. permisivo |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| Piloto | strict | 2/4 | 69,58 % | 79,62 % | 65,44 % | 91,38 % | 8.225 | 95,65 % |
+| Piloto | 3/5 | 3/5 | 71,53 % | 81,15 % | 64,58 % | 91,22 % | 8.247 | — |
+| Piloto | permisivo | 4/6 | 72,75 % | 82,51 % | 64,08 % | 91,10 % | 8.252 | 100,00 % |
+| Actual | strict | 2/4 | 41,23 % | 41,56 % | 68,77 % | 93,74 % | 7.909 | 90,43 % |
+| Actual | 3/5 | 3/5 | 43,90 % | 44,23 % | 68,28 % | 93,71 % | 7.986 | — |
+| Actual | permisivo | 4/6 | 45,60 % | 45,88 % | 67,86 % | 93,68 % | 8.012 | 100,00 % |
 
-Cuando la etapa esté completada, este capítulo mostrará:
+: Sensibilidad DADA2 sobre el recorte anclado. “Mediana por biblioteca” es la
+retención tras `filterAndTrim`; “pares vs. permisivo” compara el total filtrado
+de `strict` con el de 4/6. La fila 3/5 es la configuración de la validación de
+recorte, no una elección retrospectiva de la rama principal.
+:::
 
-1. seguimiento de lecturas por biblioteca y por ensayo;
-2. número de ASV antes y después de quimeras;
-3. distribución de longitudes de los amplicones fusionados;
-4. criterios documentados para el umbral mínimo de profundidad; y
-5. tabla de ASV integrada por secuencia exacta, con procedencia de ensayo.
+La ganancia de relajar el filtro fue pequeña en número de ASVs: frente a 3/5,
+`strict` difiere en 22 ASVs en `pilot` y 77 en `current`. En cambio, conservó
+las condiciones de QC: los positivos de `pilot` retuvieron 8.513.057 lecturas
+no quiméricas, el 98,45 % de su resultado permisivo; los negativos de `current`
+retuvieron 1.167.920, el 91,85 %. La tabla completa de candidatos está
+disponible como [sensibilidad DADA2](../tables/05_dada2_inferencia_asv/Table-5.1-sensibilidad-candidatos-dada2.tsv).
+
+## Parámetros definitivos y significado operativo
+
+La configuración final fue `truncLen=c(0,0)`, `truncQ=2`, `minLen=100` y
+`maxEE=c(2,4)`; modelos de error separados por ensayo y mate, sin *pooling*;
+`minOverlap=20`, `maxMismatch=0` y `trimOverhang=TRUE` para fusionar; quimeras
+por consenso y semilla `20260825`.
+
+`truncLen=c(0,0)` no significa ausencia de control de calidad: evita imponer
+un corte posicional a FASTQ de longitud variable tras el recorte anclado. La
+calidad esperada, el mínimo de longitud y la posterior fusión con solapamiento
+real actúan en conjunto. El diagnóstico de longitudes que llevó a esta elección
+se documenta en el [capítulo de preprocesamiento](04_control_calidad_preprocesamiento.qmd#por-que-no-se-trunco-por-posicion).
+
+## Retención por tipo técnico e integración exacta
+
+La @tbl-dada2-retention-by-type separa los controles de las biopsias para que
+no se confunda la retención agregada con un efecto de tipo de biblioteca. Los
+porcentajes finales no quiméricos respecto a la entrada fueron 33,82 % para las
+biopsias y 46,65 % para los positivos de `pilot`; 26,37 % para biopsias y
+27,86 % para negativos de `current`.
+
+::: {#tbl-dada2-retention-by-type}
+| Ensayo | Tipo técnico | Bibliotecas | Pares de entrada | Filtradas | Fusionadas | No quiméricas | No quiméricas / entrada |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Piloto | Biopsias | 8 | 11.815.341 | 8.702.905 | 4.633.882 | 3.995.673 | 33,82 % |
+| Piloto | Controles positivos | 38 | 18.249.198 | 12.215.833 | 9.055.389 | 8.513.057 | 46,65 % |
+| Actual | Biopsias | 130 | 25.718.239 | 10.567.915 | 7.212.594 | 6.782.364 | 26,37 % |
+| Actual | Controles negativos | 22 | 4.192.039 | 1.765.167 | 1.268.653 | 1.167.920 | 27,86 % |
+
+: Retención de la rama anclada `strict` 2/4 por ensayo y tipo de biblioteca.
+Las cuatro categorías conservaron al menos una biblioteca después de cada etapa.
+:::
+
+Al finalizar DADA2, las secuencias ASV de ambos ensayos se integraron por
+identidad exacta, manteniendo el ensayo de origen en la trazabilidad. No se
+suman ingenuamente 8.225 y 7.909 ASVs: 915 secuencias no quiméricas son
+idénticas entre ensayos, de modo que la unión canónica contiene 15.219 ASVs.
+
+::: {#tbl-dada2-final-retention}
+| Ensayo | Bibliotecas | Pares de entrada | Filtradas | Fusionadas | No quiméricas | ASVs no quiméricas |
+|---|---:|---:|---:|---:|---:|---:|
+| Piloto | 46 | 30.064.539 | 20.918.738 (69,58 %) | 13.689.271 | 12.508.730 (41,61 %) | 8.225 |
+| Actual | 152 | 29.910.278 | 12.333.082 (41,23 %) | 8.481.247 | 7.950.284 (26,58 %) | 7.909 |
+| **Canónica integrada** | **198** | **59.974.817** | **—** | **—** | **20.459.014** | **15.219** |
+
+: Resultado de la rama anclada `strict` 2/4. Los porcentajes son respecto a
+los pares de entrada de cada ensayo; no se calcula un porcentaje para la fila
+integrada porque no corresponde a una sola cadena de filtrado.
+:::
+
+La [retención por tipo de biblioteca](../tables/05_dada2_inferencia_asv/Table-5.2-retencion-dada2-por-tipo-biblioteca.tsv)
+y el [marcador de integración](../tables/05_dada2_inferencia_asv/Table-5.3-integracion-asv-canonica.tsv)
+permiten verificar esta cadena sin recalcular DADA2. El número combinado de
+ASVs prequiméricas no se declara porque las secuencias prequiméricas no se
+conservaron de forma que permitiera reconstruir su unión exacta. La tabla final
+no quimérica, el mapa ASV-secuencia y el seguimiento por biblioteca sí están
+completos.
+
+Dos biopsias de profundidad muy baja (`01-182` y `01-183`) se retuvieron, con
+18 y 48 lecturas no quiméricas. No se excluyeron por tamaño ni profundidad;
+cualquier umbral requiere una evaluación posterior conjunta con controles.
+
+## Comparación aislada: fijo 17/21 frente a anclado {#sec-fixed-anchored-comparison}
+
+La validación parte de los FASTQ raw y usa DADA2 3/5 en ambas ramas. Por tanto,
+describe el efecto de estrategias completas de recorte y no la diferencia entre
+la rama fija y la tabla formal `strict` 2/4. El fijo retuvo más lecturas y más
+ASVs, pero la fracción de lecturas asignadas a género fue mayor tras el recorte
+anclado en ambos ensayos.
+
+::: {#tbl-fixed-anchored-comparison}
+| Ensayo | Recorte | No quiméricas / entrada | ASVs | Lecturas a género | ASVs evaluables a género |
+|---|---|---:|---:|---:|---:|
+| Piloto | Anclado | 42,14 % | 8.247 | 89,88 % | 45,76 % |
+| Piloto | Fijo 17/21 | 54,43 % | 22.252 | 79,85 % | 26,53 % |
+| Actual | Anclado | 28,09 % | 7.986 | 75,07 % | 57,56 % |
+| Actual | Fijo 17/21 | 67,91 % | 37.739 | 62,61 % | 33,12 % |
+
+: Comparación aislada de estrategias de recorte con DADA2 3/5. La cobertura a
+género se calculó después de la taxonomía comparativa de esas ramas, no de la
+taxonomía formal `strict` 2/4 del capítulo 6.
+:::
+
+La ventaja de cobertura a género del anclado fue 10,03 puntos porcentuales en
+`pilot` y 12,46 en `current`. El incremento de ASVs del fijo tampoco se puede
+interpretar por sí solo como riqueza biológica: la @fig-fixed-anchored-richness
+compara la riqueza tras rarefacción pareada dentro de cada biblioteca y muestra
+que el patrón persiste al igualar la profundidad. Es una evidencia de
+sensibilidad metodológica, no una prueba de artefacto, de prevalencia ni de
+señal clínica.
+
+![Riqueza ASV tras rarefacción pareada, comparando recorte fijo 17/21 y anclado con DADA2 3/5. Cada punto corresponde a la misma biblioteca en ambas estrategias.](../figures/05_dada2_inferencia_asv/Fig-5.3-riqueza-rarefactada-fijo-anclado.pdf){#fig-fixed-anchored-richness fig-alt="Gráfico de dispersión que compara riqueza rarefactada por biblioteca bajo recorte anclado y fijo 17/21, con colores para pilot y current."}
+
+La comparación de núcleos internos aporta un control adicional: 98,11 % de las
+lecturas ancladas de `pilot` y 98,72 % de las de `current` tienen algún núcleo
+fijo de al menos 250 nt. No equivale a identidad de ASV ni autoriza colapsar
+las dos tablas, ya que los extremos técnicos pueden diferir. Están disponibles
+las tablas descargables de [procesamiento](../tables/05_dada2_inferencia_asv/Table-5.4-comparacion-procesamiento-fijo-anclado.tsv), [cobertura taxonómica](../tables/05_dada2_inferencia_asv/Table-5.5-cobertura-taxonomica-fijo-anclado.tsv)
+y [núcleos internos](../tables/05_dada2_inferencia_asv/Table-5.6-nucleos-internos-fijo-anclado.tsv).
+
+El [suplemento gráfico multipágina](../figures/05_dada2_inferencia_asv/Fig-5.4-qc-taxonomico-fijo-anclado-suplemento.pdf)
+añade la distribución por biblioteca de la cobertura a género y las distancias
+Bray--Curtis entre estrategias. Se mantiene como PDF descargable para conservar
+sus cuatro páginas completas; no se incrusta como una figura única que ocultase
+las páginas posteriores.
+
+::: {.callout-note}
+## Qué no concluye este capítulo
+
+La selección de filtro y de recorte establece una tabla ASV canónica trazable.
+No decide qué ASVs son biológicas, no excluye negativos ni biopsias de baja
+profundidad y no ejecuta decontaminación. Esas preguntas requieren una etapa
+posterior explícitamente autorizada, conservando siempre la tabla sin filtrar.
+:::

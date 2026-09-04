@@ -1,0 +1,17 @@
+analysis_branch	processing_batch	flag	asvs	asv_pct	reads	read_pct
+sequence_anchored_strict	pilot	is_bacteria	10584	69.5446481371969	11736076	93.8230819595594
+sequence_anchored_strict	pilot	is_archaea	2	0.0131414679019646	19	0.000151893917288166
+sequence_anchored_strict	pilot	is_eukaryote	2864	18.8185820356134	547296	4.37531228190232
+sequence_anchored_strict	pilot	is_chloroplast	11	0.0722780734608056	18613	0.148800078025507
+sequence_anchored_strict	pilot	is_mitochondria	744	4.88862605953085	178447	1.42657967675376
+sequence_anchored_strict	pilot	is_unassigned_genus	7590	49.8718706879558	1270248	10.1548918235504
+sequence_anchored_strict	pilot	is_shorter_than_minimum_length	2	0.0131414679019646	474	0.00378935351550477
+sequence_anchored_strict	pilot	is_shorter_than_250nt	2962	19.4625139628096	283834	2.26908726945102
+sequence_anchored_strict	current	is_bacteria	10584	69.5446481371969	7184752	90.3710106456574
+sequence_anchored_strict	current	is_archaea	2	0.0131414679019646	914	0.0114964446553104
+sequence_anchored_strict	current	is_eukaryote	2864	18.8185820356134	511437	6.43294000566521
+sequence_anchored_strict	current	is_chloroplast	11	0.0722780734608056	509	0.00640228701264005
+sequence_anchored_strict	current	is_mitochondria	744	4.88862605953085	978831	12.3118998013153
+sequence_anchored_strict	current	is_unassigned_genus	7590	49.8718706879558	2013978	25.3321516564691
+sequence_anchored_strict	current	is_shorter_than_minimum_length	2	0.0131414679019646	0	0
+sequence_anchored_strict	current	is_shorter_than_250nt	2962	19.4625139628096	975248	12.2668322288864

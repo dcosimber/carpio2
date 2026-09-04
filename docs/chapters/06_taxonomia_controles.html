@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -102,6 +67,9 @@ div.csl-indent {
 <link href="../site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-7e34ecb6a0e7991f0346b0751d4a7c3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -440,10 +408,12 @@ div.csl-indent {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#asignación-taxonómica" id="toc-asignación-taxonómica" class="nav-link active" data-scroll-target="#asignación-taxonómica"><span class="header-section-number">6.1</span> Asignación taxonómica</a></li>
-  <li><a href="#controles-positivos" id="toc-controles-positivos" class="nav-link" data-scroll-target="#controles-positivos"><span class="header-section-number">6.2</span> Controles positivos</a></li>
-  <li><a href="#controles-negativos-y-decontaminación" id="toc-controles-negativos-y-decontaminación" class="nav-link" data-scroll-target="#controles-negativos-y-decontaminación"><span class="header-section-number">6.3</span> Controles negativos y decontaminación</a></li>
-  <li><a href="#productos-de-salida" id="toc-productos-de-salida" class="nav-link" data-scroll-target="#productos-de-salida"><span class="header-section-number">6.4</span> Productos de salida</a></li>
+  <li><a href="#objeto-de-entrada-y-método-de-asignación" id="toc-objeto-de-entrada-y-método-de-asignación" class="nav-link active" data-scroll-target="#objeto-de-entrada-y-método-de-asignación"><span class="header-section-number">6.1</span> Objeto de entrada y método de asignación</a></li>
+  <li><a href="#cobertura-por-rango-asvs-y-lecturas" id="toc-cobertura-por-rango-asvs-y-lecturas" class="nav-link" data-scroll-target="#cobertura-por-rango-asvs-y-lecturas"><span class="header-section-number">6.2</span> Cobertura por rango: ASVs y lecturas</a></li>
+  <li><a href="#señales-técnicas-preservadas-sin-filtrado" id="toc-señales-técnicas-preservadas-sin-filtrado" class="nav-link" data-scroll-target="#señales-técnicas-preservadas-sin-filtrado"><span class="header-section-number">6.3</span> Señales técnicas preservadas, sin filtrado</a></li>
+  <li><a href="#controles-positivos-recuperación-a-género-y-heterogeneidad" id="toc-controles-positivos-recuperación-a-género-y-heterogeneidad" class="nav-link" data-scroll-target="#controles-positivos-recuperación-a-género-y-heterogeneidad"><span class="header-section-number">6.4</span> Controles positivos: recuperación a género y heterogeneidad</a></li>
+  <li><a href="#negativos-prevalencia-y-decontaminación-todavía-no-ejecutados" id="toc-negativos-prevalencia-y-decontaminación-todavía-no-ejecutados" class="nav-link" data-scroll-target="#negativos-prevalencia-y-decontaminación-todavía-no-ejecutados"><span class="header-section-number">6.5</span> Negativos, prevalencia y decontaminación: todavía no ejecutados</a></li>
+  <li><a href="#recuperación-trazable-de-la-asignación" id="toc-recuperación-trazable-de-la-asignación" class="nav-link" data-scroll-target="#recuperación-trazable-de-la-asignación"><span class="header-section-number">6.6</span> Recuperación trazable de la asignación</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/06_taxonomia_controles.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -476,44 +446,262 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Precaución</span>Estado de la etapa
+<span class="screen-reader-only">Precaución</span>Estado e interpretación permitida
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>La asignación taxonómica y la evaluación de controles aún no se han ejecutado en el análisis ampliado. Este capítulo documenta el método previsto y reserva el espacio para resultados revisados, sin atribuir composición microbiana a las biopsias ni declarar contaminantes antes de su evaluación.</p>
+<p>La taxonomía formal está completada exclusivamente para la tabla ASV canónica anclada <code>strict</code> 2/4. Los controles positivos se describen como QC taxonómico. La evaluación de prevalencia, controles negativos, decontaminación y downstream sigue pendiente de autorización; este capítulo no declara contaminantes ni atribuye resultados clínicos a las biopsias.</p>
 </div>
 </div>
-<section id="asignación-taxonómica" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="asignación-taxonómica"><span class="header-section-number">6.1</span> Asignación taxonómica</h2>
-<p>Las ASV no quiméricas se anotarán mediante SILVA NR99 138.2. La referencia, su versión, checksum y parámetros se conservarán en el proyecto analítico. La taxonomía se asignará únicamente después de la fusión por secuencia exacta.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>taxonomy <span class="ot">&lt;-</span> <span class="fu">assignTaxonomy</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">seqs =</span> <span class="sc">&lt;</span>secuencias_asv<span class="sc">&gt;</span>, <span class="at">refFasta =</span> <span class="sc">&lt;</span>silva_nr99_138_2<span class="sc">&gt;</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">minBoot =</span> <span class="dv">50</span>, <span class="at">multithread =</span> <span class="cn">TRUE</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>minBoot = 50</code> define el soporte mínimo de bootstrap para las asignaciones. La salida esperada es una tabla taxonómica vinculada a las ASV y al seguimiento de lecturas; se informarán los niveles no resueltos sin forzar anotaciones.</p>
+<section id="objeto-de-entrada-y-método-de-asignación" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="objeto-de-entrada-y-método-de-asignación"><span class="header-section-number">6.1</span> Objeto de entrada y método de asignación</h2>
+<p>La asignación partió de la tabla ASV no quimérica canónica del capítulo 5: 15.219 ASVs, 20.459.014 lecturas y 198 bibliotecas. Se usó SILVA NR99 v138.2 <span class="citation" data-cites="Quast2013">(<a href="11_referencias.html#ref-Quast2013" role="doc-biblioref">Quast et&nbsp;al. 2013</a>)</span>, con <code>minBoot=50</code>, <code>tryRC=FALSE</code> y <code>addSpecies</code> con <code>allowMultiple=FALSE</code>. La taxonomía se aplicó a la tabla sin filtrar: no se eliminaron ni fusionaron ASVs y no se aplicó decontaminación.</p>
+<p>Dos ASVs de menos de 50 nt se preservaron como no evaluables. No se les asigna taxonomía ni se interpretan como un fallo del clasificador. Es una decisión de trazabilidad: la tabla de entrada permanece íntegra y la no evaluabilidad se separa explícitamente de la ausencia de una asignación taxonómica.</p>
 </section>
-<section id="controles-positivos" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="controles-positivos"><span class="header-section-number">6.2</span> Controles positivos</h2>
-<p>Los mocks de extracción, los mocks de PCR y las diluciones de <em>E. coli</em> se utilizarán para evaluar recuperación taxonómica, consistencia de la preparación y sensibilidad. Se compararán con su composición o señal esperada, teniendo en cuenta los límites de resolución de 16S y de la base de datos. Los controles positivos se mantendrán en QC y no se incluirán en las comparaciones biológicas de biopsias.</p>
+<section id="cobertura-por-rango-asvs-y-lecturas" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="cobertura-por-rango-asvs-y-lecturas"><span class="header-section-number">6.2</span> Cobertura por rango: ASVs y lecturas</h2>
+<p>La cobertura debe leerse con dos denominadores. El porcentaje de ASVs se calcula sobre las 15.217 ASVs evaluables de la unión canónica y por eso es idéntico en ambos ensayos. El porcentaje de lecturas se calcula dentro de cada ensayo y pondera la abundancia; por eso puede ser alto aunque una parte de la cola de ASVs raras no alcance ese rango.</p>
+<div id="tbl-taxonomy-coverage" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-taxonomy-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;6.1: Cobertura SILVA de la rama anclada <code>strict</code> 2/4. Los porcentajes de lecturas son respecto a todas las lecturas no quiméricas del ensayo; los de ASVs usan el mismo conjunto canónico evaluable para <code>pilot</code> y <code>current</code>.
+</figcaption>
+<div aria-describedby="tbl-taxonomy-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rango</th>
+<th style="text-align: right;">ASVs asignadas / 15.217 evaluables</th>
+<th style="text-align: right;">Lecturas <code>pilot</code></th>
+<th style="text-align: right;">Lecturas <code>current</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reino</td>
+<td style="text-align: right;">88,39 %</td>
+<td style="text-align: right;">98,20 %</td>
+<td style="text-align: right;">96,82 %</td>
+</tr>
+<tr class="even">
+<td>Filo</td>
+<td style="text-align: right;">64,95 %</td>
+<td style="text-align: right;">93,35 %</td>
+<td style="text-align: right;">89,76 %</td>
+</tr>
+<tr class="odd">
+<td>Clase</td>
+<td style="text-align: right;">63,88 %</td>
+<td style="text-align: right;">93,01 %</td>
+<td style="text-align: right;">89,64 %</td>
+</tr>
+<tr class="even">
+<td>Orden</td>
+<td style="text-align: right;">63,44 %</td>
+<td style="text-align: right;">93,00 %</td>
+<td style="text-align: right;">89,60 %</td>
+</tr>
+<tr class="odd">
+<td>Familia</td>
+<td style="text-align: right;">61,31 %</td>
+<td style="text-align: right;">92,43 %</td>
+<td style="text-align: right;">89,03 %</td>
+</tr>
+<tr class="even">
+<td>Género</td>
+<td style="text-align: right;">50,12 % (7.627)</td>
+<td style="text-align: right;">89,84 %</td>
+<td style="text-align: right;">74,67 %</td>
+</tr>
+<tr class="odd">
+<td>Especie</td>
+<td style="text-align: right;">2,70 % (411)</td>
+<td style="text-align: right;">26,40 %</td>
+<td style="text-align: right;">29,88 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La <a href="#fig-taxonomy-coverage" class="quarto-xref">Figura&nbsp;<span>6.1</span></a> representa la parte basada en lecturas de la tabla: la caída al pasar de familia a género es más marcada en <code>current</code> (89,03 % a 74,67 %) que en <code>pilot</code> (92,43 % a 89,84 %). No significa que las ASVs sin género sean artefactos: indica que muchas ASVs, habitualmente de menor abundancia, no alcanzan resolución a género con este marcador y referencia.</p>
+<div id="fig-taxonomy-coverage" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Barras agrupadas que muestran el porcentaje de lecturas asignadas desde reino hasta especie en los ensayos pilot y current.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-taxonomy-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/06_taxonomia_controles/Fig-6.1-cobertura-taxonomica-por-rango.pdf" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;6.1: Porcentaje de lecturas de la tabla ASV canónica con asignación SILVA en cada rango taxonómico, por ensayo."><embed src="../figures/06_taxonomia_controles/Fig-6.1-cobertura-taxonomica-por-rango.pdf" class="img-fluid" alt="Barras agrupadas que muestran el porcentaje de lecturas asignadas desde reino hasta especie en los ensayos pilot y current."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-taxonomy-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.1: Porcentaje de lecturas de la tabla ASV canónica con asignación SILVA en cada rango taxonómico, por ensayo.
+</figcaption>
+</figure>
+</div>
+<p>El bootstrap mediano a género fue 100 en ambos ensayos, con P10=68,6. Ese valor resume el soporte condicional de las etiquetas que sí se asignaron; no demuestra presencia biológica, prevalencia ni ausencia de contaminación. A especie, <code>assignTaxonomy</code> no registra bootstrap y el campo se conserva como <code>NA</code>; la resolución a especie se interpreta, por tanto, con especial cautela. El detalle reutilizable por rango está en la <a href="../tables/06_taxonomia_controles/Table-6.1-cobertura-taxonomica-por-rango.tsv">tabla de cobertura</a>.</p>
 </section>
-<section id="controles-negativos-y-decontaminación" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="controles-negativos-y-decontaminación"><span class="header-section-number">6.3</span> Controles negativos y decontaminación</h2>
-<p>Los controles negativos de batch, extracción y PCR fundamentarán el análisis principal de prevalencia de contaminantes. Cuando haya una variable de concentración de ADN apropiada y validada, se añadirá un análisis de frecuencia como sensibilidad <span class="citation" data-cites="Davis2018">(<a href="11_referencias.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>)</span>. El comando genérico de prevalencia es:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>contaminants <span class="ot">&lt;-</span> <span class="fu">isContaminant</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">physeq =</span> <span class="sc">&lt;</span>objeto_con_asv_y_metadatos<span class="sc">&gt;</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">"prevalence"</span>, <span class="at">neg =</span> <span class="st">"is_negative_control"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">threshold =</span> <span class="fl">0.5</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>La decisión de filtrado se conservará en tres capas revisables: tabla cruda, ASV candidatas a contaminante y tabla filtrada. Ninguna tabla sustituirá a las otras; así será posible revisar el impacto de cada decisión de decontaminación.</p>
+<section id="señales-técnicas-preservadas-sin-filtrado" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="señales-técnicas-preservadas-sin-filtrado"><span class="header-section-number">6.3</span> Señales técnicas preservadas, sin filtrado</h2>
+<p>La tabla ASV conserva flags que serán necesarios para una etapa posterior, pero estas categorías pueden solaparse y no deben sumarse como una composición. Tampoco equivalen por sí solas a contaminación, calidad biológica o criterio de exclusión.</p>
+<div id="tbl-taxonomy-flags" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-taxonomy-flags-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;6.2: Flags de la rama anclada <code>strict</code> 2/4. Las filas se solapan por construcción; por ejemplo, una ASV puede ser eucariota y estar sin asignar a género.
+</figcaption>
+<div aria-describedby="tbl-taxonomy-flags-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Señal</th>
+<th style="text-align: right;">ASVs</th>
+<th style="text-align: right;">Lecturas <code>pilot</code></th>
+<th style="text-align: right;">Lecturas <code>current</code></th>
+<th>Lectura correcta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bacterias</td>
+<td style="text-align: right;">69,54 %</td>
+<td style="text-align: right;">93,82 %</td>
+<td style="text-align: right;">90,37 %</td>
+<td>Categoría taxonómica descriptiva, no filtro.</td>
+</tr>
+<tr class="even">
+<td>Eucariotas</td>
+<td style="text-align: right;">18,82 %</td>
+<td style="text-align: right;">4,38 %</td>
+<td style="text-align: right;">6,43 %</td>
+<td>Se preservan para evaluación posterior.</td>
+</tr>
+<tr class="odd">
+<td>Mitocondrias</td>
+<td style="text-align: right;">4,89 %</td>
+<td style="text-align: right;">1,43 %</td>
+<td style="text-align: right;">12,31 %</td>
+<td>Señal técnica/taxonómica; no se retiró en esta etapa.</td>
+</tr>
+<tr class="even">
+<td>Sin asignación a género</td>
+<td style="text-align: right;">49,87 %</td>
+<td style="text-align: right;">10,15 %</td>
+<td style="text-align: right;">25,33 %</td>
+<td>ASVs evaluables sin género, incluidas en el denominador de lecturas.</td>
+</tr>
+<tr class="odd">
+<td>Longitud &lt;250 nt</td>
+<td style="text-align: right;">19,46 %</td>
+<td style="text-align: right;">2,27 %</td>
+<td style="text-align: right;">12,27 %</td>
+<td>Flag de longitud, no una exclusión aplicada.</td>
+</tr>
+<tr class="even">
+<td>Longitud &lt;50 nt</td>
+<td style="text-align: right;">0,013 % (2)</td>
+<td style="text-align: right;">0,0038 %</td>
+<td style="text-align: right;">0,00 %</td>
+<td>ASVs preservadas como no evaluables.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La diferencia entre el porcentaje de ASVs y el de lecturas vuelve a ser informativa: las ASVs &lt;250 nt representan 19,46 % de la unión, pero sólo 2,27 % de las lecturas de <code>pilot</code> y 12,27 % de <code>current</code>. La interpretación se limita a describir qué se ha conservado; la <a href="../tables/06_taxonomia_controles/Table-6.2-senales-taxonomicas.tsv">tabla de señales taxonómicas</a> permite revisar los valores sin exponer datos por biblioteca.</p>
 </section>
-<section id="productos-de-salida" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="productos-de-salida"><span class="header-section-number">6.4</span> Productos de salida</h2>
-<p>Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de los controles positivos, la lista de candidatas a contaminante, los criterios aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos no se inferirán a partir de los controles.</p>
+<section id="controles-positivos-recuperación-a-género-y-heterogeneidad" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="controles-positivos-recuperación-a-género-y-heterogeneidad"><span class="header-section-number">6.4</span> Controles positivos: recuperación a género y heterogeneidad</h2>
+<p>Los 38 positivos de <code>pilot</code> no son un único tipo: incluyen 24 controles de <em>E. coli</em>, ocho mocks de extracción y seis mocks de PCR. Los 24 negativos de <code>current</code> se conservan igualmente desagregados para el QC futuro: diez de extracción, diez de PCR y dos de lote. Ninguno quedó a cero tras DADA2. Esta estructura evita interpretar todos los controles positivos como si fueran réplicas de <em>E. coli</em> o los negativos como si ya hubieran recibido un filtro.</p>
+<div id="tbl-ecoli-qc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ecoli-qc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;6.3: QC taxonómico de los controles de <em>E. coli</em> en la rama formal <code>strict</code> 2/4. El porcentaje ponderado usa todas las lecturas no quiméricas del conjunto de controles; la mediana y el rango no se ponderan.
+</figcaption>
+<div aria-describedby="tbl-ecoli-qc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control formal</th>
+<th style="text-align: right;">Bibliotecas</th>
+<th style="text-align: right;">Lecturas no quiméricas</th>
+<th style="text-align: right;"><em>Escherichia</em> a género</th>
+<th>Resumen por biblioteca</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>E. coli</em></td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">4.280.316</td>
+<td style="text-align: right;">88,55 % ponderado (3.790.002 lecturas)</td>
+<td>Mediana 96,60 %; rango 32,24–99,49 %.</td>
+</tr>
+<tr class="even">
+<td>Etiqueta de especie con <code>coli</code></td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">4.280.316</td>
+<td style="text-align: right;">260 lecturas (0,0061 %)</td>
+<td>No es un criterio de QC ni de filtrado.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La <a href="#tbl-ecoli-qc" class="quarto-xref">Tabla&nbsp;<span>6.3</span></a> apoya recuperabilidad a nivel de género, pero también hace visible la heterogeneidad entre bibliotecas. No se interpreta como curva de dilución, límite de detección ni validación cuantitativa porque las concentraciones de entrada no se documentaron para ese propósito. La escasa etiqueta de especie que contiene <code>coli</code> es compatible con la resolución limitada del amplicón/SILVA; no se utiliza para filtrar ASVs ni como fallo del pipeline.</p>
+<p>La tabla interna <code>genus_abundance_by_library.tsv</code> preserva deliberadamente <code>__unassigned_genus__</code> para ASVs evaluables sin género y <code>__short_lt50__</code> para las no evaluables. La abundancia relativa se calcula sobre todas las lecturas no quiméricas: por ello, los recuentos por biblioteca suman el total y no renormalizan artificialmente la fracción asignada a género.</p>
+</section>
+<section id="negativos-prevalencia-y-decontaminación-todavía-no-ejecutados" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="negativos-prevalencia-y-decontaminación-todavía-no-ejecutados"><span class="header-section-number">6.5</span> Negativos, prevalencia y decontaminación: todavía no ejecutados</h2>
+<p>Los negativos de <code>current</code> se mantienen en la tabla canónica y en el QC taxonómico, pero no se ejecutó análisis de prevalencia ni decontaminación. En consecuencia, no existe una lista activa de ASVs candidatas a contaminante, una tabla filtrada ni una inferencia a partir de su composición. Una etapa futura autorizada deberá conservar por separado la tabla cruda, las candidatas y toda versión filtrada; si se dispone de concentración de ADN validada, podrá añadir un análisis de frecuencia como sensibilidad <span class="citation" data-cites="Davis2018">(<a href="11_referencias.html#ref-Davis2018" role="doc-biblioref">Davis et&nbsp;al. 2018</a>)</span>.</p>
+</section>
+<section id="recuperación-trazable-de-la-asignación" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="recuperación-trazable-de-la-asignación"><span class="header-section-number">6.6</span> Recuperación trazable de la asignación</h2>
+<p>La recuperación separó claramente clasificación y visualización:</p>
+<ol type="1">
+<li>El job 9559086 completó la asignación científica y falló únicamente al crear la figura de cobertura por un desajuste de etiquetas.</li>
+<li>Sus siete TSV científicos y dos objetos RDS se archivaron y validaron contra la tabla DADA2 canónica, metadatos y controles.</li>
+<li>El job 9560462 copió esos nueve artefactos byte a byte y regeneró sólo la figura, el informe, parámetros, manifiesto y marcador final; no reclasificó secuencias.</li>
+</ol>
+<p>Por tanto, la igualdad byte a byte aplica a los artefactos científicos, no a los productos deliberadamente regenerados de cierre. La <a href="../tables/06_taxonomia_controles/Table-6.3-proveniencia-recuperacion-taxonomia.tsv">proveniencia de la recuperación</a> documenta los dos jobs y confirma <code>taxonomy_assignments_recomputed=FALSE</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Límite de interpretación
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La tabla taxonómica formal es un punto de partida sin filtrar. La identidad exacta de una ASV y una etiqueta SILVA no sustituyen la evaluación de abundancia, prevalencia, negativos, contaminación ni la definición autorizada del análisis biológico o clínico.</p>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Davis2018" class="csl-entry" role="listitem">
 Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin J. Callahan. 2018. <span>«Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data»</span>. <em>Microbiome</em> 6 (1): 226. <a href="https://doi.org/10.1186/s40168-018-0605-2">https://doi.org/10.1186/s40168-018-0605-2</a>.
+</div>
+<div id="ref-Quast2013" class="csl-entry" role="listitem">
+Quast, Christian, Elmar Pruesse, Pelin Yilmaz, Jan Gerken, Tim Schweer, Pablo Yarza, Jörg Peplies, y Frank Oliver Glöckner. 2013. <span>«The SILVA ribosomal RNA gene database project: improved data processing and web-based tools»</span>. <em>Nucleic Acids Research</em> 41 (D1): D590-96. <a href="https://doi.org/10.1093/nar/gks1219">https://doi.org/10.1093/nar/gks1219</a>.
 </div>
 </div>
 </section>
@@ -950,9 +1138,41 @@ Davis, Nicole M., Diana M. Proctor, Susan P. Holmes, David A. Relman, y Benjamin
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/06_taxonomia_controles.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/06_taxonomia_controles.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,0 +1,17 @@
+processing_batch	check	expected	observed	status
+pilot	manifest_libraries	46	46	pass
+pilot	raw_fastqc_inventory	92	92	pass
+pilot	trimmed_fastqc_inventory	92	92	pass
+pilot	trimmed_fastq_files	92	92	pass
+pilot	paired_raw_counts	46	46	pass
+pilot	paired_trimmed_counts	46	46	pass
+pilot	trimmed_pairs_retained	46	46	pass
+pilot	sequence_trimming_verified	46	46	pass
+current	manifest_libraries	152	152	pass
+current	raw_fastqc_inventory	304	304	pass
+current	trimmed_fastqc_inventory	304	304	pass
+current	trimmed_fastq_files	304	304	pass
+current	paired_raw_counts	152	152	pass
+current	paired_trimmed_counts	152	152	pass
+current	trimmed_pairs_retained	152	152	pass
+current	sequence_trimming_verified	152	152	pass

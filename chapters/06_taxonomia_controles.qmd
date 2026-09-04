@@ -3,62 +3,159 @@ title: "Taxonomía, controles y decontaminación"
 ---
 
 ::: {.callout-caution}
-## Estado de la etapa
+## Estado e interpretación permitida
 
-La asignación taxonómica y la evaluación de controles aún no se han ejecutado
-en el análisis ampliado. Este capítulo documenta el método previsto y reserva
-el espacio para resultados revisados, sin atribuir composición microbiana a las
-biopsias ni declarar contaminantes antes de su evaluación.
+La taxonomía formal está completada exclusivamente para la tabla ASV canónica
+anclada `strict` 2/4. Los controles positivos se describen como QC taxonómico.
+La evaluación de prevalencia, controles negativos, decontaminación y downstream
+sigue pendiente de autorización; este capítulo no declara contaminantes ni
+atribuye resultados clínicos a las biopsias.
 :::
 
-## Asignación taxonómica
+## Objeto de entrada y método de asignación
 
-Las ASV no quiméricas se anotarán mediante SILVA NR99 138.2. La referencia, su
-versión, checksum y parámetros se conservarán en el proyecto analítico. La
-taxonomía se asignará únicamente después de la fusión por secuencia exacta.
+La asignación partió de la tabla ASV no quimérica canónica del capítulo 5:
+15.219 ASVs, 20.459.014 lecturas y 198 bibliotecas. Se usó SILVA NR99 v138.2
+[@Quast2013], con `minBoot=50`, `tryRC=FALSE` y `addSpecies` con
+`allowMultiple=FALSE`. La taxonomía se aplicó a la tabla sin filtrar: no se
+eliminaron ni fusionaron ASVs y no se aplicó decontaminación.
 
-```r
-taxonomy <- assignTaxonomy(
-  seqs = <secuencias_asv>, refFasta = <silva_nr99_138_2>,
-  minBoot = 50, multithread = TRUE
-)
-```
+Dos ASVs de menos de 50 nt se preservaron como no evaluables. No se les asigna
+taxonomía ni se interpretan como un fallo del clasificador. Es una decisión de
+trazabilidad: la tabla de entrada permanece íntegra y la no evaluabilidad se
+separa explícitamente de la ausencia de una asignación taxonómica.
 
-`minBoot = 50` define el soporte mínimo de bootstrap para las asignaciones. La
-salida esperada es una tabla taxonómica vinculada a las ASV y al seguimiento de
-lecturas; se informarán los niveles no resueltos sin forzar anotaciones.
+## Cobertura por rango: ASVs y lecturas
 
-## Controles positivos
+La cobertura debe leerse con dos denominadores. El porcentaje de ASVs se calcula
+sobre las 15.217 ASVs evaluables de la unión canónica y por eso es idéntico en
+ambos ensayos. El porcentaje de lecturas se calcula dentro de cada ensayo y
+pondera la abundancia; por eso puede ser alto aunque una parte de la cola de
+ASVs raras no alcance ese rango.
 
-Los mocks de extracción, los mocks de PCR y las diluciones de *E. coli* se
-utilizarán para evaluar recuperación taxonómica, consistencia de la preparación
-y sensibilidad. Se compararán con su composición o señal esperada, teniendo en
-cuenta los límites de resolución de 16S y de la base de datos. Los controles
-positivos se mantendrán en QC y no se incluirán en las comparaciones biológicas
-de biopsias.
+::: {#tbl-taxonomy-coverage}
+| Rango | ASVs asignadas / 15.217 evaluables | Lecturas `pilot` | Lecturas `current` |
+|---|---:|---:|---:|
+| Reino | 88,39 % | 98,20 % | 96,82 % |
+| Filo | 64,95 % | 93,35 % | 89,76 % |
+| Clase | 63,88 % | 93,01 % | 89,64 % |
+| Orden | 63,44 % | 93,00 % | 89,60 % |
+| Familia | 61,31 % | 92,43 % | 89,03 % |
+| Género | 50,12 % (7.627) | 89,84 % | 74,67 % |
+| Especie | 2,70 % (411) | 26,40 % | 29,88 % |
 
-## Controles negativos y decontaminación
+: Cobertura SILVA de la rama anclada `strict` 2/4. Los porcentajes de lecturas
+son respecto a todas las lecturas no quiméricas del ensayo; los de ASVs usan el
+mismo conjunto canónico evaluable para `pilot` y `current`.
+:::
 
-Los controles negativos de batch, extracción y PCR fundamentarán el análisis
-principal de prevalencia de contaminantes. Cuando haya una variable de
-concentración de ADN apropiada y validada, se añadirá un análisis de frecuencia
-como sensibilidad [@Davis2018]. El comando genérico de prevalencia es:
+La @fig-taxonomy-coverage representa la parte basada en lecturas de la tabla:
+la caída al pasar de familia a género es más marcada en `current` (89,03 % a
+74,67 %) que en `pilot` (92,43 % a 89,84 %). No significa que las ASVs sin
+género sean artefactos: indica que muchas ASVs, habitualmente de menor
+abundancia, no alcanzan resolución a género con este marcador y referencia.
 
-```r
-contaminants <- isContaminant(
-  physeq = <objeto_con_asv_y_metadatos>,
-  method = "prevalence", neg = "is_negative_control",
-  threshold = 0.5
-)
-```
+![Porcentaje de lecturas de la tabla ASV canónica con asignación SILVA en cada rango taxonómico, por ensayo.](../figures/06_taxonomia_controles/Fig-6.1-cobertura-taxonomica-por-rango.pdf){#fig-taxonomy-coverage fig-alt="Barras agrupadas que muestran el porcentaje de lecturas asignadas desde reino hasta especie en los ensayos pilot y current."}
 
-La decisión de filtrado se conservará en tres capas revisables: tabla cruda,
-ASV candidatas a contaminante y tabla filtrada. Ninguna tabla sustituirá a las
-otras; así será posible revisar el impacto de cada decisión de decontaminación.
+El bootstrap mediano a género fue 100 en ambos ensayos, con P10=68,6. Ese valor
+resume el soporte condicional de las etiquetas que sí se asignaron; no demuestra
+presencia biológica, prevalencia ni ausencia de contaminación. A especie,
+`assignTaxonomy` no registra bootstrap y el campo se conserva como `NA`; la
+resolución a especie se interpreta, por tanto, con especial cautela. El detalle
+reutilizable por rango está en la [tabla de cobertura](../tables/06_taxonomia_controles/Table-6.1-cobertura-taxonomica-por-rango.tsv).
 
-## Productos de salida
+## Señales técnicas preservadas, sin filtrado
 
-Se incorporarán el porcentaje de ASV taxonómicamente resueltas, los perfiles de
-los controles positivos, la lista de candidatas a contaminante, los criterios
-aplicados y el efecto del filtrado sobre las biopsias. Los resultados clínicos
-no se inferirán a partir de los controles.
+La tabla ASV conserva flags que serán necesarios para una etapa posterior, pero
+estas categorías pueden solaparse y no deben sumarse como una composición.
+Tampoco equivalen por sí solas a contaminación, calidad biológica o criterio de
+exclusión.
+
+::: {#tbl-taxonomy-flags}
+| Señal | ASVs | Lecturas `pilot` | Lecturas `current` | Lectura correcta |
+|---|---:|---:|---:|---|
+| Bacterias | 69,54 % | 93,82 % | 90,37 % | Categoría taxonómica descriptiva, no filtro. |
+| Eucariotas | 18,82 % | 4,38 % | 6,43 % | Se preservan para evaluación posterior. |
+| Mitocondrias | 4,89 % | 1,43 % | 12,31 % | Señal técnica/taxonómica; no se retiró en esta etapa. |
+| Sin asignación a género | 49,87 % | 10,15 % | 25,33 % | ASVs evaluables sin género, incluidas en el denominador de lecturas. |
+| Longitud <250 nt | 19,46 % | 2,27 % | 12,27 % | Flag de longitud, no una exclusión aplicada. |
+| Longitud <50 nt | 0,013 % (2) | 0,0038 % | 0,00 % | ASVs preservadas como no evaluables. |
+
+: Flags de la rama anclada `strict` 2/4. Las filas se solapan por construcción;
+por ejemplo, una ASV puede ser eucariota y estar sin asignar a género.
+:::
+
+La diferencia entre el porcentaje de ASVs y el de lecturas vuelve a ser
+informativa: las ASVs <250 nt representan 19,46 % de la unión, pero sólo 2,27 %
+de las lecturas de `pilot` y 12,27 % de `current`. La interpretación se limita a
+describir qué se ha conservado; la [tabla de señales taxonómicas](../tables/06_taxonomia_controles/Table-6.2-senales-taxonomicas.tsv)
+permite revisar los valores sin exponer datos por biblioteca.
+
+## Controles positivos: recuperación a género y heterogeneidad
+
+Los 38 positivos de `pilot` no son un único tipo: incluyen 24 controles de
+*E. coli*, ocho mocks de extracción y seis mocks de PCR. Los 24 negativos de
+`current` se conservan igualmente desagregados para el QC futuro: diez de
+extracción, diez de PCR y dos de lote. Ninguno quedó a cero tras DADA2. Esta
+estructura evita interpretar todos los controles positivos como si fueran
+réplicas de *E. coli* o los negativos como si ya hubieran recibido un filtro.
+
+::: {#tbl-ecoli-qc}
+| Control formal | Bibliotecas | Lecturas no quiméricas | *Escherichia* a género | Resumen por biblioteca |
+|---|---:|---:|---:|---|
+| *E. coli* | 24 | 4.280.316 | 88,55 % ponderado (3.790.002 lecturas) | Mediana 96,60 %; rango 32,24–99,49 %. |
+| Etiqueta de especie con `coli` | 24 | 4.280.316 | 260 lecturas (0,0061 %) | No es un criterio de QC ni de filtrado. |
+
+: QC taxonómico de los controles de *E. coli* en la rama formal `strict` 2/4.
+El porcentaje ponderado usa todas las lecturas no quiméricas del conjunto de
+controles; la mediana y el rango no se ponderan.
+:::
+
+La @tbl-ecoli-qc apoya recuperabilidad a nivel de género, pero también hace
+visible la heterogeneidad entre bibliotecas. No se interpreta como curva de
+dilución, límite de detección ni validación cuantitativa porque las
+concentraciones de entrada no se documentaron para ese propósito. La escasa
+etiqueta de especie que contiene `coli` es compatible con la resolución limitada
+del amplicón/SILVA; no se utiliza para filtrar ASVs ni como fallo del pipeline.
+
+La tabla interna `genus_abundance_by_library.tsv` preserva deliberadamente
+`__unassigned_genus__` para ASVs evaluables sin género y `__short_lt50__` para
+las no evaluables. La abundancia relativa se calcula sobre todas las lecturas no
+quiméricas: por ello, los recuentos por biblioteca suman el total y no
+renormalizan artificialmente la fracción asignada a género.
+
+## Negativos, prevalencia y decontaminación: todavía no ejecutados
+
+Los negativos de `current` se mantienen en la tabla canónica y en el QC
+taxonómico, pero no se ejecutó análisis de prevalencia ni decontaminación. En
+consecuencia, no existe una lista activa de ASVs candidatas a contaminante, una
+tabla filtrada ni una inferencia a partir de su composición. Una etapa futura
+autorizada deberá conservar por separado la tabla cruda, las candidatas y toda
+versión filtrada; si se dispone de concentración de ADN validada, podrá añadir
+un análisis de frecuencia como sensibilidad [@Davis2018].
+
+## Recuperación trazable de la asignación
+
+La recuperación separó claramente clasificación y visualización:
+
+1. El job 9559086 completó la asignación científica y falló únicamente al crear
+   la figura de cobertura por un desajuste de etiquetas.
+2. Sus siete TSV científicos y dos objetos RDS se archivaron y validaron contra
+   la tabla DADA2 canónica, metadatos y controles.
+3. El job 9560462 copió esos nueve artefactos byte a byte y regeneró sólo la
+   figura, el informe, parámetros, manifiesto y marcador final; no reclasificó
+   secuencias.
+
+Por tanto, la igualdad byte a byte aplica a los artefactos científicos, no a los
+productos deliberadamente regenerados de cierre. La [proveniencia de la
+recuperación](../tables/06_taxonomia_controles/Table-6.3-proveniencia-recuperacion-taxonomia.tsv)
+documenta los dos jobs y confirma `taxonomy_assignments_recomputed=FALSE`.
+
+::: {.callout-note}
+## Límite de interpretación
+
+La tabla taxonómica formal es un punto de partida sin filtrar. La identidad
+exacta de una ASV y una etiqueta SILVA no sustituyen la evaluación de abundancia,
+prevalencia, negativos, contaminación ni la definición autorizada del análisis
+biológico o clínico.
+:::

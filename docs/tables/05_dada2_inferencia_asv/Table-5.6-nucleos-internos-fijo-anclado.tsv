@@ -1,0 +1,15 @@
+processing_batch	metric	asvs	asv_denominator	asv_pct_of_denominator	reads	read_pct_of_fixed
+pilot	exact_sequence	2901	fixed_17_21	13.03703037929175	13008391	79.49058989374258
+pilot	internal_core_only	3782	fixed_17_21	16.996225058421714	1698450	10.37874648794206
+pilot	no_internal_core_match	7865	fixed_17_21	35.34513751572892	320390	1.957812468587098
+pilot	shorter_than_minimum_core	7704	fixed_17_21	34.621607046557614	1337462	8.17285114972826
+pilot	anchored_asvs_with_any_fixed_core_match	5990	sequence_anchored	72.63247241421122	12429823	98.11369589609745
+pilot	anchored_asvs_with_multiple_fixed_core_matches	2741	sequence_anchored	33.23632836182854	10988701	86.73832830983531
+pilot	median_fixed_core_matches_per_covered_anchored_asv	1.0				
+current	exact_sequence	6138	fixed_17_21	16.26434192744906	16663967	82.04006333796886
+current	internal_core_only	6218	fixed_17_21	16.47632422692705	919233	4.5255690642180895
+current	no_internal_core_match	16591	fixed_17_21	43.96247913299239	1320935	6.503228856930639
+current	shorter_than_minimum_core	8792	fixed_17_21	23.296854712631497	1407852	6.931138740882416
+current	anchored_asvs_with_any_fixed_core_match	7346	sequence_anchored	91.98597545704983	8293105	98.71632313789424
+current	anchored_asvs_with_multiple_fixed_core_matches	4466	sequence_anchored	55.92286501377411	6986295	83.16081307986029
+current	median_fixed_core_matches_per_covered_anchored_asv	3.0				

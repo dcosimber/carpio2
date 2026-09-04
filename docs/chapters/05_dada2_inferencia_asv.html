@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -102,6 +67,9 @@ div.csl-indent {
 <link href="../site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-7e34ecb6a0e7991f0346b0751d4a7c3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -440,9 +408,12 @@ div.csl-indent {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#procesamiento-separado-por-ensayo" id="toc-procesamiento-separado-por-ensayo" class="nav-link active" data-scroll-target="#procesamiento-separado-por-ensayo"><span class="header-section-number">5.1</span> Procesamiento separado por ensayo</a></li>
-  <li><a href="#comandos-y-parámetros" id="toc-comandos-y-parámetros" class="nav-link" data-scroll-target="#comandos-y-parámetros"><span class="header-section-number">5.2</span> Comandos y parámetros</a></li>
-  <li><a href="#productos-de-salida" id="toc-productos-de-salida" class="nav-link" data-scroll-target="#productos-de-salida"><span class="header-section-number">5.3</span> Productos de salida</a></li>
+  <li><a href="#mapa-de-ramas-y-alcance-de-la-comparación" id="toc-mapa-de-ramas-y-alcance-de-la-comparación" class="nav-link active" data-scroll-target="#mapa-de-ramas-y-alcance-de-la-comparación"><span class="header-section-number">5.1</span> Mapa de ramas y alcance de la comparación</a></li>
+  <li><a href="#procesamiento-separado-por-ensayo" id="toc-procesamiento-separado-por-ensayo" class="nav-link" data-scroll-target="#procesamiento-separado-por-ensayo"><span class="header-section-number">5.2</span> Procesamiento separado por ensayo</a></li>
+  <li><a href="#sec-dada2-filtering" id="toc-sec-dada2-filtering" class="nav-link" data-scroll-target="#sec-dada2-filtering"><span class="header-section-number">5.3</span> Exploración de filtros y decisión</a></li>
+  <li><a href="#parámetros-definitivos-y-significado-operativo" id="toc-parámetros-definitivos-y-significado-operativo" class="nav-link" data-scroll-target="#parámetros-definitivos-y-significado-operativo"><span class="header-section-number">5.4</span> Parámetros definitivos y significado operativo</a></li>
+  <li><a href="#retención-por-tipo-técnico-e-integración-exacta" id="toc-retención-por-tipo-técnico-e-integración-exacta" class="nav-link" data-scroll-target="#retención-por-tipo-técnico-e-integración-exacta"><span class="header-section-number">5.5</span> Retención por tipo técnico e integración exacta</a></li>
+  <li><a href="#sec-fixed-anchored-comparison" id="toc-sec-fixed-anchored-comparison" class="nav-link" data-scroll-target="#sec-fixed-anchored-comparison"><span class="header-section-number">5.6</span> Comparación aislada: fijo 17/21 frente a anclado</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/05_dada2_inferencia_asv.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -475,49 +446,435 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Precaución</span>Estado de la etapa
+<span class="screen-reader-only">Precaución</span>Resultado y límite de la etapa
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Esta etapa todavía no se ha ejecutado para el conjunto ampliado. Por tanto, no se informa número de ASV, retención, éxito de fusión ni eliminación de quimeras. Los parámetros expuestos a continuación son el plan reproducible que se validará con las salidas de seguimiento de DADA2.</p>
+<p>La rama principal está completada: recorte de primers anclado bilateral y DADA2 <code>strict</code>, <code>maxEE=c(2,4)</code>. La tabla canónica no quimérica conserva 198 bibliotecas, 15.219 ASVs y 20.459.014 lecturas. Los controles, la prevalencia, la decontaminación y cualquier análisis downstream permanecen pendientes de autorización; no se aplicaron filtros adicionales a esta tabla.</p>
 </div>
 </div>
-<section id="procesamiento-separado-por-ensayo" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="procesamiento-separado-por-ensayo"><span class="header-section-number">5.1</span> Procesamiento separado por ensayo</h2>
-<p>Después del recorte de primers, cada ensayo se procesará de forma independiente con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso <span class="citation" data-cites="Callahan2016">(<a href="11_referencias.html#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>. Esta separación evita asumir que ambos ensayos comparten el mismo perfil de error. La integración posterior se realizará por secuencia exacta, conservando una variable de ensayo para los análisis técnicos.</p>
+<section id="mapa-de-ramas-y-alcance-de-la-comparación" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="mapa-de-ramas-y-alcance-de-la-comparación"><span class="header-section-number">5.1</span> Mapa de ramas y alcance de la comparación</h2>
+<p>El análisis distingue tres rutas para evitar que una exploración histórica se confunda con el resultado formal.</p>
+<div id="tbl-dada2-branches" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dada2-branches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.1: Ramas que se mantienen separadas en la documentación. La equivalencia de filtro 3/5 en la última fila es una condición de comparación, no el parámetro final de la tabla canónica.
+</figcaption>
+<div aria-describedby="tbl-dada2-branches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rama</th>
+<th>Recorte</th>
+<th>DADA2</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Canónica</td>
+<td>Anclado en 5′ y RC en 3′</td>
+<td><code>strict</code> 2/4</td>
+<td>Resultado formal, taxonomía y handoff posterior.</td>
+</tr>
+<tr class="even">
+<td>Sensibilidad de filtros</td>
+<td>Anclado en 5′ y RC en 3′</td>
+<td>2/4, 3/5, 4/6</td>
+<td>Elección del filtro final.</td>
+</tr>
+<tr class="odd">
+<td>Validación aislada</td>
+<td>Fijo 17/21 frente a anclado</td>
+<td>3/5 en ambas</td>
+<td>Evalúa el recorte sin cambiar el filtro; no sustituye la rama canónica.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="comandos-y-parámetros" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="comandos-y-parámetros"><span class="header-section-number">5.2</span> Comandos y parámetros</h2>
-<p>La ejecución se realizará en R y registrará una tabla de seguimiento por biblioteca. El fragmento genérico de filtrado y denoising es:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>filtered <span class="ot">&lt;-</span> <span class="fu">filterAndTrim</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">fwd =</span> <span class="sc">&lt;</span>R1_recortadas<span class="sc">&gt;</span>, <span class="at">rev =</span> <span class="sc">&lt;</span>R2_recortadas<span class="sc">&gt;</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">filt =</span> <span class="sc">&lt;</span>R1_filtradas<span class="sc">&gt;</span>, <span class="at">filt.rev =</span> <span class="sc">&lt;</span>R2_filtradas<span class="sc">&gt;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">truncLen =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">maxEE =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>), <span class="at">truncQ =</span> <span class="dv">2</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">minLen =</span> <span class="dv">100</span>, <span class="at">multithread =</span> <span class="cn">TRUE</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>err_R1 <span class="ot">&lt;-</span> <span class="fu">learnErrors</span>(<span class="sc">&lt;</span>R1_filtradas<span class="sc">&gt;</span>, <span class="at">multithread =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>err_R2 <span class="ot">&lt;-</span> <span class="fu">learnErrors</span>(<span class="sc">&lt;</span>R2_filtradas<span class="sc">&gt;</span>, <span class="at">multithread =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>denoised_R1 <span class="ot">&lt;-</span> <span class="fu">dada</span>(<span class="sc">&lt;</span>R1_filtradas<span class="sc">&gt;</span>, <span class="at">err =</span> err_R1, <span class="at">multithread =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>denoised_R2 <span class="ot">&lt;-</span> <span class="fu">dada</span>(<span class="sc">&lt;</span>R2_filtradas<span class="sc">&gt;</span>, <span class="at">err =</span> err_R2, <span class="at">multithread =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>truncLen = c(0, 0)</code> preserva la longitud variable observada tras el recorte.</li>
-<li><code>maxEE = c(3, 5)</code> limita el error esperado por lectura sin imponer un corte fijo de longitud.</li>
-<li><code>truncQ = 2</code> termina una lectura si alcanza una base de calidad muy baja.</li>
-<li><code>minLen = 100</code> descarta fragmentos manifiestamente no informativos.</li>
-</ul>
-<p>La fusión se realizará con al menos 20 nt de solapamiento, cero discrepancias y <code>trimOverhang = TRUE</code>. Se aplicará <code>removeBimeraDenovo(..., method = "consensus")</code> a la tabla de secuencias. Antes de fijar los parámetros finales se compararán retención, fallos de fusión y posibles sesgos entre ensayos.</p>
+<section id="procesamiento-separado-por-ensayo" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="procesamiento-separado-por-ensayo"><span class="header-section-number">5.2</span> Procesamiento separado por ensayo</h2>
+<p>Después del recorte anclado, <code>pilot</code> y <code>current</code> se procesaron por separado con DADA2: filtrado por calidad, aprendizaje de errores, denoising, fusión de pares y eliminación de quimeras por consenso <span class="citation" data-cites="Callahan2016">(<a href="11_referencias.html#ref-Callahan2016" role="doc-biblioref">Callahan et&nbsp;al. 2016</a>)</span>. Cada ensayo y cada mate usaron su propio modelo de error, sin <em>pooling</em>. Así no se presupone que la calidad, la longitud o la retención sean intercambiables entre el piloto y el ensayo ampliado.</p>
+<p>La diferencia entre ensayos ya es visible después de <code>filterAndTrim</code>: la mediana de retención por biblioteca bajo <code>strict</code> fue 79,62 % en <code>pilot</code> y 41,56 % en <code>current</code>. Las <a href="#fig-dada2-retention-pilot" class="quarto-xref">Figura&nbsp;<span>5.1</span></a> y <a href="#fig-dada2-retention-current" class="quarto-xref">Figura&nbsp;<span>5.2</span></a> muestran la distribución completa por tipo técnico, no sólo el agregado. Ninguna de las cuatro combinaciones ensayo × tipo de biblioteca quedó a cero tras filtrado, fusión o retirada de quimeras.</p>
+<div id="fig-dada2-retention-pilot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Boxplot de retención porcentual tras filterAndTrim para las biopsias y controles positivos del ensayo pilot en DADA2 strict.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dada2-retention-pilot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/05_dada2_inferencia_asv/Fig-5.1-retencion-filtrado-pilot.pdf" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;5.1: Retención por biblioteca tras filterAndTrim en la rama strict del ensayo pilot, separada entre biopsias y controles positivos."><embed src="../figures/05_dada2_inferencia_asv/Fig-5.1-retencion-filtrado-pilot.pdf" class="img-fluid" alt="Boxplot de retención porcentual tras filterAndTrim para las biopsias y controles positivos del ensayo pilot en DADA2 strict."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dada2-retention-pilot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.1: Retención por biblioteca tras <code>filterAndTrim</code> en la rama <code>strict</code> del ensayo <code>pilot</code>, separada entre biopsias y controles positivos.
+</figcaption>
+</figure>
+</div>
+<div id="fig-dada2-retention-current" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Boxplot de retención porcentual tras filterAndTrim para las biopsias y controles negativos del ensayo current en DADA2 strict.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dada2-retention-current-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/05_dada2_inferencia_asv/Fig-5.2-retencion-filtrado-current.pdf" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;5.2: Retención por biblioteca tras filterAndTrim en la rama strict del ensayo current, separada entre biopsias y controles negativos."><embed src="../figures/05_dada2_inferencia_asv/Fig-5.2-retencion-filtrado-current.pdf" class="img-fluid" alt="Boxplot de retención porcentual tras filterAndTrim para las biopsias y controles negativos del ensayo current en DADA2 strict."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dada2-retention-current-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.2: Retención por biblioteca tras <code>filterAndTrim</code> en la rama <code>strict</code> del ensayo <code>current</code>, separada entre biopsias y controles negativos.
+</figcaption>
+</figure>
+</div>
+<p>Los ejes verticales de ambas figuras no son iguales, por lo que la comparación cuantitativa debe hacerse con la <a href="#tbl-dada2-sensitivity" class="quarto-xref">Tabla&nbsp;<span>5.2</span></a> y la <a href="#tbl-dada2-retention-by-type" class="quarto-xref">Tabla&nbsp;<span>5.3</span></a>, no por altura visual. La heterogeneidad de retención es una característica técnica que justifica modelos separados; no se interpreta como una diferencia biológica entre grupos.</p>
 </section>
-<section id="productos-de-salida" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="productos-de-salida"><span class="header-section-number">5.3</span> Productos de salida</h2>
-<p>Cuando la etapa esté completada, este capítulo mostrará:</p>
-<ol type="1">
-<li>seguimiento de lecturas por biblioteca y por ensayo;</li>
-<li>número de ASV antes y después de quimeras;</li>
-<li>distribución de longitudes de los amplicones fusionados;</li>
-<li>criterios documentados para el umbral mínimo de profundidad; y</li>
-<li>tabla de ASV integrada por secuencia exacta, con procedencia de ensayo.</li>
-</ol>
+<section id="sec-dada2-filtering" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-dada2-filtering"><span class="header-section-number">5.3</span> Exploración de filtros y decisión</h2>
+<p>Se evaluaron tres candidatos sobre los FASTQ definitivos ya recortados de forma anclada: <code>strict</code> 2/4, <code>configured_current</code> 3/5 y <code>permissive</code> 4/6. El criterio preespecificado fue elegir el candidato más estricto que retuviese al menos el 90 % de los pares del permisivo, mantuviese al menos el 95 % de la mejor tasa de fusión y de fracción no quimérica, y preservase profundidad suficiente de controles. Los tres candidatos superaron los criterios en ambos ensayos; por tanto, se eligió <code>strict</code>.</p>
+<div id="tbl-dada2-sensitivity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dada2-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.2: Sensibilidad DADA2 sobre el recorte anclado. “Mediana por biblioteca” es la retención tras <code>filterAndTrim</code>; “pares vs.&nbsp;permisivo” compara el total filtrado de <code>strict</code> con el de 4/6. La fila 3/5 es la configuración de la validación de recorte, no una elección retrospectiva de la rama principal.
+</figcaption>
+<div aria-describedby="tbl-dada2-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ensayo</th>
+<th>Candidato</th>
+<th>maxEE R1/R2</th>
+<th style="text-align: right;">Filtradas</th>
+<th style="text-align: right;">Mediana por biblioteca</th>
+<th style="text-align: right;">Fusión / filtradas</th>
+<th style="text-align: right;">No quiméricas / fusión</th>
+<th style="text-align: right;">ASVs no quiméricas</th>
+<th style="text-align: right;">Pares vs.&nbsp;permisivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Piloto</td>
+<td>strict</td>
+<td>2/4</td>
+<td style="text-align: right;">69,58 %</td>
+<td style="text-align: right;">79,62 %</td>
+<td style="text-align: right;">65,44 %</td>
+<td style="text-align: right;">91,38 %</td>
+<td style="text-align: right;">8.225</td>
+<td style="text-align: right;">95,65 %</td>
+</tr>
+<tr class="even">
+<td>Piloto</td>
+<td>3/5</td>
+<td>3/5</td>
+<td style="text-align: right;">71,53 %</td>
+<td style="text-align: right;">81,15 %</td>
+<td style="text-align: right;">64,58 %</td>
+<td style="text-align: right;">91,22 %</td>
+<td style="text-align: right;">8.247</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr class="odd">
+<td>Piloto</td>
+<td>permisivo</td>
+<td>4/6</td>
+<td style="text-align: right;">72,75 %</td>
+<td style="text-align: right;">82,51 %</td>
+<td style="text-align: right;">64,08 %</td>
+<td style="text-align: right;">91,10 %</td>
+<td style="text-align: right;">8.252</td>
+<td style="text-align: right;">100,00 %</td>
+</tr>
+<tr class="even">
+<td>Actual</td>
+<td>strict</td>
+<td>2/4</td>
+<td style="text-align: right;">41,23 %</td>
+<td style="text-align: right;">41,56 %</td>
+<td style="text-align: right;">68,77 %</td>
+<td style="text-align: right;">93,74 %</td>
+<td style="text-align: right;">7.909</td>
+<td style="text-align: right;">90,43 %</td>
+</tr>
+<tr class="odd">
+<td>Actual</td>
+<td>3/5</td>
+<td>3/5</td>
+<td style="text-align: right;">43,90 %</td>
+<td style="text-align: right;">44,23 %</td>
+<td style="text-align: right;">68,28 %</td>
+<td style="text-align: right;">93,71 %</td>
+<td style="text-align: right;">7.986</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr class="even">
+<td>Actual</td>
+<td>permisivo</td>
+<td>4/6</td>
+<td style="text-align: right;">45,60 %</td>
+<td style="text-align: right;">45,88 %</td>
+<td style="text-align: right;">67,86 %</td>
+<td style="text-align: right;">93,68 %</td>
+<td style="text-align: right;">8.012</td>
+<td style="text-align: right;">100,00 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La ganancia de relajar el filtro fue pequeña en número de ASVs: frente a 3/5, <code>strict</code> difiere en 22 ASVs en <code>pilot</code> y 77 en <code>current</code>. En cambio, conservó las condiciones de QC: los positivos de <code>pilot</code> retuvieron 8.513.057 lecturas no quiméricas, el 98,45 % de su resultado permisivo; los negativos de <code>current</code> retuvieron 1.167.920, el 91,85 %. La tabla completa de candidatos está disponible como <a href="../tables/05_dada2_inferencia_asv/Table-5.1-sensibilidad-candidatos-dada2.tsv">sensibilidad DADA2</a>.</p>
+</section>
+<section id="parámetros-definitivos-y-significado-operativo" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="parámetros-definitivos-y-significado-operativo"><span class="header-section-number">5.4</span> Parámetros definitivos y significado operativo</h2>
+<p>La configuración final fue <code>truncLen=c(0,0)</code>, <code>truncQ=2</code>, <code>minLen=100</code> y <code>maxEE=c(2,4)</code>; modelos de error separados por ensayo y mate, sin <em>pooling</em>; <code>minOverlap=20</code>, <code>maxMismatch=0</code> y <code>trimOverhang=TRUE</code> para fusionar; quimeras por consenso y semilla <code>20260825</code>.</p>
+<p><code>truncLen=c(0,0)</code> no significa ausencia de control de calidad: evita imponer un corte posicional a FASTQ de longitud variable tras el recorte anclado. La calidad esperada, el mínimo de longitud y la posterior fusión con solapamiento real actúan en conjunto. El diagnóstico de longitudes que llevó a esta elección se documenta en el <a href="../chapters/04_control_calidad_preprocesamiento.html#por-que-no-se-trunco-por-posicion">capítulo de preprocesamiento</a>.</p>
+</section>
+<section id="retención-por-tipo-técnico-e-integración-exacta" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="retención-por-tipo-técnico-e-integración-exacta"><span class="header-section-number">5.5</span> Retención por tipo técnico e integración exacta</h2>
+<p>La <a href="#tbl-dada2-retention-by-type" class="quarto-xref">Tabla&nbsp;<span>5.3</span></a> separa los controles de las biopsias para que no se confunda la retención agregada con un efecto de tipo de biblioteca. Los porcentajes finales no quiméricos respecto a la entrada fueron 33,82 % para las biopsias y 46,65 % para los positivos de <code>pilot</code>; 26,37 % para biopsias y 27,86 % para negativos de <code>current</code>.</p>
+<div id="tbl-dada2-retention-by-type" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dada2-retention-by-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.3: Retención de la rama anclada <code>strict</code> 2/4 por ensayo y tipo de biblioteca. Las cuatro categorías conservaron al menos una biblioteca después de cada etapa.
+</figcaption>
+<div aria-describedby="tbl-dada2-retention-by-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ensayo</th>
+<th>Tipo técnico</th>
+<th style="text-align: right;">Bibliotecas</th>
+<th style="text-align: right;">Pares de entrada</th>
+<th style="text-align: right;">Filtradas</th>
+<th style="text-align: right;">Fusionadas</th>
+<th style="text-align: right;">No quiméricas</th>
+<th style="text-align: right;">No quiméricas / entrada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Piloto</td>
+<td>Biopsias</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">11.815.341</td>
+<td style="text-align: right;">8.702.905</td>
+<td style="text-align: right;">4.633.882</td>
+<td style="text-align: right;">3.995.673</td>
+<td style="text-align: right;">33,82 %</td>
+</tr>
+<tr class="even">
+<td>Piloto</td>
+<td>Controles positivos</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">18.249.198</td>
+<td style="text-align: right;">12.215.833</td>
+<td style="text-align: right;">9.055.389</td>
+<td style="text-align: right;">8.513.057</td>
+<td style="text-align: right;">46,65 %</td>
+</tr>
+<tr class="odd">
+<td>Actual</td>
+<td>Biopsias</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">25.718.239</td>
+<td style="text-align: right;">10.567.915</td>
+<td style="text-align: right;">7.212.594</td>
+<td style="text-align: right;">6.782.364</td>
+<td style="text-align: right;">26,37 %</td>
+</tr>
+<tr class="even">
+<td>Actual</td>
+<td>Controles negativos</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">4.192.039</td>
+<td style="text-align: right;">1.765.167</td>
+<td style="text-align: right;">1.268.653</td>
+<td style="text-align: right;">1.167.920</td>
+<td style="text-align: right;">27,86 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Al finalizar DADA2, las secuencias ASV de ambos ensayos se integraron por identidad exacta, manteniendo el ensayo de origen en la trazabilidad. No se suman ingenuamente 8.225 y 7.909 ASVs: 915 secuencias no quiméricas son idénticas entre ensayos, de modo que la unión canónica contiene 15.219 ASVs.</p>
+<div id="tbl-dada2-final-retention" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dada2-final-retention-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.4: Resultado de la rama anclada <code>strict</code> 2/4. Los porcentajes son respecto a los pares de entrada de cada ensayo; no se calcula un porcentaje para la fila integrada porque no corresponde a una sola cadena de filtrado.
+</figcaption>
+<div aria-describedby="tbl-dada2-final-retention-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ensayo</th>
+<th style="text-align: right;">Bibliotecas</th>
+<th style="text-align: right;">Pares de entrada</th>
+<th style="text-align: right;">Filtradas</th>
+<th style="text-align: right;">Fusionadas</th>
+<th style="text-align: right;">No quiméricas</th>
+<th style="text-align: right;">ASVs no quiméricas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Piloto</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">30.064.539</td>
+<td style="text-align: right;">20.918.738 (69,58 %)</td>
+<td style="text-align: right;">13.689.271</td>
+<td style="text-align: right;">12.508.730 (41,61 %)</td>
+<td style="text-align: right;">8.225</td>
+</tr>
+<tr class="even">
+<td>Actual</td>
+<td style="text-align: right;">152</td>
+<td style="text-align: right;">29.910.278</td>
+<td style="text-align: right;">12.333.082 (41,23 %)</td>
+<td style="text-align: right;">8.481.247</td>
+<td style="text-align: right;">7.950.284 (26,58 %)</td>
+<td style="text-align: right;">7.909</td>
+</tr>
+<tr class="odd">
+<td><strong>Canónica integrada</strong></td>
+<td style="text-align: right;"><strong>198</strong></td>
+<td style="text-align: right;"><strong>59.974.817</strong></td>
+<td style="text-align: right;"><strong>—</strong></td>
+<td style="text-align: right;"><strong>—</strong></td>
+<td style="text-align: right;"><strong>20.459.014</strong></td>
+<td style="text-align: right;"><strong>15.219</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La <a href="../tables/05_dada2_inferencia_asv/Table-5.2-retencion-dada2-por-tipo-biblioteca.tsv">retención por tipo de biblioteca</a> y el <a href="../tables/05_dada2_inferencia_asv/Table-5.3-integracion-asv-canonica.tsv">marcador de integración</a> permiten verificar esta cadena sin recalcular DADA2. El número combinado de ASVs prequiméricas no se declara porque las secuencias prequiméricas no se conservaron de forma que permitiera reconstruir su unión exacta. La tabla final no quimérica, el mapa ASV-secuencia y el seguimiento por biblioteca sí están completos.</p>
+<p>Dos biopsias de profundidad muy baja (<code>01-182</code> y <code>01-183</code>) se retuvieron, con 18 y 48 lecturas no quiméricas. No se excluyeron por tamaño ni profundidad; cualquier umbral requiere una evaluación posterior conjunta con controles.</p>
+</section>
+<section id="sec-fixed-anchored-comparison" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="sec-fixed-anchored-comparison"><span class="header-section-number">5.6</span> Comparación aislada: fijo 17/21 frente a anclado</h2>
+<p>La validación parte de los FASTQ raw y usa DADA2 3/5 en ambas ramas. Por tanto, describe el efecto de estrategias completas de recorte y no la diferencia entre la rama fija y la tabla formal <code>strict</code> 2/4. El fijo retuvo más lecturas y más ASVs, pero la fracción de lecturas asignadas a género fue mayor tras el recorte anclado en ambos ensayos.</p>
+<div id="tbl-fixed-anchored-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fixed-anchored-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5.5: Comparación aislada de estrategias de recorte con DADA2 3/5. La cobertura a género se calculó después de la taxonomía comparativa de esas ramas, no de la taxonomía formal <code>strict</code> 2/4 del capítulo 6.
+</figcaption>
+<div aria-describedby="tbl-fixed-anchored-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ensayo</th>
+<th>Recorte</th>
+<th style="text-align: right;">No quiméricas / entrada</th>
+<th style="text-align: right;">ASVs</th>
+<th style="text-align: right;">Lecturas a género</th>
+<th style="text-align: right;">ASVs evaluables a género</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Piloto</td>
+<td>Anclado</td>
+<td style="text-align: right;">42,14 %</td>
+<td style="text-align: right;">8.247</td>
+<td style="text-align: right;">89,88 %</td>
+<td style="text-align: right;">45,76 %</td>
+</tr>
+<tr class="even">
+<td>Piloto</td>
+<td>Fijo 17/21</td>
+<td style="text-align: right;">54,43 %</td>
+<td style="text-align: right;">22.252</td>
+<td style="text-align: right;">79,85 %</td>
+<td style="text-align: right;">26,53 %</td>
+</tr>
+<tr class="odd">
+<td>Actual</td>
+<td>Anclado</td>
+<td style="text-align: right;">28,09 %</td>
+<td style="text-align: right;">7.986</td>
+<td style="text-align: right;">75,07 %</td>
+<td style="text-align: right;">57,56 %</td>
+</tr>
+<tr class="even">
+<td>Actual</td>
+<td>Fijo 17/21</td>
+<td style="text-align: right;">67,91 %</td>
+<td style="text-align: right;">37.739</td>
+<td style="text-align: right;">62,61 %</td>
+<td style="text-align: right;">33,12 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La ventaja de cobertura a género del anclado fue 10,03 puntos porcentuales en <code>pilot</code> y 12,46 en <code>current</code>. El incremento de ASVs del fijo tampoco se puede interpretar por sí solo como riqueza biológica: la <a href="#fig-fixed-anchored-richness" class="quarto-xref">Figura&nbsp;<span>5.3</span></a> compara la riqueza tras rarefacción pareada dentro de cada biblioteca y muestra que el patrón persiste al igualar la profundidad. Es una evidencia de sensibilidad metodológica, no una prueba de artefacto, de prevalencia ni de señal clínica.</p>
+<div id="fig-fixed-anchored-richness" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de dispersión que compara riqueza rarefactada por biblioteca bajo recorte anclado y fijo 17/21, con colores para pilot y current.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fixed-anchored-richness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/05_dada2_inferencia_asv/Fig-5.3-riqueza-rarefactada-fijo-anclado.pdf" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;5.3: Riqueza ASV tras rarefacción pareada, comparando recorte fijo 17/21 y anclado con DADA2 3/5. Cada punto corresponde a la misma biblioteca en ambas estrategias."><embed src="../figures/05_dada2_inferencia_asv/Fig-5.3-riqueza-rarefactada-fijo-anclado.pdf" class="img-fluid" alt="Gráfico de dispersión que compara riqueza rarefactada por biblioteca bajo recorte anclado y fijo 17/21, con colores para pilot y current."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fixed-anchored-richness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.3: Riqueza ASV tras rarefacción pareada, comparando recorte fijo 17/21 y anclado con DADA2 3/5. Cada punto corresponde a la misma biblioteca en ambas estrategias.
+</figcaption>
+</figure>
+</div>
+<p>La comparación de núcleos internos aporta un control adicional: 98,11 % de las lecturas ancladas de <code>pilot</code> y 98,72 % de las de <code>current</code> tienen algún núcleo fijo de al menos 250 nt. No equivale a identidad de ASV ni autoriza colapsar las dos tablas, ya que los extremos técnicos pueden diferir. Están disponibles las tablas descargables de <a href="../tables/05_dada2_inferencia_asv/Table-5.4-comparacion-procesamiento-fijo-anclado.tsv">procesamiento</a>, <a href="../tables/05_dada2_inferencia_asv/Table-5.5-cobertura-taxonomica-fijo-anclado.tsv">cobertura taxonómica</a> y <a href="../tables/05_dada2_inferencia_asv/Table-5.6-nucleos-internos-fijo-anclado.tsv">núcleos internos</a>.</p>
+<p>El <a href="../figures/05_dada2_inferencia_asv/Fig-5.4-qc-taxonomico-fijo-anclado-suplemento.pdf">suplemento gráfico multipágina</a> añade la distribución por biblioteca de la cobertura a género y las distancias Bray–Curtis entre estrategias. Se mantiene como PDF descargable para conservar sus cuatro páginas completas; no se incrusta como una figura única que ocultase las páginas posteriores.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Qué no concluye este capítulo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La selección de filtro y de recorte establece una tabla ASV canónica trazable. No decide qué ASVs son biológicas, no excluye negativos ni biopsias de baja profundidad y no ejecuta decontaminación. Esas preguntas requieren una etapa posterior explícitamente autorizada, conservando siempre la tabla sin filtrar.</p>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -959,9 +1316,41 @@ Callahan, Benjamin J., Paul J. McMurdie, Michael J. Rosen, Andrew W. Han, Amy Jo
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/05_dada2_inferencia_asv.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dcosimber/carpio2/blob/main/chapters/05_dada2_inferencia_asv.qmd" class="toc-action"><i class="bi bi-github"></i>Ver el código</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

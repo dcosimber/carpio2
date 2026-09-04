@@ -18,40 +18,118 @@
       "id": "primer_retention_by_batch",
       "source": "analysis/tables/01_preprocessing/primer_trimming_read_retention_by_batch.tsv",
       "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-retencion-primers-por-ensayo.tsv",
-      "description": "Retención de pares, coincidencias de primer y lecturas sin coincidencia preservadas tras el recorte por secuencia."
+      "description": "Retención de pares, coincidencias completas de primers 5′ y RC 3′, y lecturas sin coincidencia preservadas tras el recorte por secuencia."
     },
     {
       "id": "primer_verification_summary",
       "source": "analysis/tables/01_preprocessing/primer_trimming_verification_summary.tsv",
       "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-verificacion-primers-por-secuencia.tsv",
-      "description": "Verificación agregada de coincidencias completas de primer ancladas y lecturas sin coincidencia preservadas."
+      "description": "Verificación agregada de coincidencias completas de primers 5′ y RC 3′ anclados, y lecturas sin coincidencia preservadas."
     },
     {
-      "id": "fastqc_raw_quality_profiles_by_batch",
-      "source": "analysis/plots/01_preprocessing/qc/fastqc_raw_quality_profiles_by_batch.png",
-      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-crudo-por-ensayo.png",
-      "description": "Perfiles FastQC de calidad de los FASTQ crudos por ensayo y sentido de lectura."
+      "id": "primer_orientation_pairing",
+      "source": "analysis/tables/01_preprocessing/primer_orientation_pairing_by_batch.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.2-orientacion-pareada-primers.tsv",
+      "description": "Coocurrencia agregada de primers canónicos e invertidos en los extremos 5′ y 3′ por ensayo, incluida la evidencia de read-through."
     },
     {
-      "id": "fastqc_raw_quality_profiles_by_batch_pdf",
-      "source": "analysis/plots/01_preprocessing/qc/fastqc_raw_quality_profiles_by_batch.pdf",
-      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-crudo-por-ensayo.pdf",
-      "description": "Versión vectorial de los perfiles FastQC de calidad de los FASTQ crudos por ensayo y sentido de lectura."
+      "id": "preprocessing_stage_validation",
+      "source": "analysis/tables/01_preprocessing/preprocessing_stage_validation.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.6-validacion-etapas-preprocesamiento.tsv",
+      "description": "Matriz de controles de validación del preprocesamiento para los ensayos pilot y current."
     },
     {
-      "id": "fastqc_trimmed_quality_profiles_by_batch",
-      "source": "analysis/plots/01_preprocessing/qc/fastqc_trimmed_quality_profiles_by_batch.png",
-      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.3-perfiles-calidad-fastq-recortado-por-ensayo.png",
-      "description": "Perfiles FastQC de calidad de los FASTQ tras el recorte por secuencia, por ensayo y sentido de lectura."
+      "id": "trimmed_fastqc_truncation_candidates",
+      "source": "analysis/tables/01_preprocessing/fastqc_trimmed_truncation_candidates.tsv",
+      "destination": "tables/04_control_calidad_preprocesamiento/Table-4.7-candidatos-truncamiento-fastqc.tsv",
+      "description": "Diagnóstico FastQC de calidad y fracción de lecturas que alcanza longitudes candidatas de truncamiento tras el recorte anclado."
     },
     {
-      "id": "fastqc_trimmed_quality_profiles_by_batch_pdf",
-      "source": "analysis/plots/01_preprocessing/qc/fastqc_trimmed_quality_profiles_by_batch.pdf",
-      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.3-perfiles-calidad-fastq-recortado-por-ensayo.pdf",
-      "description": "Versión vectorial de los perfiles FastQC de calidad de los FASTQ tras el recorte por secuencia, por ensayo y sentido de lectura."
+            "id": "fastqc_raw_quality_profiles_by_group",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_raw_quality_profiles_by_batch.png",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.1-perfiles-calidad-fastq-crudo-por-ensayo.png",
+            "description": "Perfiles FastQC de calidad de los FASTQ crudos por ensayo, tipo de biblioteca y sentido de lectura."
     },
     {
-      "id": "repeated_biopsy_depth_comparison",
+            "id": "fastqc_raw_quality_profiles_by_group_pdf",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_raw_quality_profiles_by_batch.pdf",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.1-perfiles-calidad-fastq-crudo-por-ensayo.pdf",
+            "description": "Versión vectorial de los perfiles FastQC de calidad de los FASTQ crudos por ensayo, tipo de biblioteca y sentido de lectura."
+    },
+    {
+            "id": "fastqc_trimmed_quality_profiles_by_group",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_trimmed_quality_profiles_by_batch.png",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-recortado-por-ensayo.png",
+            "description": "Perfiles FastQC de calidad de los FASTQ tras el recorte por secuencia, por ensayo, tipo de biblioteca y sentido de lectura."
+    },
+        {
+            "id": "fastqc_trimmed_quality_profiles_by_group_pdf",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_trimmed_quality_profiles_by_batch.pdf",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.2-perfiles-calidad-fastq-recortado-por-ensayo.pdf",
+            "description": "Versión vectorial de los perfiles FastQC de calidad de los FASTQ tras el recorte por secuencia, por ensayo, tipo de biblioteca y sentido de lectura."
+        },
+        {
+            "id": "fastqc_module_quantitative_summary",
+            "source": "analysis/tables/01_preprocessing/fastqc_module_quantitative_summary.tsv",
+            "destination": "tables/04_control_calidad_preprocesamiento/Table-4.4-resumen-cuantitativo-modulos-fastqc.tsv",
+            "description": "Resumen cuantitativo agregado de los módulos FastQC por etapa, ensayo, tipo de biblioteca y sentido de lectura."
+        },
+        {
+            "id": "fastqc_module_status_summary",
+            "source": "analysis/tables/01_preprocessing/fastqc_module_status_summary.tsv",
+            "destination": "tables/04_control_calidad_preprocesamiento/Table-4.5-estados-modulos-fastqc.tsv",
+            "description": "Matriz agregada de estados pass, warn y fail de los módulos FastQC por etapa, ensayo, tipo de biblioteca y sentido de lectura."
+        },
+        {
+            "id": "fastqc_module_status_plot",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_module_status_by_stage.png",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.4-estados-modulos-fastqc-por-etapa.png",
+            "description": "Estados agregados pass, warn y fail de los once módulos FastQC por etapa y grupo técnico."
+        },
+        {
+            "id": "fastqc_module_status_plot_pdf",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_module_status_by_stage.pdf",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.4-estados-modulos-fastqc-por-etapa.pdf",
+            "description": "Versión vectorial de los estados agregados de los once módulos FastQC."
+        },
+        {
+            "id": "fastqc_sequence_quality_length_plot",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_sequence_quality_length_by_stage.png",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.5-calidad-por-secuencia-y-longitud-fastqc.png",
+            "description": "Calidad media por lectura, fracción de lecturas con calidad baja y longitudes agregadas de FastQC."
+        },
+        {
+            "id": "fastqc_sequence_quality_length_plot_pdf",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_sequence_quality_length_by_stage.pdf",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.5-calidad-por-secuencia-y-longitud-fastqc.pdf",
+            "description": "Versión vectorial de la auditoría de calidad por secuencia y longitud."
+        },
+        {
+            "id": "fastqc_composition_gc_n_plot",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_composition_gc_n_by_stage.png",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.6-composicion-gc-y-n-fastqc.png",
+            "description": "Desequilibrio de bases, contenido GC y contenido N agregados de FastQC."
+        },
+        {
+            "id": "fastqc_composition_gc_n_plot_pdf",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_composition_gc_n_by_stage.pdf",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.6-composicion-gc-y-n-fastqc.pdf",
+            "description": "Versión vectorial de la auditoría de composición, GC y N."
+        },
+        {
+            "id": "fastqc_duplication_overrepresented_adapter_plot",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_duplication_overrepresented_adapter_by_stage.png",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.7-duplicacion-sobrerrepresentadas-y-adaptadores-fastqc.png",
+            "description": "Duplicación, secuencias sobrerrepresentadas y contenido de adaptadores agregados de FastQC."
+        },
+        {
+            "id": "fastqc_duplication_overrepresented_adapter_plot_pdf",
+            "source": "analysis/plots/01_preprocessing/qc/fastqc_duplication_overrepresented_adapter_by_stage.pdf",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.7-duplicacion-sobrerrepresentadas-y-adaptadores-fastqc.pdf",
+            "description": "Versión vectorial de la auditoría de duplicación, secuencias sobrerrepresentadas y adaptadores."
+        },
+        {
+            "id": "repeated_biopsy_depth_comparison",
       "source": "analysis/tables/01_preprocessing/repeated_biopsies_raw_depth_comparison.tsv",
       "destination": "tables/04_control_calidad_preprocesamiento/Table-4.3-profundidad-biopsias-repetidas.tsv",
       "description": "Profundidad de los FASTQ crudos de las ocho biopsias repetidas; se permiten los códigos técnicos de muestra."
@@ -63,16 +141,100 @@
       "description": "Resumen descriptivo de la comparación pareada de profundidad."
     },
     {
-      "id": "repeated_biopsy_depth_plot",
-      "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.png",
-      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.1-profundidad-biopsias-repetidas.png",
+            "id": "repeated_biopsy_depth_plot",
+            "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.png",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.3-profundidad-biopsias-repetidas.png",
       "description": "Gráfico pareado de profundidad de las ocho biopsias repetidas."
     },
     {
-      "id": "repeated_biopsy_depth_plot_pdf",
-      "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.pdf",
-      "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.1-profundidad-biopsias-repetidas.pdf",
+            "id": "repeated_biopsy_depth_plot_pdf",
+            "source": "analysis/plots/01_preprocessing/qc/repeated_biopsies_raw_depth_paired.pdf",
+            "destination": "figures/04_control_calidad_preprocesamiento/Fig-4.3-profundidad-biopsias-repetidas.pdf",
       "description": "Versión vectorial del gráfico pareado de profundidad."
+    },
+    {
+      "id": "dada2_sensitivity_candidates",
+      "source": "analysis/tables/02_dada2/sensitivity/candidate_comparison.tsv",
+      "destination": "tables/05_dada2_inferencia_asv/Table-5.1-sensibilidad-candidatos-dada2.tsv",
+      "description": "Comparación de los candidatos DADA2 2/4, 3/5 y 4/6 sobre los FASTQ con recorte anclado."
+    },
+    {
+      "id": "dada2_retention_by_library_type",
+      "source": "analysis/tables/02_dada2/merged/dada2_retention_summary.tsv",
+      "destination": "tables/05_dada2_inferencia_asv/Table-5.2-retencion-dada2-por-tipo-biblioteca.tsv",
+      "description": "Retención DADA2 de la rama strict 2/4 por ensayo y tipo de biblioteca."
+    },
+    {
+      "id": "dada2_canonical_integration_marker",
+      "source": "analysis/tables/02_dada2/merged/selected_strict_summary_complete.tsv",
+      "destination": "tables/05_dada2_inferencia_asv/Table-5.3-integracion-asv-canonica.tsv",
+      "description": "Marcador de integración canónica de la rama DADA2 strict anclada."
+    },
+    {
+      "id": "dada2_strict_filter_retention_pilot_plot",
+      "source": "analysis/plots/02_dada2/pilot/library_filter_retention.pdf",
+      "destination": "figures/05_dada2_inferencia_asv/Fig-5.1-retencion-filtrado-pilot.pdf",
+      "description": "Distribución de la retención tras filterAndTrim en la rama strict del ensayo pilot, por tipo de biblioteca."
+    },
+    {
+      "id": "dada2_strict_filter_retention_current_plot",
+      "source": "analysis/plots/02_dada2/current/library_filter_retention.pdf",
+      "destination": "figures/05_dada2_inferencia_asv/Fig-5.2-retencion-filtrado-current.pdf",
+      "description": "Distribución de la retención tras filterAndTrim en la rama strict del ensayo current, por tipo de biblioteca."
+    },
+    {
+      "id": "dada2_fixed_anchored_processing_comparison",
+      "source": "analysis/validation/20260903_fixed17_21/tables/dada2_method_comparison.tsv",
+      "destination": "tables/05_dada2_inferencia_asv/Table-5.4-comparacion-procesamiento-fijo-anclado.tsv",
+      "description": "Comparación aislada de retención, fusión, quimeras y ASVs entre recorte fijo 17/21 y anclado, con DADA2 3/5 en ambas ramas."
+    },
+    {
+      "id": "dada2_fixed_anchored_taxonomy_comparison",
+      "source": "analysis/validation/20260903_fixed17_21/tables/taxonomy_comparison/method_comparison/taxonomy_rank_coverage_comparison.tsv",
+      "destination": "tables/05_dada2_inferencia_asv/Table-5.5-cobertura-taxonomica-fijo-anclado.tsv",
+      "description": "Cobertura taxonómica comparativa del recorte fijo 17/21 y anclado en la validación aislada DADA2 3/5."
+    },
+    {
+      "id": "dada2_fixed_anchored_internal_core_comparison",
+      "source": "analysis/validation/20260903_fixed17_21/tables/fixed_vs_sequence_anchored_internal_core_summary.tsv",
+      "destination": "tables/05_dada2_inferencia_asv/Table-5.6-nucleos-internos-fijo-anclado.tsv",
+      "description": "Resumen de núcleos internos compartidos entre ASVs de las estrategias fija y anclada en la validación aislada."
+    },
+    {
+      "id": "dada2_fixed_anchored_rarefied_richness_plot",
+      "source": "analysis/validation/20260903_fixed17_21/plots/comparison/paired_rarefied_richness.pdf",
+      "destination": "figures/05_dada2_inferencia_asv/Fig-5.3-riqueza-rarefactada-fijo-anclado.pdf",
+      "description": "Comparación pareada de riqueza rarefactada entre el recorte fijo 17/21 y el anclado en la validación aislada DADA2 3/5."
+    },
+    {
+      "id": "dada2_fixed_anchored_taxonomy_qc_supplement",
+      "source": "analysis/validation/20260903_fixed17_21/plots/taxonomy_comparison/taxonomy_method_comparison_qc.pdf",
+      "destination": "figures/05_dada2_inferencia_asv/Fig-5.4-qc-taxonomico-fijo-anclado-suplemento.pdf",
+      "description": "Suplemento multipágina con cobertura taxonómica a género y disimilitud Bray-Curtis entre recorte fijo 17/21 y anclado en la validación aislada DADA2 3/5."
+    },
+    {
+      "id": "taxonomy_assignment_coverage",
+      "source": "analysis/tables/03_taxonomy/taxonomy_assignment_summary.tsv",
+      "destination": "tables/06_taxonomia_controles/Table-6.1-cobertura-taxonomica-por-rango.tsv",
+      "description": "Cobertura de asignación SILVA por rango taxonómico y ensayo para la rama strict anclada."
+    },
+    {
+      "id": "taxonomy_flag_summary",
+      "source": "analysis/tables/03_taxonomy/taxonomy_flag_summary.tsv",
+      "destination": "tables/06_taxonomia_controles/Table-6.2-senales-taxonomicas.tsv",
+      "description": "Resumen de señales y categorías taxonómicas de la rama strict anclada."
+    },
+    {
+      "id": "taxonomy_recovery_provenance",
+      "source": "analysis/tables/03_taxonomy/taxonomy_recovery_provenance.tsv",
+      "destination": "tables/06_taxonomia_controles/Table-6.3-proveniencia-recuperacion-taxonomia.tsv",
+      "description": "Proveniencia de la recuperación validada de la asignación taxonómica sin reclasificación."
+    },
+    {
+      "id": "taxonomy_assignment_coverage_plot",
+      "source": "analysis/plots/03_taxonomy/taxonomy_assignment_coverage_by_rank.pdf",
+      "destination": "figures/06_taxonomia_controles/Fig-6.1-cobertura-taxonomica-por-rango.pdf",
+      "description": "Cobertura de asignación taxonómica por rango para la rama strict anclada."
     }
   ],
   "authorized_metadata_assets": [
